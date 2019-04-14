@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Barlowe Analytics</title>
+    <link>https://barloweanalytics.com/posts/</link>
+    <description>Recent content in Posts on Barlowe Analytics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2019</copyright>
+    <lastBuildDate>Sat, 13 Apr 2019 21:36:40 -0400</lastBuildDate>
+    
+	<atom:link href="https://barloweanalytics.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>We&#39;re Back!</title>
+      <link>https://barloweanalytics.com/posts/my-first-post/</link>
+      <pubDate>Sat, 13 Apr 2019 21:36:40 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/posts/my-first-post/</guid>
+      <description>The Rebuild Has Begun Due to a lot (well a few) people asking me about my tutorials I&amp;rsquo;ve decided to bring them back. And It gives me a chance to revamp the old website with a little slicker format. So stay tuned as I slowly work to get things back in the shape they were before. As always you can address any concerns, questions, or requests to barloweanalytics@gmail.com.</description>
+    </item>
+    
+  </channel>
+</rss>

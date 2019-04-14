@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Barlowe Analytics</title>
+    <link>https://barloweanalytics.com/</link>
+    <description>Recent content on Barlowe Analytics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2019</copyright>
+    <lastBuildDate>Sat, 13 Apr 2019 22:46:09 -0400</lastBuildDate>
+    
+	<atom:link href="https://barloweanalytics.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Showcase</title>
+      <link>https://barloweanalytics.com/showcase/</link>
+      <pubDate>Sat, 13 Apr 2019 22:46:09 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/showcase/</guid>
+      <description>My Work Rpubs Here&amp;rsquo;s some of the Data Analysis I&amp;rsquo;ve done in R. I don&amp;rsquo;t use R as much as I used to but I still love doing simply data exploration/graphing in it.
+Github A lot of my public work had to be taken down due to my current job as it dealt with hockey analytics with a NHL focus. I&amp;rsquo;m starting to branch out into other things such as NBA analysis and fintech in the public spheres these days.</description>
+    </item>
+    
+    <item>
+      <title>Tutorials</title>
+      <link>https://barloweanalytics.com/tutorials/tutorial/</link>
+      <pubDate>Sat, 13 Apr 2019 22:24:45 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/tutorials/tutorial/</guid>
+      <description> This will be a site hosting tutorials for various subjects in Data Science
+Python R SQL Git Unix </description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://barloweanalytics.com/about/aboutme/</link>
+      <pubDate>Sat, 13 Apr 2019 21:58:17 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/about/aboutme/</guid>
+      <description>I am a SQL Developer and Stats Analyst for the National Hockey League</description>
+    </item>
+    
+    <item>
+      <title>We&#39;re Back!</title>
+      <link>https://barloweanalytics.com/posts/my-first-post/</link>
+      <pubDate>Sat, 13 Apr 2019 21:36:40 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/posts/my-first-post/</guid>
+      <description>The Rebuild Has Begun Due to a lot (well a few) people asking me about my tutorials I&amp;rsquo;ve decided to bring them back. And It gives me a chance to revamp the old website with a little slicker format. So stay tuned as I slowly work to get things back in the shape they were before. As always you can address any concerns, questions, or requests to barloweanalytics@gmail.com.</description>
+    </item>
+    
+  </channel>
+</rss>
