@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019</copyright>
-    <lastBuildDate>Sat, 13 Apr 2019 22:46:09 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 14 Apr 2019 17:30:40 -0400</lastBuildDate>
     
 	<atom:link href="https://barloweanalytics.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introduction to Git and Github</title>
+      <link>https://barloweanalytics.com/git/gitintro/</link>
+      <pubDate>Sun, 14 Apr 2019 17:30:40 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/git/gitintro/</guid>
+      <description>by Matthew Barlowe So if you&amp;rsquo;ve started out doing a little coding either for fun or like me to try and do data analysis of the NHL, then you&amp;rsquo;ve probably heard people talk a lot about Git and Github. And if you were like me, you&amp;rsquo;ve even tried to learn it, or use it, but just got so frustrated you gave up and figured it wasn&amp;rsquo;t worth the time.</description>
+    </item>
     
     <item>
       <title>Showcase</title>
@@ -24,12 +33,13 @@ Github A lot of my public work had to be taken down due to my current job as it 
     
     <item>
       <title>Tutorials</title>
-      <link>https://barloweanalytics.com/tutorials/tutorial/</link>
+      <link>https://barloweanalytics.com/tutorials/</link>
       <pubDate>Sat, 13 Apr 2019 22:24:45 -0400</pubDate>
       
-      <guid>https://barloweanalytics.com/tutorials/tutorial/</guid>
+      <guid>https://barloweanalytics.com/tutorials/</guid>
       <description> This will be a site hosting tutorials for various subjects in Data Science
-Python R SQL Git Unix </description>
+Python R SQL Git Getting Started with Git
+Unix </description>
     </item>
     
     <item>

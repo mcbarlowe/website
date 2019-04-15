@@ -43,4 +43,4 @@ paginate = 5
       [[languages.en.menu.main]]
         identifier = "Tutorials"
         name = "Tutorials"
-        url = "/tutorials/tutorial"
+        url = "/tutorials"
