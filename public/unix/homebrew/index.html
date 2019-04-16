@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Homebrew Install :: Barlowe Analytics — Posts about Data Science</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="by Matthew Barlowe Homebrew is a very usefual package manager that can be installed on the macOS system. It&amp;rsquo;s what I use to manage by Python installations along with my SQL database as well. It has a nice, easy to learn, syntax and is simple to install from the terminal on an Apple computer. What is a package manager you ask? Well join me in the next section and we&amp;rsquo;ll discuss the details behind it."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://barloweanalytics.com/unix/homebrew/" />
+
+
+<link rel="stylesheet" href="https://barloweanalytics.com/assets/style.css">
+
+  <link rel="stylesheet" href="https://barloweanalytics.com/assets/pink.css">
+
+
+
+<link rel="stylesheet" href="https://barloweanalytics.com/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://barloweanalytics.com/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://barloweanalytics.com/img/favicon/pink.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Homebrew Install :: Barlowe Analytics — Posts about Data Science" />
+<meta name="twitter:description" content="by Matthew Barlowe Homebrew is a very usefual package manager that can be installed on the macOS system. It&amp;rsquo;s what I use to manage by Python installations along with my SQL database as well. It has a nice, easy to learn, syntax and is simple to install from the terminal on an Apple computer. What is a package manager you ask? Well join me in the next section and we&amp;rsquo;ll discuss the details behind it." />
+<meta name="twitter:site" content="https://barloweanalytics.com/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Homebrew Install :: Barlowe Analytics — Posts about Data Science">
+<meta property="og:description" content="by Matthew Barlowe Homebrew is a very usefual package manager that can be installed on the macOS system. It&amp;rsquo;s what I use to manage by Python installations along with my SQL database as well. It has a nice, easy to learn, syntax and is simple to install from the terminal on an Apple computer. What is a package manager you ask? Well join me in the next section and we&amp;rsquo;ll discuss the details behind it." />
+<meta property="og:url" content="https://barloweanalytics.com/unix/homebrew/" />
+<meta property="og:site_name" content="Homebrew Install" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-04-15 18:38:25 -0400 EDT" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Barlowe Analytics
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about/aboutme">About</a></li>
+        
+      
+        
+          <li><a href="/tutorials">Tutorials</a></li>
+        
+      
+        
+          <li><a href="/work">Work</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about/aboutme">About</a></li>
+      
+    
+      
+        <li><a href="/tutorials">Tutorials</a></li>
+      
+    
+      
+        <li><a href="/work">Work</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://barloweanalytics.com/unix/homebrew/">Homebrew Install</a></h1>
+  <div class="post-meta">
+    <span class="post-date">
+      2019-04-15
+    </span>
+    
+  </div>
+
+  
+
+  
+
+  <div class="post-content">
+    <p><h2> by Matthew Barlowe</h2>
+      <br />
+      <p>Homebrew is a very usefual package manager that can be installed on the macOS system.
+      It&rsquo;s what I use to manage by Python installations along with my SQL database as well.
+      It has a nice, easy to learn, syntax and is simple to install from the terminal on an
+      Apple computer. What is a package manager you ask? Well join me in the next section and
+      we&rsquo;ll discuss the details behind it.</p>
+      <h2>What is a Package Manager?</h2>
+      <p>A package manger is according to <a href='https://en.wikipedia.org/wiki/Package_manager' target="_blank">Wikipedia</a>
+      &ldquo;A a collection of software tools that automates the process of installing, upgrading,
+      configuring, and removing computer programs for a computer&rsquo;s operating system in a
+      consistent manner.&rdquo; In normal speak its just a program that handles programs on your&gt;Wikipedia</a>
+      &ldquo;A a collection of software tools that automates the process of installing, upgrading,
+      configuring, and removing computer programs for a computer&rsquo;s operating system in a
+      consistent manner.&rdquo; In normal speak its just a program that handles programs on your
+      computer. Instead of having to go to Google to upgrade Chrome, or going to Adobe to
+      upgrade Photoshop, this program takes care of all that leg work and brings the files to
+      you while all you have to do is type a simple command.</p>
+      <p>The package manager will also keep track of what programs you have installed on your
+      system and what versions of those programs are installed as well. It&rsquo;s a very useful for
+      getting things up and running quickly and effortlessly without having to worry about dealing
+      with source files. If I was powering on a new Macbook or iMac for the first time, Homebrew
+      would be the first program I installed to get the software I need to develop my scripts.
+      <h2>Installing Homebrew</h2>
+      <p>Installing Homebrew is simple and just takes this simple one line command:
+      <br />
+      <br />
+        <code>
+          /usr/bin/ruby -e &ldquo;$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;">https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</a>
+        </code>
+      <br />
+      <br />
+      Copy and paste that into your terminal and hit enter and that&rsquo;s all you need to do.
+      And now you&rsquo;re on your way to becoming a programmer. You can read more about the Homebrew
+      package manager at the <a href='https://brew.sh' target="_blank">Homebrew website.</a>
+      <h2>How Does Homebrew Work?</h2>
+      <p>If you clicked on the page I linked above you would see that &ldquo;Homebrew installs packages
+      to their own directory and then symlinks their files into <code>/usr/local</code>. Ok, so what
+      does all that mean? We&rsquo;ll break it down piece by piece. So first Homebrew installs the files
+      you want in its own file system so they don&rsquo;t contaminate other files of the operating system.
+      This is especially important for langauges like Ruby and Python where the Mac OS has system
+      installed versions of these langauges already installed in <code>/usr/bin</code>. You never want
+      to touch the versions of these located in that folder as it can affect other programs the OS
+      runs.</p>
+      <p>But the operating system won&rsquo;t know where these files are located because the directory is
+      not stored in the OS <code>$PATH</code> environment variable(If you don&rsquo;t understand what that is
+      don&rsquo;t worry we&rsquo;ll get there in future tutorials). So to get around that Homebrew creates a symbolic
+      link to its files and stores those in your <code>/usr/local/bin</code> which is in the <code>$PATH</code>
+      variable.</p>
+      <p>A symbolic link is basically the same as a shortcut in Windows or Mac where you create an
+      icon on your desktop to point to a file or a directory. However, a symbolic link does a little
+      bit more as it <a href='https://www.makeuseof.com/tag/what-is-a-symbolic-link-what-are-its-uses-makeuseof-explains/' target="_blank">
+        &ldquo;will make it look like the linked file is actually there, rather than it just being a shortcut.&rdquo;</a>
+      So Homebrew is making it look like the programs are in the bin folder
+      so when we type the commands into terminal they will execute properly.</p>
+      <p>One last thing I&rsquo;ll touch on quickly is why installing to <code>/usr/local/</code>
+      is important.  <code>/usr</code> back in the olden days was used to store executables and
+      libraries that were not system critical, and <code>/usr/local/</code> was used to store software
+      that wouldn&rsquo;t be overwritten with a system update i.e. it was installed locally. However that
+      has changed in recent years with most linuxes symbolic linking <code>/bin</code> to
+      <code>/usr/bin</code> and Apple has <code>/usr</code> protected as well. By installing into
+      <code>/usr/local/</code>we avoid accidentally overwritting or messing up files in our
+      <code>usr/bin</code> that could cause serious issues in the operation of the Mac OS. Again
+      it&rsquo;s not neccesary to know any of this to get Homebrew to work on your computer so if you don&rsquo;t
+      I wouldn&rsquo;t worry about it too much.
+      <h2>Homebrew Commands</h2>
+      <p>Homebrew has three basic commands:
+      <br />
+      <br />
+      <code>brew install [package name]</code>
+      <br />
+      <br />
+      <code>brew uninstall [package name]</code>
+      <br />
+      <br />
+      <code>brew upgrade [package name]</code>
+      <br />
+      <br />
+      These three commands will install new packages, remove old packages you no longer want,
+      and update packages that are out of date. That&rsquo;s it, pretty easy right? There&rsquo;s a lot more
+      to Homebrew than this, but if you want to learn more I suggest checking out the documentation
+      in the link to their site above or the links in the sources I list below.
+      <h2>Other OS Package Managers:</h2>
+      <p>Homebrew is only available for the MacOS, but if you&rsquo;re on Windows or Linux don&rsquo;t despair.
+      <a href='http://linuxbrew.sh'>Linux Brew</a> is a package manager for Linux that is a fork of
+      the Homebrew repo so should work in a very similar fashion. There&rsquo;s also more traditional linux package
+      managers such as <code>yum</code> and <code>apt</code>.
+      For Windows there seems to be
+      <a href='https://chocolatey.org'>Chocolatey</a> that has both a GUI and a command line
+      implementation.  I hav used <code>linuxbrew</code> for a little bit but it didn&rsquo;t work quite as
+      seemlessly as Homebrew does for OS X so I&rsquo;d recommend going with <code>yum</code> or <code>apt</code>.
+      As far as Chocolatey I haven&rsquo;t used it at all so I can&rsquo;t speak to its usefulness.
+      <a href='mailto:mcbarlowe@gmail.com'>mcbarlowe@gmail.com</a> and let me know.</p>
+      <h2>Sources:</h2>
+      <p><a href='http://www.pyladies.com/blog/Get-Your-Mac-Ready-for-Python-Programming/'>
+        Getting Your Mac Ready For Python Programming</a>
+      <br />
+      <a href='https://kb.iu.edu/d/abbe' target="_blank">Create a Symbolic Link in Unix</a>
+      <br />
+      <a href='https://unix.stackexchange.com/questions/4186/what-is-usr-local-bin' target="_blank">What is /usr/local/bin</a>
+      <br />
+      <a href='https://en.wikipedia.org/wiki/Unix_filesystem#Conventional_directory_layout' target="_blank">Unix Filesystem Layout</a>
+      <br />
+      <a href='https://www.centos.org/docs/5/html/5.1/Deployment_Guide/s3-filesystem-usr-local.html' target="_blank">CentOS Docs</a>
+      <br />
+      <a href='https://en.wikipedia.org/wiki/PATH_(variable)' target="_blank">$PATH variable</a>
+      <br />
+      <a href='https://computers.tutsplus.com/tutorials/homebrew-demystified-os-xs-ultimate-package-manager--mac-44884' target="_blank">Homebrew Demystified</a></p>
+
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">2019</div>
+    
+  </div>
+</footer>
+
+<script src="https://barloweanalytics.com/assets/main.js"></script>
+<script src="https://barloweanalytics.com/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

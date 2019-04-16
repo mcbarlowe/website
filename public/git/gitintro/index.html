@@ -85,11 +85,11 @@
         
       
         
-          <li><a href="/showcase">Showcase</a></li>
+          <li><a href="/tutorials">Tutorials</a></li>
         
       
         
-          <li><a href="/tutorials">Tutorials</a></li>
+          <li><a href="/work">Work</a></li>
         
       
       
@@ -103,11 +103,11 @@
       
     
       
-        <li><a href="/showcase">Showcase</a></li>
+        <li><a href="/tutorials">Tutorials</a></li>
       
     
       
-        <li><a href="/tutorials">Tutorials</a></li>
+        <li><a href="/work">Work</a></li>
       
     
   </ul>
@@ -148,6 +148,11 @@ it wasn&rsquo;t worth the time.</p>
 once Git clicks for you, you&rsquo;ll never code without it. It&rsquo;s such a powerful
 tool to fit into your coding arsenal. But before we get into setting up
 Git and using let&rsquo;s talk about what Git is and what it does.</p>
+
+<p>This article will be done from a Mac OS X developer point of view. The only
+main differences between Mac and a Windows will be how you install and setup
+git to work on your system. The actual git commands should be the same no
+matter what Operating System (OS) you are on.</p>
 
 <h3 id="what-is-git">What is Git?</h3>
 
@@ -229,10 +234,10 @@ code! It&rsquo;s near
 universiality makes it a common ground for developers to meet and
 collaborate on projects.</p>
 <h2>Setting up Git</h2>
-<p>&gt;The first step to getting Git up and running is to go to <a href='github.com'>Github</a>
+<p>The first step to getting Git up and running is to go to <a href='github.com'>Github</a>
 and setup an account. Once that&rsquo;s done open up a terminal screen and we&rsquo;ll
 get started installing Git. If you don&rsquo;t have Hombrew installed on your
-system please head <a href='homebrew.html'>here</a> and read this tutorial
+system please head <a href="/unix/homebrew/">here</a> and read this tutorial
 to get up to date as I&rsquo;ll be using Homebrew to install Git.</p>
 <p>If you have Homebrew installed and running, all you need to do is type
 this at the command line:</p>
@@ -312,10 +317,10 @@ repository. The third line means there are no files that we can even commit/save
 which again as it is a newly created directory shouldn't be surprising.</p>
 <p>So lets create a file using whichever text editor you prefer. I use Vim myself
 but if you want to use Nano or Emacs that's fine as well. But we'll write a
-simple python script show below and then save it as gittutorial.py.</p>
+simple python script show below and then save it as `gittutorial.py`.</p>
 
 <pre><code>for x in range(10):
-print(x)
+    print(x)
 </code></pre>
 
 <p>After you've saved the file exit back out to the command line and run
@@ -343,14 +348,17 @@ $ git add gittutorial.py
 </code></pre>
 <p>Nothing will print out but if you type <code>git status</code> again you will see
 this:</p>
-    On branch master
 
-    No commits yet
+<pre><code>On branch master
 
-    Changes to be committed:
-    (use "git rm --cached file..." to unstage)
+No commits yet
 
-    new file:   gittutorial.py
+Changes to be committed:
+(use &quot;git rm --cached file...&quot; to unstage)
+
+new file:   gittutorial.py
+</code></pre>
+
 <p>So is our file saved? No! At least not yet. All we've done is add the file to the staging area
 so that when we commit the changes to our repository the file will be saved with the commit.
 If you're a little confused don't worry a lot of people are confused over this step. Basically
@@ -379,14 +387,17 @@ nothing to commit, working tree clean
 and then you'll need to repeat the process over again. Ok let's get some more practice with this.
 Go back into your gittutorial.py file and change the number in the range function to 20 save and then
 exit. Now type in <code>git status</code> and you'll see this:</p>
-    On branch master
-    Changes not staged for commit:
 
-    (use "git add file..." to update what will be committed)
-    (use "git checkout -- file..." to discard changes in working directory)
+<pre><code>On branch master
+Changes not staged for commit:
 
-    modified:   gittutorial.py
-    no changes added to commit (use "git add" and/or "git commit -a")
+(use &quot;git add file...&quot; to update what will be committed)
+(use &quot;git checkout -- file...&quot; to discard changes in working directory)
+
+modified:   gittutorial.py
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+
 <p>So now that we've made changes to the file we need to <code>git add</code> and then
 <code>git commit -m "Changed number in range from 10 to 20"</code>. And now you have commited
 your changes for the second time to the repository. So let's introduce a new command
@@ -504,7 +515,7 @@ enter which should produce this output:
 * 88e287f Changed number in range from 10 to 20
 * c9801bb First Commit
 </code></pre>
-<p>As you can se here the dots on the left are our master branch and then we see the newbranch branch out and
+<p>As you can see here the dots on the left are our master branch and then we see the newbranch branch out and
 then come back in which represents our merge. Each asterisk represents a commit on that branch. And now you know
 the basics of Git! There's tons more complex stuff in Git, but these are some of the main commands and along with
 the next ones I'm going to show you represent the majority of commands you'll use on a day to day basis.

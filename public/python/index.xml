@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pythons on Barlowe Analytics</title>
+    <link>https://barloweanalytics.com/python/</link>
+    <description>Recent content in Pythons on Barlowe Analytics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2019</copyright>
+    <lastBuildDate>Mon, 15 Apr 2019 20:24:18 -0400</lastBuildDate>
+    
+	<atom:link href="https://barloweanalytics.com/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python Hello World</title>
+      <link>https://barloweanalytics.com/python/helloworld/</link>
+      <pubDate>Mon, 15 Apr 2019 20:24:18 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/python/helloworld/</guid>
+      <description>by Matthew Barlowe &amp;ldquo;Hello World&amp;rdquo; is a very common first program for just about any programming langauge. I&amp;rsquo;m sure there&amp;rsquo;s some history behind it, but I&amp;rsquo;ve never bothered to look it up. Usually it&amp;rsquo;s just a simple program of very limited lines that prints out the phrase &amp;ldquo;Hello World.&amp;rdquo; The purpose of this tutorial is to get you setup to write that first program.
+Getting Started The first thing to do is open your favorite text editor.</description>
+    </item>
+    
+    <item>
+      <title>Installing Python</title>
+      <link>https://barloweanalytics.com/python/pythoninstall/</link>
+      <pubDate>Mon, 15 Apr 2019 19:25:14 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/python/pythoninstall/</guid>
+      <description>by Matthew Barlowe Ok so if you&amp;rsquo;ve read the Homebrew Tutorial you are ready to actually start using it to start programming in python. If you haven&amp;rsquo;t read that tutorial and you want to follow this one I sugestt going back and reading that one first. First though we need to get your system properly setup to run python safely and avoid problems in the future. The first step to doing that is to install Apple&amp;rsquo;s Xcode utilities, specifically GCC.</description>
+    </item>
+    
+  </channel>
+</rss>

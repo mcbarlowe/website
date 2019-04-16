@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unixes on Barlowe Analytics</title>
+    <link>https://barloweanalytics.com/unix/</link>
+    <description>Recent content in Unixes on Barlowe Analytics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2019</copyright>
+    <lastBuildDate>Mon, 15 Apr 2019 18:38:25 -0400</lastBuildDate>
+    
+	<atom:link href="https://barloweanalytics.com/unix/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Homebrew Install</title>
+      <link>https://barloweanalytics.com/unix/homebrew/</link>
+      <pubDate>Mon, 15 Apr 2019 18:38:25 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/unix/homebrew/</guid>
+      <description>by Matthew Barlowe Homebrew is a very usefual package manager that can be installed on the macOS system. It&amp;rsquo;s what I use to manage by Python installations along with my SQL database as well. It has a nice, easy to learn, syntax and is simple to install from the terminal on an Apple computer. What is a package manager you ask? Well join me in the next section and we&amp;rsquo;ll discuss the details behind it.</description>
+    </item>
+    
+  </channel>
+</rss>

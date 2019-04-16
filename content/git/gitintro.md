@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Git and Github"
 date: 2019-04-14T17:30:40-04:00
-draft: false
+draft: False
 ---
 ### by Matthew Barlowe
 
@@ -15,6 +15,11 @@ Well this article will try to dispel some of those confusions because
 once Git clicks for you, you'll never code without it. It's such a powerful
 tool to fit into your coding arsenal. But before we get into setting up
 Git and using let's talk about what Git is and what it does.
+
+This article will be done from a Mac OS X developer point of view. The only
+main differences between Mac and a Windows will be how you install and setup
+git to work on your system. The actual git commands should be the same no
+matter what Operating System (OS) you are on.
 
 ### What is Git?
 First off let's differentiate between Git and Github. Many people use
@@ -88,10 +93,10 @@ code! It's near
 universiality makes it a common ground for developers to meet and
 collaborate on projects.</p>
 <h2>Setting up Git</h2>
-<p>>The first step to getting Git up and running is to go to <a href='github.com'>Github</a>
+<p>The first step to getting Git up and running is to go to <a href='github.com'>Github</a>
 and setup an account. Once that's done open up a terminal screen and we'll
 get started installing Git. If you don't have Hombrew installed on your
-system please head <a href='homebrew.html'>here</a> and read this tutorial
+system please head [here]({{< relref "unix/homebrew">}}) and read this tutorial
 to get up to date as I'll be using Homebrew to install Git.</p>
 <p>If you have Homebrew installed and running, all you need to do is type
 this at the command line:</p>
@@ -170,10 +175,10 @@ repository. The third line means there are no files that we can even commit/save
 which again as it is a newly created directory shouldn't be surprising.</p>
 <p>So lets create a file using whichever text editor you prefer. I use Vim myself
 but if you want to use Nano or Emacs that's fine as well. But we'll write a
-simple python script show below and then save it as gittutorial.py.</p>
+simple python script show below and then save it as `gittutorial.py`.</p>
 
     for x in range(10):
-    print(x)
+        print(x)
 
 <p>After you've saved the file exit back out to the command line and run
 <code>git status</code> and you should see this on the command line.</p>
@@ -199,6 +204,7 @@ $ git add gittutorial.py
 </code></pre>
 <p>Nothing will print out but if you type <code>git status</code> again you will see
 this:</p>
+
     On branch master
 
     No commits yet
@@ -207,6 +213,7 @@ this:</p>
     (use "git rm --cached file..." to unstage)
 
     new file:   gittutorial.py
+
 <p>So is our file saved? No! At least not yet. All we've done is add the file to the staging area
 so that when we commit the changes to our repository the file will be saved with the commit.
 If you're a little confused don't worry a lot of people are confused over this step. Basically
@@ -235,6 +242,7 @@ nothing to commit, working tree clean
 and then you'll need to repeat the process over again. Ok let's get some more practice with this.
 Go back into your gittutorial.py file and change the number in the range function to 20 save and then
 exit. Now type in <code>git status</code> and you'll see this:</p>
+
     On branch master
     Changes not staged for commit:
 
@@ -243,6 +251,7 @@ exit. Now type in <code>git status</code> and you'll see this:</p>
 
     modified:   gittutorial.py
     no changes added to commit (use "git add" and/or "git commit -a")
+
 <p>So now that we've made changes to the file we need to <code>git add</code> and then
 <code>git commit -m "Changed number in range from 10 to 20"</code>. And now you have commited
 your changes for the second time to the repository. So let's introduce a new command
@@ -359,7 +368,7 @@ enter which should produce this output:
 * 88e287f Changed number in range from 10 to 20
 * c9801bb First Commit
 </code></pre>
-<p>As you can se here the dots on the left are our master branch and then we see the newbranch branch out and
+<p>As you can see here the dots on the left are our master branch and then we see the newbranch branch out and
 then come back in which represents our merge. Each asterisk represents a commit on that branch. And now you know
 the basics of Git! There's tons more complex stuff in Git, but these are some of the main commands and along with
 the next ones I'm going to show you represent the majority of commands you'll use on a day to day basis.

@@ -18,7 +18,8 @@
       <pubDate>Sat, 13 Apr 2019 21:58:17 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/about/aboutme/</guid>
-      <description>I am a SQL Developer and Stats Analyst for the National Hockey League</description>
+      <description>I am a SQL Developer and Stats Analyst for the National Hockey League
+This site is built using Hugo static site generator. It is hosted on AWS S3 Buckets using AWS Cloudfront to serve SSL certificates and AWS Lambda to clean the urls.</description>
     </item>
     
   </channel>

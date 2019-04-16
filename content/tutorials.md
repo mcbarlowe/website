@@ -7,6 +7,9 @@ draft: false
 This will be a site hosting tutorials for various subjects in Data Science
 
 # Python
+[Installing Python]({{< relref "python/pythoninstall" >}})
+[Python Hello World]({{< relref "python/helloworld" >}})
+
 
 # R
 
@@ -16,6 +19,7 @@ This will be a site hosting tutorials for various subjects in Data Science
 [Getting Started with Git]({{< relref "git/gitintro" >}})
 
 # Unix
+[Homebrew Install]({{<relref "unix/homebrew" >}})
 
 
 

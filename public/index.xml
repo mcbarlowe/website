@@ -7,10 +7,38 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019</copyright>
-    <lastBuildDate>Sun, 14 Apr 2019 17:30:40 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 15 Apr 2019 20:24:18 -0400</lastBuildDate>
     
 	<atom:link href="https://barloweanalytics.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python Hello World</title>
+      <link>https://barloweanalytics.com/python/helloworld/</link>
+      <pubDate>Mon, 15 Apr 2019 20:24:18 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/python/helloworld/</guid>
+      <description>by Matthew Barlowe &amp;ldquo;Hello World&amp;rdquo; is a very common first program for just about any programming langauge. I&amp;rsquo;m sure there&amp;rsquo;s some history behind it, but I&amp;rsquo;ve never bothered to look it up. Usually it&amp;rsquo;s just a simple program of very limited lines that prints out the phrase &amp;ldquo;Hello World.&amp;rdquo; The purpose of this tutorial is to get you setup to write that first program.
+Getting Started The first thing to do is open your favorite text editor.</description>
+    </item>
+    
+    <item>
+      <title>Installing Python</title>
+      <link>https://barloweanalytics.com/python/pythoninstall/</link>
+      <pubDate>Mon, 15 Apr 2019 19:25:14 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/python/pythoninstall/</guid>
+      <description>by Matthew Barlowe Ok so if you&amp;rsquo;ve read the Homebrew Tutorial you are ready to actually start using it to start programming in python. If you haven&amp;rsquo;t read that tutorial and you want to follow this one I sugestt going back and reading that one first. First though we need to get your system properly setup to run python safely and avoid problems in the future. The first step to doing that is to install Apple&amp;rsquo;s Xcode utilities, specifically GCC.</description>
+    </item>
+    
+    <item>
+      <title>Homebrew Install</title>
+      <link>https://barloweanalytics.com/unix/homebrew/</link>
+      <pubDate>Mon, 15 Apr 2019 18:38:25 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/unix/homebrew/</guid>
+      <description>by Matthew Barlowe Homebrew is a very usefual package manager that can be installed on the macOS system. It&amp;rsquo;s what I use to manage by Python installations along with my SQL database as well. It has a nice, easy to learn, syntax and is simple to install from the terminal on an Apple computer. What is a package manager you ask? Well join me in the next section and we&amp;rsquo;ll discuss the details behind it.</description>
+    </item>
     
     <item>
       <title>Introduction to Git and Github</title>
@@ -22,13 +50,14 @@
     </item>
     
     <item>
-      <title>Showcase</title>
-      <link>https://barloweanalytics.com/showcase/</link>
+      <title>My Work</title>
+      <link>https://barloweanalytics.com/work/</link>
       <pubDate>Sat, 13 Apr 2019 22:46:09 -0400</pubDate>
       
-      <guid>https://barloweanalytics.com/showcase/</guid>
-      <description>My Work Rpubs Here&amp;rsquo;s some of the Data Analysis I&amp;rsquo;ve done in R. I don&amp;rsquo;t use R as much as I used to but I still love doing simply data exploration/graphing in it.
-Github A lot of my public work had to be taken down due to my current job as it dealt with hockey analytics with a NHL focus. I&amp;rsquo;m starting to branch out into other things such as NBA analysis and fintech in the public spheres these days.</description>
+      <guid>https://barloweanalytics.com/work/</guid>
+      <description>Rpubs Here&amp;rsquo;s some of the Data Analysis I&amp;rsquo;ve done in R. I don&amp;rsquo;t use R as much as I used to but I still love doing simple data exploration/graphing in it.
+Github A lot of my public work had to be taken down due as it dealt with NHL analytics. I&amp;rsquo;ve branched out into other things such as NBA analysis and fintech in the public sphere these days.
+LinkedIn Standard LinkedIn stuff including some of the presentations I&amp;rsquo;ve done in the past on hockey analytics</description>
     </item>
     
     <item>
@@ -37,9 +66,10 @@ Github A lot of my public work had to be taken down due to my current job as it 
       <pubDate>Sat, 13 Apr 2019 22:24:45 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/tutorials/</guid>
-      <description> This will be a site hosting tutorials for various subjects in Data Science
-Python R SQL Git Getting Started with Git
-Unix </description>
+      <description>This will be a site hosting tutorials for various subjects in Data Science
+Python Installing Python Python Hello World
+R SQL Git Getting Started with Git
+Unix Homebrew Install</description>
     </item>
     
     <item>
@@ -48,7 +78,8 @@ Unix </description>
       <pubDate>Sat, 13 Apr 2019 21:58:17 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/about/aboutme/</guid>
-      <description>I am a SQL Developer and Stats Analyst for the National Hockey League</description>
+      <description>I am a SQL Developer and Stats Analyst for the National Hockey League
+This site is built using Hugo static site generator. It is hosted on AWS S3 Buckets using AWS Cloudfront to serve SSL certificates and AWS Lambda to clean the urls.</description>
     </item>
     
     <item>
