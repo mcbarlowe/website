@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019</copyright>
-    <lastBuildDate>Mon, 15 Apr 2019 20:24:18 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 16 Apr 2019 17:53:57 -0400</lastBuildDate>
     
 	<atom:link href="https://barloweanalytics.com/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Loops</title>
+      <link>https://barloweanalytics.com/python/loops/</link>
+      <pubDate>Tue, 16 Apr 2019 17:53:57 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/python/loops/</guid>
+      <description>by Matthew Barlowe Loops are an important part of programming in any language. So in this tutorial we are going to go over what they do and how to implement them.
+In Python there are two typs of loops: the for loop and the while loop. But before we get into the distinction of the two lets talk about why you want to use loops in your programming.
+Why loops?</description>
+    </item>
     
     <item>
       <title>Python Hello World</title>

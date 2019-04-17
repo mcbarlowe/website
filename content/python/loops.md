@@ -1,7 +1,7 @@
 ---
 title: "Loops"
 date: 2019-04-16T17:53:57-04:00
-draft: true
+draft: False
 ---
 
 ## by Matthew Barlowe
@@ -39,7 +39,7 @@ above we don't want to do that. This is where the `for` loop comes in. Lets look
     for x in range(5):
         print("Let's Go")
 
-If you put that in a file and run it similar to what we did in the [Hello World]({{< "python/helloworld" >}})
+If you put that in a file and run it similar to what we did in the [Hello World]({{< relref "python/helloworld" >}})
 tutorial it would produce this:
 
     Let's Go
@@ -59,6 +59,123 @@ reprogram yourself to think of 0 as 1. [It's easy not hard!](https://www.youtube
 So if it starts at zero then why did you put 5 in there? Why not 4? That's because the end range in a lot
 of Python things is not inclusive. 5 tells it where to stop but it doesn't include it in the actual group
 of numbers `range` returns. I understand all this is a bit counterintuitive and I still mess it up sometimes,
-but with practice it will come naturally.
+but with practice it will come ... well not naturally but you'll only mess it up half the time instead
+of all the time.
+
+So the `range(5)` gives us what we are going to loop over. As you learn more about Python you'll see
+that `range(5)` is just one of many things you can loop over. The other part of the sentence `for x`
+is where the looping happens. `for x` is actually saying "for each item in `range(5)`", the `x` is just
+a variable for that item. You could replace `x` with anything:
+
+    for x in range(5):
+        print("Let's Go")
+
+    for number in range(5):
+        print("Let's Go")
+
+    for thingy in range(5):
+        print("Let's Go")
+
+    for Bob in range(5):
+        print("Let's Go")
+
+All those blocks of code will produce the same output shown above which is five lines of "Let's Go."
+
+Think of `for` loops as having a bag of marbles. And like in code you can't do anything else until
+you pull every marble out of the bag.  In this analogy `range(5)` would be our bag of marbles and `for x`
+would be the act of us pulling each marble out at a time. The `print("Let's Go")` would be what we do
+each time we pull a marble out of the bag. So the process would be pull a marble, do something, pull a marble,
+do something, etc. until you ran out of marbles. That's a real word equivalent of what we just
+told the computer to do with our `for` loop above.
+
+The real power of Python `for` loops happens though when you need to do something to each
+marble you pull out of the bag. That's where the `for x` part comes in. By assigning each item
+in the collection to a variable we can do things with those variables as we loop through the collection
+For example:
+
+    for x in range(5):
+        print(x)
+
+Which produces this output:
+
+    0
+    1
+    2
+    3
+    4
+
+We can print them, perform mathematical operations on them, store them in file for safe keeping etc.
+`for` loops are a tool that is indispensable not only in Python but in all programming languages as
+they form a core concept of programming and computer science. One key aspect though of the variables
+we create with a loop is if you have that variable name storing a value somewhere else in your code
+the loop will override that value with the last value it has from the loop. For example:
+
+    x = 10
+    for x in range(5)
+        print(x)
+    print(x)
+
+The output will be:
+
+    0
+    1
+    2
+    3
+    4
+    4
+
+The value of ten will be overwritten and gone.
+
+# While Loops
+
+`while` loops are a bit different than `for` loops. `for` loops will end when the amount of items
+they need to loop over is exhausted. `while` loops will continuing looping until a certain logical condition
+is met. Which is why you have to be careful when using them because thy can continue forever creating
+a condition called an infinite loop that will never terminate unless you force it to. If your program
+does this usually a `Ctrl+C` is the break signal for most computers to stop running things and if that
+doesn't work you can always restart.
+
+While loops look like this:
+
+    x = 0
+    while x < 5:
+        print(x)
+        x += 1
+
+As you can see the conditional statement in this `while` loop is `x<5`, and as long as
+`x` continues to be less than 5 the loop will continue repeating. That's why we have to add
+the line `x += 1`[^1] in there to increment the value of `x` each time the loop repeats. If we
+didn't do that then the loop would continue forever.
+
+#Summary
+
+Ok lets wrap things up. One last thing about syntax is that both `for` and `while` loop
+lines must end in a `:` or else Python will get angry and yell at you.
+
+* `for` loops
+    1. Loop over a collection of items passed to them and performs some code until colleciton is exhausted
+    2. As the loop progresses assigns each item if pulls from the collection to a variable
+    which you can then use or ignore
+    3. Has the syntax `for x in collection:` where `collection` is the items you want to loop
+    over and `x` is the variable you assign the piece of the collection the code pulls in that
+    run through the loop
+* `while` loops
+    1. Loops over a set of commands until a conditional statement is met.
+    2. Any variables use in the loop statment are usually assigned before the loop statement
+    and not in the loop statement unlike `for` loops.
+    3. Has the syntax `while condition is true:` where the condition could be `x=10`, `sky='blue'`
+    etc. The condition is whatever you want it to be.
+    4. It is very easy to create infinite loops and must use caution in creating `while`
+
+This page is on [Github](https://github.com/mcbarlowe/website). If you see errors feel free to
+submit a pull request or contact me on [Twitter](https://twitter.com/barloweanalytic) or email
+[barloweanalytics@gmail.com](mailto:barloweanalytics@gmail.com).
 
 
+
+
+[^1]: `x += 1` is the equivalent of `x = x + 1`. You can also do this with other math functions
+    such as `x -= 1` which is the same as `x = x - 1` or `x *= 1` which is the same as `x = x * 1`.
+    There is no benefit in using one over the other other than to save keystrokes and keep know it
+    alls on Stack Overflow from trying to uneccesarily improve your code even though you didnt ask
+    them to.
