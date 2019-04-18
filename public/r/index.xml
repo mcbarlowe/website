@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rs on Barlowe Analytics</title>
+    <link>https://barloweanalytics.com/r/</link>
+    <description>Recent content in Rs on Barlowe Analytics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2019</copyright>
+    <lastBuildDate>Wed, 17 Apr 2019 23:12:25 -0400</lastBuildDate>
+    
+	<atom:link href="https://barloweanalytics.com/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://barloweanalytics.com/r/helloworld/</link>
+      <pubDate>Wed, 17 Apr 2019 23:12:25 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/r/helloworld/</guid>
+      <description> by Matthew Barlowe Some simple Hello World code.
+print(&amp;quot;Hello World!&amp;quot;) print(&amp;quot;Hello World!&amp;quot;, quote=FALSE) print(paste(&amp;quot;Hello&amp;quot;, &amp;quot;World!&amp;quot;))  produces this output:
+&amp;quot;Hello World!&amp;quot; Hello World! &amp;quot;Hello World!&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>Loops</title>
+      <link>https://barloweanalytics.com/r/loops/</link>
+      <pubDate>Wed, 17 Apr 2019 20:51:38 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/r/loops/</guid>
+      <description>by Matthew Barlowe This is a tutorial going over the syntax of loops in R. If you want a break down of how loops work and the philosophy please read my Python loop tutorial. Loops should be a last resort in R as they are slow and inefficient. Often you can do what you need to in loops using the apply family of functions or the purrr package.
+for loops for (i in 1:10) { print(paste(&amp;quot;Your number is&amp;quot;, i)) } some_numbers &amp;lt;- c(1,3,5,3,0,10,35) for (i in some_numbers) { print(paste(&amp;quot;Your number is&amp;quot;, i)) }  while loops answer &amp;lt;- readline(prompt=&amp;quot;What&#39;s the best part about Matt?</description>
+    </item>
+    
+  </channel>
+</rss>

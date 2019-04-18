@@ -24,7 +24,8 @@ from the perspective of working in a Mac OS X environment.
 <table border="0" style="border: none;padding:0; margin:0;">
   <tr>
   <td style="border: none; padding:0; margin:0;">
-  <p>[Python Hello World]({{< relref "python/helloworld" >}})</p>
+  <p>[Hello World]({{< relref "python/helloworld" >}})</p>
+  <p>[Functions]({{< relref "python/functions" >}})</p>
   </td>
   <td style="border: none;padding:0; margin:0;">
   <p>[Loops]({{< relref "python/loops/" >}})</p>
@@ -34,6 +35,30 @@ from the perspective of working in a Mac OS X environment.
 
 
 # R
+* Basics
+<table border="0" style="border: none;padding:0; margin:0;">
+  <tr>
+  <td style="border: none; padding:0; margin:0;">
+  <p>[Hello World]({{< relref "r/helloworld/" >}})</p>
+  </td>
+  <td style="border: none;padding:0; margin:0;">
+  <p>[Loops]({{< relref "r/loops/" >}})</p>
+  </td>
+  </tr>
+</table>
+
+# Java
+* Basics
+<table border="0" style="border: none;padding:0; margin:0;">
+  <tr>
+  <td style="border: none; padding:0; margin:0;">
+  <p>[Hello World]({{< relref "java/helloworld/" >}})</p>
+  </td>
+  <td style="border: none;padding:0; margin:0;">
+  <p></p>
+  </td>
+  </tr>
+</table>
 
 # SQL
 This will mainly deal with PostgreSQL but a lot of the basic commands translate to

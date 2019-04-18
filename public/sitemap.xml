@@ -4,19 +4,51 @@
   
   <url>
     <loc>https://barloweanalytics.com/</loc>
-    <lastmod>2019-04-16T17:53:57-04:00</lastmod>
+    <lastmod>2019-04-17T23:22:23-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://barloweanalytics.com/java/helloworld/</loc>
+    <lastmod>2019-04-17T23:22:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://barloweanalytics.com/java/</loc>
+    <lastmod>2019-04-17T23:22:23-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://barloweanalytics.com/r/helloworld/</loc>
+    <lastmod>2019-04-17T23:12:25-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://barloweanalytics.com/r/</loc>
+    <lastmod>2019-04-17T23:12:25-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://barloweanalytics.com/r/loops/</loc>
+    <lastmod>2019-04-17T20:51:38-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://barloweanalytics.com/python/functions/</loc>
+    <lastmod>2019-04-17T20:51:24-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://barloweanalytics.com/python/</loc>
+    <lastmod>2019-04-17T20:51:24-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://barloweanalytics.com/python/loops/</loc>
     <lastmod>2019-04-16T17:53:57-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://barloweanalytics.com/python/</loc>
-    <lastmod>2019-04-16T17:53:57-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

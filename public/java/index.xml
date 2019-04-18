@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javas on Barlowe Analytics</title>
+    <link>https://barloweanalytics.com/java/</link>
+    <description>Recent content in Javas on Barlowe Analytics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2019</copyright>
+    <lastBuildDate>Wed, 17 Apr 2019 23:22:23 -0400</lastBuildDate>
+    
+	<atom:link href="https://barloweanalytics.com/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://barloweanalytics.com/java/helloworld/</link>
+      <pubDate>Wed, 17 Apr 2019 23:22:23 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/java/helloworld/</guid>
+      <description>Ok Java is a little different than R or Python in that in order to run any code you have to first create a class object. I haven&amp;rsquo;t yet written a tutorial on classes and inheritence which form the basis of Object Oriented Programming.
+If you&amp;rsquo;re trying to learn Java coming from Python or R this fact will be very disorienting as you can&amp;rsquo;t can&amp;rsquo;t just type some lines and run them at the command line.</description>
+    </item>
+    
+  </channel>
+</rss>
