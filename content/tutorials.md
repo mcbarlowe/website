@@ -56,7 +56,7 @@ from the perspective of working in a Mac OS X environment.
   <p>[Hello World]({{< relref "java/helloworld/" >}})</p>
   </td>
   <td style="border: none;padding:0; margin:0;">
-  <p></p>
+  <p>[Loops]({{< relref "java/loops/" >}})</p>
   </td>
   </tr>
 </table>
