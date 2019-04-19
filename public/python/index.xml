@@ -18,7 +18,7 @@
       <pubDate>Wed, 17 Apr 2019 20:51:24 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/python/functions/</guid>
-      <description>Work in Progress</description>
+      <description>by Matthew Barlowe What is a function? Basically &amp;ldquo;a function is a block of code which only runs when it is called.&amp;rdquo; But what does that mean? It means that you have set aside a set of code inside your overall program that won&amp;rsquo;t run unless you specifically tell the computer that you want to run it. Still doesn&amp;rsquo;t make sense? Let&amp;rsquo;s look at it in action. Create a file let&amp;rsquo;s call it test.</description>
     </item>
     
     <item>

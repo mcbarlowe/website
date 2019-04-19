@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Work in Progress"/>
+<meta name="description" content="by Matthew Barlowe What is a function? Basically &amp;ldquo;a function is a block of code which only runs when it is called.&amp;rdquo; But what does that mean? It means that you have set aside a set of code inside your overall program that won&amp;rsquo;t run unless you specifically tell the computer that you want to run it. Still doesn&amp;rsquo;t make sense? Let&amp;rsquo;s look at it in action. Create a file let&amp;rsquo;s call it test."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://barloweanalytics.com/python/functions/" />
@@ -29,7 +29,7 @@
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Functions :: Barlowe Analytics — Posts about Data Science" />
-<meta name="twitter:description" content="Work in Progress" />
+<meta name="twitter:description" content="by Matthew Barlowe What is a function? Basically &amp;ldquo;a function is a block of code which only runs when it is called.&amp;rdquo; But what does that mean? It means that you have set aside a set of code inside your overall program that won&amp;rsquo;t run unless you specifically tell the computer that you want to run it. Still doesn&amp;rsquo;t make sense? Let&amp;rsquo;s look at it in action. Create a file let&amp;rsquo;s call it test." />
 <meta name="twitter:site" content="https://barloweanalytics.com/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image" content="">
@@ -38,7 +38,7 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Functions :: Barlowe Analytics — Posts about Data Science">
-<meta property="og:description" content="Work in Progress" />
+<meta property="og:description" content="by Matthew Barlowe What is a function? Basically &amp;ldquo;a function is a block of code which only runs when it is called.&amp;rdquo; But what does that mean? It means that you have set aside a set of code inside your overall program that won&amp;rsquo;t run unless you specifically tell the computer that you want to run it. Still doesn&amp;rsquo;t make sense? Let&amp;rsquo;s look at it in action. Create a file let&amp;rsquo;s call it test." />
 <meta property="og:url" content="https://barloweanalytics.com/python/functions/" />
 <meta property="og:site_name" content="Functions" />
 <meta property="og:image" content="">
@@ -134,7 +134,206 @@
   
 
   <div class="post-content">
-    <p>Work in Progress</p>
+    
+
+<h3 id="by-matthew-barlowe">by Matthew Barlowe</h3>
+
+<p>What is a function? Basically <a href="https://www.w3schools.com/python/python_functions.asp">&ldquo;a function is a block of code which only runs when it is called.&rdquo;</a>
+But what does that mean? It means that you have set aside a set of code inside your overall program
+that won&rsquo;t run unless you specifically tell the computer that you want to run it. Still doesn&rsquo;t make
+sense? Let&rsquo;s look at it in action. Create a file let&rsquo;s call it <code>test.py</code> and add this code to it:</p>
+
+<pre><code>def our_function():
+    print(&quot;This code is our function&quot;)
+
+print(&quot;This code is not our function&quot;)
+</code></pre>
+
+<p>Ok lets talk a little about the syntax before diving in deeper about how the
+code works. In python functions are declared using <code>def</code> (short for define) which
+tells Python we are declaring a function. <code>our_function</code> is what we want to
+call the function and the <code>()</code> will tell what parameters we want to pass
+to the function. In this case there are no parameters but you still need the
+<code>()</code>. The <code>:</code> is also required at the end of every function declaration just like
+with <code>for</code> and <code>while</code> loops. Also all code inside a function has to be indented
+four spaces to tell the Python interpretor that those lines of code belongs to the function
+just like you have to do with loops.</p>
+
+<p>So if you ran that code what would expect the output to be? If you said just
+<code>This code is not our function</code> then you would be correct. Python effectively
+ignored our function when it runs the <code>test.py</code> file because we didn&rsquo;t <strong>specifically</strong>
+tell our script to run that code. So how do you tell your script you want to run
+that function? You do so by doing what&rsquo;s known as  &ldquo;calling the function.&rdquo; This is
+done by simply typing the functions name like this <code>our_function()</code> in your code.
+For example:</p>
+
+<pre><code>def our_function():
+    print(&quot;This code is our function&quot;)
+
+print(&quot;This code is not our function&quot;)
+our_function()
+</code></pre>
+
+<p>If you run that script now you will get this output:</p>
+
+<pre><code>This code is not our function
+This code is our function
+</code></pre>
+
+<h1 id="function-parameters">Function Parameters</h1>
+
+<p>What are function parameters? Function paramaters are values you pass to the function
+whenever you call the function in your code. You normally pass the function paramters
+because you want to do something to them inside the code of the function.
+Our function above didn&rsquo;t have any paramaters because there was nothing in the <code>()</code>
+when we decalred the function. But lets look at a function with parameters:</p>
+
+<pre><code>def new_function(x, y):
+    print(x*y)
+
+new_function(6,3)
+</code></pre>
+
+<p>What do you think the output of our new function will be? If you guessed <code>18</code> you are
+correct! In this case our parameters are <code>x</code> and <code>y</code> in <code>new_function</code>. So when we
+call the function what we put inside the parentheses becomes the value of the parameters
+of the function. The values are assigned in order as they are passed to the function call
+so <code>x</code> is equal to 6 and <code>y</code> is equal to three. If our function was declared like this
+<code>def new_function(y, x)</code> then <code>y</code> would be equal to six and <code>x</code> would be equal to three.</p>
+
+<p>This is an important concept to remember when passing parameters to a function. If you don&rsquo;t
+pass the parameters in the correct order to the function call then the outputs will be
+incorrect.</p>
+
+<h1 id="function-return">Function Return</h1>
+
+<p>So you created a function and you passed it parameters to do something to, but what
+if you need to get the output of what your code does and store it in another variable?
+This is where the <code>return</code> keyword comes in. Using our above example:</p>
+
+<pre><code>def new_function(x, y):
+    print(x*y)
+    return x*y
+
+x = new_function(6,3)
+print(x)
+</code></pre>
+
+<p>What do you think the output of this script will be? If you guessed this you are correct</p>
+
+<pre><code>18
+18
+</code></pre>
+
+<p>As you can see the function prints out the value of <code>x*y</code> and then returns that value
+when has completed running. We take that value the funciton <code>new_function</code> returned and
+stored it in the variable <code>x</code> and then printed the value of <code>x</code> which is another 18.</p>
+
+<p>One quick thing I want to touch on before we move on is the fact I use <code>x</code> as a variable twice
+in this example. Are they the same variable? No they are two completely different
+variables. The <code>x</code> variable that is the function parameter only exists within the function
+itself. This idea is known as the variables scope. The scope is the area in which a variable
+can be used, any use outside that area will result in an error. Try running this code:</p>
+
+<pre><code>def new_function(x, y):
+    print(x*y)
+    return x*y
+
+new_function(6,3)
+print(x)
+</code></pre>
+
+<p>Which will produce this output:</p>
+
+<pre><code>18
+Traceback (most recent call last):
+  File &quot;test.py&quot;, line 6, in &lt;module&gt;
+    print(x)
+NameError: name 'x' is not defined
+</code></pre>
+
+<p>Even though we create <code>x</code> and assign it a value when we call the function, that variable only
+exists inside the code of that function once we try to use it outside that scope Python throws
+and error. Scope will be very important in the next section.</p>
+
+<h1 id="functions-in-functions">Functions in Functions</h1>
+
+<p>Yes you can have funcions inside your functions, and if you wanted even functions inside those other functions.
+Here&rsquo;s an example</p>
+
+<pre><code>def math_function(x,y):
+
+    def add_function(x,y):
+        return x + y
+
+    def subtract_function(x,y):
+        return x - y
+
+    return add_function(x,y), subtract_function(x,y)
+
+x, y = math_functions(6,3)
+print(x, y)
+</code></pre>
+
+<p>What do you think the output of this would be? If you guessed <code>9 3</code> you are correct. There&rsquo;s
+a couple new things in this one I want to touch on before we continue. A function can return as
+many things you want it to just seperate the values with a comma in the <code>return</code> statement as seen
+in <code>return add_function(x,y), subtract_function(x,y)</code> and then you can assign them to individual
+variables seperated by a comma as seen in <code>x, y = math_functions(6,3)</code> where the first variable
+will be the first value returned, the second variable the second value etc.</p>
+
+<p>As you can see here we created functions of <code>add_function</code> and <code>subtract_function</code> inside our
+larger <code>math_function</code> function. But remember like the <code>x</code> variable above the <code>add_function</code>
+and the <code>subtract_function</code> only exist inside the <code>math_function</code>. You can&rsquo;t call them in the main
+part of your script without getting an error. If you wanted to be able to call them anywhere
+in the file you would need to define the outside of the <code>math_function</code> like so:</p>
+
+<pre><code>def add_function(x,y):
+    return x + y
+
+def subtract_function(x,y):
+    return x - y
+
+def math_function(x,y):
+    return add_function(x,y), subtract_function(x,y)
+
+print(add_function(6,3))
+print(subtract_function(6,3))
+print(math_function(6,3))
+</code></pre>
+
+<p>One last thing is that you shouldn&rsquo;t variables inside the scopre of your function like I did
+in the example above. You technically can but its considered bad programming form as you can easily
+confuse what the variables represent at any given time in the code and makes it hard for others
+to read.</p>
+
+<h1 id="overview">Overview</h1>
+
+<p>Functions are a key part to becoming a better programmer. But now that you know the how let&rsquo;s talk
+a little about the why. Functions help programmers follow the &ldquo;Don&rsquo;t Repeat Yourself&rdquo; paradigm discussed
+in our <a href="/python/loops/">loops tutorial</a>. They allow you to run a set of code over an over again
+without having to manually type it out every time. Functions also allow us to name a set of operations
+so that we know what those operations do without having to read the source code of the function. Like
+our example you may not know what exactly was in the <code>add_function</code> but you could sort of figure out
+that by its name the function did some sort of addition. This is also why using intuitive names for your
+functions is important as well.</p>
+
+<p>Functions should also be fairly short and to the point. Functions are best when they do one thing very
+well. That one thing may <strong>have</strong> to be very complex sometimes, but the simpler your functions are the easier
+they are to debug when things go wrong and things will go wrong. So some guidlines to take away from this
+when writing your functions in the future are: Short, Simple, Do one thing, Named appropriately.</p>
+
+<h1 id="sources">Sources</h1>
+
+<p><a href="https://www.w3schools.com/python/python_functions.asp">Python Functions</a></p>
+
+<p><a href="https://www.w3schools.com/python/python_functions.asp">What is a Function in Computer Programming</a></p>
+
+<p><a href="https://www.cs.utah.edu/~zachary/computing/lessons/uces-10/uces-10/node11.html">Why Use Funtions</a></p>
+
+<p><a href="https://pythonspot.com/scope/">Scope</a></p>
+
+<p><a href="https://nicercode.github.io/guides/functions/">Nice R Code</a> Some good writing behind the philosophy of functions.</p>
 
   </div>
   

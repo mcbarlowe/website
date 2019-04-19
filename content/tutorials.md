@@ -40,6 +40,7 @@ from the perspective of working in a Mac OS X environment.
   <tr>
   <td style="border: none; padding:0; margin:0;">
   <p>[Hello World]({{< relref "r/helloworld/" >}})</p>
+  <p>[Functions]({{< relref "r/functions/" >}})</p>
   </td>
   <td style="border: none;padding:0; margin:0;">
   <p>[Loops]({{< relref "r/loops/" >}})</p>
