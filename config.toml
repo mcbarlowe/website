@@ -26,6 +26,7 @@ paginate = 5
     menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
+    googleAnalytics = "UA-138686262-1"
 
     [languages.en.params.logo]
       logoText = "Barlowe Analytics"

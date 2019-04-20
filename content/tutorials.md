@@ -64,17 +64,6 @@ from the perspective of working in a Mac OS X environment.
 # SQL
 This will mainly deal with PostgreSQL but a lot of the basic commands translate to
 any SQL flavor
-* Installation
-<table border="0" style="border: none;padding:0; margin:0;">
-  <tr>
-  <td style="border: none; padding:0; margin:0;">
-  <p>[Installing PostgreSQL]({{< relref "sql/install/" >}})</p>
-  </td>
-  <td style="border: none;padding:0; margin:0;">
-  <p></p>
-  </td>
-  </tr>
-</table>
 
 # Git
 [Getting Started with Git]({{< relref "git/gitintro" >}})
