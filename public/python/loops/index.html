@@ -190,7 +190,7 @@ just work on code by yourself, trust me your future self will thank you for your
 ten times in your script and run it and get the desired result. But following the ideas discussed
 above we don&rsquo;t want to do that. This is where the <code>for</code> loop comes in. Lets look at some example code</p>
 
-<pre><code>for x in range(5):
+<pre><code class="language-python">for x in range(5):
     print(&quot;Let's Go&quot;)
 </code></pre>
 
@@ -223,7 +223,7 @@ that <code>range(5)</code> is just one of many things you can loop over. The oth
 is where the looping happens. <code>for x</code> is actually saying &ldquo;for each item in <code>range(5)</code>&rdquo;, the <code>x</code> is just
 a variable for that item. You could replace <code>x</code> with anything:</p>
 
-<pre><code>for x in range(5):
+<pre><code class="language-python">for x in range(5):
     print(&quot;Let's Go&quot;)
 
 for number in range(5):
@@ -250,7 +250,7 @@ marble you pull out of the bag. That&rsquo;s where the <code>for x</code> part c
 in the collection to a variable we can do things with those variables as we loop through the collection
 For example:</p>
 
-<pre><code>for x in range(5):
+<pre><code class="language-python">for x in range(5):
     print(x)
 </code></pre>
 
@@ -269,7 +269,7 @@ they form a core concept of programming and computer science. One key aspect tho
 we create with a loop is if you have that variable name storing a value somewhere else in your code
 the loop will override that value with the last value it has from the loop. For example:</p>
 
-<pre><code>x = 10
+<pre><code class="language-python">x = 10
 for x in range(5)
     print(x)
 print(x)
@@ -298,10 +298,10 @@ doesn&rsquo;t work you can always restart.</p>
 
 <p>While loops look like this:</p>
 
-<pre><code>x = 0
-while x &lt; 5:
-    print(x)
-    x += 1
+<pre><code class="language-python">    x = 0
+    while x &lt; 5:
+        print(x)
+        x += 1
 </code></pre>
 
 <p>As you can see the conditional statement in this <code>while</code> loop is <code>x&lt;5</code>, and as long as
@@ -317,24 +317,24 @@ lines must end in a <code>:</code> or else Python will get angry and yell at you
 <ul>
 <li><code>for</code> loops
 
-<ol>
+<ul>
 <li>Loop over a collection of items passed to them and performs some code until colleciton is exhausted</li>
 <li>As the loop progresses assigns each item if pulls from the collection to a variable
 which you can then use or ignore</li>
 <li>Has the syntax <code>for x in collection:</code> where <code>collection</code> is the items you want to loop
 over and <code>x</code> is the variable you assign the piece of the collection the code pulls in that
 run through the loop</li>
-</ol></li>
+</ul></li>
 <li><code>while</code> loops
 
-<ol>
+<ul>
 <li>Loops over a set of commands until a conditional statement is met.</li>
 <li>Any variables use in the loop statment are usually assigned before the loop statement
 and not in the loop statement unlike <code>for</code> loops.</li>
 <li>Has the syntax <code>while condition is true:</code> where the condition could be <code>x=10</code>, <code>sky='blue'</code>
 etc. The condition is whatever you want it to be.</li>
 <li>It is very easy to create infinite loops and must use caution in creating <code>while</code></li>
-</ol></li>
+</ul></li>
 </ul>
 
 <p>This page is on <a href="https://github.com/mcbarlowe/website">Github</a>. If you see errors feel free to

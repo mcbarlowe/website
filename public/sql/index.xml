@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sqls on Barlowe Analytics</title>
+    <link>https://barloweanalytics.com/sql/</link>
+    <description>Recent content in Sqls on Barlowe Analytics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2019</copyright>
+    <lastBuildDate>Thu, 18 Apr 2019 23:38:39 -0400</lastBuildDate>
+    
+	<atom:link href="https://barloweanalytics.com/sql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install</title>
+      <link>https://barloweanalytics.com/sql/install/</link>
+      <pubDate>Thu, 18 Apr 2019 23:38:39 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/sql/install/</guid>
+      <description>by Matthew Barlowe  This tutorial will cover the basics of getting PostgreSQL setup on your computer and running. We won&amp;rsquo;t actually be working with data in this article, but instead the focus is on the nuts and bolts of what PostgreSQL is and and its structure. But before I get into all that let&amp;rsquo;s start at the beginning. As always these tutorials will be focused on working in a Mac OS X environment.</description>
+    </item>
+    
+  </channel>
+</rss>
