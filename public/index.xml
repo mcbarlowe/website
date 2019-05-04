@@ -6,11 +6,25 @@
     <description>Recent content on Barlowe Analytics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2019</copyright>
-    <lastBuildDate>Thu, 18 Apr 2019 23:38:39 -0400</lastBuildDate>
+    <copyright>2019 Barlowe Analytics</copyright>
+    <lastBuildDate>Sat, 04 May 2019 14:27:59 -0400</lastBuildDate>
     
 	<atom:link href="https://barloweanalytics.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Projects</title>
+      <link>https://barloweanalytics.com/projects/</link>
+      <pubDate>Sat, 04 May 2019 14:27:59 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/projects/</guid>
+      <description>Projects This is a list of all current/past projects I am working on.
+nba_scraper This is a python package for scraping the NBA&amp;rsquo;s api and returning a play by play file or pandas dataframe.
+PyPi page
+Source code
+jAvantage This is a java API wrapper for the Alpha Vantage API. Is currently still in construciton but a succesful Jar can be built from the source code
+Source code</description>
+    </item>
     
     <item>
       <title>Install</title>
@@ -138,7 +152,7 @@ Getting Started The first thing to do is open your favorite text editor.</descri
       
       <guid>https://barloweanalytics.com/work/</guid>
       <description>Rpubs Here&amp;rsquo;s some of the Data Analysis I&amp;rsquo;ve done in R. I don&amp;rsquo;t use R as much as I used to but I still love doing simple data exploration/graphing in it.
-Github A lot of my public work had to be taken down due as it dealt with NHL analytics. I&amp;rsquo;ve branched out into other things such as NBA analysis and fintech in the public sphere these days.
+Github A lot of my public work had to be taken down as it dealt with NHL analytics. I&amp;rsquo;ve branched out into other things such as NBA analysis and fintech in the public sphere these days.
 LinkedIn Standard LinkedIn stuff including some of the presentations I&amp;rsquo;ve done in the past on hockey analytics</description>
     </item>
     
@@ -170,7 +184,7 @@ Functions
       
       <guid>https://barloweanalytics.com/about/aboutme/</guid>
       <description>I am a SQL Developer and Stats Analyst for the National Hockey League
-This site is built using Hugo static site generator. It is hosted on AWS S3 Buckets using AWS Cloudfront to serve SSL certificates and AWS Lambda to clean the urls.</description>
+This site is built using Hugo static site generator. Site theme is terminal by panr. Site is hosted on AWS S3 Buckets using AWS Cloudfront to serve SSL certificates and AWS Lambda to clean the urls. Source code for site can be found here.</description>
     </item>
     
     <item>
@@ -179,7 +193,7 @@ This site is built using Hugo static site generator. It is hosted on AWS S3 Buck
       <pubDate>Sat, 13 Apr 2019 21:36:40 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/posts/my-first-post/</guid>
-      <description>The Rebuild Has Begun Due to a lot (well a few) people asking me about my tutorials I&amp;rsquo;ve decided to bring them back. And It gives me a chance to revamp the old website with a little slicker format. So stay tuned as I slowly work to get things back in the shape they were before. As always you can address any concerns, questions, or requests to barloweanalytics@gmail.com.</description>
+      <description>The Rebuild Has Begun Due to a lot (well a few) people asking me about my tutorials I&amp;rsquo;ve decided to bring them back. And It gives me a chance to revamp the old website with a little slicker format. So stay tuned as I slowly work to get things back in the shape they were before. As always you can address any concerns, questions, or requests to matt@barloweanaltyics.com.</description>
     </item>
     
   </channel>

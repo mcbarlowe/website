@@ -6,7 +6,7 @@
     <description>Recent content in Abouts on Barlowe Analytics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2019</copyright>
+    <copyright>2019 Barlowe Analytics</copyright>
     <lastBuildDate>Sat, 13 Apr 2019 21:58:17 -0400</lastBuildDate>
     
 	<atom:link href="https://barloweanalytics.com/about/index.xml" rel="self" type="application/rss+xml" />
@@ -19,7 +19,7 @@
       
       <guid>https://barloweanalytics.com/about/aboutme/</guid>
       <description>I am a SQL Developer and Stats Analyst for the National Hockey League
-This site is built using Hugo static site generator. It is hosted on AWS S3 Buckets using AWS Cloudfront to serve SSL certificates and AWS Lambda to clean the urls.</description>
+This site is built using Hugo static site generator. Site theme is terminal by panr. Site is hosted on AWS S3 Buckets using AWS Cloudfront to serve SSL certificates and AWS Lambda to clean the urls. Source code for site can be found here.</description>
     </item>
     
   </channel>

@@ -10,7 +10,7 @@ Here's some of the Data Analysis I've done in R. I don't use R as much as I used
 love doing simple data exploration/graphing in it.
 
 # [Github](https://github.com/mcbarlowe)
-A lot of my public work had to be taken down due as it dealt with NHL analytics.
+A lot of my public work had to be taken down as it dealt with NHL analytics.
 I've branched out into other things such as NBA analysis and fintech in
 the public sphere these days.
 
