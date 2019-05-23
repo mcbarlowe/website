@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019 Barlowe Analytics</copyright>
-    <lastBuildDate>Mon, 20 May 2019 00:22:29 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 22 May 2019 22:16:36 -0400</lastBuildDate>
     
 	<atom:link href="https://barloweanalytics.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SQL Basics</title>
+      <link>https://barloweanalytics.com/posts/sqlbasics/</link>
+      <pubDate>Wed, 22 May 2019 22:16:36 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/posts/sqlbasics/</guid>
+      <description>Ok if you&amp;rsquo;ve read the first tutorial on installing Postgres and getting your first database up and running, you&amp;rsquo;re now wondering &amp;ldquo;So how do I access all this data?&amp;rdquo; Well that&amp;rsquo;s where this tutorial comes in as we are going to cover some of the basic commands in SQL to get the data we want. Ok let&amp;rsquo;s get started and dive right in to our data.
+SELECT The SELECT command is going to be your workhorse command when working with SQL.</description>
+    </item>
+    
+    <item>
+      <title>SQL Basics</title>
+      <link>https://barloweanalytics.com/sql/sqlbasics/</link>
+      <pubDate>Wed, 22 May 2019 22:16:36 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/sql/sqlbasics/</guid>
+      <description>Ok if you&amp;rsquo;ve read the first tutorial on installing Postgres and getting your first database up and running, you&amp;rsquo;re now wondering &amp;ldquo;So how do I access all this data?&amp;rdquo; Well that&amp;rsquo;s where this tutorial comes in as we are going to cover some of the basic commands in SQL to get the data we want. Ok let&amp;rsquo;s get started and dive right in to our data.
+SELECT The SELECT command is going to be your workhorse command when working with SQL.</description>
+    </item>
     
     <item>
       <title>Using Travis CI and Codecov with your Python Project</title>

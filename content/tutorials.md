@@ -77,6 +77,17 @@ any SQL flavor
   </tr>
 </table>
 
+* Commands
+<table border="0" style="border: none;padding:0; margin:0;">
+  <tr>
+  <td style="border: none; padding:0; margin:0;">
+  <p>[SQL Basic Commands]({{< relref "sql/sqlbasics/" >}})</p>
+  </td>
+  <td style="border: none;padding:0; margin:0;">
+  <p></p>
+  </td>
+  </tr>
+</table>
 # Git
 [Getting Started with Git]({{< relref "git/gitintro" >}})
 
