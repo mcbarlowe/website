@@ -84,7 +84,7 @@ any SQL flavor
   <p>[SQL Basic Commands]({{< relref "sql/sqlbasics/" >}})</p>
   </td>
   <td style="border: none;padding:0; margin:0;">
-  <p></p>
+  <p>[Postgres Remote Login]({{< relref "sql/login/" >}})</p>
   </td>
   </tr>
 </table>
