@@ -4,8 +4,24 @@
   
   <url>
     <loc>https://barloweanalytics.com/</loc>
-    <lastmod>2019-05-22T22:16:36-04:00</lastmod>
+    <lastmod>2019-05-24T21:33:42-04:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://barloweanalytics.com/sql/createuser/</loc>
+    <lastmod>2019-05-24T21:33:42-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://barloweanalytics.com/sql/</loc>
+    <lastmod>2019-05-24T21:33:42-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://barloweanalytics.com/sql/login/</loc>
+    <lastmod>2019-05-23T22:25:11-04:00</lastmod>
   </url>
   
   <url>
@@ -22,12 +38,6 @@
   <url>
     <loc>https://barloweanalytics.com/sql/sqlbasics/</loc>
     <lastmod>2019-05-22T22:16:36-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://barloweanalytics.com/sql/</loc>
-    <lastmod>2019-05-22T22:16:36-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

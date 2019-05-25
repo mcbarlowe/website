@@ -62,8 +62,8 @@ from the perspective of working in a Mac OS X environment.
 </table>
 
 # SQL
-This will mainly deal with PostgreSQL but a lot of the basic commands translate to
-any SQL flavor
+This will mainly deal with PostgreSQL version 11.2 but a lot of the
+basic commands translate to any SQL flavor
 
 * Installation
 <table border="0" style="border: none;padding:0; margin:0;">
@@ -82,6 +82,7 @@ any SQL flavor
   <tr>
   <td style="border: none; padding:0; margin:0;">
   <p>[SQL Basic Commands]({{< relref "sql/sqlbasics/" >}})</p>
+  <p>[Creating a new Postgres User]({{< relref "sql/createuser/" >}})</p>
   </td>
   <td style="border: none;padding:0; margin:0;">
   <p>[Postgres Remote Login]({{< relref "sql/login/" >}})</p>

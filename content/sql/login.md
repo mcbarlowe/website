@@ -1,7 +1,7 @@
 ---
 title: "Postgres Remote Login"
 date: 2019-05-23T22:25:11-04:00
-draft: true
+draft: false
 ---
 
 <h2>Remote Postgres Login</h2>
