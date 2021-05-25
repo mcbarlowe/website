@@ -1,7 +1,7 @@
 ---
-title: "How_to_ask_a_question"
+title: "How to ask a question"
 date: 2020-04-14T00:08:25-04:00
-draft: true
+draft: False
 ---
 
 # How to Ask Questions

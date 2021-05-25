@@ -49,6 +49,6 @@ for web hosting if you don't already have one set up.
 
 2. EC2 Instances
 
-# Cloufront and SSL certificates
+# Cloudfront and SSL certificates
 
 
