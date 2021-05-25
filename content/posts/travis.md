@@ -73,14 +73,14 @@ slider buttons are also checked as well. Ok now Travis is ready to
 the run project's tests with each push to the Github repo.
 
 Don't push anything though because Travis won't know what to do with it
-because we haven't written the `.travis.yaml` file for the repo.
+because we haven't written the `.travis.yml` file for the repo.
 [YAML](https://en.wikipedia.org/wiki/YAML) stands for "YAML ain't
 markup language" and is a common format for configuration files.
 
-So create a `.travis.yaml` file inside the root directory of the repo
+So create a `.travis.yml` file inside the root directory of the repo
 on your computer and we'll create a basic one for our Travis CI
 build below. You can read more about the options you can have in
-the `.travis.yaml` file [here](https://docs.travis-ci.com/user/customizing-the-build/)
+the `.travis.yml` file [here](https://docs.travis-ci.com/user/customizing-the-build/)
 
 ```
 language: python
@@ -94,7 +94,7 @@ script:
     - pytest -s test_unit.py
 ```
 
-There are a lot of configurations you can put in your `.travs.yaml` file
+There are a lot of configurations you can put in your `.travs.yml` file
 but for now this basic one will get your tests up and running. Let's break
 it down. `language` tells Travis what language you will be running the tests
 in. This case is python but it could be anything: c++, java, ruby etc. The
@@ -118,7 +118,7 @@ if any test fails it will determine that the build is failing.
 
 Save this file and then push it to your repo on Github. Goto your Build History
 on Travis CI and you will see Travis spinning up a virtual machine with the
-settings you passed it in the `.travis.yaml` file. This is after a successful
+settings you passed it in the `.travis.yml` file. This is after a successful
 test for my `nba_scraper` package but the look should be similar.
 
 ![Travis build](/posts/img/travisbuild.png)
@@ -146,12 +146,12 @@ Codecov will then show a page saying no repos are linked to it and
 giving you a repository upload token. You won't need that because
 Codecov doesn't require the token from **public repositories** originating
 from Travis CI, Circle CI, or AppVeyor CI. If you want to pass
-private repositories then you will need to add that to your `.travis.yaml`
+private repositories then you will need to add that to your `.travis.yml`
 file.
 
 Now that your Codecov account is created, the next step is to edit
-the `.travis.yaml` file to tell Travis to run it after our tests
-are done. So open the `.travis.yaml` file and add these lines to it
+the `.travis.yml` file to tell Travis to run it after our tests
+are done. So open the `.travis.yml` file and add these lines to it
 
 ```
 language: python
@@ -177,7 +177,7 @@ the name of the folder is holding your python module. The second part
 is `after_success:`. This section tells Travis what to do after the tests
 are passed which in this case is to send the report to Codecov.
 
-And that's it! Now save the `.travis.yaml` file and push to Github.
+And that's it! Now save the `.travis.yml` file and push to Github.
 Travis will do it's thing and then send the code coverage report to
 Codecov and you should see something like this on your Codecov main
 page:

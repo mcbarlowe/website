@@ -24,3 +24,14 @@ API. Is currently still in construciton but a succesful Jar can be built from
 the source code
 
 [Source code](https://github.com/mcbarlowe/jAvantage)
+
+# The Seventhman
+
+This is a NBA stats website I built using the `nba_scraper`. You can visit it at
+[theseventhman.net](https://theseventhman.net). The source code for it can be found
+[here](https://github.com/mcbarlowe/seventhmanapp)
+
+# The Seventhman API
+
+I have made the API that my website consumes completely public. You can pull the
+data from the API using the docs written [here](https://github.com/mcbarlowe/seventhmanapi)

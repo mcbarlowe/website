@@ -7,10 +7,48 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019 Barlowe Analytics</copyright>
-    <lastBuildDate>Fri, 24 May 2019 21:33:42 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2020 01:39:30 -0400</lastBuildDate>
     
 	<atom:link href="https://barloweanalytics.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>IDEs of March</title>
+      <link>https://barloweanalytics.com/posts/ides-of-march/</link>
+      <pubDate>Fri, 13 Mar 2020 01:39:30 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/posts/ides-of-march/</guid>
+      <description>IDEs of March There are many articles about learning to code and mention where to learn or how to learn etc. Very few however mention where you are going to write the code once you learn it! Most beginner stuff have you working at that programming language&amp;rsquo;s terminal, which is great for getting the basics but you&amp;rsquo;ll quickly grow past that. So where does one actually write their source code?</description>
+    </item>
+    
+    <item>
+      <title>So You Want to Learn to Code</title>
+      <link>https://barloweanalytics.com/posts/learning_to_code/</link>
+      <pubDate>Thu, 12 Mar 2020 22:52:24 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/posts/learning_to_code/</guid>
+      <description>So You Want to Learn to Code I&amp;rsquo;ve been getting a lot of inquiries recently asking a lot of similar quesitions. Often these questions are broad and hard to answer in an email or a DM, so I&amp;rsquo;ve decided to use my free time no longer taken up by watching sports to write a series of blog posts to answer them as best I can.
+One of the big ones I keep seeing over and over again is &amp;ldquo;What are the best resources to learn to code?</description>
+    </item>
+    
+    <item>
+      <title>Probability and Statistics: Chapter 1</title>
+      <link>https://barloweanalytics.com/posts/degrootchapter1/</link>
+      <pubDate>Sun, 10 Nov 2019 15:34:22 -0500</pubDate>
+      
+      <guid>https://barloweanalytics.com/posts/degrootchapter1/</guid>
+      <description>Ok this is going to be a series of blog posts about detaling my notes and thoughts as I work through DeGroot and Schervish&amp;rsquo;s Probability and Statistics 4th Edition. This may be useful to you it may not be but I generally find I learn things better if I write down what I&amp;rsquo;m thinking about them so without further ado, let&amp;rsquo;s begin!
+The History of Probability So apparently people have been gambling forever.</description>
+    </item>
+    
+    <item>
+      <title>Joins</title>
+      <link>https://barloweanalytics.com/sql/joins/</link>
+      <pubDate>Fri, 24 May 2019 23:46:03 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/sql/joins/</guid>
+      <description>Ok now that you have the database up and can now do some basic queries from the [last tutorial]((https://barloweanalytics.com/sql/sqlbasics/) you are probably wondering how do you actually tell which players are achieveing which stats. In the few tables we looked at there are no actual player names, only what&amp;rsquo;s called playerid which looks like a weird combination of a name and a number. Some aren&amp;rsquo;t even full names either way it doesn&amp;rsquo;t really tell you who is doing what in the database.</description>
+    </item>
     
     <item>
       <title>Creating a New Postgres User</title>
@@ -183,6 +221,15 @@ Getting Started The first thing to do is open your favorite text editor.</descri
       
       <guid>https://barloweanalytics.com/unix/homebrew/</guid>
       <description>by Matthew Barlowe Homebrew is a very usefual package manager that can be installed on the macOS system. It&amp;rsquo;s what I use to manage by Python installations along with my SQL database as well. It has a nice, easy to learn, syntax and is simple to install from the terminal on an Apple computer. What is a package manager you ask? Well join me in the next section and we&amp;rsquo;ll discuss the details behind it.</description>
+    </item>
+    
+    <item>
+      <title>Git2</title>
+      <link>https://barloweanalytics.com/git/git2/</link>
+      <pubDate>Mon, 15 Apr 2019 01:57:19 -0400</pubDate>
+      
+      <guid>https://barloweanalytics.com/git/git2/</guid>
+      <description> This is a test </description>
     </item>
     
     <item>

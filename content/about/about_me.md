@@ -5,7 +5,7 @@ date: 2019-04-13T21:58:17-04:00
 draft: false
 ---
 
-I am a SQL Developer and Stats Analyst for the National Hockey League
+I am an Application Developer for the National Hockey League
 
 This site is built using [Hugo](https://gohugo.io/) static site generator.
 Site theme is `terminal` by [panr](https://twitter.com/panr).
