@@ -184,10 +184,10 @@ Postgres will list all the tables in the public schema. The <code>LIMIT</code> c
 for a <code>SELECT</code> query is very important here. If we had just entered in the command without
 using the <code>LIMIT</code> Postgres would have returned every single row in the table and you almost
 never want to do that when just trying to look at the data in a table. So I added the <code>LIMIT</code>
-clause and passed it the number 1 telling Postgres to limit the results to 10 rows. Pretty simple eh?</p>
+clause and passed it the number 10 telling Postgres to limit the results to 10 rows. Pretty simple eh?</p>
 <p>Ok lets do a couple other <code>SELECT</code> queries to get the hang of it. First though
 lets get a list of the columns in our table with the <code>\d+ appearances</code> which will produce
-and output similar to this:</p></p>
+an output similar to this:</p></p>
 
 <pre><code>      Column   |       Type       | Collation | Nullable | Default | Storage  | Stats target | Description
     -----------+------------------+-----------+----------+---------+----------+--------------+-------------
@@ -242,7 +242,7 @@ where table_schema = 'public' and lower(column_name) != column_name
 in the tutorial for a very good reason. I could have gone back and fixed the file and changed a couple
 things and made it look like I&rsquo;m perfect, but I&rsquo;m not. Mistakes happen. A lot. Things are going
 break and a vital skill is to learn how to fix them. In this case I literally googled
-&lsquo;convert all columnames to lowercase postgres&rsquo; and the answer was the <a href="https://stackoverflow.com/questions/10086532/how-can-i-convert-all-columns-in-my-database-to-case-insensitive">second link</a>
+&lsquo;convert all column names to lowercase postgres&rsquo; and the answer was the <a href="https://stackoverflow.com/questions/10086532/how-can-i-convert-all-columns-in-my-database-to-case-insensitive">second link</a>
 on google.</p>
 
 <p>Do I know exactly what that code does? Nope but what better place to learn than in a situation
@@ -283,7 +283,7 @@ isn't then the row is excluded. Let's look at it in action:
 
     SELECT playerid, teamid, g_1b, g_2b, g_cf from appearances WHERE yearid = 2016 limit 10;
 
-<p>Now there is a order in which clauses go where in the SQL queries. Generally its SELECT, FROM,
+<p>Now there is an order in which clauses go where in the SQL queries. Generally its SELECT, FROM,
 WHERE, GROUP BY, HAVING, ORDER BY, LIMIT. So when playing around with your queries if you don't stick
 to the order Postgres will throw an error. Obviously you don't know what all of those clauses do, but
 just keep in mind for now that <code>WHERE</code> clauses will go before `LIMIT` clauses. So if you ran
@@ -323,10 +323,10 @@ a season or even a certain time frame? This is done with our powerful aggregate 
 <code>WHERE</code>won't tell you the whole story. So let's try and see if we can calculate
 who had the most hits last season in the MLB.
 
-    SELECT playerid, sum(h) FROM batting WHERE yearid=2017 GROUP BY playerid ORDER BY sum(h) DESC LIMIT 10;
+    <pre><code>SELECT playerid, sum(h) FROM batting WHERE yearid=2017 GROUP BY playerid ORDER BY sum(h) DESC LIMIT 10;</code></pre>
 
 Which gives us this output:
-
+<pre><code>
      playerid  | sum
     -----------+-----
      blackch02 | 213
@@ -339,11 +339,11 @@ Which gives us this output:
      abreujo02 | 189
      lemahdj01 | 189
      arenano01 | 187
-
+</code></pre>
 <p>Well that column name isn't very helpful. However there is a simple way to change that using the <code>AS</code>
 command in your query:
 
-    SELECT playerid, sum(h) AS Hits FROM batting WHERE yearid=2017 GROUP BY playerid ORDER BY sum(h) DESC LIMIT 10;
+    <pre><code>SELECT playerid, sum(h) AS Hits FROM batting WHERE yearid=2017 GROUP BY playerid ORDER BY sum(h) DESC LIMIT 10;</code></pre>
 
 <p>And now your output looks much nicer:</p>
 
@@ -365,7 +365,7 @@ command in your query:
 <p>All <code>AS</code> does is just create an alias for the column. You can do this with any column you want
 along with tables as well. It just creates another name for something that you can refer to later on in the query.
 In many newer flavors of SQL you can leave out the `AS` and just put a name next to the column, but I wanted to
-show the `AS` incase something breaks if  you do that.
+show the `AS` incase something breaks if you do that.
 This won't work with <code>WHERE</code> statements because the <code>WHERE</code> clause references the raw data
 and your alias is created after the fact.</p>
 
@@ -373,14 +373,14 @@ and your alias is created after the fact.</p>
 they played for in the season. A lot of players do play for the same team all season but a lot don&rsquo;t. If you didn&rsquo;t do
 the group by you would miss out on those other team hits for that player. The next is the <code>ORDER BY</code> this tells
 the database how to sort the results in this case by hits descending, i.e. from largest to smallest, with the
-<code>DESC</code> keyword. When you alias the <code>sum(h)</code> column you can just using <code>ORDER BY hits</code> next time. <code>ORDER BY</code> will
+<code>DESC</code> keyword. When you alias the <code>sum(h)</code> column you can just use <code>ORDER BY hits</code> next time. <code>ORDER BY</code> will
 sort ascending by default unless you tell it otherwise</p>
 
 <p>There several aggregate functions in SQL with the most common being <code>sum, avg, min, max, count</code>. Respectively
-those add the values, average the values, find the minimum value, the maximum value, and last counts the number of values i.e.
+those add the values, average the values, find the minimum value, the maximum value, and the last counts the number of values i.e.
 the of rows in a column.</p>
 <p>The next and most important part of an aggregate function is the <code>GROUP BY</code> clause. This tells
-Postgres how we want to calculate the aggregate functions. If we left out the <code>player</code> column then
+Postgres how we want to calculate the aggregate functions. If we left out the <code>playerid</code> column then
 the functions would just sum the total goals and assists of every player after the date we gave it. <code>GROUP BY</code>
 though allows us to tell Postgres that we want to group the sums by each player.
 <code>GROUP BY</code> doesn't just work
@@ -390,7 +390,7 @@ different categorical columns <code>GROUP BY</code> would work just as well on t
 stats. If you have some experinece with pandas or R dataframes <code>GROUP BY</code> in SQL works basically the same
 as <code>.groupby</code> and <code>group_by</code> respectively in those langauges.</p>
 
-<p>Our next tutorial will cover <code>JOIN</code> so you can finall tell which players are actually accumulating the stats
+<p>Our next tutorial will cover <code>JOIN</code> so you can finally tell which players are actually accumulating the stats
 you are calculating in you queries.</p>
 
 <p><h2>Sources</h2>
