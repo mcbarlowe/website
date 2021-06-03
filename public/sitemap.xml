@@ -1,204 +1,111 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://barloweanalytics.com/</loc>
     <lastmod>2020-03-13T01:39:30-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/posts/ides-of-march/</loc>
     <lastmod>2020-03-13T01:39:30-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/posts/</loc>
     <lastmod>2020-03-13T01:39:30-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/posts/learning_to_code/</loc>
     <lastmod>2020-03-12T22:52:24-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/posts/degrootchapter1/</loc>
     <lastmod>2019-11-10T15:34:22-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://barloweanalytics.com/sql/joins/</loc>
-    <lastmod>2019-05-24T23:46:03-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://barloweanalytics.com/sql/</loc>
-    <lastmod>2019-05-24T23:46:03-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/sql/createuser/</loc>
     <lastmod>2019-05-24T21:33:42-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://barloweanalytics.com/sql/</loc>
+    <lastmod>2019-05-24T21:33:42-04:00</lastmod>
+  </url><url>
     <loc>https://barloweanalytics.com/sql/login/</loc>
     <lastmod>2019-05-23T22:25:11-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/posts/sqlbasics/</loc>
     <lastmod>2019-05-22T22:16:36-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/sql/sqlbasics/</loc>
     <lastmod>2019-05-22T22:16:36-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/posts/travis/</loc>
     <lastmod>2019-05-20T00:22:29-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/projects/</loc>
     <lastmod>2019-05-04T14:27:59-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/sql/install/</loc>
     <lastmod>2019-04-18T23:38:39-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/java/</loc>
     <lastmod>2019-04-18T19:07:08-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/java/loops/</loc>
     <lastmod>2019-04-18T19:07:08-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/r/functions/</loc>
     <lastmod>2019-04-18T17:19:29-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/r/</loc>
     <lastmod>2019-04-18T17:19:29-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/java/helloworld/</loc>
     <lastmod>2019-04-17T23:22:23-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/r/helloworld/</loc>
     <lastmod>2019-04-17T23:12:25-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/r/loops/</loc>
     <lastmod>2019-04-17T20:51:38-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/python/functions/</loc>
     <lastmod>2019-04-17T20:51:24-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/python/</loc>
     <lastmod>2019-04-17T20:51:24-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/python/loops/</loc>
     <lastmod>2019-04-16T17:53:57-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/python/helloworld/</loc>
     <lastmod>2019-04-15T20:24:18-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/python/pythoninstall/</loc>
     <lastmod>2019-04-15T19:25:14-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/unix/homebrew/</loc>
     <lastmod>2019-04-15T18:38:25-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/unix/</loc>
     <lastmod>2019-04-15T18:38:25-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://barloweanalytics.com/git/git2/</loc>
-    <lastmod>2019-04-15T01:57:19-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/git/</loc>
-    <lastmod>2019-04-15T01:57:19-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+    <lastmod>2019-04-14T17:30:40-04:00</lastmod>
+  </url><url>
     <loc>https://barloweanalytics.com/git/gitintro/</loc>
     <lastmod>2019-04-14T17:30:40-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/work/</loc>
     <lastmod>2019-04-13T22:46:09-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/tutorials/</loc>
     <lastmod>2019-04-13T22:24:45-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/about/aboutme/</loc>
     <lastmod>2019-04-13T21:58:17-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/about/</loc>
     <lastmod>2019-04-13T21:58:17-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/posts/my-first-post/</loc>
     <lastmod>2019-04-13T21:36:40-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://barloweanalytics.com/tags/</loc>
-    <priority>0</priority>
   </url>
-  
 </urlset>

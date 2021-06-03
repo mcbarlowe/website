@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gits on Barlowe Analytics</title>
@@ -7,27 +7,160 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019 Barlowe Analytics</copyright>
-    <lastBuildDate>Mon, 15 Apr 2019 01:57:19 -0400</lastBuildDate>
-    
-	<atom:link href="https://barloweanalytics.com/git/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Git2</title>
-      <link>https://barloweanalytics.com/git/git2/</link>
-      <pubDate>Mon, 15 Apr 2019 01:57:19 -0400</pubDate>
-      
-      <guid>https://barloweanalytics.com/git/git2/</guid>
-      <description> This is a test </description>
-    </item>
-    
+    <lastBuildDate>Sun, 14 Apr 2019 17:30:40 -0400</lastBuildDate><atom:link href="https://barloweanalytics.com/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Git and Github</title>
       <link>https://barloweanalytics.com/git/gitintro/</link>
       <pubDate>Sun, 14 Apr 2019 17:30:40 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/git/gitintro/</guid>
-      <description>by Matthew Barlowe So if you&amp;rsquo;ve started out doing a little coding either for fun or like me to try and do data analysis of the NHL, then you&amp;rsquo;ve probably heard people talk a lot about Git and Github. And if you were like me, you&amp;rsquo;ve even tried to learn it, or use it, but just got so frustrated you gave up and figured it wasn&amp;rsquo;t worth the time.</description>
+      <description>by Matthew Barlowe So if you&amp;rsquo;ve started out doing a little coding either for fun or like me to try and do data analysis of the NHL, then you&amp;rsquo;ve probably heard people talk a lot about Git and Github. And if you were like me, you&amp;rsquo;ve even tried to learn it, or use it, but just got so frustrated you gave up and figured it wasn&amp;rsquo;t worth the time.
+Well this article will try to dispel some of those confusions because once Git clicks for you, you&amp;rsquo;ll never code without it.</description>
+      <content>&lt;h3 id=&#34;by-matthew-barlowe&#34;&gt;by Matthew Barlowe&lt;/h3&gt;
+&lt;p&gt;So if you&amp;rsquo;ve started out doing a little coding either for fun or like me
+to try and do data analysis of the NHL, then you&amp;rsquo;ve probably heard people
+talk a lot about Git and Github. And if you were like me, you&amp;rsquo;ve even tried
+to learn it, or use it, but just got so frustrated you gave up and figured
+it wasn&amp;rsquo;t worth the time.&lt;/p&gt;
+&lt;p&gt;Well this article will try to dispel some of those confusions because
+once Git clicks for you, you&amp;rsquo;ll never code without it. It&amp;rsquo;s such a powerful
+tool to fit into your coding arsenal. But before we get into setting up
+Git and using let&amp;rsquo;s talk about what Git is and what it does.&lt;/p&gt;
+&lt;p&gt;This article will be done from a Mac OS X developer point of view. The only
+main differences between Mac and a Windows will be how you install and setup
+git to work on your system. The actual git commands should be the same no
+matter what Operating System (OS) you are on.&lt;/p&gt;
+&lt;h3 id=&#34;what-is-git&#34;&gt;What is Git?&lt;/h3&gt;
+&lt;p&gt;First off let&amp;rsquo;s differentiate between Git and Github. Many people use
+these terms interchangeably, but they are very different things. Git is
+what is called a Version Control System or VCS. To put it simply it&amp;rsquo;s a
+software that just tracks the changes you make to the programs you
+write. That&amp;rsquo;s all it is at its essence. Like working with a Google doc
+tracking changes, Git remembers the changes, and more importantly the history of those changes,
+you make to your files.  This allows Git to restore those files to any
+previous state in the history of the development of the code.&lt;/p&gt;
+&lt;p&gt;Now Git itself is self contained to your computer, nobody can
+see your changes except for you. Github on the other hand is a website
+where you can store your code and the history of your changes saved by Git.
+This is where you will send your work when you want to share it with the
+world. So keep that in mind when reading the rest of this article. Git is
+the program on your computer, and Github is the website where you will
+send your code when you want to share it. This also adds the benefit of
+an extra back up in case something happens to your system.&lt;/p&gt;
+&lt;h3 id=&#34;why-use-git&#34;&gt;Why use Git?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Track Changes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Git as noted above keeps track of the changes you&amp;rsquo;ve made to your
+code throughout the history of developing if used properly. Everytime I
+add a new feature to my code I save it in Git. And using Git logs I can
+see all the changes I&amp;rsquo;ve made. So if I write something and it messes
+everything up I can just go back one step in the Git chain and get things
+back up and running.&lt;/p&gt;
+&lt;p&gt;Obviously this may not be a big deal if you are just writing code that
+only you will use yourself. But there&amp;rsquo;s been plenty of times I&amp;rsquo;ve made
+changes one night and forgotten what I&amp;rsquo;ve done the next day when I go back
+to work on it. And if you are working with multiple people on a project
+then this log of changes is invaluable to see what others have done in
+the code base. Git also keeps track of the date and time of changes
+made as well so you can see who made changes and when those changes
+were made.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Branching&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is perhaps the most important part about git is that you can
+create branches of the code you are working on in order to fix bugs or
+create new features. You may be asking now, &amp;ldquo;Why not just create a copy
+of the file and work on two copies?&amp;rdquo; Well if you&amp;rsquo;re only working on one
+file then you may not need Git, but often you&amp;rsquo;ll be working on multiple
+files that often interact with each other.&lt;/p&gt;
+&lt;p&gt;Trying to keep track manually
+of the working copies and copies that are being worked on would quickly
+become confusing and could lead to bugs and errors that you&amp;rsquo;d have
+to waste futher time tracking down. Git handles all that behind the scenes
+so you don&amp;rsquo;t have to. You can create a new branch and make as many changes
+all without breaking any of the files you are using until you have properly
+tested the new versions.&lt;/p&gt;
+&lt;p&gt;To use a personal example I recently added the ability to query goalie
+stats to my twitter bot. Instead of taking the bot down and working on
+the file until the features were added, I created a new branch where I
+worked on the new features until they were finished. Once done, I then
+merged those changes back into my main script. And in doing this I only
+worked on one file the whole time.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It works with Everything&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Git is language agnostic. It works with any programming language out
+there whether it&amp;rsquo;s Python, R, C++, or something else, Git doesn&amp;rsquo;t care.
+It tracks all changes for all files no matter what they are. In fact
+Git works just as well with writing a novel or a story as it does with writing
+code! It&amp;rsquo;s near
+universiality makes it a common ground for developers to meet and
+collaborate on projects.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use &amp;quot;git add&amp;quot; to track)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;for x in range(10):
+    print(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;On branch master
+
+No commits yet
+
+Untracked files:
+(use &amp;quot;git add file...&amp;quot; to include in what will be committed)
+
+gittutorial.py
+
+nothing added to commit but untracked files present (use &amp;quot;git add&amp;quot; to track)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;On branch master
+
+No commits yet
+
+Changes to be committed:
+(use &amp;quot;git rm --cached file...&amp;quot; to unstage)
+
+new file:   gittutorial.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;On branch master
+Changes not staged for commit:
+
+(use &amp;quot;git add file...&amp;quot; to update what will be committed)
+(use &amp;quot;git checkout -- file...&amp;quot; to discard changes in working directory)
+
+modified:   gittutorial.py
+no changes added to commit (use &amp;quot;git add&amp;quot; and/or &amp;quot;git commit -a&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;Auto-merging gittutorial.py
+CONFLICT (content): Merge conflict in gittutorial.py
+Automatic merge failed; fix conflicts and then commit the result.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;for x in range(20):
+print(x)
+print(&#39;This is a new feature&#39;)
+&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD
+print(&#39;This is a feature on the master branch&#39;)
+=======
+print(&#39;This is a newbranch feature&#39;)
+&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; newbranch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;img src=&#34;https://barloweanalytics.com/git/repocreate.png&#34; alt=&#34;&amp;lsquo;Creating a Github Repo&amp;rsquo;&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+</content>
     </item>
     
   </channel>

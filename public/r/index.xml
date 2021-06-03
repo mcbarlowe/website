@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rs on Barlowe Analytics</title>
@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019 Barlowe Analytics</copyright>
-    <lastBuildDate>Thu, 18 Apr 2019 17:19:29 -0400</lastBuildDate>
-    
-	<atom:link href="https://barloweanalytics.com/r/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 18 Apr 2019 17:19:29 -0400</lastBuildDate><atom:link href="https://barloweanalytics.com/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Functions</title>
       <link>https://barloweanalytics.com/r/functions/</link>
@@ -21,6 +17,21 @@
       <description>#by Matthew Barlowe
 This is the syntax for making a function in R:
 function.name &amp;lt;- function(arg1, arg2, arg3=2) { variable = arg1 + arg2 print(arg3) variable # the last line of the function is the return value in R }  In R you can also pass an ... argument to a function indicating that the funciton can take any number of name or unnamed arguments as well in the function parameters.</description>
+      <content>&lt;p&gt;#by Matthew Barlowe&lt;/p&gt;
+&lt;p&gt;This is the syntax for making a function in R:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function.name &amp;lt;- function(arg1, arg2, arg3=2) {
+    variable = arg1 + arg2
+    print(arg3)
+    variable # the last line of the function is the return value in R
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In R you can also pass an &lt;code&gt;...&lt;/code&gt; argument to a function indicating that the funciton
+can take any number of name or unnamed arguments as well in the function
+parameters. This is similar to Python&amp;rsquo;s &lt;code&gt;*args&lt;/code&gt; and &lt;code&gt;**kwargs&lt;/code&gt; parameters in
+funciton defining.&lt;/p&gt;
+&lt;h1 id=&#34;sources&#34;&gt;Sources&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://nicercode.github.io/guides/functions/&#34;&gt;Nice R Code&lt;/a&gt;&lt;/p&gt;
+</content>
     </item>
     
     <item>
@@ -29,9 +40,21 @@ function.name &amp;lt;- function(arg1, arg2, arg3=2) { variable = arg1 + arg2 pr
       <pubDate>Wed, 17 Apr 2019 23:12:25 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/r/helloworld/</guid>
-      <description> by Matthew Barlowe Some simple Hello World code.
+      <description>by Matthew Barlowe Some simple Hello World code.
 print(&amp;quot;Hello World!&amp;quot;) print(&amp;quot;Hello World!&amp;quot;, quote=FALSE) print(paste(&amp;quot;Hello&amp;quot;, &amp;quot;World!&amp;quot;))  produces this output:
 &amp;quot;Hello World!&amp;quot; Hello World! &amp;quot;Hello World!&amp;quot;  </description>
+      <content>&lt;h1 id=&#34;by-matthew-barlowe&#34;&gt;by Matthew Barlowe&lt;/h1&gt;
+&lt;p&gt;Some simple Hello World code.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;print(&amp;quot;Hello World!&amp;quot;)
+print(&amp;quot;Hello World!&amp;quot;, quote=FALSE)
+print(paste(&amp;quot;Hello&amp;quot;, &amp;quot;World!&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;produces this output:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;Hello World!&amp;quot;
+Hello World!
+&amp;quot;Hello World!&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
     </item>
     
     <item>
@@ -42,6 +65,49 @@ print(&amp;quot;Hello World!&amp;quot;) print(&amp;quot;Hello World!&amp;quot;, 
       <guid>https://barloweanalytics.com/r/loops/</guid>
       <description>by Matthew Barlowe This is a tutorial going over the syntax of loops in R. If you want a break down of how loops work and the philosophy please read my Python loop tutorial. Loops should be a last resort in R as they are slow and inefficient. Often you can do what you need to in loops using the apply family of functions or the purrr package.
 for loops for (i in 1:10) { print(paste(&amp;quot;Your number is&amp;quot;, i)) } some_numbers &amp;lt;- c(1,3,5,3,0,10,35) for (i in some_numbers) { print(paste(&amp;quot;Your number is&amp;quot;, i)) }  while loops answer &amp;lt;- readline(prompt=&amp;quot;What&#39;s the best part about Matt?</description>
+      <content>&lt;h1 id=&#34;by-matthew-barlowe&#34;&gt;by Matthew Barlowe&lt;/h1&gt;
+&lt;p&gt;This is a tutorial going over the syntax of loops in R. If you want a break down
+of how loops work and the philosophy please read my &lt;a href=&#34;https://barloweanalytics.com/python/loops/&#34;&gt;Python loop tutorial&lt;/a&gt;.
+Loops should be a last resort in R as they are slow and inefficient. Often you can do
+what you need to in loops using the &lt;a href=&#34;https://www.guru99.com/r-apply-sapply-tapply.html&#34;&gt;&lt;code&gt;apply&lt;/code&gt;&lt;/a&gt;
+family of functions or the &lt;a href=&#34;https://purrr.tidyverse.org/&#34;&gt;&lt;code&gt;purrr&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
+&lt;h1 id=&#34;for-loops&#34;&gt;&lt;code&gt;for&lt;/code&gt; loops&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;for (i in 1:10) {
+    print(paste(&amp;quot;Your number is&amp;quot;, i))
+}
+
+some_numbers &amp;lt;- c(1,3,5,3,0,10,35)
+
+for (i in some_numbers) {
+    print(paste(&amp;quot;Your number is&amp;quot;, i))
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;while-loops&#34;&gt;&lt;code&gt;while&lt;/code&gt; loops&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;answer &amp;lt;- readline(prompt=&amp;quot;What&#39;s the best part about Matt? &amp;quot;)
+while (answer != &#39;He&#39;s Awesome&amp;quot;) {
+    print(&amp;quot;Sorry, that isn&#39;t the correct answer.&amp;quot;)
+    answer &amp;lt;- readline(prompt=&#39;&#39;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;repeat-loops&#34;&gt;&lt;code&gt;repeat&lt;/code&gt; loops&lt;/h1&gt;
+&lt;p&gt;These loops aren&amp;rsquo;t present in Python. &lt;code&gt;repeat&lt;/code&gt; loops are similar to &lt;code&gt;while&lt;/code&gt; loops except
+that &lt;code&gt;repeat&lt;/code&gt; loops require the user to explicitly break the loop when the condition is met
+instead of doing it automatically like &lt;code&gt;while&lt;/code&gt; loops. Here is the example above
+rewritten as a &lt;code&gt;repeat&lt;/code&gt; loop.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;answer &amp;lt;- readline(prompt=&amp;quot;What&#39;s the best part about Matt? &amp;quot;)
+repeat {
+    if(answer == &amp;quot;He&#39;s Aweseome&amp;quot;){
+        break
+    }
+    print(&amp;quot;Sorry, that isn&#39;t the correct answer.&amp;quot;)
+    answer &amp;lt;- readline(prompt=&#39;&#39;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;sources&#34;&gt;Sources&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/29215589/while-vs-repeat-loops-in-r&#34;&gt;While vs. Repeat Loops in R&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I hate linking to this because it&amp;rsquo;s Datacamp but it&amp;rsquo;s free so hopefully they aren&amp;rsquo;t making money off it&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.datacamp.com/community/tutorials/tutorial-on-loops-in-r&#34;&gt;Tutorial on Loops in R&lt;/a&gt;&lt;/p&gt;
+</content>
     </item>
     
   </channel>

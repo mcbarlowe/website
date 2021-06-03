@@ -56,3 +56,11 @@ paginate = 5
         identifier = "Projects"
         name = "Projects"
         url = "/projects"
+
+[deployment]
+
+[[deployment.targets]]
+name = "barloweanalytics.com"
+url = "s3://barloweanalytics.com"
+
+cloudFrontDistributionID = "E2AV6QX834HOND"

@@ -2,14 +2,28 @@
 <html lang="en">
 <head>
   
-    <title>Creating a New Postgres User :: Barlowe Analytics — Posts about Data Science</title>
+    <title>Creating a New Postgres User :: Barlowe Analytics</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Ok so if you&#39;ve come to this point you now have your database up and running and you want to allow others to access it. Some people say it&#39;s not the brightest idea, but hey, this data ain&#39;t going to share itself. Obviously letting them use your account is out of the question because as a superuser that will just allow them to wreak havoc any time they want on your meticulously gathered data."/>
-<meta name="keywords" content=""/>
-<meta name="robots" content="noodp"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
 <link rel="canonical" href="https://barloweanalytics.com/sql/createuser/" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-138686262-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
 
 
 <link rel="stylesheet" href="https://barloweanalytics.com/assets/style.css">
@@ -18,34 +32,41 @@
 
 
 
-<link rel="stylesheet" href="https://barloweanalytics.com/style.css">
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://barloweanalytics.com/img/apple-touch-icon-144-precomposed.png">
 
-<link rel="shortcut icon" href="https://barloweanalytics.com/img/favicon/pink.png">
+<link rel="apple-touch-icon" href="https://barloweanalytics.com/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://barloweanalytics.com/img/favicon/pink.png">
 
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Creating a New Postgres User :: Barlowe Analytics — Posts about Data Science" />
-<meta name="twitter:description" content="Ok so if you&#39;ve come to this point you now have your database up and running and you want to allow others to access it. Some people say it&#39;s not the brightest idea, but hey, this data ain&#39;t going to share itself. Obviously letting them use your account is out of the question because as a superuser that will just allow them to wreak havoc any time they want on your meticulously gathered data." />
-<meta name="twitter:site" content="https://barloweanalytics.com/" />
-<meta name="twitter:creator" content="" />
-<meta name="twitter:image" content="">
+
+  
+    <meta name="twitter:site" content="barloweanalytic" />
+  
+    <meta name="twitter:creator" content="" />
+
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Creating a New Postgres User :: Barlowe Analytics — Posts about Data Science">
-<meta property="og:description" content="Ok so if you&#39;ve come to this point you now have your database up and running and you want to allow others to access it. Some people say it&#39;s not the brightest idea, but hey, this data ain&#39;t going to share itself. Obviously letting them use your account is out of the question because as a superuser that will just allow them to wreak havoc any time they want on your meticulously gathered data." />
+<meta property="og:title" content="Creating a New Postgres User">
+<meta property="og:description" content="" />
 <meta property="og:url" content="https://barloweanalytics.com/sql/createuser/" />
-<meta property="og:site_name" content="Creating a New Postgres User" />
-<meta property="og:image" content="">
+<meta property="og:site_name" content="Barlowe Analytics" />
+
+  
+    <meta property="og:image" content="https://barloweanalytics.com/img/favicon/pink.png">
+  
+
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2019-05-24 21:33:42 -0400 EDT" />
+
+  <meta property="article:published_time" content="2019-05-24 21:33:42 -0400 -0400" />
+
 
 
 
@@ -58,10 +79,10 @@
 
 
 </head>
-<body class="">
+<body class="pink">
 
 
-<div class="container">
+<div class="container headings--one-size">
 
   <header class="header">
   <div class="header__inner">
@@ -98,6 +119,8 @@
       
       
     
+
+    
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
@@ -118,6 +141,7 @@
         <li><a href="/work">Work</a></li>
       
     
+    
   </ul>
 </nav>
 
@@ -135,7 +159,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 </header>
 
 
@@ -145,9 +168,11 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://barloweanalytics.com/sql/createuser/">Creating a New Postgres User</a></h1>
   <div class="post-meta">
-    <span class="post-date">
-      2019-05-24
-    </span>
+    
+      <span class="post-date">
+        2019-05-24 
+      </span>
+    
     
   </div>
 
@@ -155,107 +180,13 @@ if (!doNotTrack) {
 
   
 
-  <div class="post-content">
-    <p>Ok so if you've come to this point you now have your database up and
-running and you want to allow others to access it. Some people say
-it's not the brightest idea, but hey, this data ain't going to share
-itself. Obviously letting them use your account is out of the question
-because as a superuser that will just allow them to wreak havoc any time
-they want on your meticulously gathered data. That's were new users come
-in to save the day</p>
-<p>Postgres users work pretty much the same way as Mac OSX users. You have
-a username and a password, and each user is given rules and limitations
-on what they can do. I'll get more into what privileges are available
-for a Postgres user in the next tutorial, but for now just keep in mind
-that they are the rules that let the database administrator know what
-each individual user can do on the Postgres server</p>
-<h2>Difference Between a User and a Role</h2>
-<p>In older versions of Postgres a User and a Role used to be more
-seperately defined. But from version 8.0 onward a User has been defined
-as a subset of a Role, with the main difference being that when you create
-a User Postgres assumes that it has login privileges to the Postgres
-sever. If you create a role it does not have login privileges unless you
-specifically define those privileges.</p>
-<p>Gennerally what I like to do is create users and then create roles that
-I assign to each individual user to manage their privileges of what databases
-they can connect to and what actions they can take on each database.</p>
-<p>Yes it is a bit confusing I understand, but I'll go over how I generally
-do things that helps keep it seperate for me. So ok let's look at it in practice
-and see if that makes things a little clearer.</p>
-<h2>Creating Your First User</h2>
-<p>Ok so you need to add one user to your Postgres server then this would be the
-syntax:</p>
-<pre><code class='Command Line'>
-CREATE USER matt WITH PASSWORD 'password';
-</code></pre>
-<p>Ok so with that you created one user with the user name <code>matt</code>
-and the password <code>password</code>. Obviously, that's an awful password
-and don't ever do that unless you want to have a bad time. The good news is
-you created your first user, the bad news is they can't do anything yet other
-than login to the Postgres server.</p>
-<p>If you ever lose track of the Users, or Roles, you've created on your
-Postgres server all you need to do is type <code>\du</code> and Postgres
-will show you a table of all the roles available on the server.</p>
-<p>But what good is a user if they can't do anything? No good if you ask me
-that's why I'll show you how to grant them <code>SELECT</code> privileges
-to a table so they can at least access your data. Here is the syntax to do
-that:</p>
-<pre><code class='Command Line'>
-GRANT SELECT ON ALL TABLES IN SCHEMA public TO matt;
-</code></pre>
-<p>So now the user <code>matt</code> has the ability to <code>SELECT</code>
-query all the tables that have the schema public. If you are just starting
-out with postgres most of your tables will use the public schema as that is
-the default choice. This also raises another issue as well with your new
-user. Since they have access to the public schema by default on Postgres
-that means they have <code>USAGE</code> or read permissions and <code>CREATE</code>
-which means they can create new tables on your database.</p>
-<p>Obviously as a superuser you could just delete what they create, but
-it's better to just not allow it in the first place. This means you
-need to revoke that privilege which is done with this syntax:</p>
-<pre><code class='Command Line'>
-REVOKE CREATE ON SCHEMA public FROM PUBLIC;
-</code></pre>
-<p>This removes the ablity for your new user to create a new table on the
-database using the public schema. This is generally a good idea as a user
-that creates a table becomes an onwer of that table; meaning they can insert
-whatever data they want to the data and grant other users privileges to it
-as well. You always want to make sure that your users can only do what you
-want them to do. If you're fine with them creating new tables then ignore this,
-but most likely you won't be.</p>
-<h2>Sources</h2>
-<p><a href='https://www.postgresql.org/docs/current/static/sql-createuser.html'>Postgres Create Users Docs</a></p>
-<p><a href='https://www.postgresql.org/docs/current/static/sql-createrole.html'>Postgres Create Role Docs</a></p>
-<p><a href='https://serverfault.com/questions/60508/grant-select-to-all-tables-in-postgresql'>Grant SELECT on all Tables</a></p>
-<p><a href='https://dba.stackexchange.com/questions/35316/why-is-a-new-user-allowed-to-create-a-table'>Why is new user allowed to create a table</a></p>
-
-  </div>
   
-  <div class="pagination">
-    <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
-    </div>
-    <div class="pagination__buttons">
-      
-      <span class="button previous">
-        <a href="https://barloweanalytics.com/sql/joins/">
-          <span class="button__icon">←</span>
-          <span class="button__text">Joins</span>
-        </a>
-      </span>
-      
-      
-      <span class="button next">
-        <a href="https://barloweanalytics.com/sql/login/">
-          <span class="button__text">Postgres Remote Login</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      
-    </div>
-  </div>
+
+  <div class="post-content"><div>
+        <!-- raw HTML omitted -->
+
+      </div></div>
+
   
 
   
@@ -268,13 +199,18 @@ but most likely you won't be.</p>
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">2019 Barlowe Analytics</div>
+      <div class="copyright copyright--user">
+        <span>2019 Barlowe Analytics</span>
     
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
   </div>
 </footer>
 
 <script src="https://barloweanalytics.com/assets/main.js"></script>
 <script src="https://barloweanalytics.com/assets/prism.js"></script>
+
+
 
 
 

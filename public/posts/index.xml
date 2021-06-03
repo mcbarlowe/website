@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Barlowe Analytics</title>
@@ -7,18 +7,97 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019 Barlowe Analytics</copyright>
-    <lastBuildDate>Fri, 13 Mar 2020 01:39:30 -0400</lastBuildDate>
-    
-	<atom:link href="https://barloweanalytics.com/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 13 Mar 2020 01:39:30 -0400</lastBuildDate><atom:link href="https://barloweanalytics.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IDEs of March</title>
       <link>https://barloweanalytics.com/posts/ides-of-march/</link>
       <pubDate>Fri, 13 Mar 2020 01:39:30 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/posts/ides-of-march/</guid>
-      <description>IDEs of March There are many articles about learning to code and mention where to learn or how to learn etc. Very few however mention where you are going to write the code once you learn it! Most beginner stuff have you working at that programming language&amp;rsquo;s terminal, which is great for getting the basics but you&amp;rsquo;ll quickly grow past that. So where does one actually write their source code?</description>
+      <description>IDEs of March There are many articles about learning to code and mention where to learn or how to learn etc. Very few however mention where you are going to write the code once you learn it! Most beginner stuff have you working at that programming language&amp;rsquo;s terminal, which is great for getting the basics but you&amp;rsquo;ll quickly grow past that. So where does one actually write their source code? A lot of people use what&amp;rsquo;s called an IDE which stands for Integrated Development Envrionment.</description>
+      <content>&lt;h1 id=&#34;ides-of-march&#34;&gt;IDEs of March&lt;/h1&gt;
+&lt;p&gt;There are many articles about learning to code and mention where to learn
+or how to learn etc. Very few however mention where you are going to write
+the code once you learn it! Most beginner stuff have you working at that programming
+language&amp;rsquo;s terminal, which is great for getting the basics but you&amp;rsquo;ll quickly grow past
+that. So where does one actually write their source code? A lot of people use what&amp;rsquo;s
+called an IDE which stands for Integrated Development Envrionment.&lt;/p&gt;
+&lt;h1 id=&#34;whats-the-story-morning-glory&#34;&gt;What&amp;rsquo;s the Story Morning Glory&lt;/h1&gt;
+&lt;p&gt;Codeacademy gives a &lt;a href=&#34;https://www.codecademy.com/articles/what-is-an-ide&#34;&gt;breif rundown&lt;/a&gt; and they
+generally have these features: text editor, syntax highlighting, autocomplete, compiler(if needed),
+and a debugger.&lt;/p&gt;
+&lt;p&gt;A text editor is the most important part. If you are completely new to coding, you are probably used
+to writing things in some sort of program like Word or Apple Docs. These programs are completely useless
+it comes to storing code because they have tons of metadata in the text that you don&amp;rsquo;t see that
+determines things like font size or type or margins etc. When you try to run this through a compiler
+or an interpreter the program won&amp;rsquo;t know what to do with them and will create an error that prevents
+the script from running. A text editor in its most basic form is the basic notepad program for both Mac and Windows. IDE&amp;rsquo;s just
+take these editors and add a bunch of bells and whistles to them.&lt;/p&gt;
+&lt;p&gt;Syntax highlighting is a benefit where certain key words are highlighted so you can quickly parse the code.
+These are usually syntax to create functions or classes. Comments often have a different color than executable
+code. There are a lot of different color schemes for syntax highlighting. My favorite is &lt;a href=&#34;https://github.com/pR0Ps/molokai-dark&#34;&gt;Molokai Dark&lt;/a&gt;
+and while it is a vim color scheme I&amp;rsquo;m pretty sure its been ported to the IDEs will talk about.&lt;/p&gt;
+&lt;p&gt;Autocomplete is more of argued about benefit of IDEs. Some people love it and some hate it. If you&amp;rsquo;re just starting
+out I would lean more towards using it because its good at helping you remember function/variable names in packages.
+Some people hate it because it can get in the way when you are trying to code and autocomplete the wrong things if
+they have similar names.&lt;/p&gt;
+&lt;p&gt;Unless you&amp;rsquo;re writing a compiled langauge(C++, Java) then the built in compiler is not a huge issue. But even for
+things like Python/R there will be built in terminals where you can run your code with leaving the IDE environment
+which will be key to not breaking your concentration. Lastly there are debuggers, I personally don&amp;rsquo;t use them because
+I&amp;rsquo;m dumb but some people swear by them so being able to set break points for your code and stuff is really useful.&lt;/p&gt;
+&lt;p&gt;Now don&amp;rsquo;t expect to download these and immediately get started coding as they do take some setup. For the most
+part though its minimal to be able to start writing code to learn.&lt;/p&gt;
+&lt;h1 id=&#34;so-what-are-my-choices&#34;&gt;So What are My Choices&lt;/h1&gt;
+&lt;p&gt;There are quite a few choices out there some free, some not. This won&amp;rsquo;t be an exhaustive list but there will be
+enough choice to cover most of the people&lt;/p&gt;
+&lt;h2 id=&#34;visual-studio-code&#34;&gt;Visual Studio Code&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;Visual Studio Code&lt;/a&gt; is what I recommend for just about everyone. It&amp;rsquo;s free and open
+source. Its backed by Microsoft so it won&amp;rsquo;t stopped being maintained for now reason. And it has tons of plugins you can
+download that will allow you to work with any language. It has full Git integration and a built in terminal as well allowing
+you to run code without leaving the environment. It works on Windows/Mac/Linux as well so you can use it on any platform.
+Visual Studio Code also has tons of customization so you can configure it to do almost anything you want once you get to that
+point. If you&amp;rsquo;re reading this to get &amp;ldquo;the best&amp;rdquo; IDE (no such things exists though!) then this would be my choice.&lt;/p&gt;
+&lt;h2 id=&#34;rstudio&#34;&gt;Rstudio&lt;/h2&gt;
+&lt;p&gt;The only time I disagree with what I said above is if you are going to be working in R then you need to use
+&lt;a href=&#34;https://rstudio.com/products/rstudio/&#34;&gt;Rstudio&lt;/a&gt;. Its not quite as customizable as VS Code in terms of packages
+being developed by others, but it is probably the best IDE when work with code in a pure data evironment. It also
+integrates with Git and has built in terminals and command line so you don&amp;rsquo;t have to leave as well. Rstudio also
+allows you to build &lt;a href=&#34;https://rmarkdown.rstudio.com/&#34;&gt;Rmarkdown files&lt;/a&gt; which is one of the easiest ways you can share
+your findings as you can directly host them on &lt;a href=&#34;https://rpubs.com/&#34;&gt;Rpubs&lt;/a&gt; for free. If you work in R this is the easiest
+way to build a portfolio to show to perspective employers&lt;/p&gt;
+&lt;h2 id=&#34;atom&#34;&gt;Atom&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://atom.io/&#34;&gt;Atom&lt;/a&gt; is another IDE developed by GitHub. It seems to be more tuned to frontend developers esepcially
+those working in Javascript, but I have set it up to use Python and I&amp;rsquo;m sure it can be configured for almost every language.
+It is also customizable by downloading user made packages like VS code. Technically Atom isn&amp;rsquo;t a true IDE anymore but rather
+a souped up text editor. But there are ways to add on those functionalities. Me personally I found Atom to be bloated and
+clunky and it wouldn&amp;rsquo;t be my first choice. But some people like it so I thought I would include it here.&lt;/p&gt;
+&lt;h2 id=&#34;others&#34;&gt;Others&lt;/h2&gt;
+&lt;h3 id=&#34;python-spyder&#34;&gt;Python Spyder&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.spyder-ide.org/&#34;&gt;Spyder&lt;/a&gt; is python&amp;rsquo;s answer to Rstudio and like pandas to tidyverse it does enough but still feels
+clunky. I haven&amp;rsquo;t used it in a while so take what I say with a grain of salt but it wasn&amp;rsquo;t my favorite. However if you want something
+close to Rstudio, but don&amp;rsquo;t want to work in R (completely understandable), this is the best best.&lt;/p&gt;
+&lt;h3 id=&#34;jetbrains&#34;&gt;Jetbrains&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jetbrains.com/&#34;&gt;Jetbrains&lt;/a&gt; makes a lot of good IDEs that are tailored to their individual langauge such as Pycharm for
+python, IntelliJ for Java, and Datagrips for SQL. These are not free but I have used them and there are some key benefits to paying.
+One is you don&amp;rsquo;t have to rely on user created packages to add functionality and two you get actual support instead of having to scour
+the internet to fix things. Again I feel VScode is just as good as these with a little extra work but if you don&amp;rsquo;t want to put the time
+in and have the money consider paying for a license for these.&lt;/p&gt;
+&lt;h1 id=&#34;only-read-past-here-if-you-are-truly-a-masochist&#34;&gt;Only Read Past Here if You Are Truly a Masochist&lt;/h1&gt;
+&lt;p&gt;So for the record I don&amp;rsquo;t use any of these options for anything I do. Not. Use. A. Single. One. I actually craft my own IDE by combining a
+bunch of different packages built around using &lt;a href=&#34;https://neovim.io/&#34;&gt;Neovim&lt;/a&gt; as my text editor. Neovim is an upgraded version of Vim which
+was an improvment on Vi released in 1991. This is a text editor that has no mouse and you navigate around your code using entirely your
+keyboard. It is not for the faint of heart and has a steep learning curve but if you have time to learn it you will be well rewarded
+because Vim is a ubiqutous text editor that comes with all linux/unix systems and you&amp;rsquo;ll never not be able to work.&lt;/p&gt;
+&lt;p&gt;In addition to neovim I install several packages to help me work. The first is &lt;a href=&#34;https://github.com/preservim/nerdtree&#34;&gt;NerdTree&lt;/a&gt; for navigating
+directories of files. The next is &lt;a href=&#34;https://github.com/vim-airline/vim-airline&#34;&gt;Airline&lt;/a&gt; to improve my status bar. After that is
+&lt;a href=&#34;https://github.com/vim-syntastic/syntastic&#34;&gt;Syntastic&lt;/a&gt; to handle all the linting for the languages I&amp;rsquo;m writing in. And lastly
+&lt;a href=&#34;https://github.com/ervandew/supertab&#34;&gt;Supertab&lt;/a&gt; to handle my autocompletion. I&amp;rsquo;ve also used &lt;a href=&#34;https://kite.com/&#34;&gt;Kite&lt;/a&gt; for python things
+which I really like as well.&lt;/p&gt;
+&lt;p&gt;All of this is dificult to setup and maintain so don&amp;rsquo;t choose this until you feel you are ready. Honestly you may find you never want this
+as Vim keystrokes can be added to almost any IDE these days. However if you find you want true customization of your text editor and IDE then
+this is the only way to go. It is not for the faint of heart though and learning it is hard. However, if you decide to embark down this
+path of darkness feel free to reach out to me and I&amp;rsquo;ll try to help you as much as I can.&lt;/p&gt;
+</content>
     </item>
     
     <item>
@@ -29,6 +108,79 @@
       <guid>https://barloweanalytics.com/posts/learning_to_code/</guid>
       <description>So You Want to Learn to Code I&amp;rsquo;ve been getting a lot of inquiries recently asking a lot of similar quesitions. Often these questions are broad and hard to answer in an email or a DM, so I&amp;rsquo;ve decided to use my free time no longer taken up by watching sports to write a series of blog posts to answer them as best I can.
 One of the big ones I keep seeing over and over again is &amp;ldquo;What are the best resources to learn to code?</description>
+      <content>&lt;h1 id=&#34;so-you-want-to-learn-to-code&#34;&gt;So You Want to Learn to Code&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;ve been getting a lot of inquiries recently asking a lot of similar quesitions.
+Often these questions are broad and hard to answer in an email or a DM, so I&amp;rsquo;ve decided
+to use my free time no longer taken up by watching sports to write a series of blog
+posts to answer them as best I can.&lt;/p&gt;
+&lt;p&gt;One of the big ones I keep seeing over and over again is &amp;ldquo;What are the best resources to
+learn to code?&amp;rdquo; or &amp;ldquo;How can I get started coding?&amp;rdquo; Questions like these are very hard to answer
+because everyone learns differently and what some find easy others may find dificult. This post
+will focuse on resources &lt;strong&gt;I&amp;rsquo;ve&lt;/strong&gt; found helpful in teaching myself to code. Will they work for you?
+Maybe, or maybe not but a lot of these are used/recommended by others so I&amp;rsquo;m hoping they
+work for you.&lt;/p&gt;
+&lt;h1 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h1&gt;
+&lt;p&gt;So the first step is to pick a programming language to learn. Which language should you pick?
+It really doesn&amp;rsquo;t matter, the key is to stick with it long enough to learn it well because once
+you do the same ideas will carry over from language to language. Most people asking me are wanting
+to learn a programming language in order to do some type of &amp;ldquo;analytics&amp;rdquo;. This post will generally
+tackle things from that view point, but I&amp;rsquo;m going to include some frontend resources
+(skills also very important in analytics though for different reasons) in case someone
+is interested.&lt;/p&gt;
+&lt;p&gt;Two of the most popular langauges in analytics is R and python. Which one should you choose?
+Again it doesn&amp;rsquo;t matter, just pick one and learn it! This part is going to take some time.
+You&amp;rsquo;ll be doing a lot of boring stuff just to learn the basics of the language before you can
+start working on the cool stuf. But don&amp;rsquo;t get discouraged and &lt;strong&gt;stick with it!&lt;/strong&gt; The key to learning
+things isn&amp;rsquo;t smarts, but rather time, so keep chipping away at it every day.&lt;/p&gt;
+&lt;p&gt;Disclaimer here Python is my language of choice. It&amp;rsquo;s what I use for everything I do so I&amp;rsquo;m a bit biased
+in favor of it. However, that doesn&amp;rsquo;t it make it perfect by any means so if you decide its not for you don&amp;rsquo;t
+feel bad. In fact I started learning R, didn&amp;rsquo;t like it, and then switched to Python. So if you&amp;rsquo;re just starting
+and you don&amp;rsquo;t like it then don&amp;rsquo;t fall for a sunk cost fallacy. Switch things up and see if other languages
+are easier to grasp&lt;/p&gt;
+&lt;p&gt;One link I&amp;rsquo;ll start out with is &lt;a href=&#34;https://www.codecademy.com/&#34;&gt;Code Academy&lt;/a&gt;. It has a bunch of intro
+lessons for all sorts of languages. And its a site that if I need to learn a new language and they have
+a lesson on it I always go through that lesson. There is premium content but most of it is free and
+its enough to get you started with any language you want to learn.&lt;/p&gt;
+&lt;h1 id=&#34;beginner-python-resources&#34;&gt;Beginner Python Resources&lt;/h1&gt;
+&lt;p&gt;One of my favorite beginner python books is &lt;a href=&#34;https://automatetheboringstuff.com/&#34;&gt;Automate the Boring Stuff&lt;/a&gt;
+by Al Sweigart. Not only is it good for beginners, the problems it uses to teach you programming are problems
+you&amp;rsquo;ll need to solve as a programmer. Things like file manipulation, web scraping, and working with
+spreadsheets in python are all skills you will need in analytics and this book does a great job of
+breaking things down. If you make it through the entire book you&amp;rsquo;ll come out the other side with
+enough skills in python to do whatever you want next.&lt;/p&gt;
+&lt;p&gt;The next I recommend if you don&amp;rsquo;t like reading is a class on EdX taught by MIT called
+&lt;a href=&#34;https://www.edx.org/course/introduction-to-computer-science-and-programming-7&#34;&gt;Intro to Computer Science and Programming using Python&lt;/a&gt;.
+It is a more broad course that focuses on important Computer Science ideas like loops,
+recursion, functions, and objects. These are all very important ideas to learn and know when
+learning programming as the translate to almost EVERY programming language and are a shared
+vocabulary. Even if I program in Java and you program in Python, I can say I did this by
+writing a for loop you&amp;rsquo;ll know what I mean and could replicate it in your own language as well.&lt;/p&gt;
+&lt;h1 id=&#34;beginner-r-resources&#34;&gt;Beginner R Resources&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;m not as familiar with R but I have learned it and can work in it, but others may have better
+resources than me. If you know something better for beginners then let me know &lt;a href=&#34;mailto:matt@barloweanaltyics.com&#34;&gt;matt@barloweanaltyics.com&lt;/a&gt;
+and I&amp;rsquo;ll add it to the post.&lt;/p&gt;
+&lt;p&gt;The course I used to mainly use R was this one from Udacity I took while working on my Data Analyst
+Nanodegree from them. &lt;a href=&#34;https://www.udacity.com/course/data-analysis-with-r--ud651&#34;&gt;Data Analysis with R&lt;/a&gt; is
+a free course you can go through all the lessons. I highly recommend it, and anything else from Udacity as well
+researched that will give you a good coverage of the basics to build on.&lt;/p&gt;
+&lt;p&gt;The next package I used is the &lt;a href=&#34;https://swirlstats.com/&#34;&gt;Swirl Package&lt;/a&gt;. This is an interactive package that
+will allow you to learn R while running R. So its similar to the Code Academy courses I posted above just
+not on a website.&lt;/p&gt;
+&lt;p&gt;Lastly I found this site while researching this post. Disclaimer I haven&amp;rsquo;t worked through it but it seems free
+and the first three lessons I skimmed through are very informative. If you go through it and had a bad experience
+let me know and I&amp;rsquo;ll change my review on it. This site &lt;a href=&#34;https://www.guru99.com/r-tutorial.html&#34;&gt;R Tutorial for Beginners&lt;/a&gt;
+even goes over the install process for R as well which could be very handy as well.&lt;/p&gt;
+&lt;h1 id=&#34;other-resources&#34;&gt;Other Resources&lt;/h1&gt;
+&lt;p&gt;One other site I worked on when I was first starting out was &lt;a href=&#34;https://www.freecodecamp.org/&#34;&gt;Free Code Camp&lt;/a&gt;.
+Its focus is mainly frontend design using javascript, but that still contains a lot of good knowledge that
+has come in handy a lot of times for me. They also have a good &lt;a href=&#34;https://www.freecodecamp.org/news/&#34;&gt;blog&lt;/a&gt;
+that posts articles about learning to code, tutorials, and about coding in general. All of it is well done
+and they have a great community focused on learning and beginnings. Even if you don&amp;rsquo;t want to do Javascript
+some of their stuff on coding philosophies is worth the time to read.&lt;/p&gt;
+&lt;p&gt;As an example here&amp;rsquo;s an &lt;a href=&#34;https://www.freecodecamp.org/news/a-gentler-introduction-to-programming-1f57383a1b2c/&#34;&gt;article&lt;/a&gt;
+that goes in depth on the broad concepts of what programming is that you
+might find interesting if you are first starting out.&lt;/p&gt;
+</content>
     </item>
     
     <item>
@@ -39,6 +191,121 @@ One of the big ones I keep seeing over and over again is &amp;ldquo;What are the
       <guid>https://barloweanalytics.com/posts/degrootchapter1/</guid>
       <description>Ok this is going to be a series of blog posts about detaling my notes and thoughts as I work through DeGroot and Schervish&amp;rsquo;s Probability and Statistics 4th Edition. This may be useful to you it may not be but I generally find I learn things better if I write down what I&amp;rsquo;m thinking about them so without further ado, let&amp;rsquo;s begin!
 The History of Probability So apparently people have been gambling forever.</description>
+      <content>&lt;p&gt;Ok this is going to be a series of blog posts about detaling my notes and thoughts as
+I work through DeGroot and &lt;em&gt;Schervish&amp;rsquo;s Probability and Statistics 4th Edition.&lt;/em&gt; This may be
+useful to you it may not be but I generally find I learn things better if I write down
+what I&amp;rsquo;m thinking about them so without further ado, let&amp;rsquo;s begin!&lt;/p&gt;
+&lt;h1 id=&#34;the-history-of-probability&#34;&gt;The History of Probability&lt;/h1&gt;
+&lt;p&gt;So apparently people have been gambling forever. Balise Pascal and Pierre Fermat started the
+mathematical theory of probability.&lt;/p&gt;
+&lt;h1 id=&#34;interpretations-of-probability&#34;&gt;Interpretations of Probability&lt;/h1&gt;
+&lt;p&gt;Apparently nobody can agree on a single scientific interpretation of what the term &lt;em&gt;probability&lt;/em&gt; means. I wonder what the probability of that happening is? But there seems to
+be three main different interpretations of probablity.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Frequency Interpretaion of Probability&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So the probability of a specific outcome of a process will be obtained is interpreted as
+the relative frequency that outcome is obtained if the process were repeated a large number
+of times under similar conditions. However there are some problems with this definition.
+The main thing being that the ideas are rather vague. &amp;ldquo;Large number&amp;rdquo; has no defnitive
+measurement of what the number should be to be considered large enough.&lt;/p&gt;
+&lt;p&gt;Secondly, its stating that the experiment should be repeated under similar conditions but
+again the conditions are not precisely described. The situations can&amp;rsquo;t be exactly identical
+or else the results would always be the same. So the trials have to have some random features in them.&lt;/p&gt;
+&lt;p&gt;Thirdly a shortcoming of the frequency interpretation of probability is that it applies only to
+a problem where there are a large number of similar repetitions of a similar problem. Some
+examples are that frequency interpretation can&amp;rsquo;t be used to determine the probability that a
+friend will get married or that a research project will lead to the development of a new
+treatment for a disease in a period of time.&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Classical Interpretation of Probability&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The classical interpretation of probability is based on the concept of equally likely outcomes
+and the sums of the probabilities must equal 1. For example with a coin there are only two possible outcomes and if we assume that both outcomes are equally likely they have the same
+probability and since the probabilities must equal one then their probabilities must be 1/2. To
+generalize if the outcome of some process is one of &lt;em&gt;n&lt;/em&gt; different outcomes and if those outcomes
+are equally likely to occur then the probability of each outcome is 1/&lt;em&gt;n&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;There are two main flaws when attempting to define a formal definition of probability from this
+interpretation. One the concept of equally likely outcomes is based on the concept of probability
+we are try to define. Two possible outcomes that are equally likely is the same as two outcomes have the same probability.&lt;/p&gt;
+&lt;p&gt;Second no systematic method is given for assigning probabilities to outcomes were we don&amp;rsquo;t assume
+them all to be equally likely. Look back at the problem of determing the probability of a friend
+getting married. No reasonable person would assume all outcomes of that situation to be equally likely so a different method would be needed to determine the probabilities of each outcome.&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Subjective Interpretation of Probability&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The subjective interpretation of probability is that the probability a person assigns to a
+possible outcome of some process represents their own judgment of the likelihood that the
+outcome will be obtained. If people&amp;rsquo;s judgements of the relative likelihoods of various combinations of outcomes satisfy certain conditions of consistency then it can be shown that
+their subjective probabilities of the different possible events can be uniquely determined.&lt;/p&gt;
+&lt;p&gt;The downfalls to this is that the idea that a person&amp;rsquo;s judgements be free from contradictions
+or biases does not seem humanly possible unless the person is willing to adopt a collection of
+judgements known to be consistent. Also these subjective interpretations provide no objective
+basis for two or more  people working together to reach a common evaluation of the state of
+knowledge.&lt;/p&gt;
+&lt;p&gt;So the mathematical theory of probability can be done without regard to the controversies of
+the different interpretations of the term probability.&lt;/p&gt;
+&lt;h1 id=&#34;experiments-and-events&#34;&gt;Experiments and Events&lt;/h1&gt;
+&lt;p&gt;An experiment is any process, real or hypothetical, in which the possible outcomes can be
+identified ahead of time. An event is a well defined set of possible outcomes of the experiment.
+The probability of each event is the way of saying how likely it is that the outcome of the
+experiment is in the event.&lt;/p&gt;
+&lt;p&gt;Once probabilities have been assigned to outcomes there is agreementthat the mathematical
+theory of probability provides the appropriate methodology to further study probabilities.&lt;/p&gt;
+&lt;h1 id=&#34;set-theory&#34;&gt;Set Theory&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Sample Space:&lt;/strong&gt; The collection of all possible outcomes of an experiment is called the sample
+space of the experiment. This space can also be thought of as a set or colleciton of the
+different possible outcomes. Each outcome is a &lt;em&gt;point&lt;/em&gt; or &lt;em&gt;element&lt;/em&gt; in the sample space and
+events are &lt;em&gt;subsets&lt;/em&gt; of the sample space.&lt;/p&gt;
+&lt;p&gt;For example with rolling a six sided dice the sample space is the six numbers on the dice.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;S = {1, 2, 3, 4, 5, 6}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;One event we call &lt;em&gt;A&lt;/em&gt; is an even number is rolled on the dice represented thusly &lt;em&gt;A&lt;/em&gt; = {2, 4, 6}.
+Another event is rolling a number greater than 2 then the subset of our sample space would
+be &lt;em&gt;B&lt;/em&gt; = {3, 4, 5, 6}&lt;/p&gt;
+&lt;p&gt;The collections of sets called events will have three conditions for the rest of the book.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Condition 1: The sample space &lt;em&gt;S&lt;/em&gt; must be an event where &lt;em&gt;S&lt;/em&gt; is the sample space of some
+experiment.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Containment:&lt;/strong&gt; it is said that a set &lt;em&gt;A is contained in&lt;/em&gt; another set &lt;em&gt;B&lt;/em&gt; if every element of
+the set &lt;em&gt;A&lt;/em&gt; also belongs to the set &lt;em&gt;B&lt;/em&gt;. This is expressed by A ⊂ B which says A is a subset
+of B. Also can say that B contains A and also write B ⊃ A. For events this means that if A
+occurs then so does B.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem 1.4.1:&lt;/strong&gt; Let A, B, and C be events. then A ⊂ S. If A ⊂ B and B ⊂ A, then A=B. If A⊂B and B ⊂ C, then A ⊂ C.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem 1.4.3:&lt;/strong&gt; Let A be an event then ∅ ⊂ A.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Countable/Uncountable:&lt;/strong&gt; An infinite set A is countable if there is a one to one
+correspondence between the elements of A and the set of natural numbers {1, 2, 3, &amp;hellip;}. A set is uncountable if it is neither finite nor countable. If it is said
+that a set has at most countably many elements then the set is either finite or countable.&lt;/p&gt;
+&lt;p&gt;Examples of countably infinite sets include the integers, even integers, odd integers,
+the prime numbers, and any infinite sequence. these sets can be put in one to one
+correspondence with the natural numbers. Every infinite sequence of distinct items
+is a countable set as its indexing puts it in one to one correspondence with the natural numbers. Examples of uncountable sets are the real numbers, the positive
+reals, numbers in the interval [0, 1], and the set of all ordered pairs of real
+numbers.&lt;/p&gt;
+&lt;h2 id=&#34;operation-of-set-theory&#34;&gt;Operation of Set Theory&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Complement:&lt;/strong&gt; The complement of a set A is defined to be the set that contains all
+elements of the sample space S that do not belong to A. In terms of events the
+compliment event of A is the event that A does not occur.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Condition 2:&lt;/strong&gt; If A is an event then the compliment of A is also an event.&lt;/p&gt;
+&lt;p&gt;If A is an event the the compliment of the compliment of A is A. The compleiment of the empty set is S the sample space and the compilment of the sample space is the empty set.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Union of Two Sets:&lt;/strong&gt; If A and B are any two sets, the union of A and B is defined
+to be the set containing all outcomes that belong to A alon, to B alone, or to both
+A and B. The notation for the union of A and B is A ∪ B.&lt;/p&gt;
+&lt;p&gt;For all sets A and B,
+A ∪ B = B ∪ A,
+A ∪ A = A,
+A ∪ Ac = S,
+A ∪ ∅ = A,
+A ∪ S = S.
+Furthermore, if A ⊂ B, then A ∪ B = B.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Union of Many Sets:&lt;/strong&gt; the union of n sets A₁, &amp;hellip;, An is defined to be the set that
+contains all outcomes that bleong to at least one of these n sets.&lt;/p&gt;
+&lt;p&gt;In terms of events the union of a colleciton of events is the event that at least
+one of the events in the collections occurs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Condition 3:&lt;/strong&gt; If A1, A2, . . . is a countable collection of events, then the union of all the events also an event.&lt;/p&gt;
+</content>
     </item>
     
     <item>
@@ -48,7 +315,151 @@ The History of Probability So apparently people have been gambling forever.</des
       
       <guid>https://barloweanalytics.com/posts/sqlbasics/</guid>
       <description>Ok if you&amp;rsquo;ve read the first tutorial on installing Postgres and getting your first database up and running, you&amp;rsquo;re now wondering &amp;ldquo;So how do I access all this data?&amp;rdquo; Well that&amp;rsquo;s where this tutorial comes in as we are going to cover some of the basic commands in SQL to get the data we want. Ok let&amp;rsquo;s get started and dive right in to our data.
-SELECT The SELECT command is going to be your workhorse command when working with SQL.</description>
+ Column | Type | Collation | Nullable | Default | Storage | Stats target | Description -----------+------------------+-----------+----------+---------+----------+--------------+------------- yearID | bigint | | | | plain | | teamID | text | | | | extended | | lgID | text | | | | extended | | playerID | text | | | | extended | | G_all | bigint | | | | plain | | GS | double precision | | | | plain | | G_batting | bigint | | | | plain | | G_defense | double precision | | | | plain | | G_p | bigint | | | | plain | | G_c | bigint | | | | plain | | G_1b | bigint | | | | plain | | G_2b | bigint | | | | plain | | G_3b | bigint | | | | plain | | G_ss | bigint | | | | plain | | G_lf | bigint | | | | plain | | G_cf | bigint | | | | plain | | G_rf | bigint | | | | plain | | G_of | bigint | | | | plain | | G_dh | double precision | | | | plain | | G_ph | double precision | | | | plain | | G_pr | double precision | | | | plain | | This table in the database lists the number of appearances at each position for each player, each season and each team.</description>
+      <content>&lt;p&gt;Ok if you&amp;rsquo;ve read the &lt;a href=&#34;https://barloweanalytics.com/sql/install/&#34;&gt;first tutorial&lt;/a&gt; on installing Postgres
+and getting your first database up and running, you&amp;rsquo;re now wondering &amp;ldquo;So how do I access all
+this data?&amp;rdquo; Well that&amp;rsquo;s where this tutorial comes in as we are going to cover some of the basic
+commands in SQL to get the data we want. Ok let&amp;rsquo;s get started and dive right in to our data.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;      Column   |       Type       | Collation | Nullable | Default | Storage  | Stats target | Description
+    -----------+------------------+-----------+----------+---------+----------+--------------+-------------
+     yearID    | bigint           |           |          |         | plain    |              |
+     teamID    | text             |           |          |         | extended |              |
+     lgID      | text             |           |          |         | extended |              |
+     playerID  | text             |           |          |         | extended |              |
+     G_all     | bigint           |           |          |         | plain    |              |
+     GS        | double precision |           |          |         | plain    |              |
+     G_batting | bigint           |           |          |         | plain    |              |
+     G_defense | double precision |           |          |         | plain    |              |
+     G_p       | bigint           |           |          |         | plain    |              |
+     G_c       | bigint           |           |          |         | plain    |              |
+     G_1b      | bigint           |           |          |         | plain    |              |
+     G_2b      | bigint           |           |          |         | plain    |              |
+     G_3b      | bigint           |           |          |         | plain    |              |
+     G_ss      | bigint           |           |          |         | plain    |              |
+     G_lf      | bigint           |           |          |         | plain    |              |
+     G_cf      | bigint           |           |          |         | plain    |              |
+     G_rf      | bigint           |           |          |         | plain    |              |
+     G_of      | bigint           |           |          |         | plain    |              |
+     G_dh      | double precision |           |          |         | plain    |              |
+     G_ph      | double precision |           |          |         | plain    |              |
+     G_pr      | double precision |           |          |         | plain    |              |
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This table in the database lists the number of appearances at each position for each player, each season
+and each team. G_1b is games at first base and so on. If you need more info about the data
+in the database the data dictionary can be found &lt;a href=&#34;http://www.seanlahman.com/files/database/readme2012.txt&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Side note here. When I was creating this database file for you I forgot that Postgres only stores column names
+in lower case. As you can see above it does recognize upper case when displaying the column. The problem comes
+when you want to select a column. If you tried to execute &lt;code&gt;SELECT playerID from appearances limit 10;&lt;/code&gt; you would
+get an error saying &lt;code&gt;HINT:  Perhaps you meant to reference the column &amp;quot;appearances.playerID&amp;quot;&lt;/code&gt;. But even if you added
+appearances to your column selection you would still get the same error. THe solution is to add &lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt; around each
+column name so that the column is searched for on a case sensitive basis. But that&amp;rsquo;s annoying so lets fix it.&lt;/p&gt;
+&lt;p&gt;Logout of your current account with &lt;code&gt;\q&lt;/code&gt; and log back in with the superuser account that is the same
+name as your computer user name and run this code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\t on
+select &#39;ALTER TABLE &#39;||&#39;&amp;quot;&#39;||table_name||&#39;&amp;quot;&#39;||&#39; RENAME COLUMN &#39;||&#39;&amp;quot;&#39;||column_name||&#39;&amp;quot;&#39;||&#39; TO &#39; || lower(column_name)||&#39;;&#39;
+from information_schema.columns
+where table_schema = &#39;public&#39; and lower(column_name) != column_name
+\g /tmp/go_to_lower
+\i /tmp/go_to_lower
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Copy this and paste it into the terminal and hit enter and all your column names will be in lower case. I put this
+in the tutorial for a very good reason. I could have gone back and fixed the file and changed a couple
+things and made it look like I&amp;rsquo;m perfect, but I&amp;rsquo;m not. Mistakes happen. A lot. Things are going
+break and a vital skill is to learn how to fix them. In this case I literally googled
+&amp;lsquo;convert all columnames to lowercase postgres&amp;rsquo; and the answer was the &lt;a href=&#34;https://stackoverflow.com/questions/10086532/how-can-i-convert-all-columns-in-my-database-to-case-insensitive&#34;&gt;second link&lt;/a&gt;
+on google.&lt;/p&gt;
+&lt;p&gt;Do I know exactly what that code does? Nope but what better place to learn than in a situation
+with no ramifications for it being wrong. Now knowing what to google comes with experience,
+but a good place to start is to just cut and paste the error into google and start clicking.
+This is what every professional programmer does and the ones that say they don&amp;rsquo;t are lying.
+Ok back to the tutorial.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;playerid  | teamid | g_1b | g_2b | g_cf
+-----------+--------+------+------+------
+ abercda01 | TRO    |    0 |    0 |    0
+ addybo01  | RC1    |    0 |   22 |    0
+ allisar01 | CL1    |    0 |    2 |   29
+ allisdo01 | WS3    |    0 |    0 |    0
+ ansonca01 | RC1    |    1 |    2 |    0
+ armstbo01 | FW1    |    0 |    0 |   11
+ barkeal01 | RC1    |    0 |    0 |    0
+ barnero01 | BS1    |    0 |   16 |    0
+ barrebi01 | FW1    |    0 |    0 |    0
+ barrofr01 | BS1    |    0 |    1 |    0
+(10 rows)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;SELECT playerid, teamid, g_1b, g_2b, g_cf from appearances WHERE yearid = 2016 limit 10;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt; yearid | playerid  | teamid | g_1b | g_2b | g_cf
+--------+-----------+--------+------+------+------
+   2016 | abadfe01  | BOS    |    0 |    0 |    0
+   2016 | abadfe01  | MIN    |    0 |    0 |    0
+   2016 | abreujo02 | CHA    |  152 |    0 |    0
+   2016 | achteaj01 | LAA    |    0 |    0 |    0
+   2016 | ackledu01 | NYA    |   13 |    1 |    0
+   2016 | adamecr01 | COL    |    0 |   11 |    0
+   2016 | adamsau01 | CLE    |    0 |    0 |    0
+   2016 | adamsma01 | SLN    |   86 |    0 |    0
+   2016 | adlemti01 | CIN    |    0 |    0 |    0
+   2016 | adriaeh01 | SFN    |    0 |    7 |    0
+(10 rows)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This has returned all the players that had an appearance in the 2016 baseball season.
+You can also chain these commands as well using logical switches such as AND or OR like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT playerid, teamid, g_1b, g_2b, g_cf from appearances WHERE yearid = 2016 AND g_1b &amp;gt; 100;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;SELECT playerid, sum(h) FROM batting WHERE yearid=2017 GROUP BY playerid ORDER BY sum(h) DESC LIMIT 10;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which gives us this output:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; playerid  | sum
+-----------+-----
+ blackch02 | 213
+ altuvjo01 | 204
+ inciaen01 | 201
+ gordode01 | 201
+ hosmeer01 | 192
+ ozunama01 | 191
+ andruel01 | 191
+ abreujo02 | 189
+ lemahdj01 | 189
+ arenano01 | 187
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;SELECT playerid, sum(h) AS Hits FROM batting WHERE yearid=2017 GROUP BY playerid ORDER BY sum(h) DESC LIMIT 10;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt; playerid  | hits
+-----------+------
+ blackch02 |  213
+ altuvjo01 |  204
+ inciaen01 |  201
+ gordode01 |  201
+ hosmeer01 |  192
+ ozunama01 |  191
+ andruel01 |  191
+ abreujo02 |  189
+ lemahdj01 |  189
+ arenano01 |  187
+(10 rows)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;A couple other notes on this query. We have to do the &lt;code&gt;GROUP BY&lt;/code&gt; because this table has a row for each player for each team
+they played for in the season. A lot of players do play for the same team all season but a lot don&amp;rsquo;t. If you didn&amp;rsquo;t do
+the group by you would miss out on those other team hits for that player. The next is the &lt;code&gt;ORDER BY&lt;/code&gt; this tells
+the database how to sort the results in this case by hits descending, i.e. from largest to smallest, with the
+&lt;code&gt;DESC&lt;/code&gt; keyword. When you alias the &lt;code&gt;sum(h)&lt;/code&gt; column you can just using &lt;code&gt;ORDER BY hits&lt;/code&gt; next time. &lt;code&gt;ORDER BY&lt;/code&gt; will
+sort ascending by default unless you tell it otherwise&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Our next tutorial will cover &lt;code&gt;JOIN&lt;/code&gt; so you can finall tell which players are actually accumulating the stats
+you are calculating in you queries.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+</content>
     </item>
     
     <item>
@@ -59,6 +470,172 @@ SELECT The SELECT command is going to be your workhorse command when working wit
       <guid>https://barloweanalytics.com/posts/travis/</guid>
       <description>by Matthew Barlowe I&amp;rsquo;m going to cover two important concepts when it comes to coding: Continuous Integration and Code Coverage. Continuous Integration is the act of merging everyones code into the main code repository several times a day instead of doing it once a day or every few days.
 There are pros and cons to this behavior which is beyond the scope of the article, but I like Continuous Integration (CI) because it fits in with my own coding philosophy.</description>
+      <content>&lt;h3 id=&#34;by-matthew-barlowe&#34;&gt;by Matthew Barlowe&lt;/h3&gt;
+&lt;p&gt;I&amp;rsquo;m going to cover two important concepts when it comes to
+coding: Continuous Integration and Code Coverage. Continuous Integration
+is the act of merging everyones code into the main code repository several
+times a day instead of doing it once a day or every few days.&lt;/p&gt;
+&lt;p&gt;There are pros and cons to this behavior which is beyond the scope of the
+article, but I like Continuous Integration (CI) because it fits in with
+my own coding philosophy. I like to commit often usually after every
+feature/function I create. This is because if something breaks I
+don&amp;rsquo;t want to have to go back through lines and lines of code to
+figure out what is actually breaking things.
+The second part of CI is each merge automatically runs tests to
+make sure the new code doesn&amp;rsquo;t break the old code. Automating tests
+is a great behavior because it means never forgetting to
+run them.&lt;/p&gt;
+&lt;p&gt;Tests brings us to the next part of this article: code coverage.
+The idea of code coverage concerns the tests run after each
+integration of the code. Code coverage examines all tests
+and determines what percentage of the code base the tests
+actually test.&lt;/p&gt;
+&lt;p&gt;The best is to have your tests cover one hundred
+percent of your code but that&amp;rsquo;s not always possible. Sometimes
+certain functions take to long and can&amp;rsquo;t always be implemented
+in a test as tests are meant to be short as possible. Still though,
+shooting for one hundred percent code coverage is always a good goal
+strive for.&lt;/p&gt;
+&lt;p&gt;There are tons of platforms out there to implement CI and measure
+code coverage for your projects. The two I will be discussing in
+this article is &lt;a href=&#34;https://travis-ci.org&#34;&gt;Travis CI&lt;/a&gt; for continuous
+integration and &lt;a href=&#34;https://codecov.io&#34;&gt;Codecov&lt;/a&gt; for code coverage.
+This article will require you have a Github account and be familiar
+with &lt;code&gt;git&lt;/code&gt; so go grab one if you do not already have one.
+If you are unfamiliar with git, make sure to read my other
+articles on &lt;a href=&#34;https://barloweanalytics.com/git/gitintro/&#34;&gt;learning to use git&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;One last note is that Pytest will be the python testing suite
+I will be using for all the tests. I&amp;rsquo;m sure others will work
+with this setup just fine I&amp;rsquo;m just not familiar with the exact
+syntax to get them to run. Also if you don&amp;rsquo;t have any tests
+written for your code then the rest of this article will be
+useless to you as well. So go write some tests for your code
+and then come back!&lt;/p&gt;
+&lt;h1 id=&#34;setting-up-travis-ci&#34;&gt;Setting up Travis-CI&lt;/h1&gt;
+&lt;p&gt;Shown below is similar to what you will see when
+you visit the &lt;a href=&#34;https://travis-ci.org&#34;&gt;Travis CI Homepage&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://barloweanalytics.com/posts/img/travishomepage.png&#34; alt=&#34;&amp;lsquo;Travis CI Home Page&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Hit the big green signup button and it will take you to a page
+that will have you enter your Github credentials. Enter those
+and then authorize Travis CI to access your Github repos. Click
+that big green button as well and then Travis should take you
+to a page that looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://barloweanalytics.com/posts/img/travisdash.png&#34; alt=&#34;&amp;lsquo;Travis CI Dash&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Click the slider button next to the repo you want to have Travis
+CI monitor and then click on the Settings button next to it and
+make sure that &amp;ldquo;Build pushed branches&amp;rdquo; and &amp;ldquo;Build pushed pull requests&amp;rdquo;
+slider buttons are also checked as well. Ok now Travis is ready to
+the run project&amp;rsquo;s tests with each push to the Github repo.&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t push anything though because Travis won&amp;rsquo;t know what to do with it
+because we haven&amp;rsquo;t written the &lt;code&gt;.travis.yml&lt;/code&gt; file for the repo.
+&lt;a href=&#34;https://en.wikipedia.org/wiki/YAML&#34;&gt;YAML&lt;/a&gt; stands for &amp;ldquo;YAML ain&amp;rsquo;t
+markup language&amp;rdquo; and is a common format for configuration files.&lt;/p&gt;
+&lt;p&gt;So create a &lt;code&gt;.travis.yml&lt;/code&gt; file inside the root directory of the repo
+on your computer and we&amp;rsquo;ll create a basic one for our Travis CI
+build below. You can read more about the options you can have in
+the &lt;code&gt;.travis.yml&lt;/code&gt; file &lt;a href=&#34;https://docs.travis-ci.com/user/customizing-the-build/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;language: python
+python:
+    - &amp;quot;3.6&amp;quot;
+
+install:
+    pip install -r requirements.txt
+
+script:
+    - pytest -s test_unit.py
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are a lot of configurations you can put in your &lt;code&gt;.travs.yml&lt;/code&gt; file
+but for now this basic one will get your tests up and running. Let&amp;rsquo;s break
+it down. &lt;code&gt;language&lt;/code&gt; tells Travis what language you will be running the tests
+in. This case is python but it could be anything: c++, java, ruby etc. The
+&lt;code&gt;python&lt;/code&gt; tells Travis which version of Python we want to run the tests in. This
+one is Python 3.6. If you are using a different version of Python please change
+this to reflect that version.&lt;/p&gt;
+&lt;p&gt;If your tests require any non standard packages you would tell Travis that
+in the &lt;code&gt;intsall&lt;/code&gt; section of the YAML file. A &lt;code&gt;requirements.txt&lt;/code&gt; file holds
+all the Python packages the code needs to run and Travis installs them before
+it trys to run your tests. Not adding this line will cause automatic failure
+of your tests due to &lt;code&gt;ImportErrors&lt;/code&gt; if the code uses non base Python packages.&lt;/p&gt;
+&lt;p&gt;Next is the &lt;code&gt;script&lt;/code&gt; part of the YAML file. Here Travis looks to see exactly
+what tests we want to run each time we push to the repo. Our file is telling
+Travis to run the &lt;code&gt;test_unit.py&lt;/code&gt; file and take the output of those tests to
+determine whether our build is successful or not. Change &lt;code&gt;test_unit.py&lt;/code&gt; to
+whatever the name of your test file is and Travis will run that instead.
+Travis will only determine the build is successful if all the tests pass;
+if any test fails it will determine that the build is failing.&lt;/p&gt;
+&lt;p&gt;Save this file and then push it to your repo on Github. Goto your Build History
+on Travis CI and you will see Travis spinning up a virtual machine with the
+settings you passed it in the &lt;code&gt;.travis.yml&lt;/code&gt; file. This is after a successful
+test for my &lt;code&gt;nba_scraper&lt;/code&gt; package but the look should be similar.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://barloweanalytics.com/posts/img/travisbuild.png&#34; alt=&#34;Travis build&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If all the tests pass the build will turn green and if they fail then
+it will turn red. And now you have Continous Integration setup for your
+python project! This means that every time you push a commit to your
+python project Github repo, Travis will clone the repo and run the tests.&lt;/p&gt;
+&lt;p&gt;One last thing to mention is that if you&amp;rsquo;d like the build badge on your
+Github repo README.md just click on the badge you see on the Travis
+build page and select the Markdown option. Take markdown it gives you
+and paste it at the top your README.md file commit and push to the Github
+repo and you&amp;rsquo;ll have your own shiny build: passing badge.&lt;/p&gt;
+&lt;h1 id=&#34;setting-up-codecov&#34;&gt;Setting up Codecov&lt;/h1&gt;
+&lt;p&gt;Ok know that Travis CI is up and running with the repo adding the
+Code Coverage reports is just a few more steps. First you need to
+&lt;code&gt;pip install pytest-cov codecov&lt;/code&gt; and add the packages to your
+&lt;code&gt;requirements.txt&lt;/code&gt; file so Travis will know to install them as well.&lt;/p&gt;
+&lt;p&gt;Next go to &lt;a href=&#34;https://codecov.io&#34;&gt;Codecov&lt;/a&gt; and link your Github account.
+Codecov will then show a page saying no repos are linked to it and
+giving you a repository upload token. You won&amp;rsquo;t need that because
+Codecov doesn&amp;rsquo;t require the token from &lt;strong&gt;public repositories&lt;/strong&gt; originating
+from Travis CI, Circle CI, or AppVeyor CI. If you want to pass
+private repositories then you will need to add that to your &lt;code&gt;.travis.yml&lt;/code&gt;
+file.&lt;/p&gt;
+&lt;p&gt;Now that your Codecov account is created, the next step is to edit
+the &lt;code&gt;.travis.yml&lt;/code&gt; file to tell Travis to run it after our tests
+are done. So open the &lt;code&gt;.travis.yml&lt;/code&gt; file and add these lines to it&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;language: python
+python:
+    - &amp;quot;3.6&amp;quot;
+
+install:
+    pip install -r requirements.txt
+
+script:
+    - pytest -s --cov=nba_scraper test_unit.py
+
+env:
+    - CODECOV_TOKEN=&amp;lt;token&amp;gt;#IF ONLY YOU HAVE A PRIVATE REPOSITORY
+
+after_success:
+    - codecov
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So its basically the same except for a couple differences. First
+is the &lt;code&gt;--cov=nba_scraper&lt;/code&gt; flag to pytest. This tells pytest to measure
+coverage for my &lt;code&gt;nba_scraper&lt;/code&gt; module. You would change this name to whatever
+the name of the folder is holding your python module. The second part
+is &lt;code&gt;after_success:&lt;/code&gt;. This section tells Travis what to do after the tests
+are passed which in this case is to send the report to Codecov.&lt;/p&gt;
+&lt;p&gt;And that&amp;rsquo;s it! Now save the &lt;code&gt;.travis.yml&lt;/code&gt; file and push to Github.
+Travis will do it&amp;rsquo;s thing and then send the code coverage report to
+Codecov and you should see something like this on your Codecov main
+page:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://barloweanalytics.com/posts/img/codecovdash.png&#34; alt=&#34;Codecov Dashboard&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nba_scraper&lt;/code&gt; would be replaced with the name of whatever repository
+you were pushing to Github. And now the only thing left to do is to
+get the badge for your repo&amp;rsquo;s README.md. Click on your repo&amp;rsquo;s name
+from the main page and then goto Settings. On the left will be a Badge
+section, click on that and copy the markdown option. Repeate the process
+of adding it to the repo&amp;rsquo;s README.md just like you did with Travis. Commit
+and push and now you have a shiny code coverage badge next to your
+build badge.&lt;/p&gt;
+&lt;p&gt;If you have any questions/concerns or notice any errors please feel
+free to email me at &lt;a href=&#34;mailto:matt@barloweanalytics.com&#34;&gt;matt@barloweanalytics.com&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;sources&#34;&gt;Sources:&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://dev.to/j0nimost/using-codecov-with-travis-ci-pytest-cov-1dfj&#34;&gt;Using Codecov with Travis CI&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/devops/continuous-integration/&#34;&gt;Continuous Integration&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.codecov.io/docs/frequently-asked-questions&#34;&gt;Codecov FAQ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/195008/what-is-code-coverage-and-how-do-you-measure-it&#34;&gt;What is code coverage and how do you measure it?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Continuous_integration&#34;&gt;Wikipedia Continuous Integration&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pypi.org/project/pytest-cov/&#34;&gt;Pytest-cov&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.pytest.org/en/latest/&#34;&gt;Pytest&lt;/a&gt;&lt;/p&gt;
+</content>
     </item>
     
     <item>
@@ -68,6 +645,13 @@ There are pros and cons to this behavior which is beyond the scope of the articl
       
       <guid>https://barloweanalytics.com/posts/my-first-post/</guid>
       <description>The Rebuild Has Begun Due to a lot (well a few) people asking me about my tutorials I&amp;rsquo;ve decided to bring them back. And It gives me a chance to revamp the old website with a little slicker format. So stay tuned as I slowly work to get things back in the shape they were before. As always you can address any concerns, questions, or requests to matt@barloweanaltyics.com.</description>
+      <content>&lt;h1 id=&#34;the-rebuild-has-begun&#34;&gt;The Rebuild Has Begun&lt;/h1&gt;
+&lt;p&gt;Due to a lot (well a few) people asking me about my tutorials I&amp;rsquo;ve decided to bring them
+back. And It gives me a chance to revamp the old website with a little slicker format. So
+stay tuned as I slowly work to get things back in the shape they were before. As always you
+can address any concerns, questions, or requests to
+&lt;a href=&#34;mailto:matt@barloweanaltyics.com&#34;&gt;matt@barloweanaltyics.com&lt;/a&gt;.&lt;/p&gt;
+</content>
     </item>
     
   </channel>

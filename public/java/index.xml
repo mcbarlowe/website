@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javas on Barlowe Analytics</title>
+    <title>Javae on Barlowe Analytics</title>
     <link>https://barloweanalytics.com/java/</link>
-    <description>Recent content in Javas on Barlowe Analytics</description>
+    <description>Recent content in Javae on Barlowe Analytics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019 Barlowe Analytics</copyright>
-    <lastBuildDate>Thu, 18 Apr 2019 19:07:08 -0400</lastBuildDate>
-    
-	<atom:link href="https://barloweanalytics.com/java/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 18 Apr 2019 19:07:08 -0400</lastBuildDate><atom:link href="https://barloweanalytics.com/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Loops</title>
       <link>https://barloweanalytics.com/java/loops/</link>
@@ -21,6 +17,55 @@
       <description>by Matthew Barlowe Remember all these code snippets must be wrapped in a class method or a public static void main to actually run. For the idea/philosophy behind loops and how to use them go here
 for loops for (initialization; termination; increment){ statement(s); }  Real world example:
 //++ operator increments the value by one for (int i=1; i&amp;lt;11; i++) { System.out.println(&amp;quot;Your number is: &amp;quot; + i); }  Infinite loop can be created this way:</description>
+      <content>&lt;h1 id=&#34;by-matthew-barlowe&#34;&gt;by Matthew Barlowe&lt;/h1&gt;
+&lt;p&gt;Remember all these code snippets must be wrapped in a class method or a
+&lt;code&gt;public static void main&lt;/code&gt; to actually run. For the idea/philosophy
+behind loops and how to use them go &lt;a href=&#34;https://barloweanalytics.com/python/loops/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;for-loops&#34;&gt;&lt;code&gt;for&lt;/code&gt; loops&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;for (initialization; termination; increment){
+    statement(s);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Real world example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//++ operator increments the value by one
+for (int i=1; i&amp;lt;11; i++) {
+    System.out.println(&amp;quot;Your number is: &amp;quot; + i);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Infinite loop can be created this way:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for ( ; ; ) {
+    //put code here
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Can also loop over an array like in R/Python like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int[] numbers = {1,4,5,2,6,3,6,7}
+for (int item : numbers) {
+    System.out.println(&amp;quot;Your number is: &amp;quot; + i);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;while-loops&#34;&gt;&lt;code&gt;while&lt;/code&gt; loops&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;while (count &amp;lt; 11) {
+    System.out.println(&amp;quot;Your number is: &amp;quot; + count);
+    count ++;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;do-while-loops&#34;&gt;&lt;code&gt;do-while&lt;/code&gt; loops&lt;/h1&gt;
+&lt;p&gt;The main difference between &lt;code&gt;while&lt;/code&gt; and &lt;code&gt;do-while&lt;/code&gt; loops in java is that
+&lt;code&gt;while&lt;/code&gt; loops evaluate the condition for continuing at the beginning of the
+loop, and &lt;code&gt;do-while&lt;/code&gt; evaluates its condition at the end of the loop. This means
+a &lt;code&gt;do-while&lt;/code&gt; loop will run at least once as opposed to a &lt;code&gt;while&lt;/code&gt; loop which
+could never run depending on the condition. You also have to initialize the
+variable before you write the loop unlike &lt;code&gt;while&lt;/code&gt; loops where you can
+initialize the variable in the loop declaration.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int count = 1;
+do {
+    System.out.println(&amp;quot;Your number is: &amp;quot; + count);
+    count ++;
+} while (count &amp;lt; 11);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;source&#34;&gt;Source&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html&#34;&gt;&lt;code&gt;while&lt;/code&gt; and &lt;code&gt;do-while&lt;/code&gt;Statments&lt;/a&gt;&lt;/p&gt;
+</content>
     </item>
     
     <item>
@@ -31,6 +76,34 @@ for loops for (initialization; termination; increment){ statement(s); }  Real wo
       <guid>https://barloweanalytics.com/java/helloworld/</guid>
       <description>Ok Java is a little different than R or Python in that in order to run any code you have to first create a class object. I haven&amp;rsquo;t yet written a tutorial on classes and inheritence which form the basis of Object Oriented Programming.
 If you&amp;rsquo;re trying to learn Java coming from Python or R this fact will be very disorienting as you can&amp;rsquo;t can&amp;rsquo;t just type some lines and run them at the command line.</description>
+      <content>&lt;p&gt;Ok Java is a little different than R or Python in that in order to run any code you
+have to first create a &lt;code&gt;class&lt;/code&gt; object. I haven&amp;rsquo;t yet written a tutorial on classes
+and inheritence which form the basis of Object Oriented Programming.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re trying to learn Java coming from Python or R this fact will be very disorienting
+as you can&amp;rsquo;t can&amp;rsquo;t just type some lines and run them at the command line. In Java you have
+to create a &lt;code&gt;class&lt;/code&gt; first and then create a &lt;code&gt;main&lt;/code&gt; method which will run the lines of code
+you want after you compile the code.&lt;/p&gt;
+&lt;p&gt;Each class must be stored in its on file as well. This means that everytime you want to
+create a new class you have to create a new file &lt;strong&gt;that has the same file name as the
+class name&lt;/strong&gt;. The file name also has to end in &lt;code&gt;.java&lt;/code&gt; just like all Python scripts
+have to end in &lt;code&gt;.py&lt;/code&gt;. It&amp;rsquo;s a lot to take in that I will explain further in my tutorial on
+installing Java, but as of right now let&amp;rsquo;s just write a simple &lt;code&gt;Hello World&lt;/code&gt; program.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// Java uses camelCase for its naming conventions. Awful I know.
+// unlike Python, Java doesn&#39;t care about whitespace so you can
+// structure your code however you want as each line ends with a
+// semicolon.
+public class helloWorld {
+
+    // the main method will always look like this
+    public static void main(String[] args) {
+        //Look at all that just to print. Also don&#39;t forget your semicolon!
+        System.out.println(&amp;quot;Hello World&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now your program is ready to compile so save it as &lt;code&gt;helloWorld.java&lt;/code&gt; and then type
+at the command line &lt;code&gt;java helloWorld.java&lt;/code&gt; and the output will be &lt;code&gt;Hello World&lt;/code&gt;.&lt;/p&gt;
+</content>
     </item>
     
   </channel>

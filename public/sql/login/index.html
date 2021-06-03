@@ -2,15 +2,28 @@
 <html lang="en">
 <head>
   
-    <title>Postgres Remote Login :: Barlowe Analytics — Posts about Data Science</title>
+    <title>Postgres Remote Login :: Barlowe Analytics</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Remote Postgres Login 
-Ok if you&amp;rsquo;ve been following along with the other tutorials you have seen me use the psql command to login into your database that you&amp;rsquo;ve setup on your computer. But that&amp;rsquo;s not all psql is use for, and in fact it has many diverse properties that you can use to pass SQL queries to the database without ever logging into the server itself. But I won&amp;rsquo;t get into that with this tutorial, instead I&amp;rsquo;m going to focus on using psql to login into a remote Postgres server"/>
-<meta name="keywords" content=""/>
-<meta name="robots" content="noodp"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="psql --host=&amp;lt;hostname&amp;gt; --port=5432 --username=&amp;lt;username&amp;gt; --dbname=&amp;lt;dbname&amp;gt;  " />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
 <link rel="canonical" href="https://barloweanalytics.com/sql/login/" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-138686262-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
 
 
 <link rel="stylesheet" href="https://barloweanalytics.com/assets/style.css">
@@ -19,36 +32,41 @@ Ok if you&amp;rsquo;ve been following along with the other tutorials you have se
 
 
 
-<link rel="stylesheet" href="https://barloweanalytics.com/style.css">
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://barloweanalytics.com/img/apple-touch-icon-144-precomposed.png">
 
-<link rel="shortcut icon" href="https://barloweanalytics.com/img/favicon/pink.png">
+<link rel="apple-touch-icon" href="https://barloweanalytics.com/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://barloweanalytics.com/img/favicon/pink.png">
 
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Postgres Remote Login :: Barlowe Analytics — Posts about Data Science" />
-<meta name="twitter:description" content="Remote Postgres Login 
-Ok if you&amp;rsquo;ve been following along with the other tutorials you have seen me use the psql command to login into your database that you&amp;rsquo;ve setup on your computer. But that&amp;rsquo;s not all psql is use for, and in fact it has many diverse properties that you can use to pass SQL queries to the database without ever logging into the server itself. But I won&amp;rsquo;t get into that with this tutorial, instead I&amp;rsquo;m going to focus on using psql to login into a remote Postgres server" />
-<meta name="twitter:site" content="https://barloweanalytics.com/" />
-<meta name="twitter:creator" content="" />
-<meta name="twitter:image" content="">
+
+  
+    <meta name="twitter:site" content="barloweanalytic" />
+  
+    <meta name="twitter:creator" content="" />
+
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Postgres Remote Login :: Barlowe Analytics — Posts about Data Science">
-<meta property="og:description" content="Remote Postgres Login 
-Ok if you&amp;rsquo;ve been following along with the other tutorials you have seen me use the psql command to login into your database that you&amp;rsquo;ve setup on your computer. But that&amp;rsquo;s not all psql is use for, and in fact it has many diverse properties that you can use to pass SQL queries to the database without ever logging into the server itself. But I won&amp;rsquo;t get into that with this tutorial, instead I&amp;rsquo;m going to focus on using psql to login into a remote Postgres server" />
+<meta property="og:title" content="Postgres Remote Login">
+<meta property="og:description" content="psql --host=&amp;lt;hostname&amp;gt; --port=5432 --username=&amp;lt;username&amp;gt; --dbname=&amp;lt;dbname&amp;gt;  " />
 <meta property="og:url" content="https://barloweanalytics.com/sql/login/" />
-<meta property="og:site_name" content="Postgres Remote Login" />
-<meta property="og:image" content="">
+<meta property="og:site_name" content="Barlowe Analytics" />
+
+  
+    <meta property="og:image" content="https://barloweanalytics.com/img/favicon/pink.png">
+  
+
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2019-05-23 22:25:11 -0400 EDT" />
+
+  <meta property="article:published_time" content="2019-05-23 22:25:11 -0400 -0400" />
+
 
 
 
@@ -61,10 +79,10 @@ Ok if you&amp;rsquo;ve been following along with the other tutorials you have se
 
 
 </head>
-<body class="">
+<body class="pink">
 
 
-<div class="container">
+<div class="container headings--one-size">
 
   <header class="header">
   <div class="header__inner">
@@ -101,6 +119,8 @@ Ok if you&amp;rsquo;ve been following along with the other tutorials you have se
       
       
     
+
+    
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
@@ -121,6 +141,7 @@ Ok if you&amp;rsquo;ve been following along with the other tutorials you have se
         <li><a href="/work">Work</a></li>
       
     
+    
   </ul>
 </nav>
 
@@ -138,7 +159,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 </header>
 
 
@@ -148,9 +168,11 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://barloweanalytics.com/sql/login/">Postgres Remote Login</a></h1>
   <div class="post-meta">
-    <span class="post-date">
-      2019-05-23
-    </span>
+    
+      <span class="post-date">
+        2019-05-23 
+      </span>
+    
     
   </div>
 
@@ -158,100 +180,18 @@ if (!doNotTrack) {
 
   
 
-  <div class="post-content">
-    <h2>Remote Postgres Login</h2>
+  
 
-<p><br />
-<p>Ok if you&rsquo;ve been following along with the other tutorials you have seen me
-use the <code>psql</code> command to login into your database that you&rsquo;ve setup
-on your computer. But that&rsquo;s not all <code>psql</code> is use for, and in fact it
-has many diverse properties that you can use to pass SQL queries to the database
-without ever logging into the server itself. But I won&rsquo;t get into that with this
-tutorial, instead I&rsquo;m going to focus on using psql to login into a remote Postgres
-server</p>
-<p>A couple notes here first about OS differences. If you are on a Mac which I
-assume most people will be if you&rsquo;re following these tutorials, the psql will work
-anywhere at the command line. Windows though is a bit different. If you have your
-<code>cmd</code> window up and ready to log into your Postgres server, you will need
-to change to the <code>bin</code> directory located in the directory of your Postgres
-to run the <code>psql</code> command.</p>
-<h2>Login Syntax</h2></p>
-
+  <div class="post-content"><div>
+        <!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <pre><code>psql --host=&lt;hostname&gt; --port=5432 --username=&lt;username&gt; --dbname=&lt;dbname&gt;
 </code></pre>
+<!-- raw HTML omitted -->
 
-<p>Ok this is a sample command you would type in the command line if you were going
-to login in to a remote Postgres server. Let's break it down piece by piece.
-<code>--host=&lt;hostname&gt;</code>: This is the address of the postgres server. It
-could be an IP address, or a url, or it's hosted on amazon it will have something
-that ends like this <code>rds.amazonaws.com</code>. This what tells <code>psql</code>
-where to go and connect so you can login to the Postgres server.</p>
-<p><code>--port=5432</code>: This is the port that <code>psql</code> will attempt to
-connect. This is the default port for Postgres and will almost always be the same no
-matter what Postgres server you are connecting to and you shouldn't have to change
-this unless otherwise specified.</p>
-<p><code>--username=&lt;username&gt;</code>: This one is pretty self explanatory. You will
-place your user name where &lt;username&gt; goes and it will be the username given
-to you by your database administrator</p>
-<p><code>--dbname=&lt;dbname&gt;</code>: This will be the name of the database you
-want to connect to and you will need to know this before you connect because you can't
-connect to a Postgres server without specifying a database. This should also be
-given to you by your database administrator as well.</p>
-<p>Ok that's basically it for using <code>psql</code> to log into a Postgres server.
-But what if you don't want to type all that in everytime you want to log into
-a Postgres server? Well glad you asked because I'll briefly touch on how you can
-do that.</p>
-<h2>Aliases</h2>
-<p>Ok I talked about aliases in some other SQL tutorials and this is similar but
-not quite the same. The alias I'm going to talk about right now is an alias for
-a command for the Bash shell in Mac OS X. This alias is a shortcut that you create
-so you don't have to type in long complicated commands. To create a shortcut
-we will be editing the <code>.bash_profile</code> file with a text editor.</p>
-<p>The '.' before a file in a Unix/Linux file structure means that it is a hidden
-file and won't normally show up when you do a standard <code>ls</code> command. The
-<code>.bash_profile</code> file controls how the Bash shell operates for you. I discussed
-editing it briefly in the <a href='gittutorial.html'>Git Tutorial</a> so if you
-forgot how to edit it you can refresh your memory there. But to create our alias
-you'll need to open the file and put this line inside it:</p>
-<pre><code class='Command Line'>
-alias dblogin='psql --host=&lt;host_name&gt; --port=5432 --username=&lt;username&gt; --dbname=&lt;dbname&gt;'
-</code></pre>
-<p>So after you add that all on one line to your <code>.bash_profile</code> file and
-<code>source ~/.bash_profile</code> to effect the changes to your shell all you would need
-to do is type <code>dblogin</code> and the Bash shell would automatically log you
-into your Postgres server with the selected database. And that's all it takes to create
-the alias. Aliases can be used for any series of Bash commands not just the psql so
-if you run into another command that requires a lot of inputs, or even a chain of different
-commands now you know how to set up an alias to make it easier to type into the
-command line</p>
+      </div></div>
 
-  </div>
-  
-  <div class="pagination">
-    <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
-    </div>
-    <div class="pagination__buttons">
-      
-      <span class="button previous">
-        <a href="https://barloweanalytics.com/sql/createuser/">
-          <span class="button__icon">←</span>
-          <span class="button__text">Creating a New Postgres User</span>
-        </a>
-      </span>
-      
-      
-      <span class="button next">
-        <a href="https://barloweanalytics.com/sql/sqlbasics/">
-          <span class="button__text">SQL Basics</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      
-    </div>
-  </div>
   
 
   
@@ -264,13 +204,18 @@ command line</p>
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">2019 Barlowe Analytics</div>
+      <div class="copyright copyright--user">
+        <span>2019 Barlowe Analytics</span>
     
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
   </div>
 </footer>
 
 <script src="https://barloweanalytics.com/assets/main.js"></script>
 <script src="https://barloweanalytics.com/assets/prism.js"></script>
+
+
 
 
 

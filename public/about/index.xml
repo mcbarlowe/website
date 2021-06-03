@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on Barlowe Analytics</title>
@@ -7,19 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019 Barlowe Analytics</copyright>
-    <lastBuildDate>Sat, 13 Apr 2019 21:58:17 -0400</lastBuildDate>
-    
-	<atom:link href="https://barloweanalytics.com/about/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 13 Apr 2019 21:58:17 -0400</lastBuildDate><atom:link href="https://barloweanalytics.com/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>https://barloweanalytics.com/about/aboutme/</link>
       <pubDate>Sat, 13 Apr 2019 21:58:17 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/about/aboutme/</guid>
-      <description>I am a SQL Developer and Stats Analyst for the National Hockey League
+      <description>I am an Application Developer for the National Hockey League
 This site is built using Hugo static site generator. Site theme is terminal by panr. Site is hosted on AWS S3 Buckets using AWS Cloudfront to serve SSL certificates and AWS Lambda to clean the urls. Source code for site can be found here.</description>
+      <content>&lt;p&gt;I am an Application Developer for the National Hockey League&lt;/p&gt;
+&lt;p&gt;This site is built using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; static site generator.
+Site theme is &lt;code&gt;terminal&lt;/code&gt; by &lt;a href=&#34;https://twitter.com/panr&#34;&gt;panr&lt;/a&gt;.
+Site is hosted on &lt;a href=&#34;https://aws.amazon.com/s3/&#34;&gt;AWS S3 Buckets&lt;/a&gt; using
+&lt;a href=&#34;https://aws.amazon.com/cloudfront/&#34;&gt;AWS Cloudfront&lt;/a&gt; to serve SSL certificates
+and &lt;a href=&#34;https://aws.amazon.com/lambda/&#34;&gt;AWS Lambda&lt;/a&gt; to clean the urls. Source code
+for site can be found &lt;a href=&#34;https://github.com/mcbarlowe/website&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</content>
     </item>
     
   </channel>

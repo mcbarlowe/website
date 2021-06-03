@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pythons on Barlowe Analytics</title>
@@ -7,18 +7,174 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019 Barlowe Analytics</copyright>
-    <lastBuildDate>Wed, 17 Apr 2019 20:51:24 -0400</lastBuildDate>
-    
-	<atom:link href="https://barloweanalytics.com/python/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 17 Apr 2019 20:51:24 -0400</lastBuildDate><atom:link href="https://barloweanalytics.com/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Functions</title>
       <link>https://barloweanalytics.com/python/functions/</link>
       <pubDate>Wed, 17 Apr 2019 20:51:24 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/python/functions/</guid>
-      <description>by Matthew Barlowe What is a function? Basically &amp;ldquo;a function is a block of code which only runs when it is called.&amp;rdquo; But what does that mean? It means that you have set aside a set of code inside your overall program that won&amp;rsquo;t run unless you specifically tell the computer that you want to run it. Still doesn&amp;rsquo;t make sense? Let&amp;rsquo;s look at it in action. Create a file let&amp;rsquo;s call it test.</description>
+      <description>by Matthew Barlowe What is a function? Basically &amp;ldquo;a function is a block of code which only runs when it is called.&amp;quot; But what does that mean? It means that you have set aside a set of code inside your overall program that won&amp;rsquo;t run unless you specifically tell the computer that you want to run it. Still doesn&amp;rsquo;t make sense? Let&amp;rsquo;s look at it in action. Create a file let&amp;rsquo;s call it test.</description>
+      <content>&lt;h3 id=&#34;by-matthew-barlowe&#34;&gt;by Matthew Barlowe&lt;/h3&gt;
+&lt;p&gt;What is a function? Basically &lt;a href=&#34;https://www.w3schools.com/python/python_functions.asp&#34;&gt;&amp;ldquo;a function is a block of code which only runs when it is called.&amp;quot;&lt;/a&gt;
+But what does that mean? It means that you have set aside a set of code inside your overall program
+that won&amp;rsquo;t run unless you specifically tell the computer that you want to run it. Still doesn&amp;rsquo;t make
+sense? Let&amp;rsquo;s look at it in action. Create a file let&amp;rsquo;s call it &lt;code&gt;test.py&lt;/code&gt; and add this code to it:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def our_function():
+    print(&amp;quot;This code is our function&amp;quot;)
+
+print(&amp;quot;This code is not our function&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ok lets talk a little about the syntax before diving in deeper about how the
+code works. In python functions are declared using &lt;code&gt;def&lt;/code&gt; (short for define) which
+tells Python we are declaring a function. &lt;code&gt;our_function&lt;/code&gt; is what we want to
+call the function and the &lt;code&gt;()&lt;/code&gt; will tell what parameters we want to pass
+to the function. In this case there are no parameters but you still need the
+&lt;code&gt;()&lt;/code&gt;. The &lt;code&gt;:&lt;/code&gt; is also required at the end of every function declaration just like
+with &lt;code&gt;for&lt;/code&gt; and &lt;code&gt;while&lt;/code&gt; loops. Also all code inside a function has to be indented
+four spaces to tell the Python interpretor that those lines of code belongs to the function
+just like you have to do with loops.&lt;/p&gt;
+&lt;p&gt;So if you ran that code what would expect the output to be? If you said just
+&lt;code&gt;This code is not our function&lt;/code&gt; then you would be correct. Python effectively
+ignored our function when it runs the &lt;code&gt;test.py&lt;/code&gt; file because we didn&amp;rsquo;t &lt;strong&gt;specifically&lt;/strong&gt;
+tell our script to run that code. So how do you tell your script you want to run
+that function? You do so by doing what&amp;rsquo;s known as  &amp;ldquo;calling the function.&amp;rdquo; This is
+done by simply typing the functions name like this &lt;code&gt;our_function()&lt;/code&gt; in your code.
+For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def our_function():
+    print(&amp;quot;This code is our function&amp;quot;)
+
+print(&amp;quot;This code is not our function&amp;quot;)
+our_function()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you run that script now you will get this output:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This code is not our function
+This code is our function
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;function-parameters&#34;&gt;Function Parameters&lt;/h1&gt;
+&lt;p&gt;What are function parameters? Function paramaters are values you pass to the function
+whenever you call the function in your code. You normally pass the function paramters
+because you want to do something to them inside the code of the function.
+Our function above didn&amp;rsquo;t have any paramaters because there was nothing in the &lt;code&gt;()&lt;/code&gt;
+when we decalred the function. But lets look at a function with parameters:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def new_function(x, y):
+    print(x*y)
+
+new_function(6,3)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What do you think the output of our new function will be? If you guessed &lt;code&gt;18&lt;/code&gt; you are
+correct! In this case our parameters are &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; in &lt;code&gt;new_function&lt;/code&gt;. So when we
+call the function what we put inside the parentheses becomes the value of the parameters
+of the function. The values are assigned in order as they are passed to the function call
+so &lt;code&gt;x&lt;/code&gt; is equal to 6 and &lt;code&gt;y&lt;/code&gt; is equal to three. If our function was declared like this
+&lt;code&gt;def new_function(y, x)&lt;/code&gt; then &lt;code&gt;y&lt;/code&gt; would be equal to six and &lt;code&gt;x&lt;/code&gt; would be equal to three.&lt;/p&gt;
+&lt;p&gt;This is an important concept to remember when passing parameters to a function. If you don&amp;rsquo;t
+pass the parameters in the correct order to the function call then the outputs will be
+incorrect.&lt;/p&gt;
+&lt;h1 id=&#34;function-return&#34;&gt;Function Return&lt;/h1&gt;
+&lt;p&gt;So you created a function and you passed it parameters to do something to, but what
+if you need to get the output of what your code does and store it in another variable?
+This is where the &lt;code&gt;return&lt;/code&gt; keyword comes in. Using our above example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def new_function(x, y):
+    print(x*y)
+    return x*y
+
+x = new_function(6,3)
+print(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What do you think the output of this script will be? If you guessed this you are correct&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;18
+18
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you can see the function prints out the value of &lt;code&gt;x*y&lt;/code&gt; and then returns that value
+when has completed running. We take that value the funciton &lt;code&gt;new_function&lt;/code&gt; returned and
+stored it in the variable &lt;code&gt;x&lt;/code&gt; and then printed the value of &lt;code&gt;x&lt;/code&gt; which is another 18.&lt;/p&gt;
+&lt;p&gt;One quick thing I want to touch on before we move on is the fact I use &lt;code&gt;x&lt;/code&gt; as a variable twice
+in this example. Are they the same variable? No they are two completely different
+variables. The &lt;code&gt;x&lt;/code&gt; variable that is the function parameter only exists within the function
+itself. This idea is known as the variables scope. The scope is the area in which a variable
+can be used, any use outside that area will result in an error. Try running this code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def new_function(x, y):
+    print(x*y)
+    return x*y
+
+new_function(6,3)
+print(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which will produce this output:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;18
+Traceback (most recent call last):
+  File &amp;quot;test.py&amp;quot;, line 6, in &amp;lt;module&amp;gt;
+    print(x)
+NameError: name &#39;x&#39; is not defined
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Even though we create &lt;code&gt;x&lt;/code&gt; and assign it a value when we call the function, that variable only
+exists inside the code of that function once we try to use it outside that scope Python throws
+and error. Scope will be very important in the next section.&lt;/p&gt;
+&lt;h1 id=&#34;functions-in-functions&#34;&gt;Functions in Functions&lt;/h1&gt;
+&lt;p&gt;Yes you can have funcions inside your functions, and if you wanted even functions inside those other functions.
+Here&amp;rsquo;s an example&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def math_function(x,y):
+
+    def add_function(x,y):
+        return x + y
+
+    def subtract_function(x,y):
+        return x - y
+
+    return add_function(x,y), subtract_function(x,y)
+
+x, y = math_functions(6,3)
+print(x, y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What do you think the output of this would be? If you guessed &lt;code&gt;9 3&lt;/code&gt; you are correct. There&amp;rsquo;s
+a couple new things in this one I want to touch on before we continue. A function can return as
+many things you want it to just seperate the values with a comma in the &lt;code&gt;return&lt;/code&gt; statement as seen
+in &lt;code&gt;return add_function(x,y), subtract_function(x,y)&lt;/code&gt; and then you can assign them to individual
+variables seperated by a comma as seen in &lt;code&gt;x, y = math_functions(6,3)&lt;/code&gt; where the first variable
+will be the first value returned, the second variable the second value etc.&lt;/p&gt;
+&lt;p&gt;As you can see here we created functions of &lt;code&gt;add_function&lt;/code&gt; and &lt;code&gt;subtract_function&lt;/code&gt; inside our
+larger &lt;code&gt;math_function&lt;/code&gt; function. But remember like the &lt;code&gt;x&lt;/code&gt; variable above the &lt;code&gt;add_function&lt;/code&gt;
+and the &lt;code&gt;subtract_function&lt;/code&gt; only exist inside the &lt;code&gt;math_function&lt;/code&gt;. You can&amp;rsquo;t call them in the main
+part of your script without getting an error. If you wanted to be able to call them anywhere
+in the file you would need to define the outside of the &lt;code&gt;math_function&lt;/code&gt; like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def add_function(x,y):
+    return x + y
+
+def subtract_function(x,y):
+    return x - y
+
+def math_function(x,y):
+    return add_function(x,y), subtract_function(x,y)
+
+print(add_function(6,3))
+print(subtract_function(6,3))
+print(math_function(6,3))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;One last thing is that you shouldn&amp;rsquo;t variables inside the scopre of your function like I did
+in the example above. You technically can but its considered bad programming form as you can easily
+confuse what the variables represent at any given time in the code and makes it hard for others
+to read.&lt;/p&gt;
+&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+&lt;p&gt;Functions are a key part to becoming a better programmer. But now that you know the how let&amp;rsquo;s talk
+a little about the why. Functions help programmers follow the &amp;ldquo;Don&amp;rsquo;t Repeat Yourself&amp;rdquo; paradigm discussed
+in our &lt;a href=&#34;https://barloweanalytics.com/python/loops/&#34;&gt;loops tutorial&lt;/a&gt;. They allow you to run a set of code over an over again
+without having to manually type it out every time. Functions also allow us to name a set of operations
+so that we know what those operations do without having to read the source code of the function. Like
+our example you may not know what exactly was in the &lt;code&gt;add_function&lt;/code&gt; but you could sort of figure out
+that by its name the function did some sort of addition. This is also why using intuitive names for your
+functions is important as well.&lt;/p&gt;
+&lt;p&gt;Functions should also be fairly short and to the point. Functions are best when they do one thing very
+well. That one thing may &lt;strong&gt;have&lt;/strong&gt; to be very complex sometimes, but the simpler your functions are the easier
+they are to debug when things go wrong and things will go wrong. So some guidlines to take away from this
+when writing your functions in the future are: Short, Simple, Do one thing, Named appropriately.&lt;/p&gt;
+&lt;h1 id=&#34;sources&#34;&gt;Sources&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.w3schools.com/python/python_functions.asp&#34;&gt;Python Functions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.w3schools.com/python/python_functions.asp&#34;&gt;What is a Function in Computer Programming&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cs.utah.edu/~zachary/computing/lessons/uces-10/uces-10/node11.html&#34;&gt;Why Use Funtions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pythonspot.com/scope/&#34;&gt;Scope&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nicercode.github.io/guides/functions/&#34;&gt;Nice R Code&lt;/a&gt; Some good writing behind the philosophy of functions.&lt;/p&gt;
+</content>
     </item>
     
     <item>
@@ -29,7 +185,167 @@
       <guid>https://barloweanalytics.com/python/loops/</guid>
       <description>by Matthew Barlowe Loops are an important part of programming in any language. So in this tutorial we are going to go over what they do and how to implement them.
 In Python there are two typs of loops: the for loop and the while loop. But before we get into the distinction of the two lets talk about why you want to use loops in your programming.
-Why loops?</description>
+Why loops? There&amp;rsquo;s a phrase in programming you&amp;rsquo;ll hear often if you keep pursuing this hobby/career, and that phrase is, &amp;ldquo;Don&amp;rsquo;t repeat yourself.</description>
+      <content>&lt;h2 id=&#34;by-matthew-barlowe&#34;&gt;by Matthew Barlowe&lt;/h2&gt;
+&lt;p&gt;Loops are an important part of programming in any language. So in this
+tutorial we are going to go over what they do and how to implement them.&lt;/p&gt;
+&lt;p&gt;In Python there are two typs of loops: the &lt;code&gt;for&lt;/code&gt; loop and the &lt;code&gt;while&lt;/code&gt; loop.
+But before we get into the distinction of the two lets talk about why you want to use
+loops in your programming.&lt;/p&gt;
+&lt;h1 id=&#34;why-loops&#34;&gt;Why loops?&lt;/h1&gt;
+&lt;p&gt;There&amp;rsquo;s a phrase in programming you&amp;rsquo;ll hear often if you keep pursuing this hobby/career,
+and that phrase is, &amp;ldquo;Don&amp;rsquo;t repeat yourself.&amp;rdquo; It boils down to if you need to do the same thing
+over and over again don&amp;rsquo;t just cut and past the code or &amp;ldquo;write everything twice&amp;rdquo; but try to
+abstract the process in to one block of code that just needs to be ran once. Or if you can&amp;rsquo;t
+do that then turn the code into a function that can be called when needed.&lt;/p&gt;
+&lt;p&gt;But why do this? What does it matter if cutting and pasting the code gets things done faster?
+There are couple reasons behind this.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It&amp;rsquo;s easier to debug.&lt;/strong&gt; If you only have one block of code to look at to find errors instead of
+three or five or whatever you will spend far less time trying to fix it if it breaks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It&amp;rsquo;s easier to read&lt;/strong&gt; The smaller code is the easier it is to read and understand. Even if you
+just work on code by yourself, trust me your future self will thank you for your consideration.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;loops-in-action&#34;&gt;Loops in Action&lt;/h1&gt;
+&lt;p&gt;So let&amp;rsquo;s say you wanted to print out &amp;ldquo;Let&amp;rsquo;s Go&amp;rdquo; five times. Sure you could put &lt;code&gt;print(&amp;quot;Let&#39;s Go&amp;quot;)&lt;/code&gt;
+ten times in your script and run it and get the desired result. But following the ideas discussed
+above we don&amp;rsquo;t want to do that. This is where the &lt;code&gt;for&lt;/code&gt; loop comes in. Lets look at some example code&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;):
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Let&amp;#39;s Go&amp;#34;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you put that in a file and run it similar to what we did in the &lt;a href=&#34;https://barloweanalytics.com/python/helloworld/&#34;&gt;Hello World&lt;/a&gt;
+tutorial it would produce this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Let&#39;s Go
+Let&#39;s Go
+Let&#39;s Go
+Let&#39;s Go
+Let&#39;s Go
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So with a &lt;code&gt;for&lt;/code&gt; loop we were able to reduce what would have been five lines of code down to two. In the
+grand scheme of things is this trivial? Sure but it&amp;rsquo;s a good habit to get into in the beginning because
+its much easier to apply this philosophy at the start of each project than to go back and do it after
+the code is written.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s break down exactly what the code did though. Ok the &lt;code&gt;range(5)&lt;/code&gt; creates an ordered group of numbers
+starting at 0 and ending at 4. Python always starts counting at 0 unless you tell it not to so just
+reprogram yourself to think of 0 as 1. &lt;a href=&#34;https://www.youtube.com/watch?v=VCcd5BsquPw&#34;&gt;It&amp;rsquo;s easy not hard!&lt;/a&gt;
+So if it starts at zero then why did you put 5 in there? Why not 4? That&amp;rsquo;s because the end range in a lot
+of Python things is not inclusive. 5 tells it where to stop but it doesn&amp;rsquo;t include it in the actual group
+of numbers &lt;code&gt;range&lt;/code&gt; returns. I understand all this is a bit counterintuitive and I still mess it up sometimes,
+but with practice it will come &amp;hellip; well not naturally but you&amp;rsquo;ll only mess it up half the time instead
+of all the time.&lt;/p&gt;
+&lt;p&gt;So the &lt;code&gt;range(5)&lt;/code&gt; gives us what we are going to loop over. As you learn more about Python you&amp;rsquo;ll see
+that &lt;code&gt;range(5)&lt;/code&gt; is just one of many things you can loop over. The other part of the sentence &lt;code&gt;for x&lt;/code&gt;
+is where the looping happens. &lt;code&gt;for x&lt;/code&gt; is actually saying &amp;ldquo;for each item in &lt;code&gt;range(5)&lt;/code&gt;&amp;rdquo;, the &lt;code&gt;x&lt;/code&gt; is just
+a variable for that item. You could replace &lt;code&gt;x&lt;/code&gt; with anything:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;):
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Let&amp;#39;s Go&amp;#34;&lt;/span&gt;)
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;):
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Let&amp;#39;s Go&amp;#34;&lt;/span&gt;)
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; thingy &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;):
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Let&amp;#39;s Go&amp;#34;&lt;/span&gt;)
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; Bob &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;):
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Let&amp;#39;s Go&amp;#34;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;All those blocks of code will produce the same output shown above which is five lines of &amp;ldquo;Let&amp;rsquo;s Go.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Think of &lt;code&gt;for&lt;/code&gt; loops as having a bag of marbles. And like in code you can&amp;rsquo;t do anything else until
+you pull every marble out of the bag.  In this analogy &lt;code&gt;range(5)&lt;/code&gt; would be our bag of marbles and &lt;code&gt;for x&lt;/code&gt;
+would be the act of us pulling each marble out at a time. The &lt;code&gt;print(&amp;quot;Let&#39;s Go&amp;quot;)&lt;/code&gt; would be what we do
+each time we pull a marble out of the bag. So the process would be pull a marble, do something, pull a marble,
+do something, etc. until you ran out of marbles. That&amp;rsquo;s a real word equivalent of what we just
+told the computer to do with our &lt;code&gt;for&lt;/code&gt; loop above.&lt;/p&gt;
+&lt;p&gt;The real power of Python &lt;code&gt;for&lt;/code&gt; loops happens though when you need to do something to each
+marble you pull out of the bag. That&amp;rsquo;s where the &lt;code&gt;for x&lt;/code&gt; part comes in. By assigning each item
+in the collection to a variable we can do things with those variables as we loop through the collection
+For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;):
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(x)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Which produces this output:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0
+1
+2
+3
+4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can print them, perform mathematical operations on them, store them in file for safe keeping etc.
+&lt;code&gt;for&lt;/code&gt; loops are a tool that is indispensable not only in Python but in all programming languages as
+they form a core concept of programming and computer science. One key aspect though of the variables
+we create with a loop is if you have that variable name storing a value somewhere else in your code
+the loop will override that value with the last value it has from the loop. For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(x)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(x)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output will be:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0
+1
+2
+3
+4
+4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The value of ten will be overwritten and gone.&lt;/p&gt;
+&lt;h1 id=&#34;while-loops&#34;&gt;While Loops&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;while&lt;/code&gt; loops are a bit different than &lt;code&gt;for&lt;/code&gt; loops. &lt;code&gt;for&lt;/code&gt; loops will end when the amount of items
+they need to loop over is exhausted. &lt;code&gt;while&lt;/code&gt; loops will continuing looping until a certain logical condition
+is met. Which is why you have to be careful when using them because thy can continue forever creating
+a condition called an infinite loop that will never terminate unless you force it to. If your program
+does this usually a &lt;code&gt;Ctrl+C&lt;/code&gt; is the break signal for most computers to stop running things and if that
+doesn&amp;rsquo;t work you can always restart.&lt;/p&gt;
+&lt;p&gt;While loops look like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;    x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;:
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(x)
+        x &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As you can see the conditional statement in this &lt;code&gt;while&lt;/code&gt; loop is &lt;code&gt;x&amp;lt;5&lt;/code&gt;, and as long as
+&lt;code&gt;x&lt;/code&gt; continues to be less than 5 the loop will continue repeating. That&amp;rsquo;s why we have to add
+the line &lt;code&gt;x += 1&lt;/code&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; in there to increment the value of &lt;code&gt;x&lt;/code&gt; each time the loop repeats. If we
+didn&amp;rsquo;t do that then the loop would continue forever.&lt;/p&gt;
+&lt;p&gt;#Summary&lt;/p&gt;
+&lt;p&gt;Ok lets wrap things up. One last thing about syntax is that both &lt;code&gt;for&lt;/code&gt; and &lt;code&gt;while&lt;/code&gt; loop
+lines must end in a &lt;code&gt;:&lt;/code&gt; or else Python will get angry and yell at you.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;for&lt;/code&gt; loops
+&lt;ul&gt;
+&lt;li&gt;Loop over a collection of items passed to them and performs some code until colleciton is exhausted&lt;/li&gt;
+&lt;li&gt;As the loop progresses assigns each item if pulls from the collection to a variable
+which you can then use or ignore&lt;/li&gt;
+&lt;li&gt;Has the syntax &lt;code&gt;for x in collection:&lt;/code&gt; where &lt;code&gt;collection&lt;/code&gt; is the items you want to loop
+over and &lt;code&gt;x&lt;/code&gt; is the variable you assign the piece of the collection the code pulls in that
+run through the loop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;while&lt;/code&gt; loops
+&lt;ul&gt;
+&lt;li&gt;Loops over a set of commands until a conditional statement is met.&lt;/li&gt;
+&lt;li&gt;Any variables use in the loop statment are usually assigned before the loop statement
+and not in the loop statement unlike &lt;code&gt;for&lt;/code&gt; loops.&lt;/li&gt;
+&lt;li&gt;Has the syntax &lt;code&gt;while condition is true:&lt;/code&gt; where the condition could be &lt;code&gt;x=10&lt;/code&gt;, &lt;code&gt;sky=&#39;blue&#39;&lt;/code&gt;
+etc. The condition is whatever you want it to be.&lt;/li&gt;
+&lt;li&gt;It is very easy to create infinite loops and must use caution in creating &lt;code&gt;while&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This page is on &lt;a href=&#34;https://github.com/mcbarlowe/website&#34;&gt;Github&lt;/a&gt;. If you see errors feel free to
+submit a pull request or contact me on &lt;a href=&#34;https://twitter.com/barloweanalytic&#34;&gt;Twitter&lt;/a&gt; or email
+&lt;a href=&#34;mailto:barloweanalytics@gmail.com&#34;&gt;barloweanalytics@gmail.com&lt;/a&gt;.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;code&gt;x += 1&lt;/code&gt; is the equivalent of &lt;code&gt;x = x + 1&lt;/code&gt;. You can also do this with other math functions
+such as &lt;code&gt;x -= 1&lt;/code&gt; which is the same as &lt;code&gt;x = x - 1&lt;/code&gt; or &lt;code&gt;x *= 1&lt;/code&gt; which is the same as &lt;code&gt;x = x * 1&lt;/code&gt;.
+There is no benefit in using one over the other other than to save keystrokes and keep know it
+alls on Stack Overflow from trying to uneccesarily improve your code even though you didnt ask
+them to.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
     </item>
     
     <item>
@@ -38,8 +354,23 @@ Why loops?</description>
       <pubDate>Mon, 15 Apr 2019 20:24:18 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/python/helloworld/</guid>
-      <description>by Matthew Barlowe &amp;ldquo;Hello World&amp;rdquo; is a very common first program for just about any programming langauge. I&amp;rsquo;m sure there&amp;rsquo;s some history behind it, but I&amp;rsquo;ve never bothered to look it up. Usually it&amp;rsquo;s just a simple program of very limited lines that prints out the phrase &amp;ldquo;Hello World.&amp;rdquo; The purpose of this tutorial is to get you setup to write that first program.
-Getting Started The first thing to do is open your favorite text editor.</description>
+      <description>#!/usr/bin/env python3 print(&amp;quot;Hello World&amp;quot;)  Once that is done save your file as helloworld.pyand exit the text editor if you are using a terminal editor and type python3 helloworld.pywhich will produce this output:
+Congratulations, you&amp;rsquo;ve just written your first python program! Obviously, there&amp;rsquo;s a lot more to it than this but even in just this simple program you can learn a lot.</description>
+      <content>&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python3
+
+print(&amp;quot;Hello World&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once that is done save your file as &lt;!-- raw HTML omitted --&gt;helloworld.py&lt;!-- raw HTML omitted --&gt; and exit the text editor if you are using
+a terminal editor and type &lt;!-- raw HTML omitted --&gt;python3 helloworld.py&lt;!-- raw HTML omitted --&gt; which will
+produce this output:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Congratulations, you&amp;rsquo;ve just written your first python program! Obviously,
+there&amp;rsquo;s a lot more to it than this but even in just this simple program
+you can learn a lot.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+</content>
     </item>
     
     <item>
@@ -48,7 +379,15 @@ Getting Started The first thing to do is open your favorite text editor.</descri
       <pubDate>Mon, 15 Apr 2019 19:25:14 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/python/pythoninstall/</guid>
-      <description>by Matthew Barlowe Ok so if you&amp;rsquo;ve read the Homebrew Tutorial you are ready to actually start using it to start programming in python. If you haven&amp;rsquo;t read that tutorial and you want to follow this one I sugestt going back and reading that one first. First though we need to get your system properly setup to run python safely and avoid problems in the future. The first step to doing that is to install Apple&amp;rsquo;s Xcode utilities, specifically GCC.</description>
+      <description>Edit: 2019-04-15 I just recently installed python on a new Mac system. It seems that Homebrew now aliases pip to be the same as pip3. However to make sure enter which pip and the output should be /usr/local/bin/pip which means pip is aliased to the correct pip. If the result is /usr/bin that means pip is still tied to the system python and you should only use pip3</description>
+      <content>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;Edit: 2019-04-15&lt;/strong&gt;
+I just recently installed python on a new Mac system. It seems that Homebrew now aliases
+&lt;code&gt;pip&lt;/code&gt; to be the same as &lt;code&gt;pip3&lt;/code&gt;. However to make sure enter &lt;code&gt;which pip&lt;/code&gt; and the output should
+be &lt;code&gt;/usr/local/bin/pip&lt;/code&gt; which means &lt;code&gt;pip&lt;/code&gt; is aliased to the correct pip. If the result is
+&lt;code&gt;/usr/bin&lt;/code&gt; that means &lt;code&gt;pip&lt;/code&gt; is still tied to the system python and you should only use &lt;code&gt;pip3&lt;/code&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+</content>
     </item>
     
   </channel>

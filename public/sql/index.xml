@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sqls on Barlowe Analytics</title>
@@ -7,27 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019 Barlowe Analytics</copyright>
-    <lastBuildDate>Fri, 24 May 2019 23:46:03 -0400</lastBuildDate>
-    
-	<atom:link href="https://barloweanalytics.com/sql/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Joins</title>
-      <link>https://barloweanalytics.com/sql/joins/</link>
-      <pubDate>Fri, 24 May 2019 23:46:03 -0400</pubDate>
-      
-      <guid>https://barloweanalytics.com/sql/joins/</guid>
-      <description>Ok now that you have the database up and can now do some basic queries from the [last tutorial]((https://barloweanalytics.com/sql/sqlbasics/) you are probably wondering how do you actually tell which players are achieveing which stats. In the few tables we looked at there are no actual player names, only what&amp;rsquo;s called playerid which looks like a weird combination of a name and a number. Some aren&amp;rsquo;t even full names either way it doesn&amp;rsquo;t really tell you who is doing what in the database.</description>
-    </item>
-    
+    <lastBuildDate>Fri, 24 May 2019 21:33:42 -0400</lastBuildDate><atom:link href="https://barloweanalytics.com/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a New Postgres User</title>
       <link>https://barloweanalytics.com/sql/createuser/</link>
       <pubDate>Fri, 24 May 2019 21:33:42 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/sql/createuser/</guid>
-      <description>Ok so if you&#39;ve come to this point you now have your database up and running and you want to allow others to access it. Some people say it&#39;s not the brightest idea, but hey, this data ain&#39;t going to share itself. Obviously letting them use your account is out of the question because as a superuser that will just allow them to wreak havoc any time they want on your meticulously gathered data.</description>
+      <description></description>
+      <content>&lt;!-- raw HTML omitted --&gt;
+</content>
     </item>
     
     <item>
@@ -36,8 +25,14 @@
       <pubDate>Thu, 23 May 2019 22:25:11 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/sql/login/</guid>
-      <description>Remote Postgres Login 
-Ok if you&amp;rsquo;ve been following along with the other tutorials you have seen me use the psql command to login into your database that you&amp;rsquo;ve setup on your computer. But that&amp;rsquo;s not all psql is use for, and in fact it has many diverse properties that you can use to pass SQL queries to the database without ever logging into the server itself. But I won&amp;rsquo;t get into that with this tutorial, instead I&amp;rsquo;m going to focus on using psql to login into a remote Postgres server</description>
+      <description>psql --host=&amp;lt;hostname&amp;gt; --port=5432 --username=&amp;lt;username&amp;gt; --dbname=&amp;lt;dbname&amp;gt;  </description>
+      <content>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;psql --host=&amp;lt;hostname&amp;gt; --port=5432 --username=&amp;lt;username&amp;gt; --dbname=&amp;lt;dbname&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+</content>
     </item>
     
     <item>
@@ -47,7 +42,151 @@ Ok if you&amp;rsquo;ve been following along with the other tutorials you have se
       
       <guid>https://barloweanalytics.com/sql/sqlbasics/</guid>
       <description>Ok if you&amp;rsquo;ve read the first tutorial on installing Postgres and getting your first database up and running, you&amp;rsquo;re now wondering &amp;ldquo;So how do I access all this data?&amp;rdquo; Well that&amp;rsquo;s where this tutorial comes in as we are going to cover some of the basic commands in SQL to get the data we want. Ok let&amp;rsquo;s get started and dive right in to our data.
-SELECT The SELECT command is going to be your workhorse command when working with SQL.</description>
+ Column | Type | Collation | Nullable | Default | Storage | Stats target | Description -----------+------------------+-----------+----------+---------+----------+--------------+------------- yearID | bigint | | | | plain | | teamID | text | | | | extended | | lgID | text | | | | extended | | playerID | text | | | | extended | | G_all | bigint | | | | plain | | GS | double precision | | | | plain | | G_batting | bigint | | | | plain | | G_defense | double precision | | | | plain | | G_p | bigint | | | | plain | | G_c | bigint | | | | plain | | G_1b | bigint | | | | plain | | G_2b | bigint | | | | plain | | G_3b | bigint | | | | plain | | G_ss | bigint | | | | plain | | G_lf | bigint | | | | plain | | G_cf | bigint | | | | plain | | G_rf | bigint | | | | plain | | G_of | bigint | | | | plain | | G_dh | double precision | | | | plain | | G_ph | double precision | | | | plain | | G_pr | double precision | | | | plain | | This table in the database lists the number of appearances at each position for each player, each season and each team.</description>
+      <content>&lt;p&gt;Ok if you&amp;rsquo;ve read the &lt;a href=&#34;https://barloweanalytics.com/sql/install/&#34;&gt;first tutorial&lt;/a&gt; on installing Postgres
+and getting your first database up and running, you&amp;rsquo;re now wondering &amp;ldquo;So how do I access all
+this data?&amp;rdquo; Well that&amp;rsquo;s where this tutorial comes in as we are going to cover some of the basic
+commands in SQL to get the data we want. Ok let&amp;rsquo;s get started and dive right in to our data.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;      Column   |       Type       | Collation | Nullable | Default | Storage  | Stats target | Description
+    -----------+------------------+-----------+----------+---------+----------+--------------+-------------
+     yearID    | bigint           |           |          |         | plain    |              |
+     teamID    | text             |           |          |         | extended |              |
+     lgID      | text             |           |          |         | extended |              |
+     playerID  | text             |           |          |         | extended |              |
+     G_all     | bigint           |           |          |         | plain    |              |
+     GS        | double precision |           |          |         | plain    |              |
+     G_batting | bigint           |           |          |         | plain    |              |
+     G_defense | double precision |           |          |         | plain    |              |
+     G_p       | bigint           |           |          |         | plain    |              |
+     G_c       | bigint           |           |          |         | plain    |              |
+     G_1b      | bigint           |           |          |         | plain    |              |
+     G_2b      | bigint           |           |          |         | plain    |              |
+     G_3b      | bigint           |           |          |         | plain    |              |
+     G_ss      | bigint           |           |          |         | plain    |              |
+     G_lf      | bigint           |           |          |         | plain    |              |
+     G_cf      | bigint           |           |          |         | plain    |              |
+     G_rf      | bigint           |           |          |         | plain    |              |
+     G_of      | bigint           |           |          |         | plain    |              |
+     G_dh      | double precision |           |          |         | plain    |              |
+     G_ph      | double precision |           |          |         | plain    |              |
+     G_pr      | double precision |           |          |         | plain    |              |
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This table in the database lists the number of appearances at each position for each player, each season
+and each team. G_1b is games at first base and so on. If you need more info about the data
+in the database the data dictionary can be found &lt;a href=&#34;http://www.seanlahman.com/files/database/readme2012.txt&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Side note here. When I was creating this database file for you I forgot that Postgres only stores column names
+in lower case. As you can see above it does recognize upper case when displaying the column. The problem comes
+when you want to select a column. If you tried to execute &lt;code&gt;SELECT playerID from appearances limit 10;&lt;/code&gt; you would
+get an error saying &lt;code&gt;HINT:  Perhaps you meant to reference the column &amp;quot;appearances.playerID&amp;quot;&lt;/code&gt;. But even if you added
+appearances to your column selection you would still get the same error. THe solution is to add &lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt; around each
+column name so that the column is searched for on a case sensitive basis. But that&amp;rsquo;s annoying so lets fix it.&lt;/p&gt;
+&lt;p&gt;Logout of your current account with &lt;code&gt;\q&lt;/code&gt; and log back in with the superuser account that is the same
+name as your computer user name and run this code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\t on
+select &#39;ALTER TABLE &#39;||&#39;&amp;quot;&#39;||table_name||&#39;&amp;quot;&#39;||&#39; RENAME COLUMN &#39;||&#39;&amp;quot;&#39;||column_name||&#39;&amp;quot;&#39;||&#39; TO &#39; || lower(column_name)||&#39;;&#39;
+from information_schema.columns
+where table_schema = &#39;public&#39; and lower(column_name) != column_name
+\g /tmp/go_to_lower
+\i /tmp/go_to_lower
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Copy this and paste it into the terminal and hit enter and all your column names will be in lower case. I put this
+in the tutorial for a very good reason. I could have gone back and fixed the file and changed a couple
+things and made it look like I&amp;rsquo;m perfect, but I&amp;rsquo;m not. Mistakes happen. A lot. Things are going
+break and a vital skill is to learn how to fix them. In this case I literally googled
+&amp;lsquo;convert all columnames to lowercase postgres&amp;rsquo; and the answer was the &lt;a href=&#34;https://stackoverflow.com/questions/10086532/how-can-i-convert-all-columns-in-my-database-to-case-insensitive&#34;&gt;second link&lt;/a&gt;
+on google.&lt;/p&gt;
+&lt;p&gt;Do I know exactly what that code does? Nope but what better place to learn than in a situation
+with no ramifications for it being wrong. Now knowing what to google comes with experience,
+but a good place to start is to just cut and paste the error into google and start clicking.
+This is what every professional programmer does and the ones that say they don&amp;rsquo;t are lying.
+Ok back to the tutorial.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;playerid  | teamid | g_1b | g_2b | g_cf
+-----------+--------+------+------+------
+ abercda01 | TRO    |    0 |    0 |    0
+ addybo01  | RC1    |    0 |   22 |    0
+ allisar01 | CL1    |    0 |    2 |   29
+ allisdo01 | WS3    |    0 |    0 |    0
+ ansonca01 | RC1    |    1 |    2 |    0
+ armstbo01 | FW1    |    0 |    0 |   11
+ barkeal01 | RC1    |    0 |    0 |    0
+ barnero01 | BS1    |    0 |   16 |    0
+ barrebi01 | FW1    |    0 |    0 |    0
+ barrofr01 | BS1    |    0 |    1 |    0
+(10 rows)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;SELECT playerid, teamid, g_1b, g_2b, g_cf from appearances WHERE yearid = 2016 limit 10;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt; yearid | playerid  | teamid | g_1b | g_2b | g_cf
+--------+-----------+--------+------+------+------
+   2016 | abadfe01  | BOS    |    0 |    0 |    0
+   2016 | abadfe01  | MIN    |    0 |    0 |    0
+   2016 | abreujo02 | CHA    |  152 |    0 |    0
+   2016 | achteaj01 | LAA    |    0 |    0 |    0
+   2016 | ackledu01 | NYA    |   13 |    1 |    0
+   2016 | adamecr01 | COL    |    0 |   11 |    0
+   2016 | adamsau01 | CLE    |    0 |    0 |    0
+   2016 | adamsma01 | SLN    |   86 |    0 |    0
+   2016 | adlemti01 | CIN    |    0 |    0 |    0
+   2016 | adriaeh01 | SFN    |    0 |    7 |    0
+(10 rows)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This has returned all the players that had an appearance in the 2016 baseball season.
+You can also chain these commands as well using logical switches such as AND or OR like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT playerid, teamid, g_1b, g_2b, g_cf from appearances WHERE yearid = 2016 AND g_1b &amp;gt; 100;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;SELECT playerid, sum(h) FROM batting WHERE yearid=2017 GROUP BY playerid ORDER BY sum(h) DESC LIMIT 10;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which gives us this output:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; playerid  | sum
+-----------+-----
+ blackch02 | 213
+ altuvjo01 | 204
+ inciaen01 | 201
+ gordode01 | 201
+ hosmeer01 | 192
+ ozunama01 | 191
+ andruel01 | 191
+ abreujo02 | 189
+ lemahdj01 | 189
+ arenano01 | 187
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;SELECT playerid, sum(h) AS Hits FROM batting WHERE yearid=2017 GROUP BY playerid ORDER BY sum(h) DESC LIMIT 10;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt; playerid  | hits
+-----------+------
+ blackch02 |  213
+ altuvjo01 |  204
+ inciaen01 |  201
+ gordode01 |  201
+ hosmeer01 |  192
+ ozunama01 |  191
+ andruel01 |  191
+ abreujo02 |  189
+ lemahdj01 |  189
+ arenano01 |  187
+(10 rows)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;A couple other notes on this query. We have to do the &lt;code&gt;GROUP BY&lt;/code&gt; because this table has a row for each player for each team
+they played for in the season. A lot of players do play for the same team all season but a lot don&amp;rsquo;t. If you didn&amp;rsquo;t do
+the group by you would miss out on those other team hits for that player. The next is the &lt;code&gt;ORDER BY&lt;/code&gt; this tells
+the database how to sort the results in this case by hits descending, i.e. from largest to smallest, with the
+&lt;code&gt;DESC&lt;/code&gt; keyword. When you alias the &lt;code&gt;sum(h)&lt;/code&gt; column you can just using &lt;code&gt;ORDER BY hits&lt;/code&gt; next time. &lt;code&gt;ORDER BY&lt;/code&gt; will
+sort ascending by default unless you tell it otherwise&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Our next tutorial will cover &lt;code&gt;JOIN&lt;/code&gt; so you can finall tell which players are actually accumulating the stats
+you are calculating in you queries.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+</content>
     </item>
     
     <item>
@@ -56,7 +195,92 @@ SELECT The SELECT command is going to be your workhorse command when working wit
       <pubDate>Thu, 18 Apr 2019 23:38:39 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/sql/install/</guid>
-      <description>by Matthew Barlowe  This tutorial will cover the basics of getting PostgreSQL setup on your computer and running. We won&amp;rsquo;t actually be working with data in this article, but instead the focus is on the nuts and bolts of what PostgreSQL is and and its structure. But before I get into all that let&amp;rsquo;s start at the beginning. As always these tutorials will be focused on working in a Mac OS X environment.</description>
+      <description>psql (10.3, server 10.1) Type &amp;quot;help&amp;quot; for help. postgres=#  postgres=# CREATE ROLE username WITH LOGIN PASSWORD &#39;quoted password&#39;;  postgres=# ALTER ROLE username CREATEDB;  psql (10.3, server 10.1) Type &amp;quot;help&amp;quot; for help. postgres=&amp;gt;  As you can see our # has changed to a &amp;gt; indciating that we are not a superuser anymore. So now you&amp;rsquo;re logged in to your new user lets create a database that we are going to load our data into so we can play around with it:</description>
+      <content>&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;psql (10.3, server 10.1)
+Type &amp;quot;help&amp;quot; for help.
+
+postgres=#
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;postgres=# CREATE ROLE username WITH LOGIN PASSWORD &#39;quoted password&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;postgres=# ALTER ROLE username CREATEDB;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;psql (10.3, server 10.1)
+Type &amp;quot;help&amp;quot; for help.
+
+postgres=&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you can see our &lt;code&gt;#&lt;/code&gt; has changed to a &lt;code&gt;&amp;gt;&lt;/code&gt; indciating that we are not a superuser anymore. So now you&amp;rsquo;re
+logged in to your new user lets create a database that we are going to load our data into so we can
+play around with it:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;postgres=&amp;gt; CREATE DATABASE baseballstats;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;So to check and make sure our database is created type &lt;!-- raw HTML omitted --&gt;\l&lt;!-- raw HTML omitted --&gt; into the terminal.
+This command will give you a list of all the databases on the Postgres server. Commands
+beginning with a &lt;code&gt;\&lt;/code&gt;, also known as &lt;code&gt;psql&lt;/code&gt; commands, don&amp;rsquo;t need a semicolon and will throw an error
+if you use one. It is a little confusing but one way to keep it apart is that commands that directly
+deal with the data itself need semicolons and commands that interact with the actual database don&amp;rsquo;t. You
+should see some output similar to this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;                                       List of databases
+     Name      |    Owner    | Encoding |   Collate   |    Ctype    |      Access privileges
+---------------+-------------+----------+-------------+-------------+-----------------------------
+ baseballstats | MattBarlowe | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ postgres      | MattBarlowe | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ template0     | MattBarlowe | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/MattBarlowe             +
+               |             |          |             |             | MattBarlowe=CTc/MattBarlowe
+ template1     | MattBarlowe | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/MattBarlowe             +
+               |             |          |             |             | MattBarlowe=CTc/MattBarlowe
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You should see the &lt;!-- raw HTML omitted --&gt;baseballstats&lt;!-- raw HTML omitted --&gt; in the table and that the Owner of the database is
+the username you created. As &lt;code&gt;Owner&lt;/code&gt; of the database that means you have superuser powers over it and
+that nobody can even read it until you give them acess to the database.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;baseballstats=&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;The data I will be using for this tutorial and all future tutorials can be downloaded at this
+&lt;a href=&#34;https://drive.google.com/open?id=1h1oyVfW4xLi-hqfgrNjrY-mNlnx0jSaw&#34;&gt;link&lt;/a&gt;. In this zip file
+is a PostgreSQL backup of the database I created from the &lt;code&gt;.csv&lt;/code&gt; files from
+&lt;a href=&#34;http://www.seanlahman.com/baseball-archive/statistics/&#34;&gt;Sean Lahman&amp;rsquo;s baseball database&lt;/a&gt;. Once the data
+is downloaded and unzipped then to load it into the data base all you have to do is this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;psql baseballstats &amp;lt; baseball.bak
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And you&amp;rsquo;ll see a whole bunch of output letting you know the backup is being installed into
+the database. Once that is all done log back into your database:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;psql -U username baseballstats
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will log you into the &lt;code&gt;baseballstats&lt;/code&gt; database and lets make sure the data is all in there
+by doing a simple select:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT * FROM appearances LIMIT 10;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;yearID | teamID | lgID | playerID  | G_all | GS | G_batting | G_defense | G_p | G_c | G_1b | G_2b | G_3b | G_ss | G_lf | G_cf | G_rf | G_of | G_dh | G_ph | G_pr
+--------+--------+------+-----------+-------+----+-----------+-----------+-----+-----+------+------+------+------+------+------+------+------+------+------+------
+  1871 | TRO    |      | abercda01 |     1 |  1 |         1 |         1 |   0 |   0 |    0 |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0
+  1871 | RC1    |      | addybo01  |    25 | 25 |        25 |        25 |   0 |   0 |    0 |   22 |    0 |    3 |    0 |    0 |    0 |    0 |    0 |    0 |    0
+  1871 | CL1    |      | allisar01 |    29 | 29 |        29 |        29 |   0 |   0 |    0 |    2 |    0 |    0 |    0 |   29 |    0 |   29 |    0 |    0 |    0
+  1871 | WS3    |      | allisdo01 |    27 | 27 |        27 |        27 |   0 |  27 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0
+  1871 | RC1    |      | ansonca01 |    25 | 25 |        25 |        25 |   0 |   5 |    1 |    2 |   20 |    0 |    1 |    0 |    0 |    1 |    0 |    0 |    0
+  1871 | FW1    |      | armstbo01 |    12 | 12 |        12 |        12 |   0 |   0 |    0 |    0 |    0 |    0 |    0 |   11 |    1 |   12 |    0 |    0 |    0
+  1871 | RC1    |      | barkeal01 |     1 |  1 |         1 |         1 |   0 |   0 |    0 |    0 |    0 |    0 |    1 |    0 |    0 |    1 |    0 |    0 |    0
+  1871 | BS1    |      | barnero01 |    31 | 31 |        31 |        31 |   0 |   0 |    0 |   16 |    0 |   15 |    0 |    0 |    0 |    0 |    0 |    0 |    0
+  1871 | FW1    |      | barrebi01 |     1 |  1 |         1 |         1 |   0 |   1 |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0
+  1871 | BS1    |      | barrofr01 |    18 | 17 |        18 |        18 |   0 |   0 |    0 |    1 |    0 |    0 |   13 |    0 |    4 |   17 |    0 |    0 |    0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;If you come up with a &lt;code&gt;ERROR:  permission denied for relation appearances&lt;/code&gt; when you run the above code
+you need to login back into your superuser account (which remember is the same name of the OS X you created
+the postgres server in) into the &lt;code&gt;baseballstats&lt;/code&gt; table with this command &lt;code&gt;psql baseballstats&lt;/code&gt;
+and then grant privileges to your username you created above with
+&lt;code&gt;GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public to username&lt;/code&gt;. After that you should be able to
+&lt;code&gt;select&lt;/code&gt; the data normally.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+</content>
     </item>
     
   </channel>
