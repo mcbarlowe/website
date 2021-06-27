@@ -315,12 +315,35 @@ one of the events in the collections occurs.&lt;/p&gt;
       
       <guid>https://barloweanalytics.com/posts/sqlbasics/</guid>
       <description>Ok if you&amp;rsquo;ve read the first tutorial on installing Postgres and getting your first database up and running, you&amp;rsquo;re now wondering &amp;ldquo;So how do I access all this data?&amp;rdquo; Well that&amp;rsquo;s where this tutorial comes in as we are going to cover some of the basic commands in SQL to get the data we want. Ok let&amp;rsquo;s get started and dive right in to our data.
- Column | Type | Collation | Nullable | Default | Storage | Stats target | Description -----------+------------------+-----------+----------+---------+----------+--------------+------------- yearID | bigint | | | | plain | | teamID | text | | | | extended | | lgID | text | | | | extended | | playerID | text | | | | extended | | G_all | bigint | | | | plain | | GS | double precision | | | | plain | | G_batting | bigint | | | | plain | | G_defense | double precision | | | | plain | | G_p | bigint | | | | plain | | G_c | bigint | | | | plain | | G_1b | bigint | | | | plain | | G_2b | bigint | | | | plain | | G_3b | bigint | | | | plain | | G_ss | bigint | | | | plain | | G_lf | bigint | | | | plain | | G_cf | bigint | | | | plain | | G_rf | bigint | | | | plain | | G_of | bigint | | | | plain | | G_dh | double precision | | | | plain | | G_ph | double precision | | | | plain | | G_pr | double precision | | | | plain | | This table in the database lists the number of appearances at each position for each player, each season and each team.</description>
+SELECT The SELECT command is going to be your workhorse command when working with SQL.</description>
       <content>&lt;p&gt;Ok if you&amp;rsquo;ve read the &lt;a href=&#34;https://barloweanalytics.com/sql/install/&#34;&gt;first tutorial&lt;/a&gt; on installing Postgres
 and getting your first database up and running, you&amp;rsquo;re now wondering &amp;ldquo;So how do I access all
 this data?&amp;rdquo; Well that&amp;rsquo;s where this tutorial comes in as we are going to cover some of the basic
 commands in SQL to get the data we want. Ok let&amp;rsquo;s get started and dive right in to our data.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h2&gt;SELECT&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;SELECT&lt;/code&gt; command is going to be your workhorse command when working with
+SQL. It&#39;s the command that tells Postgres to pull the data from the table and return it to you
+so you can use it. The &lt;code&gt;SELECT&lt;/code&gt; is always paired with a &lt;code&gt;FROM&lt;/code&gt; clause
+so you can tell Postgres exactly what table you want to select your data. Let&#39;s take a look
+at the command I used at the end of the first tutorial:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+SELECT * FROM appearances LIMIT 10;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ok let&#39;s break it down piece by piece. &lt;code&gt;SELECT&lt;/code&gt; tells Postgres that we want to
+pull data. The &lt;code&gt;\*&lt;/code&gt; tells Postgres that we want the data from every column in the
+table. You can choose whatever columns you want the data from and it doesn&#39;t have to be all of
+them, but this example we are taking all of them. Next is the &lt;code&gt;FROM&lt;/code&gt; clause that tells
+Postgres we want to pull all the columns from the &lt;code&gt;appearances&lt;/code&gt; table.&lt;/p&gt;
+&lt;p&gt;If you have multiple tables you would change the name of the table to whatever table you wanted
+data from. In order to get a list of all the tables you can select form type `\dt` and hit enter and
+Postgres will list all the tables in the public schema. The &lt;code&gt;LIMIT&lt;/code&gt; clause while technically not needed
+for a &lt;code&gt;SELECT&lt;/code&gt; query is very important here. If we had just entered in the command without
+using the &lt;code&gt;LIMIT&lt;/code&gt; Postgres would have returned every single row in the table and you almost
+never want to do that when just trying to look at the data in a table. So I added the &lt;code&gt;LIMIT&lt;/code&gt;
+clause and passed it the number 1 telling Postgres to limit the results to 10 rows. Pretty simple eh?&lt;/p&gt;
+&lt;p&gt;Ok lets do a couple other &lt;code&gt;SELECT&lt;/code&gt; queries to get the hang of it. First though
+lets get a list of the columns in our table with the &lt;code&gt;\d+ appearances&lt;/code&gt; which will produce
+and output similar to this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;      Column   |       Type       | Collation | Nullable | Default | Storage  | Stats target | Description
     -----------+------------------+-----------+----------+---------+----------+--------------+-------------
      yearID    | bigint           |           |          |         | plain    |              |
@@ -347,7 +370,8 @@ commands in SQL to get the data we want. Ok let&amp;rsquo;s get started and dive
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This table in the database lists the number of appearances at each position for each player, each season
 and each team. G_1b is games at first base and so on. If you need more info about the data
 in the database the data dictionary can be found &lt;a href=&#34;http://www.seanlahman.com/files/database/readme2012.txt&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;So now we have some columns lets adjust our &lt;code&gt;SELECT&lt;/code&gt; statement to just include a few
+of them instead of all of them:&lt;/p&gt;
 &lt;p&gt;Side note here. When I was creating this database file for you I forgot that Postgres only stores column names
 in lower case. As you can see above it does recognize upper case when displaying the column. The problem comes
 when you want to select a column. If you tried to execute &lt;code&gt;SELECT playerID from appearances limit 10;&lt;/code&gt; you would
@@ -374,9 +398,10 @@ with no ramifications for it being wrong. Now knowing what to google comes with 
 but a good place to start is to just cut and paste the error into google and start clicking.
 This is what every professional programmer does and the ones that say they don&amp;rsquo;t are lying.
 Ok back to the tutorial.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+SELECT playerid, teamid, g\_1b, g\_2b, g\_cf FROM appearances LIMIT 10;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which will produce an output similar to this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;playerid  | teamid | g_1b | g_2b | g_cf
 -----------+--------+------+------+------
  abercda01 | TRO    |    0 |    0 |    0
@@ -391,10 +416,22 @@ Ok back to the tutorial.&lt;/p&gt;
  barrofr01 | BS1    |    0 |    1 |    0
 (10 rows)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;You can play around with the columns as much as you want and see the different outputs.
+So now we&#39;re getting some more info that is something we can work with but nothing we can actually
+draw insights from. The next clause though will help us narrow our data even more.&lt;/p&gt;
+&lt;h2&gt;WHERE&lt;/h2&gt;
+&lt;p&gt;So above we learned how to limit the columns the SQL query returns so now lets learn how to
+limit the rows that are returned. This is done in SQL by using the &lt;code&gt;WHERE&lt;/code&gt; clause
+with your &lt;code&gt;SELECT&lt;/code&gt;. &lt;code&gt;WHERE&lt;/code&gt; gives your an SQL query a condition that it
+checks every row against in the table and if the condition is met it returns the row and if it
+isn&#39;t then the row is excluded. Let&#39;s look at it in action:
 &lt;pre&gt;&lt;code&gt;SELECT playerid, teamid, g_1b, g_2b, g_cf from appearances WHERE yearid = 2016 limit 10;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Now there is a order in which clauses go where in the SQL queries. Generally its SELECT, FROM,
+WHERE, GROUP BY, HAVING, ORDER BY, LIMIT. So when playing around with your queries if you don&#39;t stick
+to the order Postgres will throw an error. Obviously you don&#39;t know what all of those clauses do, but
+just keep in mind for now that &lt;code&gt;WHERE&lt;/code&gt; clauses will go before `LIMIT` clauses. So if you ran
+command above this should be your output:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt; yearid | playerid  | teamid | g_1b | g_2b | g_cf
 --------+-----------+--------+------+------+------
    2016 | abadfe01  | BOS    |    0 |    0 |    0
@@ -413,7 +450,18 @@ Ok back to the tutorial.&lt;/p&gt;
 You can also chain these commands as well using logical switches such as AND or OR like so:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;SELECT playerid, teamid, g_1b, g_2b, g_cf from appearances WHERE yearid = 2016 AND g_1b &amp;gt; 100;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;This will give us all the rows where the &lt;code&gt;yearid&lt;/code&gt; is 2016 and games played at first base is
+over 100 games. There are many more ways to combine these as well to help select the data that you are looking
+for but this is the basics. There will be a lot of trial and error at the beginning as you get
+used to it so don&#39;t despair and just keep at it.
+&lt;h2&gt;Aggregate Functions&lt;/h2&gt;
+&lt;p&gt;Ok so we&#39;ve learned how to select the appropriate columns and rows that we want from our data, but
+how do we look at the overall picture? How do we look at say the total goals scored or assists earned over
+a season or even a certain time frame? This is done with our powerful aggregate functions and the
+&lt;code&gt;GROUP BY&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;As you can see with the data each row is an individual game for an individual player so just using
+&lt;code&gt;WHERE&lt;/code&gt;won&#39;t tell you the whole story. So let&#39;s try and see if we can calculate
+who had the most hits last season in the MLB.
 &lt;pre&gt;&lt;code&gt;SELECT playerid, sum(h) FROM batting WHERE yearid=2017 GROUP BY playerid ORDER BY sum(h) DESC LIMIT 10;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Which gives us this output:&lt;/p&gt;
@@ -430,10 +478,11 @@ You can also chain these commands as well using logical switches such as AND or 
  lemahdj01 | 189
  arenano01 | 187
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Well that column name isn&#39;t very helpful. However there is a simple way to change that using the &lt;code&gt;AS&lt;/code&gt;
+command in your query:
 &lt;pre&gt;&lt;code&gt;SELECT playerid, sum(h) AS Hits FROM batting WHERE yearid=2017 GROUP BY playerid ORDER BY sum(h) DESC LIMIT 10;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;And now your output looks much nicer:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt; playerid  | hits
 -----------+------
  blackch02 |  213
@@ -448,17 +497,37 @@ You can also chain these commands as well using logical switches such as AND or 
  arenano01 |  187
 (10 rows)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;All &lt;code&gt;AS&lt;/code&gt; does is just create an alias for the column. You can do this with any column you want
+along with tables as well. It just creates another name for something that you can refer to later on in the query.
+In many newer flavors of SQL you can leave out the `AS` and just put a name next to the column, but I wanted to
+show the `AS` incase something breaks if  you do that.
+This won&#39;t work with &lt;code&gt;WHERE&lt;/code&gt; statements because the &lt;code&gt;WHERE&lt;/code&gt; clause references the raw data
+and your alias is created after the fact.&lt;/p&gt;
 &lt;p&gt;A couple other notes on this query. We have to do the &lt;code&gt;GROUP BY&lt;/code&gt; because this table has a row for each player for each team
 they played for in the season. A lot of players do play for the same team all season but a lot don&amp;rsquo;t. If you didn&amp;rsquo;t do
 the group by you would miss out on those other team hits for that player. The next is the &lt;code&gt;ORDER BY&lt;/code&gt; this tells
 the database how to sort the results in this case by hits descending, i.e. from largest to smallest, with the
 &lt;code&gt;DESC&lt;/code&gt; keyword. When you alias the &lt;code&gt;sum(h)&lt;/code&gt; column you can just using &lt;code&gt;ORDER BY hits&lt;/code&gt; next time. &lt;code&gt;ORDER BY&lt;/code&gt; will
 sort ascending by default unless you tell it otherwise&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;There several aggregate functions in SQL with the most common being &lt;code&gt;sum, avg, min, max, count&lt;/code&gt;. Respectively
+those add the values, average the values, find the minimum value, the maximum value, and last counts the number of values i.e.
+the of rows in a column.&lt;/p&gt;
+&lt;p&gt;The next and most important part of an aggregate function is the &lt;code&gt;GROUP BY&lt;/code&gt; clause. This tells
+Postgres how we want to calculate the aggregate functions. If we left out the &lt;code&gt;player&lt;/code&gt; column then
+the functions would just sum the total goals and assists of every player after the date we gave it. &lt;code&gt;GROUP BY&lt;/code&gt;
+though allows us to tell Postgres that we want to group the sums by each player.
+&lt;code&gt;GROUP BY&lt;/code&gt; doesn&#39;t just work
+for players we can use it on the &lt;code&gt;teamid&lt;/code&gt; column as well or any other categorical column in your database.
+In this one that is just mainly our teams and players, but if you were working with another database with
+different categorical columns &lt;code&gt;GROUP BY&lt;/code&gt; would work just as well on those with calculating aggregate
+stats. If you have some experinece with pandas or R dataframes &lt;code&gt;GROUP BY&lt;/code&gt; in SQL works basically the same
+as &lt;code&gt;.groupby&lt;/code&gt; and &lt;code&gt;group_by&lt;/code&gt; respectively in those langauges.&lt;/p&gt;
 &lt;p&gt;Our next tutorial will cover &lt;code&gt;JOIN&lt;/code&gt; so you can finall tell which players are actually accumulating the stats
 you are calculating in you queries.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h2&gt;Sources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#39;https://www.postgresql.org/docs/9.5/static/functions-aggregate.html&#39;&gt;Postgres Aggregate Functions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://stackoverflow.com/questions/9532668/list-rows-after-specific-date&#39;&gt;List Rows after Specific Date in SQL&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://dba.stackexchange.com/questions/22362/how-do-i-list-all-columns-for-a-specified-table&#39;&gt;List All Columns of Table&lt;/a&gt;&lt;/p&gt;
 </content>
     </item>
     

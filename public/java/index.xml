@@ -15,41 +15,36 @@
       
       <guid>https://barloweanalytics.com/java/loops/</guid>
       <description>by Matthew Barlowe Remember all these code snippets must be wrapped in a class method or a public static void main to actually run. For the idea/philosophy behind loops and how to use them go here
-for loops for (initialization; termination; increment){ statement(s); }  Real world example:
-//++ operator increments the value by one for (int i=1; i&amp;lt;11; i++) { System.out.println(&amp;quot;Your number is: &amp;quot; + i); }  Infinite loop can be created this way:</description>
+for loops for (initialization; termination; increment){ statement(s); } Real world example:
+//++ operator increments the value by one for (int i=1; i&amp;lt;11; i++) { System.out.println(&amp;#34;Your number is: &amp;#34; + i); } Infinite loop can be created this way:</description>
       <content>&lt;h1 id=&#34;by-matthew-barlowe&#34;&gt;by Matthew Barlowe&lt;/h1&gt;
 &lt;p&gt;Remember all these code snippets must be wrapped in a class method or a
 &lt;code&gt;public static void main&lt;/code&gt; to actually run. For the idea/philosophy
 behind loops and how to use them go &lt;a href=&#34;https://barloweanalytics.com/python/loops/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;for-loops&#34;&gt;&lt;code&gt;for&lt;/code&gt; loops&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;for (initialization; termination; increment){
-    statement(s);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Real world example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;//++ operator increments the value by one
-for (int i=1; i&amp;lt;11; i++) {
-    System.out.println(&amp;quot;Your number is: &amp;quot; + i);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Infinite loop can be created this way:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;for ( ; ; ) {
-    //put code here
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Can also loop over an array like in R/Python like this:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;int[] numbers = {1,4,5,2,6,3,6,7}
-for (int item : numbers) {
-    System.out.println(&amp;quot;Your number is: &amp;quot; + i);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;while-loops&#34;&gt;&lt;code&gt;while&lt;/code&gt; loops&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;while (count &amp;lt; 11) {
-    System.out.println(&amp;quot;Your number is: &amp;quot; + count);
-    count ++;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;do-while-loops&#34;&gt;&lt;code&gt;do-while&lt;/code&gt; loops&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Java&#34; data-lang=&#34;Java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;initialization&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt; termination&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt; increment&lt;span style=&#34;color:#f92672&#34;&gt;){&lt;/span&gt;
+    statement&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;s&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Real world example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Java&#34; data-lang=&#34;Java&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;//++ operator increments the value by one
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;11&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;++)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Your number is: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Infinite loop can be created this way:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Java&#34; data-lang=&#34;Java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;//put code here
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Can also loop over an array like in R/Python like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Java&#34; data-lang=&#34;Java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; numbers &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;4&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;5&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;2&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;6&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;3&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;6&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;7&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; item &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; numbers&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Your number is: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;while-loops&#34;&gt;&lt;code&gt;while&lt;/code&gt; loops&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Java&#34; data-lang=&#34;Java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; 11&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Your number is: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; count&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    count &lt;span style=&#34;color:#f92672&#34;&gt;++;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;do-while-loops&#34;&gt;&lt;code&gt;do-while&lt;/code&gt; loops&lt;/h1&gt;
 &lt;p&gt;The main difference between &lt;code&gt;while&lt;/code&gt; and &lt;code&gt;do-while&lt;/code&gt; loops in java is that
 &lt;code&gt;while&lt;/code&gt; loops evaluate the condition for continuing at the beginning of the
 loop, and &lt;code&gt;do-while&lt;/code&gt; evaluates its condition at the end of the loop. This means
@@ -57,13 +52,12 @@ a &lt;code&gt;do-while&lt;/code&gt; loop will run at least once as opposed to a 
 could never run depending on the condition. You also have to initialize the
 variable before you write the loop unlike &lt;code&gt;while&lt;/code&gt; loops where you can
 initialize the variable in the loop declaration.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;int count = 1;
-do {
-    System.out.println(&amp;quot;Your number is: &amp;quot; + count);
-    count ++;
-} while (count &amp;lt; 11);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;source&#34;&gt;Source&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Java&#34; data-lang=&#34;Java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 1&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Your number is: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; count&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    count &lt;span style=&#34;color:#f92672&#34;&gt;++;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; 11&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;source&#34;&gt;Source&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html&#34;&gt;&lt;code&gt;while&lt;/code&gt; and &lt;code&gt;do-while&lt;/code&gt;Statments&lt;/a&gt;&lt;/p&gt;
 </content>
     </item>
@@ -88,20 +82,19 @@ create a new class you have to create a new file &lt;strong&gt;that has the same
 class name&lt;/strong&gt;. The file name also has to end in &lt;code&gt;.java&lt;/code&gt; just like all Python scripts
 have to end in &lt;code&gt;.py&lt;/code&gt;. It&amp;rsquo;s a lot to take in that I will explain further in my tutorial on
 installing Java, but as of right now let&amp;rsquo;s just write a simple &lt;code&gt;Hello World&lt;/code&gt; program.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// Java uses camelCase for its naming conventions. Awful I know.
-// unlike Python, Java doesn&#39;t care about whitespace so you can
-// structure your code however you want as each line ends with a
-// semicolon.
-public class helloWorld {
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Java&#34; data-lang=&#34;Java&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Java uses camelCase for its naming conventions. Awful I know.
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// unlike Python, Java doesn&amp;#39;t care about whitespace so you can
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// structure your code however you want as each line ends with a
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// semicolon.
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;helloWorld&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
 
-    // the main method will always look like this
-    public static void main(String[] args) {
-        //Look at all that just to print. Also don&#39;t forget your semicolon!
-        System.out.println(&amp;quot;Hello World&amp;quot;);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now your program is ready to compile so save it as &lt;code&gt;helloWorld.java&lt;/code&gt; and then type
+    &lt;span style=&#34;color:#75715e&#34;&gt;// the main method will always look like this
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;//Look at all that just to print. Also don&amp;#39;t forget your semicolon!
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now your program is ready to compile so save it as &lt;code&gt;helloWorld.java&lt;/code&gt; and then type
 at the command line &lt;code&gt;java helloWorld.java&lt;/code&gt; and the output will be &lt;code&gt;Hello World&lt;/code&gt;.&lt;/p&gt;
 </content>
     </item>

@@ -6,7 +6,10 @@ draft: False
 
 <h2> by Matthew Barlowe</h2>
 <br />
-<p>Ok so if you've read the [Homebrew Tutorial]({{< relref "unix/homebrew">}}) you are
+Ok so if you've read the
+
+[Homebrew Tutorial]({{< relref "unix/homebrew">}})
+you are
 ready to actually start using it to start programming in python. If you haven't
 read that tutorial and you want to follow this one I sugestt going
 back and reading that one first. First though we need to get your system
@@ -17,13 +20,15 @@ as it will cause issues. In the terminal just type <code>xcode-select --install<
 if you have Mavericks or higher MacOS. If you are using Mountain Lion or Lion
 you'll need to visit <a href='https://developer.apple.com/downloads/'>Apple's Developer Site</a>.
 You can read more about it by reading this Github <a href='https://github.com/kennethreitz/osx-gcc-installer#readme'>
-README</a>.</p>
+README</a>.
 <h2>Brewing Python</h2>
 <p>After that's done the next step is to type <code>brew install python3</code>
 into the terminal and hit enter and you'll start to see something like this begin to print out
 on the screen:</p>
 <div class='fitimage'>
+
 ![Homebrew installing](/python/brew.png)
+
 </div>
 <p>Once Homebrew is finished running you should be good to go and are now able to start
 running python.  Yes it was that easy, amazing isn't it! Let's check and make sure
@@ -74,7 +79,9 @@ the nano window hit `Ctrl+o` and then enter to save. Once save hit `Ctrl+x` to e
 <p>Now you should be back at the command line. Next just close the window you were in
 and open a new one and should see these lines appear in the terminal:</p>
 <div class='fitimage'>
+
 ![virtualenvwrapper installing](/python/virtualenvwrapper.png)
+
 </div>
 <p>That means the virutalenvwrapper bashscript is running and installing the directories neccesary
 to get things up and running. To check and see type <code>workon</code> which if everything is

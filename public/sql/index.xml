@@ -14,8 +14,79 @@
       <pubDate>Fri, 24 May 2019 21:33:42 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/sql/createuser/</guid>
-      <description></description>
-      <content>&lt;!-- raw HTML omitted --&gt;
+      <description>Ok so if you&#39;ve come to this point you now have your database up and running and you want to allow others to access it. Some people say it&#39;s not the brightest idea, but hey, this data ain&#39;t going to share itself. Obviously letting them use your account is out of the question because as a superuser that will just allow them to wreak havoc any time they want on your meticulously gathered data.</description>
+      <content>&lt;p&gt;Ok so if you&#39;ve come to this point you now have your database up and
+running and you want to allow others to access it. Some people say
+it&#39;s not the brightest idea, but hey, this data ain&#39;t going to share
+itself. Obviously letting them use your account is out of the question
+because as a superuser that will just allow them to wreak havoc any time
+they want on your meticulously gathered data. That&#39;s were new users come
+in to save the day&lt;/p&gt;
+&lt;p&gt;Postgres users work pretty much the same way as Mac OSX users. You have
+a username and a password, and each user is given rules and limitations
+on what they can do. I&#39;ll get more into what privileges are available
+for a Postgres user in the next tutorial, but for now just keep in mind
+that they are the rules that let the database administrator know what
+each individual user can do on the Postgres server&lt;/p&gt;
+&lt;h2&gt;Difference Between a User and a Role&lt;/h2&gt;
+&lt;p&gt;In older versions of Postgres a User and a Role used to be more
+seperately defined. But from version 8.0 onward a User has been defined
+as a subset of a Role, with the main difference being that when you create
+a User Postgres assumes that it has login privileges to the Postgres
+sever. If you create a role it does not have login privileges unless you
+specifically define those privileges.&lt;/p&gt;
+&lt;p&gt;Gennerally what I like to do is create users and then create roles that
+I assign to each individual user to manage their privileges of what databases
+they can connect to and what actions they can take on each database.&lt;/p&gt;
+&lt;p&gt;Yes it is a bit confusing I understand, but I&#39;ll go over how I generally
+do things that helps keep it seperate for me. So ok let&#39;s look at it in practice
+and see if that makes things a little clearer.&lt;/p&gt;
+&lt;h2&gt;Creating Your First User&lt;/h2&gt;
+&lt;p&gt;Ok so you need to add one user to your Postgres server then this would be the
+syntax:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+CREATE USER matt WITH PASSWORD &#39;password&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ok so with that you created one user with the user name &lt;code&gt;matt&lt;/code&gt;
+and the password &lt;code&gt;password&lt;/code&gt;. Obviously, that&#39;s an awful password
+and don&#39;t ever do that unless you want to have a bad time. The good news is
+you created your first user, the bad news is they can&#39;t do anything yet other
+than login to the Postgres server.&lt;/p&gt;
+&lt;p&gt;If you ever lose track of the Users, or Roles, you&#39;ve created on your
+Postgres server all you need to do is type &lt;code&gt;\du&lt;/code&gt; and Postgres
+will show you a table of all the roles available on the server.&lt;/p&gt;
+&lt;p&gt;But what good is a user if they can&#39;t do anything? No good if you ask me
+that&#39;s why I&#39;ll show you how to grant them &lt;code&gt;SELECT&lt;/code&gt; privileges
+to a table so they can at least access your data. Here is the syntax to do
+that:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO matt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So now the user &lt;code&gt;matt&lt;/code&gt; has the ability to &lt;code&gt;SELECT&lt;/code&gt;
+query all the tables that have the schema public. If you are just starting
+out with postgres most of your tables will use the public schema as that is
+the default choice. This also raises another issue as well with your new
+user. Since they have access to the public schema by default on Postgres
+that means they have &lt;code&gt;USAGE&lt;/code&gt; or read permissions and &lt;code&gt;CREATE&lt;/code&gt;
+which means they can create new tables on your database.&lt;/p&gt;
+&lt;p&gt;Obviously as a superuser you could just delete what they create, but
+it&#39;s better to just not allow it in the first place. This means you
+need to revoke that privilege which is done with this syntax:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+REVOKE CREATE ON SCHEMA public FROM PUBLIC;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This removes the ablity for your new user to create a new table on the
+database using the public schema. This is generally a good idea as a user
+that creates a table becomes an onwer of that table; meaning they can insert
+whatever data they want to the data and grant other users privileges to it
+as well. You always want to make sure that your users can only do what you
+want them to do. If you&#39;re fine with them creating new tables then ignore this,
+but most likely you won&#39;t be.&lt;/p&gt;
+&lt;h2&gt;Sources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#39;https://www.postgresql.org/docs/current/static/sql-createuser.html&#39;&gt;Postgres Create Users Docs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://www.postgresql.org/docs/current/static/sql-createrole.html&#39;&gt;Postgres Create Role Docs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://serverfault.com/questions/60508/grant-select-to-all-tables-in-postgresql&#39;&gt;Grant SELECT on all Tables&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://dba.stackexchange.com/questions/35316/why-is-a-new-user-allowed-to-create-a-table&#39;&gt;Why is new user allowed to create a table&lt;/a&gt;&lt;/p&gt;
 </content>
     </item>
     
@@ -25,13 +96,70 @@
       <pubDate>Thu, 23 May 2019 22:25:11 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/sql/login/</guid>
-      <description>psql --host=&amp;lt;hostname&amp;gt; --port=5432 --username=&amp;lt;username&amp;gt; --dbname=&amp;lt;dbname&amp;gt;  </description>
-      <content>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+      <description>Remote Postgres Login 
+Ok if you&#39;ve been following along with the other tutorials you have seen me use the psql command to login into your database that you&#39;ve setup on your computer. But that&#39;s not all psql is use for, and in fact it has many diverse properties that you can use to pass SQL queries to the database without ever logging into the server itself. But I won&#39;t get into that with this tutorial, instead I&#39;m going to focus on using psql to login into a remote Postgres server</description>
+      <content>&lt;h2&gt;Remote Postgres Login&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Ok if you&#39;ve been following along with the other tutorials you have seen me
+use the &lt;code&gt;psql&lt;/code&gt; command to login into your database that you&#39;ve setup
+on your computer. But that&#39;s not all &lt;code&gt;psql&lt;/code&gt; is use for, and in fact it
+has many diverse properties that you can use to pass SQL queries to the database
+without ever logging into the server itself. But I won&#39;t get into that with this
+tutorial, instead I&#39;m going to focus on using psql to login into a remote Postgres
+server&lt;/p&gt;
+&lt;p&gt;A couple notes here first about OS differences. If you are on a Mac which I
+assume most people will be if you&#39;re following these tutorials, the psql will work
+anywhere at the command line. Windows though is a bit different. If you have your
+&lt;code&gt;cmd&lt;/code&gt; window up and ready to log into your Postgres server, you will need
+to change to the &lt;code&gt;bin&lt;/code&gt; directory located in the directory of your Postgres
+to run the &lt;code&gt;psql&lt;/code&gt; command.&lt;/p&gt;
+&lt;h2&gt;Login Syntax&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;psql --host=&amp;lt;hostname&amp;gt; --port=5432 --username=&amp;lt;username&amp;gt; --dbname=&amp;lt;dbname&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Ok this is a sample command you would type in the command line if you were going
+to login in to a remote Postgres server. Let&#39;s break it down piece by piece.
+&lt;code&gt;--host=&amp;lt;hostname&amp;gt;&lt;/code&gt;: This is the address of the postgres server. It
+could be an IP address, or a url, or it&#39;s hosted on amazon it will have something
+that ends like this &lt;code&gt;rds.amazonaws.com&lt;/code&gt;. This what tells &lt;code&gt;psql&lt;/code&gt;
+where to go and connect so you can login to the Postgres server.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--port=5432&lt;/code&gt;: This is the port that &lt;code&gt;psql&lt;/code&gt; will attempt to
+connect. This is the default port for Postgres and will almost always be the same no
+matter what Postgres server you are connecting to and you shouldn&#39;t have to change
+this unless otherwise specified.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--username=&amp;lt;username&amp;gt;&lt;/code&gt;: This one is pretty self explanatory. You will
+place your user name where &amp;lt;username&amp;gt; goes and it will be the username given
+to you by your database administrator&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--dbname=&amp;lt;dbname&amp;gt;&lt;/code&gt;: This will be the name of the database you
+want to connect to and you will need to know this before you connect because you can&#39;t
+connect to a Postgres server without specifying a database. This should also be
+given to you by your database administrator as well.&lt;/p&gt;
+&lt;p&gt;Ok that&#39;s basically it for using &lt;code&gt;psql&lt;/code&gt; to log into a Postgres server.
+But what if you don&#39;t want to type all that in everytime you want to log into
+a Postgres server? Well glad you asked because I&#39;ll briefly touch on how you can
+do that.&lt;/p&gt;
+&lt;h2&gt;Aliases&lt;/h2&gt;
+&lt;p&gt;Ok I talked about aliases in some other SQL tutorials and this is similar but
+not quite the same. The alias I&#39;m going to talk about right now is an alias for
+a command for the Bash shell in Mac OS X. This alias is a shortcut that you create
+so you don&#39;t have to type in long complicated commands. To create a shortcut
+we will be editing the &lt;code&gt;.bash_profile&lt;/code&gt; file with a text editor.&lt;/p&gt;
+&lt;p&gt;The &#39;.&#39; before a file in a Unix/Linux file structure means that it is a hidden
+file and won&#39;t normally show up when you do a standard &lt;code&gt;ls&lt;/code&gt; command. The
+&lt;code&gt;.bash_profile&lt;/code&gt; file controls how the Bash shell operates for you. I discussed
+editing it briefly in the &lt;a href=&#39;gittutorial.html&#39;&gt;Git Tutorial&lt;/a&gt; so if you
+forgot how to edit it you can refresh your memory there. But to create our alias
+you&#39;ll need to open the file and put this line inside it:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+alias dblogin=&#39;psql --host=&amp;lt;host_name&amp;gt; --port=5432 --username=&amp;lt;username&amp;gt; --dbname=&amp;lt;dbname&amp;gt;&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So after you add that all on one line to your &lt;code&gt;.bash_profile&lt;/code&gt; file and
+&lt;code&gt;source ~/.bash_profile&lt;/code&gt; to effect the changes to your shell all you would need
+to do is type &lt;code&gt;dblogin&lt;/code&gt; and the Bash shell would automatically log you
+into your Postgres server with the selected database. And that&#39;s all it takes to create
+the alias. Aliases can be used for any series of Bash commands not just the psql so
+if you run into another command that requires a lot of inputs, or even a chain of different
+commands now you know how to set up an alias to make it easier to type into the
+command line&lt;/p&gt;
 </content>
     </item>
     
@@ -42,12 +170,35 @@
       
       <guid>https://barloweanalytics.com/sql/sqlbasics/</guid>
       <description>Ok if you&amp;rsquo;ve read the first tutorial on installing Postgres and getting your first database up and running, you&amp;rsquo;re now wondering &amp;ldquo;So how do I access all this data?&amp;rdquo; Well that&amp;rsquo;s where this tutorial comes in as we are going to cover some of the basic commands in SQL to get the data we want. Ok let&amp;rsquo;s get started and dive right in to our data.
- Column | Type | Collation | Nullable | Default | Storage | Stats target | Description -----------+------------------+-----------+----------+---------+----------+--------------+------------- yearID | bigint | | | | plain | | teamID | text | | | | extended | | lgID | text | | | | extended | | playerID | text | | | | extended | | G_all | bigint | | | | plain | | GS | double precision | | | | plain | | G_batting | bigint | | | | plain | | G_defense | double precision | | | | plain | | G_p | bigint | | | | plain | | G_c | bigint | | | | plain | | G_1b | bigint | | | | plain | | G_2b | bigint | | | | plain | | G_3b | bigint | | | | plain | | G_ss | bigint | | | | plain | | G_lf | bigint | | | | plain | | G_cf | bigint | | | | plain | | G_rf | bigint | | | | plain | | G_of | bigint | | | | plain | | G_dh | double precision | | | | plain | | G_ph | double precision | | | | plain | | G_pr | double precision | | | | plain | | This table in the database lists the number of appearances at each position for each player, each season and each team.</description>
+SELECT The SELECT command is going to be your workhorse command when working with SQL.</description>
       <content>&lt;p&gt;Ok if you&amp;rsquo;ve read the &lt;a href=&#34;https://barloweanalytics.com/sql/install/&#34;&gt;first tutorial&lt;/a&gt; on installing Postgres
 and getting your first database up and running, you&amp;rsquo;re now wondering &amp;ldquo;So how do I access all
 this data?&amp;rdquo; Well that&amp;rsquo;s where this tutorial comes in as we are going to cover some of the basic
 commands in SQL to get the data we want. Ok let&amp;rsquo;s get started and dive right in to our data.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h2&gt;SELECT&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;SELECT&lt;/code&gt; command is going to be your workhorse command when working with
+SQL. It&#39;s the command that tells Postgres to pull the data from the table and return it to you
+so you can use it. The &lt;code&gt;SELECT&lt;/code&gt; is always paired with a &lt;code&gt;FROM&lt;/code&gt; clause
+so you can tell Postgres exactly what table you want to select your data. Let&#39;s take a look
+at the command I used at the end of the first tutorial:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+SELECT * FROM appearances LIMIT 10;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ok let&#39;s break it down piece by piece. &lt;code&gt;SELECT&lt;/code&gt; tells Postgres that we want to
+pull data. The &lt;code&gt;\*&lt;/code&gt; tells Postgres that we want the data from every column in the
+table. You can choose whatever columns you want the data from and it doesn&#39;t have to be all of
+them, but this example we are taking all of them. Next is the &lt;code&gt;FROM&lt;/code&gt; clause that tells
+Postgres we want to pull all the columns from the &lt;code&gt;appearances&lt;/code&gt; table.&lt;/p&gt;
+&lt;p&gt;If you have multiple tables you would change the name of the table to whatever table you wanted
+data from. In order to get a list of all the tables you can select form type `\dt` and hit enter and
+Postgres will list all the tables in the public schema. The &lt;code&gt;LIMIT&lt;/code&gt; clause while technically not needed
+for a &lt;code&gt;SELECT&lt;/code&gt; query is very important here. If we had just entered in the command without
+using the &lt;code&gt;LIMIT&lt;/code&gt; Postgres would have returned every single row in the table and you almost
+never want to do that when just trying to look at the data in a table. So I added the &lt;code&gt;LIMIT&lt;/code&gt;
+clause and passed it the number 1 telling Postgres to limit the results to 10 rows. Pretty simple eh?&lt;/p&gt;
+&lt;p&gt;Ok lets do a couple other &lt;code&gt;SELECT&lt;/code&gt; queries to get the hang of it. First though
+lets get a list of the columns in our table with the &lt;code&gt;\d+ appearances&lt;/code&gt; which will produce
+and output similar to this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;      Column   |       Type       | Collation | Nullable | Default | Storage  | Stats target | Description
     -----------+------------------+-----------+----------+---------+----------+--------------+-------------
      yearID    | bigint           |           |          |         | plain    |              |
@@ -74,7 +225,8 @@ commands in SQL to get the data we want. Ok let&amp;rsquo;s get started and dive
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This table in the database lists the number of appearances at each position for each player, each season
 and each team. G_1b is games at first base and so on. If you need more info about the data
 in the database the data dictionary can be found &lt;a href=&#34;http://www.seanlahman.com/files/database/readme2012.txt&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;So now we have some columns lets adjust our &lt;code&gt;SELECT&lt;/code&gt; statement to just include a few
+of them instead of all of them:&lt;/p&gt;
 &lt;p&gt;Side note here. When I was creating this database file for you I forgot that Postgres only stores column names
 in lower case. As you can see above it does recognize upper case when displaying the column. The problem comes
 when you want to select a column. If you tried to execute &lt;code&gt;SELECT playerID from appearances limit 10;&lt;/code&gt; you would
@@ -101,9 +253,10 @@ with no ramifications for it being wrong. Now knowing what to google comes with 
 but a good place to start is to just cut and paste the error into google and start clicking.
 This is what every professional programmer does and the ones that say they don&amp;rsquo;t are lying.
 Ok back to the tutorial.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+SELECT playerid, teamid, g\_1b, g\_2b, g\_cf FROM appearances LIMIT 10;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which will produce an output similar to this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;playerid  | teamid | g_1b | g_2b | g_cf
 -----------+--------+------+------+------
  abercda01 | TRO    |    0 |    0 |    0
@@ -118,10 +271,22 @@ Ok back to the tutorial.&lt;/p&gt;
  barrofr01 | BS1    |    0 |    1 |    0
 (10 rows)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;You can play around with the columns as much as you want and see the different outputs.
+So now we&#39;re getting some more info that is something we can work with but nothing we can actually
+draw insights from. The next clause though will help us narrow our data even more.&lt;/p&gt;
+&lt;h2&gt;WHERE&lt;/h2&gt;
+&lt;p&gt;So above we learned how to limit the columns the SQL query returns so now lets learn how to
+limit the rows that are returned. This is done in SQL by using the &lt;code&gt;WHERE&lt;/code&gt; clause
+with your &lt;code&gt;SELECT&lt;/code&gt;. &lt;code&gt;WHERE&lt;/code&gt; gives your an SQL query a condition that it
+checks every row against in the table and if the condition is met it returns the row and if it
+isn&#39;t then the row is excluded. Let&#39;s look at it in action:
 &lt;pre&gt;&lt;code&gt;SELECT playerid, teamid, g_1b, g_2b, g_cf from appearances WHERE yearid = 2016 limit 10;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Now there is a order in which clauses go where in the SQL queries. Generally its SELECT, FROM,
+WHERE, GROUP BY, HAVING, ORDER BY, LIMIT. So when playing around with your queries if you don&#39;t stick
+to the order Postgres will throw an error. Obviously you don&#39;t know what all of those clauses do, but
+just keep in mind for now that &lt;code&gt;WHERE&lt;/code&gt; clauses will go before `LIMIT` clauses. So if you ran
+command above this should be your output:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt; yearid | playerid  | teamid | g_1b | g_2b | g_cf
 --------+-----------+--------+------+------+------
    2016 | abadfe01  | BOS    |    0 |    0 |    0
@@ -140,7 +305,18 @@ Ok back to the tutorial.&lt;/p&gt;
 You can also chain these commands as well using logical switches such as AND or OR like so:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;SELECT playerid, teamid, g_1b, g_2b, g_cf from appearances WHERE yearid = 2016 AND g_1b &amp;gt; 100;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;This will give us all the rows where the &lt;code&gt;yearid&lt;/code&gt; is 2016 and games played at first base is
+over 100 games. There are many more ways to combine these as well to help select the data that you are looking
+for but this is the basics. There will be a lot of trial and error at the beginning as you get
+used to it so don&#39;t despair and just keep at it.
+&lt;h2&gt;Aggregate Functions&lt;/h2&gt;
+&lt;p&gt;Ok so we&#39;ve learned how to select the appropriate columns and rows that we want from our data, but
+how do we look at the overall picture? How do we look at say the total goals scored or assists earned over
+a season or even a certain time frame? This is done with our powerful aggregate functions and the
+&lt;code&gt;GROUP BY&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;As you can see with the data each row is an individual game for an individual player so just using
+&lt;code&gt;WHERE&lt;/code&gt;won&#39;t tell you the whole story. So let&#39;s try and see if we can calculate
+who had the most hits last season in the MLB.
 &lt;pre&gt;&lt;code&gt;SELECT playerid, sum(h) FROM batting WHERE yearid=2017 GROUP BY playerid ORDER BY sum(h) DESC LIMIT 10;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Which gives us this output:&lt;/p&gt;
@@ -157,10 +333,11 @@ You can also chain these commands as well using logical switches such as AND or 
  lemahdj01 | 189
  arenano01 | 187
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Well that column name isn&#39;t very helpful. However there is a simple way to change that using the &lt;code&gt;AS&lt;/code&gt;
+command in your query:
 &lt;pre&gt;&lt;code&gt;SELECT playerid, sum(h) AS Hits FROM batting WHERE yearid=2017 GROUP BY playerid ORDER BY sum(h) DESC LIMIT 10;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;And now your output looks much nicer:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt; playerid  | hits
 -----------+------
  blackch02 |  213
@@ -175,17 +352,37 @@ You can also chain these commands as well using logical switches such as AND or 
  arenano01 |  187
 (10 rows)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;All &lt;code&gt;AS&lt;/code&gt; does is just create an alias for the column. You can do this with any column you want
+along with tables as well. It just creates another name for something that you can refer to later on in the query.
+In many newer flavors of SQL you can leave out the `AS` and just put a name next to the column, but I wanted to
+show the `AS` incase something breaks if  you do that.
+This won&#39;t work with &lt;code&gt;WHERE&lt;/code&gt; statements because the &lt;code&gt;WHERE&lt;/code&gt; clause references the raw data
+and your alias is created after the fact.&lt;/p&gt;
 &lt;p&gt;A couple other notes on this query. We have to do the &lt;code&gt;GROUP BY&lt;/code&gt; because this table has a row for each player for each team
 they played for in the season. A lot of players do play for the same team all season but a lot don&amp;rsquo;t. If you didn&amp;rsquo;t do
 the group by you would miss out on those other team hits for that player. The next is the &lt;code&gt;ORDER BY&lt;/code&gt; this tells
 the database how to sort the results in this case by hits descending, i.e. from largest to smallest, with the
 &lt;code&gt;DESC&lt;/code&gt; keyword. When you alias the &lt;code&gt;sum(h)&lt;/code&gt; column you can just using &lt;code&gt;ORDER BY hits&lt;/code&gt; next time. &lt;code&gt;ORDER BY&lt;/code&gt; will
 sort ascending by default unless you tell it otherwise&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;There several aggregate functions in SQL with the most common being &lt;code&gt;sum, avg, min, max, count&lt;/code&gt;. Respectively
+those add the values, average the values, find the minimum value, the maximum value, and last counts the number of values i.e.
+the of rows in a column.&lt;/p&gt;
+&lt;p&gt;The next and most important part of an aggregate function is the &lt;code&gt;GROUP BY&lt;/code&gt; clause. This tells
+Postgres how we want to calculate the aggregate functions. If we left out the &lt;code&gt;player&lt;/code&gt; column then
+the functions would just sum the total goals and assists of every player after the date we gave it. &lt;code&gt;GROUP BY&lt;/code&gt;
+though allows us to tell Postgres that we want to group the sums by each player.
+&lt;code&gt;GROUP BY&lt;/code&gt; doesn&#39;t just work
+for players we can use it on the &lt;code&gt;teamid&lt;/code&gt; column as well or any other categorical column in your database.
+In this one that is just mainly our teams and players, but if you were working with another database with
+different categorical columns &lt;code&gt;GROUP BY&lt;/code&gt; would work just as well on those with calculating aggregate
+stats. If you have some experinece with pandas or R dataframes &lt;code&gt;GROUP BY&lt;/code&gt; in SQL works basically the same
+as &lt;code&gt;.groupby&lt;/code&gt; and &lt;code&gt;group_by&lt;/code&gt; respectively in those langauges.&lt;/p&gt;
 &lt;p&gt;Our next tutorial will cover &lt;code&gt;JOIN&lt;/code&gt; so you can finall tell which players are actually accumulating the stats
 you are calculating in you queries.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h2&gt;Sources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#39;https://www.postgresql.org/docs/9.5/static/functions-aggregate.html&#39;&gt;Postgres Aggregate Functions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://stackoverflow.com/questions/9532668/list-rows-after-specific-date&#39;&gt;List Rows after Specific Date in SQL&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://dba.stackexchange.com/questions/22362/how-do-i-list-all-columns-for-a-specified-table&#39;&gt;List All Columns of Table&lt;/a&gt;&lt;/p&gt;
 </content>
     </item>
     
@@ -195,20 +392,104 @@ you are calculating in you queries.&lt;/p&gt;
       <pubDate>Thu, 18 Apr 2019 23:38:39 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/sql/install/</guid>
-      <description>psql (10.3, server 10.1) Type &amp;quot;help&amp;quot; for help. postgres=#  postgres=# CREATE ROLE username WITH LOGIN PASSWORD &#39;quoted password&#39;;  postgres=# ALTER ROLE username CREATEDB;  psql (10.3, server 10.1) Type &amp;quot;help&amp;quot; for help. postgres=&amp;gt;  As you can see our # has changed to a &amp;gt; indciating that we are not a superuser anymore. So now you&amp;rsquo;re logged in to your new user lets create a database that we are going to load our data into so we can play around with it:</description>
-      <content>&lt;!-- raw HTML omitted --&gt;
+      <description>by Matthew Barlowe  This tutorial will cover the basics of getting PostgreSQL setup on your computer and running. We won&#39;t actually be working with data in this article, but instead the focus is on the nuts and bolts of what PostgreSQL is and and its structure. But before I get into all that let&#39;s start at the beginning. As always these tutorials will be focused on working in a Mac OS X environment.</description>
+      <content>&lt;h2&gt; by Matthew Barlowe&lt;/h2&gt;
+&lt;br /&gt;
+&lt;p&gt; This tutorial will
+cover the basics of getting PostgreSQL setup on your computer and running. We won&#39;t actually
+be working with data in this article, but instead the focus is on the nuts and bolts
+of what PostgreSQL is and and its structure. But before I get into all that let&#39;s start
+at the beginning. As always these tutorials will be focused on working in a Mac OS X
+environment. The Postgres commands and the SQL syntax should work no matter what, but
+the details of installing will be different on a Windows system.&lt;/p&gt;
+&lt;h2&gt;What is SQL?&lt;/h2&gt;
+&lt;p&gt;SQL, or sequel as its commonly pronounced, is bascially an acronym that stands for
+Structured Querying Language. SQL has been around forever since 1974 and isn&#39;t anywhere
+near cutting edge in technology. Some may see this as a drawback, but it also has its
+advantages as well. One being that it&#39;s a well documented system and language, and two
+is that most people are at least somewhat familiar with its terminology.&lt;/p&gt;
+&lt;p&gt;But what does SQL do? Well SQL is the language used to query and manipulate data
+in a relational database system. And a relational database system is a system that uses
+the relational model; a model consisting of unique keys to create
+relations between different tables on the database. Its not really important you
+understand this all right now but just keep it in mind for future tutorials.&lt;/p&gt;
+&lt;h2&gt;What is PostgreSQL?&lt;/h2&gt;
+&lt;p&gt;PostgreSQL is just a flavor of SQL. I chose this one for several reasons. One being
+it is noted for its speed, and secondly because it is open source and therefore free.
+There are plenty other choices out there such as MySQL or SQLite3 that are perfectly
+suitable, but these tutorials will focus on Postgres as it is the one I am most comfortable
+using. There are differences between these options, but the basic commands we
+wil go over in this series should be universal between all of these systems, however I can&#39;t
+speak for all of them as there may be slight differences in syntax.&lt;/p&gt;
+&lt;p&gt;Still the majority of the lessons learned using PostgreSQL and these tutorials will
+be portable. &lt;/p&gt;
+&lt;h2&gt;Installing PostgreSQL&lt;/h2&gt;
+&lt;p&gt;To get PostgreSQL onto our system we are going to use Homebrew to install the files. If
+you don&#39;t have Homebrew please refer to this [tutorial](https://barloweanalytics.com/unix/homebrew/) to get
+it up and running. So like our other brew installations, Postgres is installed with a
+command you may find familiar if you&#39;ve been following these tutorials.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+$ brew install postgresql
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And you&#39;ll see a whole bunch of text on the screen showing Homebrew installing the
+PostgreSQL files. It&#39;s often a good idea to skim this output even if you don&#39;t understand
+it as sometimes the output will have very important info. When installing PostgreSQL this
+is one of those times. Because at the bottom it will give you two commands: &lt;code&gt;pg_ctl
+-D /usr/local/var/postgres start&lt;/code&gt; and &lt;code&gt;brew services start postgresql&lt;/code&gt;
+&lt;p&gt;There are two major difference between these commands the first one will just start up
+the postgres server manually. If you ever shut down the computer then you will have to
+start the server again. The second one will keep Postgres running in the background at all
+times. This is the option I use, but depending on your computer it may not be best for you.
+If you just want to manually start and stop the server you&#39;d use the first command above
+to start it and this one to stop it: &lt;code&gt;pg_ctl -D /usr/local/var/postgres stop&lt;/code&gt;.
+So choose whichever option you&#39;d like and start up your new Postgres server!
+&lt;h2&gt;Logging in to Postgres&lt;/h2&gt;
+&lt;p&gt;Ok now that your server is up and running you&#39;ll need to login into the Postgres server
+before you can do anything:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+$ psql postgres
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;psql&lt;/code&gt; command is what logs you into the Postgres database server and &lt;code&gt;postgres&lt;/code&gt; is
+a default database that is created whenever you create/install the Postgres server itself.
+This database is used by third party programs and it will be the database you connect to
+run database maintenance commands.&lt;/p&gt;
+&lt;p&gt;So after you type the above command you should see that your prompt changes to something
+like this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;psql (10.3, server 10.1)
 Type &amp;quot;help&amp;quot; for help.
 
 postgres=#
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;A couple notes about background things before we go further. When you brew postgres
+Homebrew does a couple things behind the scenes. It tells you in the text it prints out, but
+I&#39;m going to highlight them here to make it easier for you. First Homebrew creates a superuser
+for the Postgres server with the same name as the OS X User you are currently logged in as.&lt;/p&gt;
+&lt;p&gt;Secondly it sets trust authentication for local connections meaning you don&#39;t need to provide a
+password to log into the data base. Obviously, this is a huge security flaw and if you were
+going to provide outside access you would change that, but for our purposes in these tutorials
+we won&#39;t get into how to do that.&lt;/p&gt;
+&lt;p&gt;Ok back to the prompt above. As you can see it tells us what version Postgres we are running,
+and that we can type help for help. But if you&#39;re like me, I find when I&#39;m learning something new
+those help menus offer no help at all until I get a little knowledge about the system. The next
+line is where we&#39;ll actually put our commands for the Postgres server. That line tells us we
+are connected to the &lt;code&gt;postgres&lt;/code&gt; database and the &lt;code&gt;#&lt;/code&gt; informs you that you are logged
+in as a superuser.&lt;/p&gt;
+&lt;p&gt;As with my rant in other tutorials about using &lt;code&gt;sudo&lt;/code&gt; unless you know
+what you are doing don&#39;t work as a superuser if you can avoid it. So we are going to create
+another user and give them database creation privileges:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;postgres=# CREATE ROLE username WITH LOGIN PASSWORD &#39;quoted password&#39;;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;You would change &lt;code&gt;username&lt;/code&gt; and &lt;code&gt;&#39;quoted password&#39;&lt;/code&gt; with whatever values
+you wanted. Next will give our new user the ability to create a database:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;postgres=# ALTER ROLE username CREATEDB;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h2&gt;Creating Your First Database&lt;/h2&gt;
+&lt;p&gt;Ok now that we&#39;ve created our new user lets logout of the superuser with &lt;code&gt;\q&lt;/code&gt; and
+log in with your new user with this command &lt;code&gt;psql -U username postgres&lt;/code&gt;. The &lt;code&gt;-U&lt;/code&gt;
+flag just tells postgres that you want to login with that particular user and &lt;code&gt;postgres&lt;/code&gt;
+is again just the name of the database. Normally you would be asked for the password you created
+for the role, but remember that local connections are trusted so you won&#39;t need to enter it.
+&lt;p&gt;Ok now you should see a command line that looks like this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;psql (10.3, server 10.1)
 Type &amp;quot;help&amp;quot; for help.
 
@@ -219,8 +500,13 @@ logged in to your new user lets create a database that we are going to load our 
 play around with it:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;postgres=&amp;gt; CREATE DATABASE baseballstats;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;So to check and make sure our database is created type &lt;!-- raw HTML omitted --&gt;\l&lt;!-- raw HTML omitted --&gt; into the terminal.
+&lt;p&gt;At this moment I&#39;ll point out, if you haven&#39;t noticed, that all SQL commands and queries will end with
+a semicolon. This let&#39;s the system know that it has reached the end of the query and there are no more
+words to parse. If you hit enter without a semicolon a new terminal will pop up with the &lt;code&gt;=&lt;/code&gt; changed
+to a &lt;code&gt;-&lt;/code&gt;. This means that Postgres is expecting more commands and it will wait until you pass it a semicolon.
+This is helpful if you are working with complex queries and you can break them up to make them easier to read,
+but can be annoying if you are wondering why your commands aren&#39;t working.&lt;/p&gt;
+&lt;p&gt;So to check and make sure our database is created type &lt;code&gt;\l&lt;/code&gt; into the terminal.
 This command will give you a list of all the databases on the Postgres server. Commands
 beginning with a &lt;code&gt;\&lt;/code&gt;, also known as &lt;code&gt;psql&lt;/code&gt; commands, don&amp;rsquo;t need a semicolon and will throw an error
 if you use one. It is a little confusing but one way to keep it apart is that commands that directly
@@ -236,13 +522,19 @@ should see some output similar to this:&lt;/p&gt;
  template1     | MattBarlowe | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/MattBarlowe             +
                |             |          |             |             | MattBarlowe=CTc/MattBarlowe
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You should see the &lt;!-- raw HTML omitted --&gt;baseballstats&lt;!-- raw HTML omitted --&gt; in the table and that the Owner of the database is
+&lt;p&gt;You should see the &lt;code&gt;baseballstats&lt;/code&gt; in the table and that the Owner of the database is
 the username you created. As &lt;code&gt;Owner&lt;/code&gt; of the database that means you have superuser powers over it and
 that nobody can even read it until you give them acess to the database.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h2&gt;Importing Data to the Database&lt;/h2&gt;
+&lt;p&gt;So we have created our new &lt;code&gt;baseballstats&lt;/code&gt; database so lets log into it. Start by typing &lt;code&gt;\q&lt;/code&gt;
+to log out of the &lt;code&gt;postgres&lt;/code&gt; database and now we&#39;ll use this command to log into our new database
+&lt;code&gt;psql -U username baseballstats&lt;/code&gt;, (where username is the username you created above)
+and you&#39;ll see your command prompt is now this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;baseballstats=&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Ok so we have our database running but we don&#39;t have any data in yet so that&#39;s our next step. Data in a SQL
+database is stored in different tables. And it is the relationships between these tables that forms the basis
+of the relational database system I touched on earlier. &lt;/p&gt;
 &lt;p&gt;The data I will be using for this tutorial and all future tutorials can be downloaded at this
 &lt;a href=&#34;https://drive.google.com/open?id=1h1oyVfW4xLi-hqfgrNjrY-mNlnx0jSaw&#34;&gt;link&lt;/a&gt;. In this zip file
 is a PostgreSQL backup of the database I created from the &lt;code&gt;.csv&lt;/code&gt; files from
@@ -258,7 +550,7 @@ the database. Once that is all done log back into your database:&lt;/p&gt;
 by doing a simple select:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;SELECT * FROM appearances LIMIT 10;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Which should produce output similar to this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;yearID | teamID | lgID | playerID  | G_all | GS | G_batting | G_defense | G_p | G_c | G_1b | G_2b | G_3b | G_ss | G_lf | G_cf | G_rf | G_of | G_dh | G_ph | G_pr
 --------+--------+------+-----------+-------+----+-----------+-----------+-----+-----+------+------+------+------+------+------+------+------+------+------+------
   1871 | TRO    |      | abercda01 |     1 |  1 |         1 |         1 |   0 |   0 |    0 |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0
@@ -272,14 +564,24 @@ by doing a simple select:&lt;/p&gt;
   1871 | FW1    |      | barrebi01 |     1 |  1 |         1 |         1 |   0 |   1 |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0
   1871 | BS1    |      | barrofr01 |    18 | 17 |        18 |        18 |   0 |   0 |    0 |    1 |    0 |    0 |   13 |    0 |    4 |   17 |    0 |    0 |    0
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt; Thats a lot text and its hard to make sense of, but if you are seeing that means we have great success
+and your first database is up and running.&lt;/p&gt;
 &lt;p&gt;If you come up with a &lt;code&gt;ERROR:  permission denied for relation appearances&lt;/code&gt; when you run the above code
 you need to login back into your superuser account (which remember is the same name of the OS X you created
 the postgres server in) into the &lt;code&gt;baseballstats&lt;/code&gt; table with this command &lt;code&gt;psql baseballstats&lt;/code&gt;
 and then grant privileges to your username you created above with
 &lt;code&gt;GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public to username&lt;/code&gt;. After that you should be able to
 &lt;code&gt;select&lt;/code&gt; the data normally.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h2&gt;Sources:&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#39;https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb&#39;&gt;Getting Started with PostgreSQL on Mac OSX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;http://blog.bradlucas.com/posts/2017-10-06-install-postgresql-on-a-mac-using-brew/&#39;&gt;Install PostgreSQL on Mac using Brew&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://stackoverflow.com/questions/7975556/how-to-start-postgresql-server-on-mac-os-x&#39;&gt;How to Start PostgreSQL Server on Mac OSX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://gist.github.com/nepsilon/f2937fe10fe8b0efc0cc&#39;&gt;Importing and Exporting CSV Files with PostgreSQL&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://en.wikipedia.org/wiki/Relational_model&#39;&gt;Relational Model&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546&#39;&gt;psql Cheatsheet&lt;/a&gt; I would definitely bookmark this folks!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://stackoverflow.com/questions/2370525/default-database-named-postgres-on-postgresql-server&#39;&gt;Default Postgres Database&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://gist.github.com/lxneng/741932&#39;&gt;Postgres Homebrew Output&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://www.youtube.com/watch?v=2OA2lLRe70Q&#39;&gt;Create tables and import CSV&lt;/a&gt;&lt;/p&gt;
 </content>
     </item>
     

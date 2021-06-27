@@ -12,36 +12,46 @@ behind loops and how to use them go [here]({{< ref "/python/loops" >}})
 
 # `for` loops
 
-    for (initialization; termination; increment){
-        statement(s);
-    }
+```Java
+for (initialization; termination; increment){
+    statement(s);
+}
+```
 
 Real world example:
 
-    //++ operator increments the value by one
-    for (int i=1; i<11; i++) {
-        System.out.println("Your number is: " + i);
-    }
+```Java
+//++ operator increments the value by one
+for (int i=1; i<11; i++) {
+    System.out.println("Your number is: " + i);
+}
+```
 
 Infinite loop can be created this way:
 
-    for ( ; ; ) {
-        //put code here
-    }
+```Java
+for ( ; ; ) {
+    //put code here
+}
+```
 
 Can also loop over an array like in R/Python like this:
 
-    int[] numbers = {1,4,5,2,6,3,6,7}
-    for (int item : numbers) {
-        System.out.println("Your number is: " + i);
-    }
+```Java
+int[] numbers = {1,4,5,2,6,3,6,7}
+for (int item : numbers) {
+    System.out.println("Your number is: " + i);
+}
+```
 
 # `while` loops
 
-    while (count < 11) {
-        System.out.println("Your number is: " + count);
-        count ++;
-    }
+```Java
+while (count < 11) {
+    System.out.println("Your number is: " + count);
+    count ++;
+}
+```
 
 # `do-while` loops
 
@@ -53,11 +63,13 @@ could never run depending on the condition. You also have to initialize the
 variable before you write the loop unlike `while` loops where you can
 initialize the variable in the loop declaration.
 
-    int count = 1;
-    do {
-        System.out.println("Your number is: " + count);
-        count ++;
-    } while (count < 11);
+```Java
+int count = 1;
+do {
+    System.out.println("Your number is: " + count);
+    count ++;
+} while (count < 11);
+```
 
 # Source
 

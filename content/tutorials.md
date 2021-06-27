@@ -7,93 +7,50 @@ draft: false
 This will be a site hosting tutorials for various subjects in Data Science written
 from the perspective of working in a Mac OS X environment.
 
-# Python
-* Installation
-<table border="0" style="border: none;padding:0; margin:0;">
-  <tr>
-  <td style="border: none; padding:0; margin:0;">
-  <p>[Installing Python]({{< relref "python/pythoninstall" >}})</p>
-  </td>
-  <td style="border: none;padding:0; margin:0;">
-  <p></p>
-  </td>
-  </tr>
-</table>
+# Python Tutorials:
+- Installation
 
+  - [Installing Python]({{< relref "python/pythoninstall" >}})
+
+- Basics
+
+  - [Hello World]({{< relref "python/helloworld" >}})
+  - [Functions]({{< relref "python/functions" >}})
+  - [Loops]({{< relref "python/loops/" >}})
+
+
+# R Tutorials
+- Basics
+
+  - [Hello World]({{< relref "r/helloworld/" >}})
+  - [Functions]({{< relref "r/functions/" >}})
+  - [Loops]({{< relref "r/loops/" >}})
+
+# Java Tutorials
 * Basics
-<table border="0" style="border: none;padding:0; margin:0;">
-  <tr>
-  <td style="border: none; padding:0; margin:0;">
-  <p>[Hello World]({{< relref "python/helloworld" >}})</p>
-  <p>[Functions]({{< relref "python/functions" >}})</p>
-  </td>
-  <td style="border: none;padding:0; margin:0;">
-  <p>[Loops]({{< relref "python/loops/" >}})</p>
-  </td>
-  </tr>
-</table>
 
-
-# R
-* Basics
-<table border="0" style="border: none;padding:0; margin:0;">
-  <tr>
-  <td style="border: none; padding:0; margin:0;">
-  <p>[Hello World]({{< relref "r/helloworld/" >}})</p>
-  <p>[Functions]({{< relref "r/functions/" >}})</p>
-  </td>
-  <td style="border: none;padding:0; margin:0;">
-  <p>[Loops]({{< relref "r/loops/" >}})</p>
-  </td>
-  </tr>
-</table>
-
-# Java
-* Basics
-<table border="0" style="border: none;padding:0; margin:0;">
-  <tr>
-  <td style="border: none; padding:0; margin:0;">
-  <p>[Hello World]({{< relref "java/helloworld/" >}})</p>
-  </td>
-  <td style="border: none;padding:0; margin:0;">
-  <p>[Loops]({{< relref "java/loops/" >}})</p>
-  </td>
-  </tr>
-</table>
+  - [Hello World]({{< relref "java/helloworld/" >}})
+  - [Loops]({{< relref "java/loops/" >}})
 
 # SQL
 This will mainly deal with PostgreSQL version 11.2 but a lot of the
 basic commands translate to any SQL flavor
 
-* Installation
-<table border="0" style="border: none;padding:0; margin:0;">
-  <tr>
-  <td style="border: none; padding:0; margin:0;">
-  <p>[Installing PostgreSQL]({{< relref "sql/install/" >}})</p>
-  </td>
-  <td style="border: none;padding:0; margin:0;">
-  <p></p>
-  </td>
-  </tr>
-</table>
+- Installation
+  - [Installing PostgreSQL]({{< relref "sql/install/" >}})
 
 * Commands
-<table border="0" style="border: none;padding:0; margin:0;">
-  <tr>
-  <td style="border: none; padding:0; margin:0;">
-  <p>[SQL Basic Commands]({{< relref "sql/sqlbasics/" >}})</p>
-  <p>[Creating a new Postgres User]({{< relref "sql/createuser/" >}})</p>
-  </td>
-  <td style="border: none;padding:0; margin:0;">
-  <p>[Postgres Remote Login]({{< relref "sql/login/" >}})</p>
-  </td>
-  </tr>
-</table>
+  - [SQL Basic Commands]({{< relref "sql/sqlbasics/" >}})
+  - [Creating a new Postgres User]({{< relref "sql/createuser/" >}})
+  - [Postgres Remote Login]({{< relref "sql/login/" >}})
+
 # Git
-[Getting Started with Git]({{< relref "git/gitintro" >}})
+
+- [Getting Started with Git]({{< relref "git/gitintro" >}})
 
 # Unix
 [Homebrew Install]({{<relref "unix/homebrew" >}})
 
 
-
+# Statistics
+- [Gamma Distribution]({{<relref "posts/math/stats/gamma_distribution/" >}})

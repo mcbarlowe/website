@@ -7,8 +7,8 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="by Matthew Barlowe Remember all these code snippets must be wrapped in a class method or a public static void main to actually run. For the idea/philosophy behind loops and how to use them go here
-for loops for (initialization; termination; increment){ statement(s); }  Real world example:
-//&#43;&#43; operator increments the value by one for (int i=1; i&amp;lt;11; i&#43;&#43;) { System.out.println(&amp;quot;Your number is: &amp;quot; &#43; i); }  Infinite loop can be created this way:" />
+for loops for (initialization; termination; increment){ statement(s); } Real world example:
+//&#43;&#43; operator increments the value by one for (int i=1; i&amp;lt;11; i&#43;&#43;) { System.out.println(&amp;#34;Your number is: &amp;#34; &#43; i); } Infinite loop can be created this way:" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://barloweanalytics.com/java/loops/" />
@@ -56,8 +56,8 @@ if (!doNotTrack) {
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Loops">
 <meta property="og:description" content="by Matthew Barlowe Remember all these code snippets must be wrapped in a class method or a public static void main to actually run. For the idea/philosophy behind loops and how to use them go here
-for loops for (initialization; termination; increment){ statement(s); }  Real world example:
-//&#43;&#43; operator increments the value by one for (int i=1; i&amp;lt;11; i&#43;&#43;) { System.out.println(&amp;quot;Your number is: &amp;quot; &#43; i); }  Infinite loop can be created this way:" />
+for loops for (initialization; termination; increment){ statement(s); } Real world example:
+//&#43;&#43; operator increments the value by one for (int i=1; i&amp;lt;11; i&#43;&#43;) { System.out.println(&amp;#34;Your number is: &amp;#34; &#43; i); } Infinite loop can be created this way:" />
 <meta property="og:url" content="https://barloweanalytics.com/java/loops/" />
 <meta property="og:site_name" content="Barlowe Analytics" />
 
@@ -192,34 +192,29 @@ if (!doNotTrack) {
 <code>public static void main</code> to actually run. For the idea/philosophy
 behind loops and how to use them go <a href="https://barloweanalytics.com/python/loops/">here</a></p>
 <h1 id="for-loops"><code>for</code> loops<a href="#for-loops" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
-<pre><code>for (initialization; termination; increment){
-    statement(s);
-}
-</code></pre>
-<p>Real world example:</p>
-<pre><code>//++ operator increments the value by one
-for (int i=1; i&lt;11; i++) {
-    System.out.println(&quot;Your number is: &quot; + i);
-}
-</code></pre>
-<p>Infinite loop can be created this way:</p>
-<pre><code>for ( ; ; ) {
-    //put code here
-}
-</code></pre>
-<p>Can also loop over an array like in R/Python like this:</p>
-<pre><code>int[] numbers = {1,4,5,2,6,3,6,7}
-for (int item : numbers) {
-    System.out.println(&quot;Your number is: &quot; + i);
-}
-</code></pre>
-<h1 id="while-loops"><code>while</code> loops<a href="#while-loops" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
-<pre><code>while (count &lt; 11) {
-    System.out.println(&quot;Your number is: &quot; + count);
-    count ++;
-}
-</code></pre>
-<h1 id="do-while-loops"><code>do-while</code> loops<a href="#do-while-loops" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>initialization<span style="color:#f92672">;</span> termination<span style="color:#f92672">;</span> increment<span style="color:#f92672">){</span>
+    statement<span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Real world example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#75715e">//++ operator increments the value by one
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>1<span style="color:#f92672">;</span> i<span style="color:#f92672">&lt;</span>11<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Your number is: &#34;</span> <span style="color:#f92672">+</span> i<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Infinite loop can be created this way:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span> <span style="color:#f92672">;</span> <span style="color:#f92672">;</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">//put code here
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><p>Can also loop over an array like in R/Python like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> numbers <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>1<span style="color:#f92672">,</span>4<span style="color:#f92672">,</span>5<span style="color:#f92672">,</span>2<span style="color:#f92672">,</span>6<span style="color:#f92672">,</span>3<span style="color:#f92672">,</span>6<span style="color:#f92672">,</span>7<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> item <span style="color:#f92672">:</span> numbers<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Your number is: &#34;</span> <span style="color:#f92672">+</span> i<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h1 id="while-loops"><code>while</code> loops<a href="#while-loops" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>count <span style="color:#f92672">&lt;</span> 11<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Your number is: &#34;</span> <span style="color:#f92672">+</span> count<span style="color:#f92672">);</span>
+    count <span style="color:#f92672">++;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h1 id="do-while-loops"><code>do-while</code> loops<a href="#do-while-loops" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>The main difference between <code>while</code> and <code>do-while</code> loops in java is that
 <code>while</code> loops evaluate the condition for continuing at the beginning of the
 loop, and <code>do-while</code> evaluates its condition at the end of the loop. This means
@@ -227,13 +222,12 @@ a <code>do-while</code> loop will run at least once as opposed to a <code>while<
 could never run depending on the condition. You also have to initialize the
 variable before you write the loop unlike <code>while</code> loops where you can
 initialize the variable in the loop declaration.</p>
-<pre><code>int count = 1;
-do {
-    System.out.println(&quot;Your number is: &quot; + count);
-    count ++;
-} while (count &lt; 11);
-</code></pre>
-<h1 id="source">Source<a href="#source" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">do</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Your number is: &#34;</span> <span style="color:#f92672">+</span> count<span style="color:#f92672">);</span>
+    count <span style="color:#f92672">++;</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>count <span style="color:#f92672">&lt;</span> 11<span style="color:#f92672">);</span>
+</code></pre></div><h1 id="source">Source<a href="#source" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html"><code>while</code> and <code>do-while</code>Statments</a></p>
 
       </div></div>

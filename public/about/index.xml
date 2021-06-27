@@ -14,9 +14,25 @@
       <pubDate>Sat, 13 Apr 2019 21:58:17 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/about/aboutme/</guid>
-      <description>I am an Application Developer for the National Hockey League
-This site is built using Hugo static site generator. Site theme is terminal by panr. Site is hosted on AWS S3 Buckets using AWS Cloudfront to serve SSL certificates and AWS Lambda to clean the urls. Source code for site can be found here.</description>
-      <content>&lt;p&gt;I am an Application Developer for the National Hockey League&lt;/p&gt;
+      <description>I am a Basketball Operations Analyst for the Houston Rockets of the NBA focused on full stack development. Formerly I was an application developer for the National Hockey League. My skills are focused around building data systems to support data science and quantitative analysis. I also love to build models and study the math behind them in my free time.
+My prefered technologies:
+ Python Postgres Linux/Unix Django AWS Flask/SqlAlchemy  Technologies I have Experience with:</description>
+      <content>&lt;p&gt;I am a Basketball Operations Analyst for the Houston Rockets of the NBA focused on full stack development. Formerly I was an application developer for the National Hockey League. My skills are focused around building data systems to support data science and quantitative analysis. I also love to build models and study the math behind them in my free time.&lt;/p&gt;
+&lt;p&gt;My prefered technologies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Postgres&lt;/li&gt;
+&lt;li&gt;Linux/Unix&lt;/li&gt;
+&lt;li&gt;Django&lt;/li&gt;
+&lt;li&gt;AWS&lt;/li&gt;
+&lt;li&gt;Flask/SqlAlchemy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Technologies I have Experience with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java&lt;/li&gt;
+&lt;li&gt;Javascript/React/Express/Objection&lt;/li&gt;
+&lt;li&gt;TSQL&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;This site is built using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; static site generator.
 Site theme is &lt;code&gt;terminal&lt;/code&gt; by &lt;a href=&#34;https://twitter.com/panr&#34;&gt;panr&lt;/a&gt;.
 Site is hosted on &lt;a href=&#34;https://aws.amazon.com/s3/&#34;&gt;AWS S3 Buckets&lt;/a&gt; using

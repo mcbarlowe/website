@@ -185,6 +185,8 @@ if (!doNotTrack) {
         <div class="post-content">
           
           
+          Ok so if you've come to this point you now have your database up and running and you want to allow others to access it. Some people say it's not the brightest idea, but hey, this data ain't going to share itself. Obviously letting them use your account is out of the question because as a superuser that will just allow them to wreak havoc any time they want on your meticulously gathered data.
+          
           
         </div>
 
@@ -213,6 +215,9 @@ if (!doNotTrack) {
 
         <div class="post-content">
           
+          
+          Remote Postgres Login 
+Ok if you've been following along with the other tutorials you have seen me use the psql command to login into your database that you've setup on your computer. But that's not all psql is use for, and in fact it has many diverse properties that you can use to pass SQL queries to the database without ever logging into the server itself. But I won't get into that with this tutorial, instead I'm going to focus on using psql to login into a remote Postgres server
           
           
         </div>
@@ -244,7 +249,7 @@ if (!doNotTrack) {
           
           
           Ok if you&rsquo;ve read the first tutorial on installing Postgres and getting your first database up and running, you&rsquo;re now wondering &ldquo;So how do I access all this data?&rdquo; Well that&rsquo;s where this tutorial comes in as we are going to cover some of the basic commands in SQL to get the data we want. Ok let&rsquo;s get started and dive right in to our data.
- Column | Type | Collation | Nullable | Default | Storage | Stats target | Description -----------+------------------+-----------+----------+---------+----------+--------------+------------- yearID | bigint | | | | plain | | teamID | text | | | | extended | | lgID | text | | | | extended | | playerID | text | | | | extended | | G_all | bigint | | | | plain | | GS | double precision | | | | plain | | G_batting | bigint | | | | plain | | G_defense | double precision | | | | plain | | G_p | bigint | | | | plain | | G_c | bigint | | | | plain | | G_1b | bigint | | | | plain | | G_2b | bigint | | | | plain | | G_3b | bigint | | | | plain | | G_ss | bigint | | | | plain | | G_lf | bigint | | | | plain | | G_cf | bigint | | | | plain | | G_rf | bigint | | | | plain | | G_of | bigint | | | | plain | | G_dh | double precision | | | | plain | | G_ph | double precision | | | | plain | | G_pr | double precision | | | | plain | | This table in the database lists the number of appearances at each position for each player, each season and each team.
+SELECT The SELECT command is going to be your workhorse command when working with SQL.
           
           
         </div>
@@ -275,7 +280,7 @@ if (!doNotTrack) {
         <div class="post-content">
           
           
-          psql (10.3, server 10.1) Type &quot;help&quot; for help. postgres=#  postgres=# CREATE ROLE username WITH LOGIN PASSWORD 'quoted password';  postgres=# ALTER ROLE username CREATEDB;  psql (10.3, server 10.1) Type &quot;help&quot; for help. postgres=&gt;  As you can see our # has changed to a &gt; indciating that we are not a superuser anymore. So now you&rsquo;re logged in to your new user lets create a database that we are going to load our data into so we can play around with it:
+          by Matthew Barlowe  This tutorial will cover the basics of getting PostgreSQL setup on your computer and running. We won't actually be working with data in this article, but instead the focus is on the nuts and bolts of what PostgreSQL is and and its structure. But before I get into all that let's start at the beginning. As always these tutorials will be focused on working in a Mac OS X environment.
           
           
         </div>

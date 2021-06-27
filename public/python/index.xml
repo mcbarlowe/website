@@ -354,22 +354,91 @@ them to.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34;
       <pubDate>Mon, 15 Apr 2019 20:24:18 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/python/helloworld/</guid>
-      <description>#!/usr/bin/env python3 print(&amp;quot;Hello World&amp;quot;)  Once that is done save your file as helloworld.pyand exit the text editor if you are using a terminal editor and type python3 helloworld.pywhich will produce this output:
-Congratulations, you&amp;rsquo;ve just written your first python program! Obviously, there&amp;rsquo;s a lot more to it than this but even in just this simple program you can learn a lot.</description>
-      <content>&lt;!-- raw HTML omitted --&gt;
+      <description>by Matthew Barlowe &#34;Hello World&#34; is a very common first program for just about any programming langauge. I&#39;m sure there&#39;s some history behind it, but I&#39;ve never bothered to look it up. Usually it&#39;s just a simple program of very limited lines that prints out the phrase &#34;Hello World.&#34; The purpose of this tutorial is to get you setup to write that first program.
+Getting Started The first thing to do is open your favorite text editor.</description>
+      <content>&lt;h2&gt; by Matthew Barlowe&lt;/h2&gt;
+&lt;br /&gt;
+&lt;p&gt;&#34;Hello World&#34; is a very common first program for just about any
+programming langauge. I&#39;m sure there&#39;s some history behind it, but
+I&#39;ve never bothered to look it up. Usually it&#39;s just a simple program
+of very limited lines that prints out the phrase &#34;Hello World.&#34; The
+purpose of this tutorial is to get you setup to write that first
+program.&lt;/p&gt;
+&lt;h2&gt;Getting Started&lt;/h2&gt;
+&lt;p&gt;The first thing to do is open your favorite text editor. I use NeoVim
+which is based on Vim a text editor that comes with Unix. Vim is know for
+being dificult if you aren&#39;t used to it, but there are many others out
+there: Nano and Emacs come with the MacOS Unix as well, you could use
+Atom which is built by Github, or even plain old TextEdit. The main
+thing is to use something that won&#39;t add extra unseen characters to
+what you type like a word processor such as Microsoft Word or Apple
+Pages.&lt;/p&gt;
+&lt;p&gt;Once you have your text editor open type these lines into them:
 &lt;pre&gt;&lt;code&gt;#!/usr/bin/env python3
 
 print(&amp;quot;Hello World&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Once that is done save your file as &lt;!-- raw HTML omitted --&gt;helloworld.py&lt;!-- raw HTML omitted --&gt; and exit the text editor if you are using
-a terminal editor and type &lt;!-- raw HTML omitted --&gt;python3 helloworld.py&lt;!-- raw HTML omitted --&gt; which will
+&lt;p&gt;Once that is done save your file as &lt;code&gt;helloworld.py&lt;/code&gt; and exit the text editor if you are using
+a terminal editor and type &lt;code&gt;python3 helloworld.py&lt;/code&gt; which will
 produce this output:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code class=&#39;python&#39;&gt;
+Hello World
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Congratulations, you&amp;rsquo;ve just written your first python program! Obviously,
 there&amp;rsquo;s a lot more to it than this but even in just this simple program
-you can learn a lot.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+you can learn a lot.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;Breaking Down the Code&lt;/h2&gt;
+&lt;p&gt;Ok let&#39;s look at the code and see what&#39;s going on in this program. The first
+line of the code is what&#39;s called a shebang line. This isn&#39;t unique to
+python scripts but is common in the Linux/Unix environment. A shebang line
+tells the shell what type of interpreter to use to process the text of the
+file. You can read more about shebangs and their use in \*nix[^1] envronments
+[^1]: \*nix is a term commonly used to refer to operating systems based on the Unix
+operating. This includes Unix, Mac OS X, Linux among others. Most usually it refers to Linux
+and Mac OS X as those are the two most popular \*nix environments.
+&lt;a href=&#39;https://bash.cyberciti.biz/guide/Shebang&#39; target=&#34;_blank&#34;&gt;at this site&lt;/a&gt;. Basically,
+this line is telling Unix what type of python to use to run the script.&lt;/p&gt;
+&lt;p&gt;If you have followed my other tutorials you may be asking now, &#34;Why did
+you list &lt;code&gt;/usr/bin/env&lt;/code&gt; instead of &lt;code&gt;/usr/bin/local&lt;/code&gt;
+where our Homebrewed python3 is located? An excellent question. The reason
+we use &lt;code&gt;/usr/bin/env&lt;/code&gt; instead of where our python is actually located
+is because &lt;code&gt;env&lt;/code&gt; is an actual Unix command that will create
+an environment using the environment variables and then run the program passed
+to it in the arguments which in this case is python3.&lt;/p&gt;
+&lt;p&gt;So the &lt;code&gt;env&lt;/code&gt; will then use the &lt;code&gt;$PATH&lt;/code&gt; variable, the
+same one mentioned in the Homebrew tutorial, of the environment
+and go down the directories on that &lt;code&gt;$PATH&lt;/code&gt;until it finds the
+right directory of the program which it then executes. To sum it all up
+it just makes your code more portable because it will search that computer
+to find where &lt;code&gt;python&lt;/code&gt; is to exectue the script.&lt;/p&gt;
+&lt;p&gt;And one last thing the shebang is good for is letting people know exactly
+what type of code they are looking at. It will say python3 if working with
+version 3.x, python2 if working with version 2.x, and just plain python
+if the code will run with either version. You won&#39;t have to worry about
+python 2.x for much longer as it will soon be deprecated but there is
+plenty of legacy code out there still.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;python&#39;&gt;
+print(&#34;Hello World&#34;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The next part above is where the code actually starts doing something. In
+this case that something is printing the phrase &#34;Hello World.&#34; Now there are
+a lot more things you can do than this in python, but &lt;code&gt;print&lt;/code&gt; is one
+of the most useful functions in python. &lt;code&gt;print&lt;/code&gt; is the way python
+outputs things to the terminal screen. You can read more about the function
+&lt;a href=&#39;https://docs.python.org/3/library/functions.html#print&#39; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.
+You have now officially written your first program. While it doesn&#39;t seem
+very impressive right now but the cliche of &#34;a journey of a thousand miles
+begins with just one step&#34; applies here. Plus think of all the hard work
+done just to get your system setup to get to this point. So keep plugging
+along, and if you&#39;d like to learn faster I suggest visiting
+&lt;a href=&#39;https://automatetheboringstuff.com&#39; target=&#34;_blank&#34;&gt;Automate the Boring Stuff&lt;/a&gt; and reading
+their really comprehensive tutorial to get you further along the path to
+python mastery.&lt;/p&gt;
+&lt;h2&gt;Sources&lt;/h2&gt;
+&lt;a href=&#39;https://unix.stackexchange.com/questions/103467/what-is-env-command-doing&#39; target=&#34;_blank&#34;&gt;What is env&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&#39;https://stackoverflow.com/questions/6908143/should-i-put-shebang-in-python-scripts-and-what-form-should-it-take&#39; target=&#34;_blank&#34;&gt;
+What form should shebang take&lt;/a&gt;
 </content>
     </item>
     
@@ -379,14 +448,202 @@ you can learn a lot.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
       <pubDate>Mon, 15 Apr 2019 19:25:14 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/python/pythoninstall/</guid>
-      <description>Edit: 2019-04-15 I just recently installed python on a new Mac system. It seems that Homebrew now aliases pip to be the same as pip3. However to make sure enter which pip and the output should be /usr/local/bin/pip which means pip is aliased to the correct pip. If the result is /usr/bin that means pip is still tied to the system python and you should only use pip3</description>
-      <content>&lt;!-- raw HTML omitted --&gt;
+      <description>by Matthew Barlowe Ok so if you&#39;ve read the Homebrew Tutorial you are ready to actually start using it to start programming in python. If you haven&amp;rsquo;t read that tutorial and you want to follow this one I sugestt going back and reading that one first. First though we need to get your system properly setup to run python safely and avoid problems in the future. The first step to doing that is to install Apple&amp;rsquo;s Xcode utilities, specifically GCC.</description>
+      <content>&lt;h2&gt; by Matthew Barlowe&lt;/h2&gt;
+&lt;br /&gt;
+Ok so if you&#39;ve read the
+&lt;p&gt;&lt;a href=&#34;https://barloweanalytics.com/unix/homebrew/&#34;&gt;Homebrew Tutorial&lt;/a&gt;
+you are
+ready to actually start using it to start programming in python. If you haven&amp;rsquo;t
+read that tutorial and you want to follow this one I sugestt going
+back and reading that one first. First though we need to get your system
+properly setup to run python safely and avoid problems in
+the future.  The first step to doing that is to install Apple&amp;rsquo;s Xcode utilities,
+specifically GCC. If you already have Xcode installed you will not need to do this
+as it will cause issues. In the terminal just type &lt;code&gt;xcode-select &amp;ndash;install&lt;/code&gt;
+if you have Mavericks or higher MacOS. If you are using Mountain Lion or Lion
+you&amp;rsquo;ll need to visit &lt;a href=&#39;https://developer.apple.com/downloads/&#39;&gt;Apple&amp;rsquo;s Developer Site&lt;/a&gt;.
+You can read more about it by reading this Github &lt;a href=&#39;https://github.com/kennethreitz/osx-gcc-installer#readme&#39;&gt;
+README&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Brewing Python&lt;/h2&gt;
+&lt;p&gt;After that&#39;s done the next step is to type &lt;code&gt;brew install python3&lt;/code&gt;
+into the terminal and hit enter and you&#39;ll start to see something like this begin to print out
+on the screen:&lt;/p&gt;
+&lt;div class=&#39;fitimage&#39;&gt;
+&lt;p&gt;&lt;img src=&#34;https://barloweanalytics.com/python/brew.png&#34; alt=&#34;Homebrew installing&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Once Homebrew is finished running you should be good to go and are now able to start
+running python.  Yes it was that easy, amazing isn&#39;t it! Let&#39;s check and make sure
+you&#39;re up and running by typing &lt;code&gt;python3&lt;/code&gt; into the terminal and hit enter.
+You should see the Python version come up (which should be 3.6.4) and then a prompt that
+looks like this &lt;code&gt;&gt;&gt;&gt;&lt;/code&gt;. Once that pops up type &lt;code&gt;exit()&lt;/code&gt; and return
+back to the terminal.&lt;/p&gt;
+&lt;p&gt;Now that&#39;s python is setup lets get some python packages installed that will
+be very important in making things go smooth in your programming future. We will
+do this by using &lt;code&gt;pip&lt;/code&gt;. Pip is similar to Homebrew in that it is a package
+manager except it only manages packages that relate to python. This will be the main
+way you install extra programs for python that are not included in the base python packages.
+Type this command
+into your terminal &lt;code&gt;pip install virtualenv virtualenvwrapper&lt;/code&gt;.  These two
+packages are important because they allow you to install virtual envrionments which I&#39;ll
+get into later on in this tutorial.&lt;/p&gt;
+&lt;p&gt;Once those are installed the next step is to type &lt;code&gt;nano ~/.bash_profile&lt;/code&gt; into
+the terminal and hit enter. This will open the nano text editor and create the &lt;code&gt;
+.bash_profile&lt;/code&gt; file if you don&#39;t have one created. &lt;code&gt;.bash_profile&lt;/code&gt; is
+a file that tells your terminal (i.e. a bash shell) what to do everytime you open a new window.
+You can set environment variables create keyboard shortcuts aka aliases and lots of
+other things that are beyond the scope of this article.  But for now you need to add
+these four lines to make sure virtualenvwrapper will work properly:
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;code&gt;
+#Setup Virtualenvwrapper environment variables&lt;br /&gt;
+export WORKON_HOME=$HOME/.virtualenvs&lt;br /&gt;
+export PROJECT_HOME=$HOME/Devel&lt;br /&gt;
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.6&lt;br /&gt;
+source /usr/local/bin/virtualenvwrapper.sh&lt;br /&gt;
+&lt;/code&gt;
+&lt;br /&gt;
+The first line is just a comment to let others know what is going on. The next line creates
+whats called in Unix/Linux an environment variable that is mapped to the &lt;code&gt;.virtualenvs&lt;/code&gt;
+directory located in your home directory. This is where all your virtual environments are stored
+that virtualenvwrapper keeps track of. The &lt;code&gt;export&lt;/code&gt; command tells your bash shell
+to create this environment variable everytime you open a new bash window in the terminal.
+The next line are where the virtualenvwrapper projects will be stored.  We won&#39;t be touching on
+those in this tutorial.&lt;/p&gt;
+&lt;p&gt;The fourth line tells virtualenvwrapper where to look for python
+when it is creating a new virtualenv. Remember from the Homebrew tutorial that our brewed
+python is in &lt;code&gt;/usr/local/bin&lt;/code&gt; so that&#39;s where we want our virtualenvwrapper to
+look when creating a new python environment and not in &lt;code&gt;usr/bin&lt;/code&gt;. The last line
+tells bash to run the virtualenvwrapper shell script everytime you open a terminal window
+so that you can use virtualenvwrapper. Once you&#39;ve typed that exactly as it appears in
+the nano window hit `Ctrl+o` and then enter to save. Once save hit `Ctrl+x` to exit.&lt;/p&gt;
+&lt;p&gt;Now you should be back at the command line. Next just close the window you were in
+and open a new one and should see these lines appear in the terminal:&lt;/p&gt;
+&lt;div class=&#39;fitimage&#39;&gt;
+&lt;p&gt;&lt;img src=&#34;https://barloweanalytics.com/python/virtualenvwrapper.png&#34; alt=&#34;virtualenvwrapper installing&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;That means the virutalenvwrapper bashscript is running and installing the directories neccesary
+to get things up and running. To check and see type &lt;code&gt;workon&lt;/code&gt; which if everything is
+working right should return nothing because we haven&#39;t created any virtual environments. Now
+type &lt;code&gt;mkvirtualenv temp&lt;/code&gt; which will create a new virtual environment named temp.
+Type &lt;code&gt;workon&lt;/code&gt; again and now it should show &lt;code&gt;temp&lt;/code&gt; in the list of virtual
+environments on the computer. If you&#39;ve been able to complete all that good job! The hardest
+part is over and now you are ready to being coding in earnest.&lt;/p&gt;
+&lt;p&gt;So why virtualenvwrapper over virtualenv or other virtual environments? One reason is
+that it stores your virtual environments in one location and allows you to acces those no
+matter where you are in the file structure without typing long filepath names or creating aliases
+in &lt;code&gt;.bash_profile&lt;/code&gt;. With &lt;code&gt;virtualenv&lt;/code&gt; you have to provide the file path
+of the location of the virtual environment in order to activate it; by using &lt;code&gt;virtualenvwrapper&lt;/code&gt;
+you avoide all the trouble of typing out those filepaths. Another benefit is that &lt;code&gt;virtualenvwrapper&lt;/code&gt;
+keeps track of all the environments you have created so in case you forget the name of one you can just
+type &lt;code&gt;workon&lt;/code&gt; and get a list of all the environments you have ever created.
+&lt;h2&gt;Navigating Your Pythons&lt;/h2&gt;
+&lt;p&gt;You should now have two Pythons installed on your Mac if you&#39;ve followed the instructions:
+the Apple supplied python 2.7 and the python 3.6 which you brewed with Homebrew. These two pythons
+are accesed in two different ways:&lt;br /&gt;
+&lt;br /&gt;
+&lt;code&gt;python&lt;/code&gt;&lt;br /&gt;
+This will access the Apple installed Python. &lt;br /&gt;
+&lt;br /&gt;
+&lt;code&gt;python3&lt;/code&gt;&lt;br /&gt;
+This will access the brewed installed python version 3.6.
+There will also be two different &lt;code&gt;pip&lt;/code&gt; that will handle your python
+packages:&lt;br /&gt;
+&lt;br /&gt;
+&lt;code&gt;pip&lt;/code&gt;&lt;br /&gt;
+This pip will install packages to the MacOS python.&lt;br /&gt;
+&lt;br /&gt;
+&lt;code&gt;pip3&lt;/code&gt;&lt;br /&gt;
+And this pip installs packages to our brewed python 3.6.&lt;br /&gt;
+&lt;br /&gt;
+~~Don&#39;t worry if you type pip instead of pip3 the way this is setup you&#39;ll get an error
+message because it will try to install the package in &lt;code&gt;/usr/bin&lt;/code&gt; which
+as I noted in the Homebrew tutorial is protected. This will happen &lt;b&gt;UNLESS&lt;/b&gt;
+you run &lt;code&gt;pip&lt;/code&gt; using &lt;code&gt;sudo&lt;/code&gt;. Don&#39;t do that. You may read other
+articles saying to do that. Don&#39;t. Unless you know what you&#39;re doing, and if you&#39;re
+reading this you don&#39;t. Don&#39;t use sudo. If you run pip with out sudo and it works
+it means you are logged in as a superuser by default which I suggest you change.~~&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Edit: 2019-04-15&lt;/strong&gt;
 I just recently installed python on a new Mac system. It seems that Homebrew now aliases
 &lt;code&gt;pip&lt;/code&gt; to be the same as &lt;code&gt;pip3&lt;/code&gt;. However to make sure enter &lt;code&gt;which pip&lt;/code&gt; and the output should
 be &lt;code&gt;/usr/local/bin/pip&lt;/code&gt; which means &lt;code&gt;pip&lt;/code&gt; is aliased to the correct pip. If the result is
 &lt;code&gt;/usr/bin&lt;/code&gt; that means &lt;code&gt;pip&lt;/code&gt; is still tied to the system python and you should only use &lt;code&gt;pip3&lt;/code&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h2&gt;Creating Virtual Environments&lt;/h2&gt;
+&lt;p&gt;Ok so now you&#39;ve got your python setup and you have the ability to create virtual environments.
+But why shoud you use virtual environments? That&#39;s a good question, and the benefit of
+a virtual environment is it&#39;s ability to isolate a python install and the packages associated with
+it from other pythons and other packages. Whenever you create a new virtual environment
+you are creating a fresh python almost the same as if you brewed python for the very first time
+on your system.  Unless specified the python in the virtual envrionment will only come with
+the base packages that come with python itself.&lt;/p&gt;
+&lt;p&gt;So any package you &lt;code&gt;pip install&lt;/code&gt; will only be found in &lt;b&gt;THAT&lt;/b&gt; virtual
+environment. This is important because packages can conflict at any time and cause scripts
+that would run normally to break, throw errors, or behave differently. And the package could
+not even be broken it could just update and change the syntax of a function that you imported.
+So what, just not update that one package? But what if you have another script that needs that
+updated package? You can&#39;t have two version of the same package running side by side because that
+will cause issues as well since python won&#39;t know which exact one you want. This is where
+virtual environments come in.
+&lt;p&gt;Virtual environments allow you to maintain two completely different versions of however many
+packages you want without any problems at all. You just keep them in seperate environments and
+switch between them as you need to run the neccesary python scripts. In the beginning this won&#39;t
+be a big deal, but its a good habit to get into as it&#39;s much easier to track down a bug or
+determine the source of an issue and then fix it inside of a virtual envrionment.&lt;/p&gt;
+&lt;p&gt;So now that you know why to use virtual environments, the question is how? You&#39;ve already seen
+a little bit when we were installing and testing &lt;code&gt;virtualenvwrapper&lt;/code&gt; but we&#39;ll go
+over the main ones again:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mkvirtualenv [environment_name]&lt;/code&gt;&lt;br /&gt;
+&lt;br /&gt;
+This will create a virtual environment with whatever name you give it.  &lt;code&gt;mkvirtualenv test&lt;/code&gt;
+will create a virtualenv named test.&lt;br/&gt;
+&lt;br /&gt;
+&lt;code&gt;workon&lt;/code&gt;&lt;br /&gt;
+&lt;br /&gt;
+This command will switch between environments. &lt;code&gt;workon test&lt;/code&gt; will switch to the test
+virtual environment. If you also just type &lt;code&gt;workon&lt;/code&gt; it will list all the virtual
+environments you have created.&lt;br /&gt;
+&lt;br /&gt;
+&lt;code&gt;deactivate&lt;/code&gt;&lt;br /&gt;
+&lt;br /&gt;
+This will exit you out of the current virtual environment you are working in.&lt;br /&gt;
+&lt;br /&gt;
+&lt;code&gt;rmvirtualenv [environment_name]&lt;/code&gt;&lt;br /&gt;
+&lt;br /&gt;
+This will remove the named environment. &lt;code&gt;rmvirtualenv test&lt;/code&gt; will remove the test virtual
+environment.&lt;/p&gt;
+&lt;p&gt;One last thing about virtual environments is that you don&#39;t need to worry about which
+&lt;code&gt;pip&lt;/code&gt; you need to use while in one. &lt;code&gt;pip&lt;/code&gt; automatically maps to the &lt;code&gt;pip&lt;/code&gt;
+installed with the virtual environment.&lt;/p&gt;
+&lt;h2&gt;Installing Python 2.7&lt;/h2&gt;
+&lt;p&gt;If you&#39;re new to python you probably don&#39;t need to worry about this, but just in case you do need to
+I&#39;ll quickly go over installing python 2.7. If you&#39;ve followed all the steps covered so far in the tutorial
+the next thing you need to type in the terminal is &lt;code&gt;brew install python2&lt;/code&gt;. This will bring up the
+familiar brew screen from before.  Once thats installed, to access the brewed python you will need to use
+&lt;code&gt;python2&lt;/code&gt; instead of &lt;code&gt;python3&lt;/code&gt;. The same for pip it will be &lt;code&gt;pip2&lt;/code&gt; instead
+of &lt;code&gt;pip3&lt;/code&gt;. To create a python 2.7 virtual environment will also be a little different as well
+as you will need to tell the virtualenv to use python 2 with the &lt;code&gt;-p&lt;/code&gt; flag: &lt;code&gt;mkvirtualenv -p python2 python2env&lt;/code&gt;
+&lt;p&gt;If you have any questions feel free to email me at barloweanalytics@gmail.com make sure you give me OS specs and any error outputs/screenshots
+so that I can diagnose your problem as quick as possible.
+&lt;h2&gt;Sources:&lt;/h2&gt;
+&lt;a href=&#39;https://docs.brew.sh/Homebrew-and-Python.html&#39;&gt;Homebrew Python Install Docs&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&#39;http://virtualenvwrapper.readthedocs.io/en/latest/install.html&#39;&gt;Virtualenvwrapper Docs&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&#39;http://www.linfo.org/path_env_var.html&#39;&gt;$PATH Definition&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&#39;https://stackoverflow.com/questions/8288297/whats-the-relationship-between-environments-and-projects-in-virtualenvwrapper&#39;&gt;
+Difference Between Projects and Environments in Virtualenvwrapper&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&#39;https://stackoverflow.com/questions/23997403/installed-virtualenv-and-virtualenvwrapper-python-says-no-module-named-virtuale&#39;&gt;
+Setting VIRTUALENVWRAPPER_PYTHON Variable&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&#39;http://docs.python-guide.org/en/latest/dev/virtualenvs/&#39;&gt;Python Virtualenvs&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&#39;http://docs.python-guide.org/en/latest/starting/install3/osx/&#39;&gt;Installing Python 3 on Mac OS X&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&#39;https://stackoverflow.com/questions/6401951/using-different-versions-of-python-with-virtualenvwrapper&#39;&gt;
+Another Way to set VIRTUALENVWRAPPER_PYTHON Variable&lt;/a&gt;
 </content>
     </item>
     

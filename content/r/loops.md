@@ -14,23 +14,27 @@ family of functions or the [`purrr`](https://purrr.tidyverse.org/) package.
 
 # `for` loops
 
-    for (i in 1:10) {
-        print(paste("Your number is", i))
-    }
+```R
+for (i in 1:10) {
+    print(paste("Your number is", i))
+}
 
-    some_numbers <- c(1,3,5,3,0,10,35)
+some_numbers <- c(1,3,5,3,0,10,35)
 
-    for (i in some_numbers) {
-        print(paste("Your number is", i))
-    }
+for (i in some_numbers) {
+    print(paste("Your number is", i))
+}
+```
 
 # `while` loops
 
-    answer <- readline(prompt="What's the best part about Matt? ")
-    while (answer != 'He's Awesome") {
-        print("Sorry, that isn't the correct answer.")
-        answer <- readline(prompt='')
-    }
+```r
+answer <- readline(prompt="What's the best part about Matt? ")
+while (answer != 'He's Awesome") {
+    print("Sorry, that isn't the correct answer.")
+    answer <- readline(prompt='')
+}
+```
 
 # `repeat` loops
 
@@ -39,14 +43,16 @@ that `repeat` loops require the user to explicitly break the loop when the condi
 instead of doing it automatically like `while` loops. Here is the example above
 rewritten as a `repeat` loop.
 
-    answer <- readline(prompt="What's the best part about Matt? ")
-    repeat {
-        if(answer == "He's Aweseome"){
-            break
-        }
-        print("Sorry, that isn't the correct answer.")
-        answer <- readline(prompt='')
+```R
+answer <- readline(prompt="What's the best part about Matt? ")
+repeat {
+    if(answer == "He's Aweseome"){
+        break
     }
+    print("Sorry, that isn't the correct answer.")
+    answer <- readline(prompt='')
+}
+```
 
 # Sources
 

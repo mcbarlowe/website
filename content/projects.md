@@ -29,9 +29,9 @@ the source code
 
 This is a NBA stats website I built using the `nba_scraper`. You can visit it at
 [theseventhman.net](https://theseventhman.net). The source code for it can be found
-[here](https://github.com/mcbarlowe/seventhmanapp)
+[here](https://github.com/mcbarlowe/seventhmanapp). **Site no longer maintained.**
 
 # The Seventhman API
 
 I have made the API that my website consumes completely public. You can pull the
-data from the API using the docs written [here](https://github.com/mcbarlowe/seventhmanapi)
+data from the API using the docs written [here](https://github.com/mcbarlowe/seventhmanapi). **Site no longer maintained.**

@@ -64,3 +64,8 @@ name = "barloweanalytics.com"
 url = "s3://barloweanalytics.com"
 
 cloudFrontDistributionID = "E2AV6QX834HOND"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -96,19 +96,95 @@ It tracks all changes for all files no matter what they are. In fact
 Git works just as well with writing a novel or a story as it does with writing
 code! It&amp;rsquo;s near
 universiality makes it a common ground for developers to meet and
-collaborate on projects.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+collaborate on projects.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;Setting up Git&lt;/h2&gt;
+&lt;p&gt;The first step to getting Git up and running is to go to &lt;a href=&#39;github.com&#39;&gt;Github&lt;/a&gt;
+and setup an account. Once that&#39;s done open up a terminal screen and we&#39;ll
+get started installing Git. If you don&#39;t have Hombrew installed on your
+system please head [here](/unix/homebrew/) and read this tutorial
+to get up to date as I&#39;ll be using Homebrew to install Git.&lt;/p&gt;
+&lt;p&gt;If you have Homebrew installed and running, all you need to do is type
+this at the command line:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+$ brew install git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Brew does its usual stuff and after its done type &lt;code&gt;which git&lt;/code&gt;
+to make sure we are using the git that brew installed. The output should be
+&lt;code&gt;usr/local/bin/git&lt;/code&gt; if it is not then we need to change your &lt;code&gt;$PATH&lt;/code&gt;
+variable to put the Homebrew version first. To do that type these commands
+one at a time and hit enter after each one:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+$ echo export PATH=&#39;/usr/local/bin:$PATH&#39; &gt;&gt; ~/.bash_profile
+$ source ~/.bash_profile
+$ echo $PATH
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Without getting into too much detail about the commands, what you are doing there is placing
+the &lt;code&gt;usr/local/bin&lt;/code&gt; at the front of your &lt;code&gt;$PATH&lt;/code&gt; so that the bash
+shell will look there first for the commands you are trying to run. Next we&#39;ll run some
+commands to setup git to use the account you just setup on Github when you
+want to push your work to a repository.
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+$ git config --global user.name &#34;Your Name Here&#34;
+$ git config --global user.email &#34;your_email@youremail.com&#34;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&#34;Your Name Here&#34; and &#34;your_email@youremail.com&#34; should be the username you created
+and the email you created it with on Github. After that&#39;s done we&#39;re going to setup Git
+to save your user name and password to the OSX keychain that way you don&#39;t have to type it
+in everytime you want to push something to one of your repositories on Github.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+$ git config --global credential.helper osxkeychain
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The first time you push something to a repository you&#39;ll have to enter your user name
+and password but after that it will be saved to the OSX keychain and you won&#39;t need to enter
+it anymore. Now that we have everything setup lets start creating our first initial
+repository or repo for short. A repository is just a fancy name for where we will
+store our code.
+&lt;h2&gt;Creating Your First Repository&lt;/h2&gt;
+&lt;p&gt;Ok lets create a new directory to store our first repo.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+$ mkdir gittutorial
+$ cd gittutorial
+$ git init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So with those three commands we created a new directory called &lt;code&gt;gittutorial&lt;/code&gt;
+we changed the directory to &lt;code&gt;gittutorial&lt;/code&gt; and then we created the repository
+with the &lt;code&gt;git init&lt;/code&gt; command. If everything worked correctly you should see
+this text as output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+Initialized empty Git repository in /Users/MattBarlowe/gittutorial/.git/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Instead of &lt;code&gt;/Users/MattBarlowe&lt;/code&gt; it will be whatever username you are logged in on
+your Mac. So now that we have the repository initialized (init is short for initialize)
+lets look our next command:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+$ git status
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which will return this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;On branch master
 
 No commits yet
 
 nothing to commit (create/copy files and use &amp;quot;git add&amp;quot; to track)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;This is the status of our repository and it tells us three important things.
+The first it tells us we are on branch master. Master is the first branch
+git creates when you initialize the repository. This is the main branch you
+will be working on in any repository. You can rename it if you wanted to, but
+I&#39;d advise against it as its common usage to call it master.
+&lt;/p&gt;
+&lt;p&gt;The next line tells us that there have been no changes made to the repository.
+In Git speak a &#39;commit&#39; is where you have saved your changes to Git. No commits
+means we haven&#39;t made any changes which is to be expected as it&#39;s a newly created
+repository. The third line means there are no files that we can even commit/save
+which again as it is a newly created directory shouldn&#39;t be surprising.&lt;/p&gt;
+&lt;p&gt;So lets create a file using whichever text editor you prefer. I use Vim myself
+but if you want to use Nano or Emacs that&#39;s fine as well. But we&#39;ll write a
+simple python script show below and then save it as `gittutorial.py`.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;for x in range(10):
     print(x)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;After you&#39;ve saved the file exit back out to the command line and run
+&lt;code&gt;git status&lt;/code&gt; and you should see this on the command line.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;On branch master
 
 No commits yet
@@ -120,7 +196,16 @@ gittutorial.py
 
 nothing added to commit but untracked files present (use &amp;quot;git add&amp;quot; to track)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;As you can see the branch is the same and we still haven&#39;t made any commits, but
+now we have a new one of Untracked files. This means that Git has noticed we created
+a new file, but Git is not currently tracking it either in this commit or past commits.
+As you can read in the output our next command &lt;code&gt;git add&lt;/code&gt; will begin the process
+of git tracking our changes. Now type:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+$ git add gittutorial.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Nothing will print out but if you type &lt;code&gt;git status&lt;/code&gt; again you will see
+this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;On branch master
 
 No commits yet
@@ -130,7 +215,34 @@ Changes to be committed:
 
 new file:   gittutorial.py
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;So is our file saved? No! At least not yet. All we&#39;ve done is add the file to the staging area
+so that when we commit the changes to our repository the file will be saved with the commit.
+If you&#39;re a little confused don&#39;t worry a lot of people are confused over this step. Basically
+what you are doing is telling Git what files you want to save when you actually save the state of
+your repository. When you create a commit Git doesn&#39;t know what it needs to keep track of unless
+you tell it the files it needs to track. All &lt;code&gt;git add&lt;/code&gt; does is tell Git exactly which
+files you want to save.&lt;/p&gt;
+&lt;p&gt;So lets actually make our first commit. Type this into the command line:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+$ git commit -m &#34;First Commit&#34;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So you&#39;ve made your first commit! The &#39;-m&#39; flag to git commit allows you to add a message to the
+commit so you can describe what you&#39;ve done. You should always put a message on your commit so you
+or others know what exactly you changed with that commit of the code. The message can be anything but
+its best to keep it short and always put it between quotation marks.&lt;/p&gt;
+&lt;p&gt;You have now officially saved the status of your repository
+with Git. Think of a commit as taking a snapshot of your code in time. Except unlike a photo, git
+allows you to go back and forth along the timeline of your code, i.e. the branch, and stop at any
+point in time of the development where you made a commmit. So now that we&#39;ve commited our changes
+lets type &lt;code&gt;git status&lt;/code&gt; and see what it tells us.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+On branch master
+nothing to commit, working tree clean
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once we&#39;ve commited our changes there is nothing more to commit. That is until you make new changes
+and then you&#39;ll need to repeat the process over again. Ok let&#39;s get some more practice with this.
+Go back into your gittutorial.py file and change the number in the range function to 20 save and then
+exit. Now type in &lt;code&gt;git status&lt;/code&gt; and you&#39;ll see this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;On branch master
 Changes not staged for commit:
 
@@ -140,12 +252,90 @@ Changes not staged for commit:
 modified:   gittutorial.py
 no changes added to commit (use &amp;quot;git add&amp;quot; and/or &amp;quot;git commit -a&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;So now that we&#39;ve made changes to the file we need to &lt;code&gt;git add&lt;/code&gt; and then
+&lt;code&gt;git commit -m &#34;Changed number in range from 10 to 20&#34;&lt;/code&gt;. And now you have commited
+your changes for the second time to the repository. So let&#39;s introduce a new command
+where you can look at the history of your changes.
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+$ git log --oneline
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which will produce this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+88e287f (HEAD -&gt; master) Changed number in range from 10 to 20
+c9801bb First Commit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is a log of all the changes you&#39;ve made so far in this repository. As we&#39;ve only made
+two changes, there are only two entries. The &lt;code&gt;--oneline&lt;/code&gt; shrinks your log down
+into oneline for each entry to make it easier to read. To get more info for each commit
+you can just type &lt;code&gt;git log&lt;/code&gt;. Let&#39;s go over the output of the log as there
+are several important things in the output.
+&lt;p&gt;The string of numbers at the front of each entry is what&#39;s called the SHA. This is a unique
+hash number that is assigned to each commit that keeps track of the commits. It&#39;s actually
+much longer than those seven numbers but its shortened for the oneline output. You can search
+log for certain commits if you know their SHA number as well. The next thing is the
+&lt;code&gt;(HEAD -&gt; master)&lt;/code&gt;. This shows you where the location of the current branch you have
+checked out. This tells us that we are currently working on the latest commit in the branch.&lt;/p&gt;
+&lt;p&gt;Now let&#39;s check out one of the most powerful features of git which is creating new branches.
+Branches, and moving back and forth between them, really lie at the heart of what makes Git
+great. Branches allow developers to work independently on the same files and develop different
+features simultaneously. Understanding how they work is important to understand Git.&lt;/p&gt;
+&lt;h2&gt;Branching&lt;/h2&gt;
+&lt;p&gt;So lets create a new branch which we&#39;ll call newbranch because I don&#39;t feel
+very creative.
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+$ git checkout -b newbranch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;git checkout&lt;/code&gt; is the main way one switches between branches in Git, however when
+we add the &#39;-b&#39; flag it tells the command to create a new branch with the name we give it
+and then switch to that branch. If we wanted to switch back to master all we would need to type
+is &lt;code&gt;git checkout master&lt;/code&gt;. Now lets got back into our python file and add the line
+&lt;code&gt;print(&#39;This is a new feature&#39;)&lt;/code&gt; after the for loop block and save it. We&#39;ll add and
+commit these changes as we did before. To make sure you&#39;re on the newbranch make sure to run a
+&lt;code&gt;git status&lt;/code&gt; and check.
+&lt;p&gt;Ok now type &lt;code&gt;git log --oneline&lt;/code&gt; again and look at the output.
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+cf87ca3 (HEAD -&gt; newbranch) Added print statement
+88e287f (master) Changed number in range from 10 to 20
+c9801bb First Commit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now you can see both branches on the log, master and newbranch, and Head is pointing at the most
+recent commit on our current branch where we added the print statement to the script. Here with one command we can see
+that newbranch is one step, or one commit ahead of master. This means up until the last commit in
+newbranch that the two branches where exactly the same. You can see that the master branch is still
+at the last commit from the last time we commited a change on that branch.
+&lt;p&gt;Ok now thats done we are going to merge our new feature back into the master branch. Obviously
+with only adding one line of code this is a little overkill but imagine if were working on a project
+with multiple files and 1000s of lines of code and then you&#39;ll start to see the potential of Git and
+why everybody uses it. So type &lt;code&gt;git checkout master&lt;/code&gt; to switch back to the master branch.
+If you are ever unsure of which branch you are on &lt;code&gt;git status&lt;/code&gt; and check, here shortly I&#39;ll
+show you a trick to help with that.&lt;/p&gt;
+&lt;p&gt;So we&#39;ll switch back to the master branch with &lt;code&gt;git checkout master&lt;/code&gt; and then follow that
+with a &lt;code&gt;git merge newbranch&lt;/code&gt; which will produce this output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+Fast-forward
+gittutorial.py | 1 +
+1 file changed, 1 insertion(+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This means that our merge is succesful! From the output you can see we only changed one file, and
+inserted one line. This doesn&#39;t happen all the time and we&#39;ll look at what does happen with the
+dreaded merge conflict.&lt;/p&gt;
+&lt;h2&gt;Merge Conflict&lt;/h2&gt;
+&lt;p&gt;So we&#39;ve done our first merge and everything went smoothly. Now we are going to look at when things
+don&#39;t go smoothly. Open up our python script while still on the master branch and right underneath our
+new feature print statement type this &lt;code&gt;print(&#39;This is a feature of the master branch&#39;)&lt;/code&gt;. Now
+we&#39;ll &lt;code&gt;git add gittutorial.py&lt;/code&gt; and then &lt;code&gt;git commit -m &#34;Added new master feature&#34;&lt;/code&gt;
+to commit the changes to the master branch. Now let&#39;s switch back over to newbranch with &lt;code&gt;git checkout newbranch&lt;/code&gt;.
+Once there open the same python file and now add on the fourth line &lt;code&gt;print(&#39;This is a feature of the newbranch&#39;)&lt;/code&gt;.
+Now add this file and commit just like you did with the master branch except change the commit message
+to &#34;Added newbranch feature.&#34;
+&lt;p&gt;Now lets switch back to master with the checkout command and try to merge the two branches. This should
+be the output you get:
 &lt;pre&gt;&lt;code&gt;Auto-merging gittutorial.py
 CONFLICT (content): Merge conflict in gittutorial.py
 Automatic merge failed; fix conflicts and then commit the result.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;So as you can see the merge failed because we have two different lines of code on the same line in each file.
+To fix this we&#39;ll open up the code in our text editor, Vim for me but whatever you prefer and you&#39;ll see this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;for x in range(20):
 print(x)
 print(&#39;This is a new feature&#39;)
@@ -155,11 +345,116 @@ print(&#39;This is a feature on the master branch&#39;)
 print(&#39;This is a newbranch feature&#39;)
 &amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; newbranch
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Git has clearly marked where the conflict is in our file. It will do this through out the file wherever
+a conflict occurs so if you&#39;re working with a large file just search for HEAD and you can quickly zip through
+the file and change what you want. Here Git gives us three choices: we can keep the master version, the newbranch
+version, or both. We&#39;ll keep both for this excercise since it won&#39;t cause any problems. It obviously won&#39;t be this
+easy all the time but this method will be the way you handle these issues when using Git. Since I&#39;m going to keep both
+for this excercise all I need to do is delete the HEAD, newbranch, and equal signs lines and I&#39;m good to go.&lt;/p&gt;
+&lt;p&gt;A quick note here, HEAD refers to the HEAD of the branch you are merging in to. In this case it is the master branch
+but it could any branch that you are merging files into. Ok so after I&#39;ve deleted the lines I will add, and commit the file with
+the message &#34;Merged master and newbranch.&#34;&lt;/p&gt;
+&lt;p&gt;Let&#39;s get a visual representation of what all just happened. Type &lt;code&gt;git log --oneline --graph&lt;/code&gt; and hit
+enter which should produce this output:
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+*   fe2e9e1 (HEAD -&gt; master) Merged master and newbranch
+|\
+| * 688fd3a (newbranch) Added new newbranch feature
+* | b6090d1 Added new master feature
+|/
+* cf87ca3 Added print statement
+* 88e287f Changed number in range from 10 to 20
+* c9801bb First Commit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you can see here the dots on the left are our master branch and then we see the newbranch branch out and
+then come back in which represents our merge. Each asterisk represents a commit on that branch. And now you know
+the basics of Git! There&#39;s tons more complex stuff in Git, but these are some of the main commands and along with
+the next ones I&#39;m going to show you represent the majority of commands you&#39;ll use on a day to day basis.
+&lt;h2&gt;Using Github&lt;/h2&gt;
+&lt;p&gt;Ok so we&#39;ve done a lot of talking about Git. And remember everything we&#39;ve discussed so far takes place ONLY
+ON YOUR COMPUTER. No one else can see that code and those changes unless you allow them access to your computer.
+But that&#39;s never a bright idea so that&#39;s why we have Github. On Github you are basically just storing all the changes
+you make on your computer on the internet so other people can use it or recommend improvements via pull requests. But how do you
+get what we&#39;ve done so far to Github itself?&lt;/p&gt;
+&lt;p&gt;To get our code to Github we are going to do what people call pushing the repository. It&#39;s called that because the
+command to send stuff to Github is &lt;code&gt;push&lt;/code&gt; as opposed to &lt;code&gt;pull&lt;/code&gt; which brings code from Github to your computer.
+So to get our code to Github, you&#39;ll need to log into Github and at the top you&#39;ll see a plus sign. Click on that
+and a drop down menu will appear and then click create new repository which will bring you to this screen.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://barloweanalytics.com/git/repocreate.png&#34; alt=&#34;&amp;lsquo;Creating a Github Repo&amp;rsquo;&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Name the repository but don&#39;t change anything else, and click &#34;Create Repository.&#34; The next screen will
+have a url that looks something like this &lt;code&gt;https://github.com/mcbarlowe/gittutorial.git&lt;/code&gt;. Copy that url
+and then in the terminal type
+&lt;code&gt;git remote add origin your_url&lt;/code&gt; and
+replace my url with your own. After that type &lt;code&gt;git push -u origin master&lt;/code&gt; and you should get output
+that looks something like this:
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+Counting objects: 18, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (18/18), 1.48 KiB | 759.00 KiB/s, done.
+Total 18 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/mcbarlowe/gittutorial.git
+* [new branch]      master -&gt; master
+Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;origin&#39;.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And now go to the url on github and you&#39;ll see your very own brand new repository on the website. If you&#39;ve gotten this
+far great job! I know its hard and confusing. It was for me as well, and it took me about four of five failed attempts at
+trying to learn how to use Git before I finally understood it. But once it clicks you&#39;ll wonder how
+you ever lived without it.&lt;/p&gt;
+&lt;p&gt;And now every time you make a commit and you want to push it up to Github all you have to type is &lt;code&gt;git push&lt;/code&gt;
+and within minutes your code is posted. How cool is that? And if you want to push another branch than master just checkout
+that branch and type &lt;code&gt;git push -u origin branchname&lt;/code&gt; and then when you have that branch checked out just type
+&lt;code&gt;git push&lt;/code&gt; and that branch will be pushed to your Github repository as well.&lt;/p&gt;
+&lt;h2&gt;Git Advice&lt;/h2&gt;
+&lt;p&gt;Here&#39;s a couple rules of thumb to follow to save yourself some Git headaches&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Always run &lt;code&gt;git status&lt;/code&gt; before and after every add, commit, or merge. This will prevent you from making
+mistakes of commiting wrong files to github like API keys, or forgetting to add files to the commit. It&#39;s just a good
+habit to get into.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Commit often. That&#39;s not to say you need to commit everytime you change one thing, but a good rule I follow is
+I make a commit everytime I write a new function and it passes its tests. That way if something goes wrong a 1000 lines
+in you don&#39;t have to re type the whole thing and can just role back that one feature and branch it off and try to fix
+it while you keep the master branch in production.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Always add commit messages to every commit. That way when you look back over the Git log you can see what changes
+you&#39;ve implemented along the way. Like properly commenting your code, properly commenting your Git commits will
+save yourself, and others, wasted time trying to figure out which exact commit they need to look at for a feature
+implementation.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One last thing. I mentioned above an easy way to help keep track of what branch you are on. To do this we&#39;ll need to edit
+your &lt;code&gt;.bash_profile&lt;/code&gt; which is located in your home directory. In Linux and Unix systems the Home directory is
+always symbolized with the &lt;code&gt;~&lt;/code&gt; symbol. So to edit it you would type &lt;code&gt;vim ~/.bash_profile&lt;/code&gt;, or whatever text editor
+you prefer. Once you have it open add these lines:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+# Git branch in prompt.
+parse_git_branch() {
+git branch 2&gt; /dev/null | sed -e &#39;/^[^*]/d&#39; -e &#39;s/* \(.*\)/ (\1)/&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now save the file and at the command line type &lt;code&gt;source ~/.bash_profile&lt;/code&gt; and you should see the git branch
+you are currently on in the terminal prompt line like this:
+&lt;pre&gt;&lt;code class=&#39;Command Line&#39;&gt;
+Username@computer-name website (master) $
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ok thats it for now with this tutorial. I know it must be a lot to take in; trust me it was a lot to write. If you have any
+questions you can always check the sources for further info. And as always I&#39;m always available on Twitter
+&lt;a href=&#39;http://www.twitter.com/matt_barlowe&#39; target=&#34;_blank&#34;&gt;@matt_barlowe&lt;/a&gt;
+or you can email me &lt;a href=&#39;mailto:barloweanalytics@gmail.com&#39; target=&#34;_blank&#34;&gt;barloweanalytics@gmail.com&lt;/a&gt; if you have longer questions.
+Good luck in your future in version control I bet you&#39;ll do great.
+&lt;h2&gt;Sources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#39;http://burnedpixel.com/blog/beginners-setup-guide-for-ruby-node-git-github-on-your-mac/&#39; target=&#34;_blank&#34;&gt;Beginners Setup Guide for Git&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;http://sourabhbajaj.com/mac-setup/Git/&#39; target=&#34;_blank&#34;&gt;Mac Setup Guide: Git&lt;/a&gt; This link covers a lot of other topics for setting
+up your Mac as a development environment. And will probably cover things I won&#39;t get to for a while. Check it out if you&#39;re
+wanting to do more advanced stuff.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://opensource.com/resources/what-is-git&#39; target=&#34;_blank&#34;&gt;What is Git?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://www.sbf5.com/~cduan/technical/git/git-1.shtml&#39; target=&#34;_blank&#34;&gt;Understanding Git Repositories&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://www.git-tower.com/learn/git/ebook/en/command-line/basics/what-is-version-control#start&#39; target=&#34;_blank&#34;&gt;What is Version Control&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://softwareengineering.stackexchange.com/questions/315252/why-does-everyone-use-git-in-a-centralized-manner&#39; target=&#34;_blank&#34;&gt;Engineering Stack Discussion on Git strutcture&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://www.makeuseof.com/tag/git-version-control-youre-developer/&#39; target=&#34;_blank&#34;&gt;What is Git and Why You Should Use Version Control if You are a Developer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://help.github.com/articles/caching-your-github-password-in-git/&#39; target=&#34;_blank&#34;&gt;Caching your Github Password in Git&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/&#39; target=&#34;_blank&#34;&gt;Adding an Existing Project to Github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch&#39; target=&#34;_blank&#34;&gt;What is the Difference between Git Pull and Git Fetch&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;https://git-scm.com&#39; target=&#34;_blank&#34;&gt;Git Docs Page&lt;/a&gt;&lt;/p&gt;
 </content>
     </item>
     

@@ -19,18 +19,20 @@ class name**. The file name also has to end in `.java` just like all Python scri
 have to end in `.py`. It's a lot to take in that I will explain further in my tutorial on
 installing Java, but as of right now let's just write a simple `Hello World` program.
 
-    // Java uses camelCase for its naming conventions. Awful I know.
-    // unlike Python, Java doesn't care about whitespace so you can
-    // structure your code however you want as each line ends with a
-    // semicolon.
-    public class helloWorld {
+```Java
+// Java uses camelCase for its naming conventions. Awful I know.
+// unlike Python, Java doesn't care about whitespace so you can
+// structure your code however you want as each line ends with a
+// semicolon.
+public class helloWorld {
 
-        // the main method will always look like this
-        public static void main(String[] args) {
-            //Look at all that just to print. Also don't forget your semicolon!
-            System.out.println("Hello World");
-        }
+    // the main method will always look like this
+    public static void main(String[] args) {
+        //Look at all that just to print. Also don't forget your semicolon!
+        System.out.println("Hello World");
     }
+}
+```
 
 Now your program is ready to compile so save it as `helloWorld.java` and then type
 at the command line `java helloWorld.java` and the output will be `Hello World`.

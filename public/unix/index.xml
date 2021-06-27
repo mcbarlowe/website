@@ -14,8 +14,115 @@
       <pubDate>Mon, 15 Apr 2019 18:38:25 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/unix/homebrew/</guid>
-      <description></description>
-      <content>&lt;!-- raw HTML omitted --&gt;
+      <description>by Matthew Barlowe Homebrew is a very usefual package manager that can be installed on the macOS system. It&#39;s what I use to manage by Python installations along with my SQL database as well. It has a nice, easy to learn, syntax and is simple to install from the terminal on an Apple computer. What is a package manager you ask? Well join me in the next section and we&#39;ll discuss the details behind it.</description>
+      <content>&lt;h2&gt; by Matthew Barlowe&lt;/h2&gt;
+      &lt;br /&gt;
+      &lt;p&gt;Homebrew is a very usefual package manager that can be installed on the macOS system.
+      It&#39;s what I use to manage by Python installations along with my SQL database as well.
+      It has a nice, easy to learn, syntax and is simple to install from the terminal on an
+      Apple computer. What is a package manager you ask? Well join me in the next section and
+      we&#39;ll discuss the details behind it.&lt;/p&gt;
+      &lt;h2&gt;What is a Package Manager?&lt;/h2&gt;
+      &lt;p&gt;A package manger is according to &lt;a href=&#39;https://en.wikipedia.org/wiki/Package_manager&#39; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt;
+      &#34;A a collection of software tools that automates the process of installing, upgrading,
+      configuring, and removing computer programs for a computer&#39;s operating system in a
+      consistent manner.&#34; In normal speak its just a program that handles programs on your&gt;Wikipedia&lt;/a&gt;
+      &#34;A a collection of software tools that automates the process of installing, upgrading,
+      configuring, and removing computer programs for a computer&#39;s operating system in a
+      consistent manner.&#34; In normal speak its just a program that handles programs on your
+      computer. Instead of having to go to Google to upgrade Chrome, or going to Adobe to
+      upgrade Photoshop, this program takes care of all that leg work and brings the files to
+      you while all you have to do is type a simple command.&lt;/p&gt;
+      &lt;p&gt;The package manager will also keep track of what programs you have installed on your
+      system and what versions of those programs are installed as well. It&#39;s a very useful for
+      getting things up and running quickly and effortlessly without having to worry about dealing
+      with source files. If I was powering on a new Macbook or iMac for the first time, Homebrew
+      would be the first program I installed to get the software I need to develop my scripts.
+      &lt;h2&gt;Installing Homebrew&lt;/h2&gt;
+      &lt;p&gt;Installing Homebrew is simple and just takes this simple one line command:
+      &lt;br /&gt;
+      &lt;br /&gt;
+        &lt;code&gt;
+          /usr/bin/ruby -e &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34;
+        &lt;/code&gt;
+      &lt;br /&gt;
+      &lt;br /&gt;
+      Copy and paste that into your terminal and hit enter and that&#39;s all you need to do.
+      And now you&#39;re on your way to becoming a programmer. You can read more about the Homebrew
+      package manager at the &lt;a href=&#39;https://brew.sh&#39; target=&#34;_blank&#34;&gt;Homebrew website.&lt;/a&gt;
+      &lt;h2&gt;How Does Homebrew Work?&lt;/h2&gt;
+      &lt;p&gt;If you clicked on the page I linked above you would see that &#34;Homebrew installs packages
+      to their own directory and then symlinks their files into &lt;code&gt;/usr/local&lt;/code&gt;. Ok, so what
+      does all that mean? We&#39;ll break it down piece by piece. So first Homebrew installs the files
+      you want in its own file system so they don&#39;t contaminate other files of the operating system.
+      This is especially important for langauges like Ruby and Python where the Mac OS has system
+      installed versions of these langauges already installed in &lt;code&gt;/usr/bin&lt;/code&gt;. You never want
+      to touch the versions of these located in that folder as it can affect other programs the OS
+      runs.&lt;/p&gt;
+      &lt;p&gt;But the operating system won&#39;t know where these files are located because the directory is
+      not stored in the OS &lt;code&gt;$PATH&lt;/code&gt; environment variable(If you don&#39;t understand what that is
+      don&#39;t worry we&#39;ll get there in future tutorials). So to get around that Homebrew creates a symbolic
+      link to its files and stores those in your &lt;code&gt;/usr/local/bin&lt;/code&gt; which is in the &lt;code&gt;$PATH&lt;/code&gt;
+      variable.&lt;/p&gt;
+      &lt;p&gt;A symbolic link is basically the same as a shortcut in Windows or Mac where you create an
+      icon on your desktop to point to a file or a directory. However, a symbolic link does a little
+      bit more as it &lt;a href=&#39;https://www.makeuseof.com/tag/what-is-a-symbolic-link-what-are-its-uses-makeuseof-explains/&#39; target=&#34;_blank&#34;&gt;
+        &#34;will make it look like the linked file is actually there, rather than it just being a shortcut.&#34;&lt;/a&gt;
+      So Homebrew is making it look like the programs are in the bin folder
+      so when we type the commands into terminal they will execute properly.&lt;/p&gt;
+      &lt;p&gt;One last thing I&#39;ll touch on quickly is why installing to &lt;code&gt;/usr/local/&lt;/code&gt;
+      is important.  &lt;code&gt;/usr&lt;/code&gt; back in the olden days was used to store executables and
+      libraries that were not system critical, and &lt;code&gt;/usr/local/&lt;/code&gt; was used to store software
+      that wouldn&#39;t be overwritten with a system update i.e. it was installed locally. However that
+      has changed in recent years with most linuxes symbolic linking &lt;code&gt;/bin&lt;/code&gt; to
+      &lt;code&gt;/usr/bin&lt;/code&gt; and Apple has &lt;code&gt;/usr&lt;/code&gt; protected as well. By installing into
+      &lt;code&gt;/usr/local/&lt;/code&gt;we avoid accidentally overwritting or messing up files in our
+      &lt;code&gt;usr/bin&lt;/code&gt; that could cause serious issues in the operation of the Mac OS. Again
+      it&#39;s not neccesary to know any of this to get Homebrew to work on your computer so if you don&#39;t
+      I wouldn&#39;t worry about it too much.
+      &lt;h2&gt;Homebrew Commands&lt;/h2&gt;
+      &lt;p&gt;Homebrew has three basic commands:
+      &lt;br /&gt;
+      &lt;br /&gt;
+      &lt;code&gt;brew install [package name]&lt;/code&gt;
+      &lt;br /&gt;
+      &lt;br /&gt;
+      &lt;code&gt;brew uninstall [package name]&lt;/code&gt;
+      &lt;br /&gt;
+      &lt;br /&gt;
+      &lt;code&gt;brew upgrade [package name]&lt;/code&gt;
+      &lt;br /&gt;
+      &lt;br /&gt;
+      These three commands will install new packages, remove old packages you no longer want,
+      and update packages that are out of date. That&#39;s it, pretty easy right? There&#39;s a lot more
+      to Homebrew than this, but if you want to learn more I suggest checking out the documentation
+      in the link to their site above or the links in the sources I list below.
+      &lt;h2&gt;Other OS Package Managers:&lt;/h2&gt;
+      &lt;p&gt;Homebrew is only available for the MacOS, but if you&#39;re on Windows or Linux don&#39;t despair.
+      &lt;a href=&#39;http://linuxbrew.sh&#39;&gt;Linux Brew&lt;/a&gt; is a package manager for Linux that is a fork of
+      the Homebrew repo so should work in a very similar fashion. There&#39;s also more traditional linux package
+      managers such as `yum` and `apt`.
+      For Windows there seems to be
+      &lt;a href=&#39;https://chocolatey.org&#39;&gt;Chocolatey&lt;/a&gt; that has both a GUI and a command line
+      implementation.  I hav used `linuxbrew` for a little bit but it didn&#39;t work quite as
+      seemlessly as Homebrew does for OS X so I&#39;d recommend going with `yum` or `apt`.
+      As far as Chocolatey I haven&#39;t used it at all so I can&#39;t speak to its usefulness.
+      &lt;a href=&#39;mailto:mcbarlowe@gmail.com&#39;&gt;mcbarlowe@gmail.com&lt;/a&gt; and let me know.&lt;/p&gt;
+      &lt;h2&gt;Sources:&lt;/h2&gt;
+      &lt;p&gt;&lt;a href=&#39;http://www.pyladies.com/blog/Get-Your-Mac-Ready-for-Python-Programming/&#39;&gt;
+        Getting Your Mac Ready For Python Programming&lt;/a&gt;
+      &lt;br /&gt;
+      &lt;a href=&#39;https://kb.iu.edu/d/abbe&#39; target=&#34;_blank&#34;&gt;Create a Symbolic Link in Unix&lt;/a&gt;
+      &lt;br /&gt;
+      &lt;a href=&#39;https://unix.stackexchange.com/questions/4186/what-is-usr-local-bin&#39; target=&#34;_blank&#34;&gt;What is /usr/local/bin&lt;/a&gt;
+      &lt;br /&gt;
+      &lt;a href=&#39;https://en.wikipedia.org/wiki/Unix_filesystem#Conventional_directory_layout&#39; target=&#34;_blank&#34;&gt;Unix Filesystem Layout&lt;/a&gt;
+      &lt;br /&gt;
+      &lt;a href=&#39;https://www.centos.org/docs/5/html/5.1/Deployment_Guide/s3-filesystem-usr-local.html&#39; target=&#34;_blank&#34;&gt;CentOS Docs&lt;/a&gt;
+      &lt;br /&gt;
+      &lt;a href=&#39;https://en.wikipedia.org/wiki/PATH_(variable)&#39; target=&#34;_blank&#34;&gt;$PATH variable&lt;/a&gt;
+      &lt;br /&gt;
+      &lt;a href=&#39;https://computers.tutsplus.com/tutorials/homebrew-demystified-os-xs-ultimate-package-manager--mac-44884&#39; target=&#34;_blank&#34;&gt;Homebrew Demystified&lt;/a&gt;
 </content>
     </item>
     

@@ -64,7 +64,7 @@ Hello World!
       
       <guid>https://barloweanalytics.com/r/loops/</guid>
       <description>by Matthew Barlowe This is a tutorial going over the syntax of loops in R. If you want a break down of how loops work and the philosophy please read my Python loop tutorial. Loops should be a last resort in R as they are slow and inefficient. Often you can do what you need to in loops using the apply family of functions or the purrr package.
-for loops for (i in 1:10) { print(paste(&amp;quot;Your number is&amp;quot;, i)) } some_numbers &amp;lt;- c(1,3,5,3,0,10,35) for (i in some_numbers) { print(paste(&amp;quot;Your number is&amp;quot;, i)) }  while loops answer &amp;lt;- readline(prompt=&amp;quot;What&#39;s the best part about Matt?</description>
+for loops for (i in 1:10) { print(paste(&amp;#34;Your number is&amp;#34;, i)) } some_numbers &amp;lt;- c(1,3,5,3,0,10,35) for (i in some_numbers) { print(paste(&amp;#34;Your number is&amp;#34;, i)) } while loops answer &amp;lt;- readline(prompt=&amp;#34;What&amp;#39;s the best part about Matt?</description>
       <content>&lt;h1 id=&#34;by-matthew-barlowe&#34;&gt;by Matthew Barlowe&lt;/h1&gt;
 &lt;p&gt;This is a tutorial going over the syntax of loops in R. If you want a break down
 of how loops work and the philosophy please read my &lt;a href=&#34;https://barloweanalytics.com/python/loops/&#34;&gt;Python loop tutorial&lt;/a&gt;.
@@ -72,38 +72,35 @@ Loops should be a last resort in R as they are slow and inefficient. Often you c
 what you need to in loops using the &lt;a href=&#34;https://www.guru99.com/r-apply-sapply-tapply.html&#34;&gt;&lt;code&gt;apply&lt;/code&gt;&lt;/a&gt;
 family of functions or the &lt;a href=&#34;https://purrr.tidyverse.org/&#34;&gt;&lt;code&gt;purrr&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
 &lt;h1 id=&#34;for-loops&#34;&gt;&lt;code&gt;for&lt;/code&gt; loops&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;for (i in 1:10) {
-    print(paste(&amp;quot;Your number is&amp;quot;, i))
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;for &lt;/span&gt;(i in &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;) {
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;paste&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Your number is&amp;#34;&lt;/span&gt;, i))
 }
 
-some_numbers &amp;lt;- c(1,3,5,3,0,10,35)
+some_numbers &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;35&lt;/span&gt;)
 
-for (i in some_numbers) {
-    print(paste(&amp;quot;Your number is&amp;quot;, i))
+&lt;span style=&#34;color:#a6e22e&#34;&gt;for &lt;/span&gt;(i in some_numbers) {
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;paste&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Your number is&amp;#34;&lt;/span&gt;, i))
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;while-loops&#34;&gt;&lt;code&gt;while&lt;/code&gt; loops&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;answer &amp;lt;- readline(prompt=&amp;quot;What&#39;s the best part about Matt? &amp;quot;)
-while (answer != &#39;He&#39;s Awesome&amp;quot;) {
-    print(&amp;quot;Sorry, that isn&#39;t the correct answer.&amp;quot;)
-    answer &amp;lt;- readline(prompt=&#39;&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;while-loops&#34;&gt;&lt;code&gt;while&lt;/code&gt; loops&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;answer &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;readline&lt;/span&gt;(prompt&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;What&amp;#39;s the best part about Matt? &amp;#34;&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;while &lt;/span&gt;(answer &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;He&amp;#39;&lt;/span&gt;s Awesome&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;) {
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    print(&amp;#34;&lt;/span&gt;Sorry, that isn&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t the correct answer.&amp;#34;)
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    answer &amp;lt;- readline(prompt=&amp;#39;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;)&lt;/span&gt;
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;repeat-loops&#34;&gt;&lt;code&gt;repeat&lt;/code&gt; loops&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;repeat-loops&#34;&gt;&lt;code&gt;repeat&lt;/code&gt; loops&lt;/h1&gt;
 &lt;p&gt;These loops aren&amp;rsquo;t present in Python. &lt;code&gt;repeat&lt;/code&gt; loops are similar to &lt;code&gt;while&lt;/code&gt; loops except
 that &lt;code&gt;repeat&lt;/code&gt; loops require the user to explicitly break the loop when the condition is met
 instead of doing it automatically like &lt;code&gt;while&lt;/code&gt; loops. Here is the example above
 rewritten as a &lt;code&gt;repeat&lt;/code&gt; loop.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;answer &amp;lt;- readline(prompt=&amp;quot;What&#39;s the best part about Matt? &amp;quot;)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;answer &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;readline&lt;/span&gt;(prompt&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;What&amp;#39;s the best part about Matt? &amp;#34;&lt;/span&gt;)
 repeat {
-    if(answer == &amp;quot;He&#39;s Aweseome&amp;quot;){
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;if&lt;/span&gt;(answer &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;He&amp;#39;s Aweseome&amp;#34;&lt;/span&gt;){
         break
     }
-    print(&amp;quot;Sorry, that isn&#39;t the correct answer.&amp;quot;)
-    answer &amp;lt;- readline(prompt=&#39;&#39;)
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sorry, that isn&amp;#39;t the correct answer.&amp;#34;&lt;/span&gt;)
+    answer &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;readline&lt;/span&gt;(prompt&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;)
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;sources&#34;&gt;Sources&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;sources&#34;&gt;Sources&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/29215589/while-vs-repeat-loops-in-r&#34;&gt;While vs. Repeat Loops in R&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I hate linking to this because it&amp;rsquo;s Datacamp but it&amp;rsquo;s free so hopefully they aren&amp;rsquo;t making money off it&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.datacamp.com/community/tutorials/tutorial-on-loops-in-r&#34;&gt;Tutorial on Loops in R&lt;/a&gt;&lt;/p&gt;
