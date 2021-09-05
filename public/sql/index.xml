@@ -199,7 +199,7 @@ clause and passed it the number 1 telling Postgres to limit the results to 10 ro
 &lt;p&gt;Ok lets do a couple other &lt;code&gt;SELECT&lt;/code&gt; queries to get the hang of it. First though
 lets get a list of the columns in our table with the &lt;code&gt;\d+ appearances&lt;/code&gt; which will produce
 and output similar to this:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;      Column   |       Type       | Collation | Nullable | Default | Storage  | Stats target | Description
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;      Column   |       Type       | Collation | Nullable | Default | Storage  | Stats target | Description
     -----------+------------------+-----------+----------+---------+----------+--------------+-------------
      yearID    | bigint           |           |          |         | plain    |              |
      teamID    | text             |           |          |         | extended |              |

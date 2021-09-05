@@ -192,7 +192,7 @@ Loops should be a last resort in R as they are slow and inefficient. Often you c
 what you need to in loops using the <a href="https://www.guru99.com/r-apply-sapply-tapply.html"><code>apply</code></a>
 family of functions or the <a href="https://purrr.tidyverse.org/"><code>purrr</code></a> package.</p>
 <h1 id="for-loops"><code>for</code> loops<a href="#for-loops" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a6e22e">for </span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a6e22e">for </span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>) {
     <span style="color:#a6e22e">print</span>(<span style="color:#a6e22e">paste</span>(<span style="color:#e6db74">&#34;Your number is&#34;</span>, i))
 }
 
@@ -202,7 +202,7 @@ some_numbers <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e
     <span style="color:#a6e22e">print</span>(<span style="color:#a6e22e">paste</span>(<span style="color:#e6db74">&#34;Your number is&#34;</span>, i))
 }
 </code></pre></div><h1 id="while-loops"><code>while</code> loops<a href="#while-loops" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">answer <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">readline</span>(prompt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;What&#39;s the best part about Matt? &#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">answer <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">readline</span>(prompt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;What&#39;s the best part about Matt? &#34;</span>)
 <span style="color:#a6e22e">while </span>(answer <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;He&#39;</span>s Awesome<span style="color:#e6db74">&#34;) {
 </span><span style="color:#e6db74">    print(&#34;</span>Sorry, that isn<span style="color:#e6db74">&#39;t the correct answer.&#34;)
 </span><span style="color:#e6db74">    answer &lt;- readline(prompt=&#39;&#39;</span><span style="color:#960050;background-color:#1e0010">)</span>
@@ -212,7 +212,7 @@ some_numbers <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e
 that <code>repeat</code> loops require the user to explicitly break the loop when the condition is met
 instead of doing it automatically like <code>while</code> loops. Here is the example above
 rewritten as a <code>repeat</code> loop.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">answer <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">readline</span>(prompt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;What&#39;s the best part about Matt? &#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">answer <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">readline</span>(prompt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;What&#39;s the best part about Matt? &#34;</span>)
 repeat {
     <span style="color:#a6e22e">if</span>(answer <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;He&#39;s Aweseome&#34;</span>){
         break

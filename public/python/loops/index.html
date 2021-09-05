@@ -215,8 +215,8 @@ just work on code by yourself, trust me your future self will thank you for your
 <p>So let&rsquo;s say you wanted to print out &ldquo;Let&rsquo;s Go&rdquo; five times. Sure you could put <code>print(&quot;Let's Go&quot;)</code>
 ten times in your script and run it and get the desired result. But following the ideas discussed
 above we don&rsquo;t want to do that. This is where the <code>for</code> loop comes in. Lets look at some example code</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Let&#39;s Go&#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
+    print(<span style="color:#e6db74">&#34;Let&#39;s Go&#34;</span>)
 </code></pre></div><p>If you put that in a file and run it similar to what we did in the <a href="/python/helloworld/">Hello World</a>
 tutorial it would produce this:</p>
 <pre><code>Let's Go
@@ -241,17 +241,17 @@ of all the time.</p>
 that <code>range(5)</code> is just one of many things you can loop over. The other part of the sentence <code>for x</code>
 is where the looping happens. <code>for x</code> is actually saying &ldquo;for each item in <code>range(5)</code>&rdquo;, the <code>x</code> is just
 a variable for that item. You could replace <code>x</code> with anything:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Let&#39;s Go&#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
+    print(<span style="color:#e6db74">&#34;Let&#39;s Go&#34;</span>)
 
 <span style="color:#66d9ef">for</span> number <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Let&#39;s Go&#34;</span>)
+    print(<span style="color:#e6db74">&#34;Let&#39;s Go&#34;</span>)
 
 <span style="color:#66d9ef">for</span> thingy <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Let&#39;s Go&#34;</span>)
+    print(<span style="color:#e6db74">&#34;Let&#39;s Go&#34;</span>)
 
 <span style="color:#66d9ef">for</span> Bob <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Let&#39;s Go&#34;</span>)
+    print(<span style="color:#e6db74">&#34;Let&#39;s Go&#34;</span>)
 </code></pre></div><p>All those blocks of code will produce the same output shown above which is five lines of &ldquo;Let&rsquo;s Go.&rdquo;</p>
 <p>Think of <code>for</code> loops as having a bag of marbles. And like in code you can&rsquo;t do anything else until
 you pull every marble out of the bag.  In this analogy <code>range(5)</code> would be our bag of marbles and <code>for x</code>
@@ -263,8 +263,8 @@ told the computer to do with our <code>for</code> loop above.</p>
 marble you pull out of the bag. That&rsquo;s where the <code>for x</code> part comes in. By assigning each item
 in the collection to a variable we can do things with those variables as we loop through the collection
 For example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
-    <span style="color:#66d9ef">print</span>(x)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
+    print(x)
 </code></pre></div><p>Which produces this output:</p>
 <pre><code>0
 1
@@ -277,10 +277,10 @@ For example:</p>
 they form a core concept of programming and computer science. One key aspect though of the variables
 we create with a loop is if you have that variable name storing a value somewhere else in your code
 the loop will override that value with the last value it has from the loop. For example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
 <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>)
-    <span style="color:#66d9ef">print</span>(x)
-<span style="color:#66d9ef">print</span>(x)
+    print(x)
+print(x)
 </code></pre></div><p>The output will be:</p>
 <pre><code>0
 1
@@ -298,9 +298,9 @@ a condition called an infinite loop that will never terminate unless you force i
 does this usually a <code>Ctrl+C</code> is the break signal for most computers to stop running things and if that
 doesn&rsquo;t work you can always restart.</p>
 <p>While loops look like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
     <span style="color:#66d9ef">while</span> x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>:
-        <span style="color:#66d9ef">print</span>(x)
+        print(x)
         x <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 </code></pre></div><p>As you can see the conditional statement in this <code>while</code> loop is <code>x&lt;5</code>, and as long as
 <code>x</code> continues to be less than 5 the loop will continue repeating. That&rsquo;s why we have to add

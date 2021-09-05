@@ -7,15 +7,137 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019 Barlowe Analytics</copyright>
-    <lastBuildDate>Tue, 25 May 2021 22:44:30 -0500</lastBuildDate><atom:link href="https://barloweanalytics.com/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Jun 2021 02:03:36 -0500</lastBuildDate><atom:link href="https://barloweanalytics.com/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Jensens Inequality</title>
-      <link>https://barloweanalytics.com/posts/jensens-inequality/</link>
-      <pubDate>Tue, 25 May 2021 22:44:30 -0500</pubDate>
+      <title>The Gamma Distribution</title>
+      <link>https://barloweanalytics.com/posts/math/stats/gamma_distribution/</link>
+      <pubDate>Sun, 27 Jun 2021 02:03:36 -0500</pubDate>
       
-      <guid>https://barloweanalytics.com/posts/jensens-inequality/</guid>
-      <description>This is an article about Jensen&#39;s Inequality</description>
-      <content>&lt;p&gt;This is an article about Jensen&#39;s Inequality&lt;/p&gt;
+      <guid>https://barloweanalytics.com/posts/math/stats/gamma_distribution/</guid>
+      <description>The Gamma Distribution The Gamma Distribution is a very useful distribution used to model Poisson processes. The Poisson distribution determines the probability of a number of events in a given time span. The Gamma distribution gives the probability of a given wait time until the \(n\)th event is observed in that process.
+Gamma Distribution Parameters The Gamma Distribution can be defined by two different sets of two parameters. It can have a shape parameter of \({k}\) and a scale parameter of \(\theta\) (theta) or a shape parameter of \(\alpha\) (alpha) and a rate parameter of \(\beta\) (beta).</description>
+      <content>&lt;h1 id=&#34;the-gamma-distribution&#34;&gt;The Gamma Distribution&lt;/h1&gt;
+
+&lt;p&gt;The Gamma Distribution is a very useful distribution used to model Poisson processes.
+The Poisson distribution determines the probability of a number of
+events in a given time span. The Gamma distribution gives the probability
+of a given wait time until the &lt;span  class=&#34;math&#34;&gt;\(n\)&lt;/span&gt;th event is observed in that process.&lt;/p&gt;
+
+&lt;h1 id=&#34;gamma-distribution-parameters&#34;&gt;Gamma Distribution Parameters&lt;/h1&gt;
+
+&lt;p&gt;The Gamma Distribution can be defined by two different sets of two parameters.
+It can have a shape parameter of &lt;span  class=&#34;math&#34;&gt;\({k}\)&lt;/span&gt; and a scale parameter of &lt;span  class=&#34;math&#34;&gt;\(\theta\)&lt;/span&gt; (theta) or a
+shape parameter of &lt;span  class=&#34;math&#34;&gt;\(\alpha\)&lt;/span&gt; (alpha) and a rate parameter of &lt;span  class=&#34;math&#34;&gt;\(\beta\)&lt;/span&gt; (beta).
+With either set of parameters &lt;span  class=&#34;math&#34;&gt;\(\alpha={k}\)&lt;/span&gt; and  &lt;span  class=&#34;math&#34;&gt;\(\beta={1/\theta}\)&lt;/span&gt;.
+&lt;span  class=&#34;math&#34;&gt;\(\beta\)&lt;/span&gt; is also equal to the &lt;span  class=&#34;math&#34;&gt;\(\lambda\)&lt;/span&gt; of the Poisson process we are trying
+to model with the Gamma Distribution.
+Gamma distribution parameters can only be positive real numbers, meaning you can
+never have a parameter for a gamma distribution be negative.&lt;/p&gt;
+
+&lt;h1 id=&#34;moments-of-the-gamma-distribution&#34;&gt;Moments of the Gamma Distribution&lt;/h1&gt;
+
+&lt;p&gt;The mean or expected value of a Gamma distribution is defined like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\mathop{{}\mathbb{E}}{[X]} = {k}\theta = \frac{\alpha}{\beta}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\(\mathop{{}\mathbb{E}}{[X]}\)&lt;/span&gt; is the symbolic way of saying the &amp;quot;Expected Value of X&amp;quot;.
+Meaning that on average if you randomly drew a number from this distribution with these
+parameters the average value of the draws would equal this number.  If you have worked
+with the Normal/Gaussian distribution you have seen this expressed as &lt;span  class=&#34;math&#34;&gt;\(\mu\)&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;The variance is defined thusly:&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\mathop{{}\mathbb{V}}{[X]} = {k}\theta^{2} = \frac{\alpha}{\beta^{2}}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\(\mathop{{}\mathbb{V}}{[X]}\)&lt;/span&gt; can also be displayed as &lt;span  class=&#34;math&#34;&gt;\(\textnormal{Var}({X})\)&lt;/span&gt; or &lt;span  class=&#34;math&#34;&gt;\(\sigma^{2}\)&lt;/span&gt; when
+dealing with Normal/Gaussian distributions.&lt;/p&gt;
+
+&lt;h1 id=&#34;purposes-of-the-gamma-distribution&#34;&gt;Purposes of the Gamma Distribution&lt;/h1&gt;
+
+&lt;p&gt;The Gamma Distribution is used to predict the wait time until a future event happens. More specifically until
+the &lt;span  class=&#34;math&#34;&gt;\({k}\)&lt;/span&gt;th event happens of a Poisson random variable. So if we wanted to model the time it takes
+until the fifth time some event happens in a Poisson process the Gamma Distribution would be
+our go-to distribution.  The Gamma Function models the wait time between Poisson distributed events.
+Or another way to put it is the Gamma models the time spent in each state between events.&lt;/p&gt;
+
+&lt;p&gt;As Aerin Kim notes in her excellent piece on the Gamma Distribution (link below in the sources):&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Poisson, Exponential, and Gamma distribution model different aspects of the same process.
+Poisson distribution is used to model the # of events in the future, Exponential distribution
+is used to predict the wait time &lt;strong&gt;until the very first event&lt;/strong&gt;, and Gamma distribution is
+used to predict the wait time &lt;strong&gt;until the &lt;span  class=&#34;math&#34;&gt;\({k}\)&lt;/span&gt;th event&lt;/strong&gt;. (Kim)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So basically let&#39;s say that a catastrophic flood happens in your area once in a hundred years.
+This would be our rate of occurrences, or &lt;span  class=&#34;math&#34;&gt;\(\lambda\)&lt;/span&gt;, of the Poisson process. So if we wanted
+to know how long we would have to wait to see five catastrophic floods we would use a Gamma
+distribution with the parameters of &lt;span  class=&#34;math&#34;&gt;\(\alpha = 5\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\(\theta = 1/\lambda\)&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\(\theta\)&lt;/span&gt; is our average wait time between events in our unit of time or rate parameter, which in this case is
+100 years. Since one divided by one is one that means our average wait time between floods
+that occur once every 100 years is one unit of our time interval which in this case is 100 years.
+If our rate of floods was 5 every 100 years then &lt;span  class=&#34;math&#34;&gt;\(\theta\)&lt;/span&gt; would be .20 or 20 years on average
+between floods.&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\(\alpha\)&lt;/span&gt; is our number of times we want the event to occur in this case 5
+because we want to calculate the probability of wait times before the area experiences 5
+catastrophic floods. Using the formulas above the expected value of our wait time
+would be 500 years (&lt;span  class=&#34;math&#34;&gt;\(\alpha * \theta\)&lt;/span&gt;) with a variance of 500 years squared as well &lt;span  class=&#34;math&#34;&gt;\(5\cdot1^{2}\)&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;But what if we want to calculate the probability of the wait time for 5 catastrophic floods being
+100 years or less? To calculate this we would just plug our parameters into the Gamma CDF
+(In this case the exact function is the Erlang CDF because the math is easier, but the Erlang is just
+a special case of the Gamma where &lt;span  class=&#34;math&#34;&gt;\(\alpha\)&lt;/span&gt; is a positive integer) function. Here both &lt;span  class=&#34;math&#34;&gt;\(\lambda\)&lt;/span&gt;
+and &lt;span  class=&#34;math&#34;&gt;\({t}\)&lt;/span&gt; are equal to one since our rate (&lt;span  class=&#34;math&#34;&gt;\(\lambda\)&lt;/span&gt;) is one and our interval of wait time (&lt;span  class=&#34;math&#34;&gt;\({t}\)&lt;/span&gt;) is one.
+Don&#39;t confuse this with the &lt;span  class=&#34;math&#34;&gt;\(\lambda\)&lt;/span&gt; of the Poisson process that is actually
+&lt;span  class=&#34;math&#34;&gt;\(\lambda={rate}\cdot{t}\)&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\begin{aligned} {P(T\le1)}&amp;={CDF(1)} \\ &amp;={1 - P(\text{events}\lt5 \text{ in interval t})} \\ &amp;=1 - \sum_{n=0}^{\alpha-1}\frac{(\lambda{t})^{n}\exp^{-\lambda{t}}}{{n}!} \\ &amp;=1 - \sum_{n=0}^{4}\frac{(1)^{n}\exp^{-1}}{{n}!} \end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Doing the math on that will give us the value of .003 or .3% probability of seeing 5 catastrophic floods
+in the interval of 100 years. If we wanted the probability of 5 floods in say 300 years or less our formula would look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[1 - \sum_{n=0}^{4}\frac{(3)^{n}\exp^{-1}}{{n}!}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Which gives us a probability of roughly .18. But enough of doing this by hand lets see how to do it in
+python. I&#39;m going to use the &lt;code&gt;scipy&lt;/code&gt; package which contains all sorts of probability distributions including
+the gamma. The CDF function takes parameters of the wait time or interval, &lt;span  class=&#34;math&#34;&gt;\(\alpha\)&lt;/span&gt;, and scale which is equal to
+our &lt;span  class=&#34;math&#34;&gt;\(\theta\)&lt;/span&gt; parameter.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;from scipy.stats import gamma
+
+#probability we see 5 floods in one interval of time or less
+#with scale parameter equal to 1
+gamma.cdf(1, 5, scale=1)
+0.003659846827343713
+
+#probability we see 5 floods in three intervals of time or less
+#with scale parameter equal to 1
+gamma.cdf(3, 5, scale=1)
+0.18473675547622787
+
+#probability we see 1 flood in three intervals of time or less
+#with scale parameter equal to 1
+gamma.cdf(3, 1, scale=1)
+0.950212931632136&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you want to dive deeper into using the gamma function to model wait times for Poisson processes
+please read the links below as they go into much great detail on the gamma function and its uses.&lt;/p&gt;
+
+&lt;h1 id=&#34;sources&#34;&gt;Sources&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://towardsdatascience.com/gamma-distribution-intuition-derivation-and-examples-55f407423840&#34;&gt;Gamma Distribution -- Intuition, Derivation, and Examples&lt;/a&gt; by Aerin Kim&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.mygreatlearning.com/blog/gamma-distribution/&#34;&gt;Gamma Distribution Explained | What is Gamma Distribution&lt;/a&gt; by Somak Sengupta&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_Gamma&#34;&gt;UCLA AP Statistics Curriculum 2007 Gamma&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://sherrytowers.com/2016/01/23/poisson-and-exponential-distributions/&#34;&gt;Poisson, Exponential, and Gamma distributions&lt;/a&gt; by Sherry Towers&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://towardsdatascience.com/seven-must-know-statistical-distributions-and-their-simulations-for-data-science-681c5ac41e32&#34;&gt;Seven Must-Know Statistical Distributions and Their Simulations for Data Science&lt;/a&gt; by Zijing Zhu&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/geekculture/how-to-model-time-between-events-using-the-exponential-gamma-and-poisson-distributions-4b058a357a55&#34;&gt;How to Model Time Between Events Using the Exponential, Gamma, and Poisson Distributions&lt;/a&gt; by Federico Riveroll&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://online.stat.psu.edu/stat414/lesson/introduction-stat-414&#34;&gt;Introduction to STAT 414&lt;/a&gt; Penn State Department of Statistics&lt;/p&gt;
 </content>
     </item>
     

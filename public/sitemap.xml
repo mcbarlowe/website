@@ -3,12 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://barloweanalytics.com/</loc>
-    <lastmod>2020-03-13T01:39:30-04:00</lastmod>
+    <lastmod>2021-06-27T02:03:36-05:00</lastmod>
   </url><url>
-    <loc>https://barloweanalytics.com/posts/ides-of-march/</loc>
-    <lastmod>2020-03-13T01:39:30-04:00</lastmod>
+    <loc>https://barloweanalytics.com/tags/math/</loc>
+    <lastmod>2021-06-27T02:03:36-05:00</lastmod>
   </url><url>
     <loc>https://barloweanalytics.com/posts/</loc>
+    <lastmod>2021-06-27T02:03:36-05:00</lastmod>
+  </url><url>
+    <loc>https://barloweanalytics.com/tags/statistics/</loc>
+    <lastmod>2021-06-27T02:03:36-05:00</lastmod>
+  </url><url>
+    <loc>https://barloweanalytics.com/tags/</loc>
+    <lastmod>2021-06-27T02:03:36-05:00</lastmod>
+  </url><url>
+    <loc>https://barloweanalytics.com/posts/math/stats/gamma_distribution/</loc>
+    <lastmod>2021-06-27T02:03:36-05:00</lastmod>
+  </url><url>
+    <loc>https://barloweanalytics.com/posts/ides-of-march/</loc>
     <lastmod>2020-03-13T01:39:30-04:00</lastmod>
   </url><url>
     <loc>https://barloweanalytics.com/posts/learning_to_code/</loc>
@@ -105,7 +117,5 @@
     <lastmod>2019-04-13T21:36:40-04:00</lastmod>
   </url><url>
     <loc>https://barloweanalytics.com/categories/</loc>
-  </url><url>
-    <loc>https://barloweanalytics.com/tags/</loc>
   </url>
 </urlset>

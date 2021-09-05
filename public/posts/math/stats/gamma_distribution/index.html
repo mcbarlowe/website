@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>The Gamma Distribution :: Barlowe Analytics</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="a look at the Gamma Distribution and its uses" />
+<meta name="keywords" content="math, statistics, distributions" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://barloweanalytics.com/posts/math/stats/gamma_distribution/" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-138686262-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+<link rel="stylesheet" href="https://barloweanalytics.com/assets/style.css">
+
+  <link rel="stylesheet" href="https://barloweanalytics.com/assets/pink.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://barloweanalytics.com/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://barloweanalytics.com/img/favicon/pink.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="barloweanalytic" />
+  
+    <meta name="twitter:creator" content="matthew_barlowe" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Gamma Distribution">
+<meta property="og:description" content="a look at the Gamma Distribution and its uses" />
+<meta property="og:url" content="https://barloweanalytics.com/posts/math/stats/gamma_distribution/" />
+<meta property="og:site_name" content="Barlowe Analytics" />
+
+  <meta property="og:image" content="https://barloweanalytics.com/">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2021-06-27 02:03:36 -0500 CDT" />
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+
+
+</head>
+<body class="pink">
+
+
+<div class="container headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Barlowe Analytics
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about/aboutme">About</a></li>
+        
+      
+        
+          <li><a href="/projects">Projects</a></li>
+        
+      
+        
+          <li><a href="/tutorials">Tutorials</a></li>
+        
+      
+        
+          <li><a href="/work">Work</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about/aboutme">About</a></li>
+      
+    
+      
+        <li><a href="/projects">Projects</a></li>
+      
+    
+      
+        <li><a href="/tutorials">Tutorials</a></li>
+      
+    
+      
+        <li><a href="/work">Work</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-138686262-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://barloweanalytics.com/posts/math/stats/gamma_distribution/">The Gamma Distribution</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2021-06-27 
+      </span>
+    
+    
+    <span class="post-author">:: Matthew Barlowe</span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://barloweanalytics.com/tags/math/">math</a>&nbsp;
+    
+    #<a href="https://barloweanalytics.com/tags/statistics/">statistics</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="the-gamma-distribution">The Gamma Distribution<a href="#the-gamma-distribution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+
+<p>The Gamma Distribution is a very useful distribution used to model Poisson processes.
+The Poisson distribution determines the probability of a number of
+events in a given time span. The Gamma distribution gives the probability
+of a given wait time until the <span  class="math">\(n\)</span>th event is observed in that process.</p>
+
+<h1 id="gamma-distribution-parameters">Gamma Distribution Parameters<a href="#gamma-distribution-parameters" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+
+<p>The Gamma Distribution can be defined by two different sets of two parameters.
+It can have a shape parameter of <span  class="math">\({k}\)</span> and a scale parameter of <span  class="math">\(\theta\)</span> (theta) or a
+shape parameter of <span  class="math">\(\alpha\)</span> (alpha) and a rate parameter of <span  class="math">\(\beta\)</span> (beta).
+With either set of parameters <span  class="math">\(\alpha={k}\)</span> and  <span  class="math">\(\beta={1/\theta}\)</span>.
+<span  class="math">\(\beta\)</span> is also equal to the <span  class="math">\(\lambda\)</span> of the Poisson process we are trying
+to model with the Gamma Distribution.
+Gamma distribution parameters can only be positive real numbers, meaning you can
+never have a parameter for a gamma distribution be negative.</p>
+
+<h1 id="moments-of-the-gamma-distribution">Moments of the Gamma Distribution<a href="#moments-of-the-gamma-distribution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+
+<p>The mean or expected value of a Gamma distribution is defined like so:</p>
+
+<p><span  class="math">\[\mathop{{}\mathbb{E}}{[X]} = {k}\theta = \frac{\alpha}{\beta}\]</span></p>
+
+<p><span  class="math">\(\mathop{{}\mathbb{E}}{[X]}\)</span> is the symbolic way of saying the &quot;Expected Value of X&quot;.
+Meaning that on average if you randomly drew a number from this distribution with these
+parameters the average value of the draws would equal this number.  If you have worked
+with the Normal/Gaussian distribution you have seen this expressed as <span  class="math">\(\mu\)</span>.</p>
+
+<p>The variance is defined thusly:</p>
+
+<p><span  class="math">\[\mathop{{}\mathbb{V}}{[X]} = {k}\theta^{2} = \frac{\alpha}{\beta^{2}}\]</span></p>
+
+<p><span  class="math">\(\mathop{{}\mathbb{V}}{[X]}\)</span> can also be displayed as <span  class="math">\(\textnormal{Var}({X})\)</span> or <span  class="math">\(\sigma^{2}\)</span> when
+dealing with Normal/Gaussian distributions.</p>
+
+<h1 id="purposes-of-the-gamma-distribution">Purposes of the Gamma Distribution<a href="#purposes-of-the-gamma-distribution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+
+<p>The Gamma Distribution is used to predict the wait time until a future event happens. More specifically until
+the <span  class="math">\({k}\)</span>th event happens of a Poisson random variable. So if we wanted to model the time it takes
+until the fifth time some event happens in a Poisson process the Gamma Distribution would be
+our go-to distribution.  The Gamma Function models the wait time between Poisson distributed events.
+Or another way to put it is the Gamma models the time spent in each state between events.</p>
+
+<p>As Aerin Kim notes in her excellent piece on the Gamma Distribution (link below in the sources):</p>
+
+<blockquote>
+<p>Poisson, Exponential, and Gamma distribution model different aspects of the same process.
+Poisson distribution is used to model the # of events in the future, Exponential distribution
+is used to predict the wait time <strong>until the very first event</strong>, and Gamma distribution is
+used to predict the wait time <strong>until the <span  class="math">\({k}\)</span>th event</strong>. (Kim)</p>
+</blockquote>
+
+<p>So basically let's say that a catastrophic flood happens in your area once in a hundred years.
+This would be our rate of occurrences, or <span  class="math">\(\lambda\)</span>, of the Poisson process. So if we wanted
+to know how long we would have to wait to see five catastrophic floods we would use a Gamma
+distribution with the parameters of <span  class="math">\(\alpha = 5\)</span> and <span  class="math">\(\theta = 1/\lambda\)</span>.</p>
+
+<p><span  class="math">\(\theta\)</span> is our average wait time between events in our unit of time or rate parameter, which in this case is
+100 years. Since one divided by one is one that means our average wait time between floods
+that occur once every 100 years is one unit of our time interval which in this case is 100 years.
+If our rate of floods was 5 every 100 years then <span  class="math">\(\theta\)</span> would be .20 or 20 years on average
+between floods.</p>
+
+<p><span  class="math">\(\alpha\)</span> is our number of times we want the event to occur in this case 5
+because we want to calculate the probability of wait times before the area experiences 5
+catastrophic floods. Using the formulas above the expected value of our wait time
+would be 500 years (<span  class="math">\(\alpha * \theta\)</span>) with a variance of 500 years squared as well <span  class="math">\(5\cdot1^{2}\)</span></p>
+
+<p>But what if we want to calculate the probability of the wait time for 5 catastrophic floods being
+100 years or less? To calculate this we would just plug our parameters into the Gamma CDF
+(In this case the exact function is the Erlang CDF because the math is easier, but the Erlang is just
+a special case of the Gamma where <span  class="math">\(\alpha\)</span> is a positive integer) function. Here both <span  class="math">\(\lambda\)</span>
+and <span  class="math">\({t}\)</span> are equal to one since our rate (<span  class="math">\(\lambda\)</span>) is one and our interval of wait time (<span  class="math">\({t}\)</span>) is one.
+Don't confuse this with the <span  class="math">\(\lambda\)</span> of the Poisson process that is actually
+<span  class="math">\(\lambda={rate}\cdot{t}\)</span></p>
+
+<p><span  class="math">\[\begin{aligned} {P(T\le1)}&={CDF(1)} \\ &={1 - P(\text{events}\lt5 \text{ in interval t})} \\ &=1 - \sum_{n=0}^{\alpha-1}\frac{(\lambda{t})^{n}\exp^{-\lambda{t}}}{{n}!} \\ &=1 - \sum_{n=0}^{4}\frac{(1)^{n}\exp^{-1}}{{n}!} \end{aligned}\]</span></p>
+
+<p>Doing the math on that will give us the value of .003 or .3% probability of seeing 5 catastrophic floods
+in the interval of 100 years. If we wanted the probability of 5 floods in say 300 years or less our formula would look like this:</p>
+
+<p><span  class="math">\[1 - \sum_{n=0}^{4}\frac{(3)^{n}\exp^{-1}}{{n}!}\]</span></p>
+
+<p>Which gives us a probability of roughly .18. But enough of doing this by hand lets see how to do it in
+python. I'm going to use the <code>scipy</code> package which contains all sorts of probability distributions including
+the gamma. The CDF function takes parameters of the wait time or interval, <span  class="math">\(\alpha\)</span>, and scale which is equal to
+our <span  class="math">\(\theta\)</span> parameter.</p>
+<pre tabindex="0"><code>from scipy.stats import gamma
+
+#probability we see 5 floods in one interval of time or less
+#with scale parameter equal to 1
+gamma.cdf(1, 5, scale=1)
+0.003659846827343713
+
+#probability we see 5 floods in three intervals of time or less
+#with scale parameter equal to 1
+gamma.cdf(3, 5, scale=1)
+0.18473675547622787
+
+#probability we see 1 flood in three intervals of time or less
+#with scale parameter equal to 1
+gamma.cdf(3, 1, scale=1)
+0.950212931632136</code></pre>
+<p>If you want to dive deeper into using the gamma function to model wait times for Poisson processes
+please read the links below as they go into much great detail on the gamma function and its uses.</p>
+
+<h1 id="sources">Sources<a href="#sources" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+
+<p><a href="https://towardsdatascience.com/gamma-distribution-intuition-derivation-and-examples-55f407423840">Gamma Distribution -- Intuition, Derivation, and Examples</a> by Aerin Kim</p>
+
+<p><a href="https://www.mygreatlearning.com/blog/gamma-distribution/">Gamma Distribution Explained | What is Gamma Distribution</a> by Somak Sengupta</p>
+
+<p><a href="http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_Gamma">UCLA AP Statistics Curriculum 2007 Gamma</a></p>
+
+<p><a href="http://sherrytowers.com/2016/01/23/poisson-and-exponential-distributions/">Poisson, Exponential, and Gamma distributions</a> by Sherry Towers</p>
+
+<p><a href="https://towardsdatascience.com/seven-must-know-statistical-distributions-and-their-simulations-for-data-science-681c5ac41e32">Seven Must-Know Statistical Distributions and Their Simulations for Data Science</a> by Zijing Zhu</p>
+
+<p><a href="https://medium.com/geekculture/how-to-model-time-between-events-using-the-exponential-gamma-and-poisson-distributions-4b058a357a55">How to Model Time Between Events Using the Exponential, Gamma, and Poisson Distributions</a> by Federico Riveroll</p>
+
+<p><a href="https://online.stat.psu.edu/stat414/lesson/introduction-stat-414">Introduction to STAT 414</a> Penn State Department of Statistics</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://barloweanalytics.com/posts/ides-of-march/">
+                <span class="button__text">IDEs of March</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>2019 Barlowe Analytics</span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://barloweanalytics.com/assets/main.js"></script>
+<script src="https://barloweanalytics.com/assets/prism.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+
+
+  
+</div>
+
+</body>
+</html>
