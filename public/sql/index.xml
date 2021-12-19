@@ -96,10 +96,9 @@ but most likely you won&#39;t be.&lt;/p&gt;
       <pubDate>Thu, 23 May 2019 22:25:11 -0400</pubDate>
       
       <guid>https://barloweanalytics.com/sql/login/</guid>
-      <description>Remote Postgres Login 
-Ok if you&#39;ve been following along with the other tutorials you have seen me use the psql command to login into your database that you&#39;ve setup on your computer. But that&#39;s not all psql is use for, and in fact it has many diverse properties that you can use to pass SQL queries to the database without ever logging into the server itself. But I won&#39;t get into that with this tutorial, instead I&#39;m going to focus on using psql to login into a remote Postgres server</description>
+      <description>Remote Postgres Login Ok if you&#39;ve been following along with the other tutorials you have seen me use the psql command to login into your database that you&#39;ve setup on your computer. But that&#39;s not all psql is use for, and in fact it has many diverse properties that you can use to pass SQL queries to the database without ever logging into the server itself. But I won&#39;t get into that with this tutorial, instead I&#39;m going to focus on using psql to login into a remote Postgres server</description>
       <content>&lt;h2&gt;Remote Postgres Login&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;br /&gt;
 &lt;p&gt;Ok if you&#39;ve been following along with the other tutorials you have seen me
 use the &lt;code&gt;psql&lt;/code&gt; command to login into your database that you&#39;ve setup
 on your computer. But that&#39;s not all &lt;code&gt;psql&lt;/code&gt; is use for, and in fact it

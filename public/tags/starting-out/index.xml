@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>starting out on Barlowe Analytics</title>
+    <link>https://barloweanalytics.com/tags/starting-out/</link>
+    <description>Recent content in starting out on Barlowe Analytics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2019 Barlowe Analytics</copyright>
+    <lastBuildDate>Sun, 19 Dec 2021 13:10:58 -0600</lastBuildDate><atom:link href="https://barloweanalytics.com/tags/starting-out/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pick A Language</title>
+      <link>https://barloweanalytics.com/posts/starting_analysis/pick_a_language/</link>
+      <pubDate>Sun, 19 Dec 2021 13:10:58 -0600</pubDate>
+      
+      <guid>https://barloweanalytics.com/posts/starting_analysis/pick_a_language/</guid>
+      <description>Pick a Language Why do this? Over the years I&amp;rsquo;ve been doing data sciencey things I often get asked for advice. I&amp;rsquo;ve decided to start jotting down my thoughts/opinions on a more regular basis now for several reasons.
+ To have an easy place to look for when I inevitably forget whatever I&amp;rsquo;ve done in the past. To allow others to freely have access to whatever experience I&amp;rsquo;ve accumulated and hopefully give them a head start.</description>
+      <content>&lt;h1 id=&#34;pick-a-language&#34;&gt;Pick a Language&lt;/h1&gt;
+&lt;h2 id=&#34;why-do-this&#34;&gt;Why do this?&lt;/h2&gt;
+&lt;p&gt;Over the years I&amp;rsquo;ve been doing data sciencey things I often get asked for advice. I&amp;rsquo;ve decided to start jotting
+down my thoughts/opinions on a more regular basis now for several reasons.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;To have an easy place to look for when I inevitably forget whatever I&amp;rsquo;ve done in the past.&lt;/li&gt;
+&lt;li&gt;To allow others to freely have access to whatever experience I&amp;rsquo;ve accumulated and hopefully give them a head
+start.&lt;/li&gt;
+&lt;li&gt;I like to write and writing is a valuable skill to maintain for anyone. Especially for those trying to share
+their findings discovered in data to non data folks&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;With that taken care of, let&amp;rsquo;s move on to the matter at hand&lt;/p&gt;
+&lt;h2 id=&#34;where-to-start&#34;&gt;Where to start?&lt;/h2&gt;
+&lt;p&gt;This is a common question asked by people starting to do, for lack of a better
+term, what others call &amp;ldquo;analytics&amp;rdquo;. The answer I give is learn a programming language. Can
+you do analytics without learning how to program? Sure, plenty do excellent work using Business
+Intelligence platforms like Tableau or Power BI. There&amp;rsquo;s also the workhorse of offices across
+the world: Microsoft Excel.&lt;/p&gt;
+&lt;p&gt;Their ease of use (and their non trivially priced licenses), will eventually limit any user wanting
+to do anything outside the box. They also are severely hampered when it comes to handling datasets that are
+fairly large. Both of these problems are solved with an Open Source programming language. The first because
+these programming languages are free, and the second because the lack of a graphical interface like Excel allows
+one to work with datasets magnitudes of orders larger than what you can fit in a single Excel Workbook.&lt;/p&gt;
+&lt;h2 id=&#34;which-language&#34;&gt;Which Language?&lt;/h2&gt;
+&lt;p&gt;It doesn&amp;rsquo;t matter really, just pick one and get started. Sure there are languages that are more tailored
+to analytics (and used more in the analytics&#39; communities themselves), but really ANY language will do some are just
+easier to get started than others. Those languages are &lt;a href=&#34;https://www.python.org&#34;&gt;Python&lt;/a&gt; and &lt;a href=&#34;https://www.r-project.org&#34;&gt;R&lt;/a&gt;
+(and to a lesser extent &lt;a href=&#34;https://julialang.org&#34;&gt;Julia&lt;/a&gt;). But those aren&amp;rsquo;t the only ones, there are data science packages
+in almost every major programming language, even &lt;a href=&#34;https://danfo.jsdata.org&#34;&gt;JavaScript!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The more one strays from R and Python, the harder it will be to do things, but it will not be impossible.
+My language of choice is Python, and I think its better than the others. Those reasons have nothing to do with
+the other language&amp;rsquo;s lack of capabilities at getting the job done, and anyone that tries to say otherwise can
+most likely be ignored. Not sure which one to pick? Flip a coin and off you go.&lt;/p&gt;
+&lt;p&gt;If you are moving from Excel, this process will be hard and slow. Things you are used to doing in minutes can
+take hours if you are just starting out. But give it time, eventually you will learn to do things in minutes that
+would take you hours in Excel!&lt;/p&gt;
+&lt;h2 id=&#34;once-youve-started&#34;&gt;Once you&amp;rsquo;ve started&lt;/h2&gt;
+&lt;p&gt;Learning a programming language is not an overnight process unfortunately. The process is often
+similar to learning a spoken language; nothing can replace the experience of using one. It will take, and
+I can&amp;rsquo;t stress this enough, time. That&amp;rsquo;s it. No fancy math is necessary. Just the ability to invest time
+on a regular basis to learning the language itself. The payoff though will be well worth the investment.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
